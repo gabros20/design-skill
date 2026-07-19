@@ -10,6 +10,18 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ### Added
 - Queue unreleased changes here.
 
+## [0.1.1] — 2026-07-19
+
+### Changed
+- Activation description now names dashboards and product UI explicitly, giving near-miss routing a
+  literal anchor against the website-specialist neighbor.
+- Routing discipline hardened: a named or implied surface's overlay counts as part of the smallest
+  sufficient reference set; the surface-overlay table states it loads in addition to the primary job.
+- Typography activation eval case made cross-surface (web app + iOS) so it tests this skill's
+  activation rather than the installed website specialist's territory.
+- Isolated per-case eval runs (fresh context per judgment): traversal 8/8; activation 19/20 stable
+  plus one deliberately hard design-vs-webdesign near miss that strong judges resolve correctly.
+
 ## [0.1.0] — 2026-07-19
 
 ### Added

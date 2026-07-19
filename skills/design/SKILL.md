@@ -1,7 +1,8 @@
 ---
 name: design
 description: >-
-  Design digital-product experiences across websites, web apps, iOS, and Android. Use for UX
+  Design digital-product experiences across websites, web apps, dashboards and product UI, iOS, and
+  Android. Use for UX
   research, user journeys, information architecture, interaction and state design, visual direction,
   typography, color, layout, motion, content design, accessibility, prototypes, design systems,
   design critique of rendered work on any surface, and frontend handoff. Do not use for production
@@ -29,7 +30,7 @@ them automatically unless the user requested a composition workflow.
 ## Route before acting
 
 1. Identify the primary design job.
-2. Add at most one surface overlay unless the task explicitly compares platforms.
+2. When the request names or implies a surface, its overlay counts as part of the smallest sufficient set — add it (at most one unless the task explicitly compares platforms).
 3. Add only the concern overlays that materially affect the request.
 4. Read every selected reference completely before producing the affected artifact.
 5. Do not scan or load unrelated references.
@@ -54,6 +55,8 @@ them automatically unless the user requested a composition workflow.
 | Prepare an implementation handoff to frontend | [Handoff](references/handoff.md) | Frontend-ready per-screen spec, tokens, motion plan, handoff.yaml |
 
 ### Surface overlay
+
+Loads in addition to the primary job whenever the request names or implies its surface.
 
 | When the surface is | Read | Expected contribution |
 |---|---|---|
