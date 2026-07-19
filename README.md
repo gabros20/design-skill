@@ -8,7 +8,7 @@ frontend-ready handoff, without expanding into production frontend engineering.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-**Visual guide:** [design-skill.vercel.app](https://design-skill.vercel.app)
+**Visual guide:** [designskill.vercel.app](https://designskill.vercel.app)
 
 `design` is the **Shape**-stage skill of the [Digital Product Skills](https://github.com/gabros20/digital-product-skill)
 family — the capability that decides how a product should look and behave before it is built. See
@@ -178,7 +178,7 @@ AGENTS.md / CLAUDE.md      repository and client-specific maintainer guidance
 skills/design/             portable runtime skill and client metadata (21 references)
 evals/                     activation, traversal, output, and compression fixtures
 docs/                      installation, usage, and recipes
-site/                      visual guide (deployed to design-skill.vercel.app)
+site/                      visual guide (deployed to designskill.vercel.app)
 scripts/                   repository validation and token accounting
 ```
 

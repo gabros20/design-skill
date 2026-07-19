@@ -69,4 +69,4 @@ Sources:
 
 ## Optional
 
-- [Visual guide](https://design-skill.vercel.app): the routing model, the laws, and the full reference map on one page.
+- [Visual guide](https://designskill.vercel.app): the routing model, the laws, and the full reference map on one page.
