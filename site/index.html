@@ -1,0 +1,429 @@
+<!doctype html>
+<!-- design-skill site: shared skill-site chrome; identity carried by the accent hue (292 / violet). -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f7fa">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#12151d">
+<title>design — Experience design for websites, web apps, iOS, and Android</title>
+<meta name="description" content="design is a Claude Code skill for experience design across websites, web apps, iOS, and Android — UX research, journeys, information architecture, interaction, visual direction, typography, color, layout, motion, content, accessibility, prototypes, design systems, critique, and frontend handoff. A router that loads only the reference each job needs.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://design-skill.vercel.app/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="design — Experience design for websites, web apps, iOS, and Android">
+<meta property="og:description" content="Experience design for websites, web apps, iOS, and Android — research, structure, interaction, visual craft, content, systems, critique, and frontend handoff, as a router that loads only what each job needs.">
+<meta property="og:url" content="https://design-skill.vercel.app/">
+<meta property="og:image" content="https://design-skill.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="design">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="design — Experience design for websites, web apps, iOS, and Android">
+<meta name="twitter:description" content="Experience design for websites, web apps, iOS, and Android — research, structure, interaction, visual craft, content, systems, critique, and frontend handoff, as a router that loads only what each job needs.">
+<meta name="twitter:image" content="https://design-skill.vercel.app/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "design",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Claude Code / agent CLIs",
+  "description": "Experience design for websites, web apps, iOS, and Android: UX research, journeys, information architecture, interaction and visual design, motion, content, accessibility, prototypes, design systems, critique, and frontend handoff, as a router that loads only the reference each job needs.",
+  "url": "https://design-skill.vercel.app/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "license": "https://opensource.org/licenses/MIT",
+  "sameAs": ["https://github.com/gabros20/design-skill"]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#f6f7fa; --panel:#ffffff; --ink:#1c2333; --muted:#5a6478; --line:#d8dde8;
+    --accent:#7c3aed; --accent-ink:#ffffff; --amber:#a97a10; --amber-bg:#fdf6e3;
+    --good:#1e7f4f; --bad:#b3403a; --code-bg:#eef1f7; --glyph:#8391ad;
+    --tok-strat:#7c3aed; --tok-dim:#8146c9; --tok-val:#1e7f4f; --tok-file:#a97a10;
+  }
+  @media (prefers-color-scheme: dark){ :root{
+    --bg:#12151d; --panel:#1a1f2b; --ink:#e6eaf3; --muted:#93a0b8; --line:#2b3245;
+    --accent:#a78bfa; --accent-ink:#0d1220; --amber:#d9a72e; --amber-bg:#26200f;
+    --good:#4cc38a; --bad:#e5726c; --code-bg:#141824; --glyph:#5d6a85;
+    --tok-strat:#a78bfa; --tok-dim:#b98aef; --tok-val:#4cc38a; --tok-file:#d9a72e;
+  }}
+  :root[data-theme="dark"]{
+    --bg:#12151d; --panel:#1a1f2b; --ink:#e6eaf3; --muted:#93a0b8; --line:#2b3245;
+    --accent:#a78bfa; --accent-ink:#0d1220; --amber:#d9a72e; --amber-bg:#26200f;
+    --good:#4cc38a; --bad:#e5726c; --code-bg:#141824; --glyph:#5d6a85;
+    --tok-strat:#a78bfa; --tok-dim:#b98aef; --tok-val:#4cc38a; --tok-file:#d9a72e;
+  }
+  :root[data-theme="light"]{
+    --bg:#f6f7fa; --panel:#ffffff; --ink:#1c2333; --muted:#5a6478; --line:#d8dde8;
+    --accent:#7c3aed; --accent-ink:#ffffff; --amber:#a97a10; --amber-bg:#fdf6e3;
+    --good:#1e7f4f; --bad:#b3403a; --code-bg:#eef1f7; --glyph:#8391ad;
+    --tok-strat:#7c3aed; --tok-dim:#8146c9; --tok-val:#1e7f4f; --tok-file:#a97a10;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg); color:var(--ink); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; margin:0; -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1060px; margin:0 auto; padding:0 24px 96px}
+  code,.mono{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+  .eyebrow{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.14em; font-weight:600; font-size:13px; color:var(--muted)}
+  h1{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:clamp(34px,6vw,56px); margin:.1em 0 .15em; letter-spacing:-.02em; text-wrap:balance}
+  h1 .sl{color:var(--accent)}
+  h2{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.09em; font-size:21px; margin:0 0 4px; display:flex; align-items:center; gap:12px}
+  h2::after{content:""; flex:1; height:1px; background:var(--line)}
+  h2 .lu{color:var(--accent); width:20px; height:20px}
+  section{margin-top:64px}
+  .lede{font-size:19px; color:var(--muted); max-width:60ch; margin:0}
+  .hosts{display:flex; flex-wrap:wrap; align-items:center; gap:7px; margin:16px 0 0}
+  .hosts .hl{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.14em; font-weight:600; font-size:11px; color:var(--muted); margin-right:2px}
+  .hosts span:not(.hl){font-family:ui-monospace,Menlo,monospace; font-size:11.5px; color:var(--muted); background:var(--code-bg); border-radius:5px; padding:3px 8px; white-space:nowrap}
+  .hosts span.ref{color:var(--accent); font-weight:600}
+  .lede b{color:var(--ink)}
+  p{max-width:68ch}
+  a{color:var(--accent)}
+
+  /* lucide icons */
+  .lu{width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; flex:none; vertical-align:-3px}
+
+  /* top nav */
+  nav{display:flex; flex-wrap:wrap; gap:8px; margin-top:26px}
+  nav a{font-family:ui-monospace,Menlo,monospace; font-size:12.5px; text-decoration:none; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:4px 12px; background:var(--panel)}
+  nav a:hover,nav a:focus-visible{color:var(--accent); border-color:var(--accent); outline:none}
+  .secnav a::before{content:"#"; color:var(--glyph); margin-right:5px}
+  .secnav a:hover::before,.secnav a:focus-visible::before{color:var(--accent)}
+
+  header{padding-top:64px}
+  .term{background:var(--code-bg); border:1px solid var(--line); border-radius:8px; padding:14px 18px; font-family:ui-monospace,Menlo,monospace; font-size:13.5px; line-height:1.7; overflow-x:auto; white-space:pre}
+  .term .c{color:var(--muted)}
+  .term .p{color:var(--accent); font-weight:600}
+
+  /* the arc — animated explainer: a Remotion video, light/dark, swapped in
+     as progressive enhancement over the static one-line arc fallback below */
+  .vidwrap{display:none; margin-top:20px}
+  .vidwrap video{display:block; width:100%; aspect-ratio:16/9; border:1px solid var(--line); border-radius:10px; background:var(--bg); box-shadow:0 30px 70px -40px rgba(0,0,0,.45)}
+  body.has-vid .vidwrap{display:block}
+  body.has-vid .poster{display:none}
+  .poster{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:20px; margin-top:20px}
+  .arcline{font-family:ui-monospace,Menlo,monospace; font-size:14.5px; line-height:2; color:var(--muted); margin:0}
+  .arcline b{color:var(--ink); font-weight:600}
+  .arcline .ar{color:var(--glyph); margin:0 2px}
+  .pcap{font-size:13.5px; color:var(--muted); margin:14px 0 0; max-width:68ch}
+  .pcap b{color:var(--ink)}
+
+  /* numbered stage timeline */
+  .steps{margin-top:20px; counter-reset:step}
+  .steps>div{position:relative; padding:0 0 22px 46px; --sc:var(--accent)}
+  .steps>div::before{counter-increment:step; content:counter(step); position:absolute; left:0; top:-3px; width:28px; height:28px; border-radius:50%; background:var(--panel); border:2px solid var(--sc); color:var(--sc); font-family:ui-monospace,Menlo,monospace; font-size:13px; font-weight:600; display:flex; align-items:center; justify-content:center}
+  .steps>div::after{content:""; position:absolute; left:13px; top:31px; bottom:-6px; width:2px; background:var(--line)}
+  .steps>div:last-child{padding-bottom:0}
+  .steps>div:last-child::after{display:none}
+  .steps b{display:flex; align-items:center; gap:8px; font-family:ui-monospace,Menlo,monospace; font-size:14px; margin:2px 0 4px}
+  .steps b .lu{width:15px; height:15px; color:var(--sc)}
+  .steps span{font-size:13.5px; color:var(--muted); display:block; line-height:1.55; max-width:66ch}
+  .steps span b{display:inline; font-family:inherit; font-size:inherit; color:var(--ink); margin:0; font-weight:600}
+  .steps span code{font-size:12px; background:var(--code-bg); padding:1px 4px; border-radius:4px; overflow-wrap:anywhere}
+
+  /* reference cards, grouped by stage */
+  /* reference map — stage → chips definition list (voids impossible by construction; lighter
+     than the card-heavy neighbouring sections, so it varies the page rhythm) */
+  .refmap{margin-top:20px}
+  .refrow{display:grid; grid-template-columns:200px 1fr; gap:8px 18px; padding:14px 0; align-items:start}
+  .refrow + .refrow{border-top:1px solid var(--line)}
+  .refrow dt, .refrow dd{margin:0}
+  .reflabel{display:flex; align-items:center; gap:8px; font-family:ui-monospace,Menlo,monospace; font-size:14px; letter-spacing:-.01em; color:var(--ink)}
+  .reflabel .lu{color:var(--accent); width:16px; height:16px; flex:none}
+  .reflabel .ct{margin-left:auto; font-size:11px; color:var(--accent); border:1px solid var(--accent); border-radius:999px; padding:1px 8px; font-family:system-ui; flex:none}
+  .refchips{display:flex; flex-wrap:wrap; gap:7px 8px; align-items:baseline}
+  .refchips .ref{display:inline-flex; align-items:baseline; gap:6px}
+  .refchips code{background:var(--code-bg); padding:2px 8px; border-radius:5px; font-size:12px; white-space:nowrap}
+  .refchips .d{font-size:11.5px; color:var(--muted)}
+  @media (max-width:640px){
+    .refrow{grid-template-columns:1fr; gap:9px 0}
+    .reflabel .ct{margin-left:8px}
+  }
+
+  /* tables */
+  .tblwrap{overflow-x:auto; border:1px solid var(--line); border-radius:8px; margin-top:20px}
+  table{border-collapse:collapse; width:100%; font-size:14px; background:var(--panel)}
+  th{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.08em; font-size:12.5px; font-weight:600; text-align:left; color:var(--muted); padding:10px 16px; border-bottom:1px solid var(--line)}
+  td{padding:10px 16px; border-bottom:1px solid var(--line); vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td code{background:var(--code-bg); padding:1px 6px; border-radius:4px; font-size:12.5px; white-space:nowrap}
+  td code a{color:inherit; text-decoration:none}
+  td code a:hover{text-decoration:underline}
+  td.dim{font-weight:600; font-family:ui-monospace,Menlo,monospace; font-size:13px; color:var(--tok-dim); white-space:nowrap}
+  td .d{color:var(--muted)}
+
+  .note{background:var(--amber-bg); border:1px solid var(--amber); border-radius:8px; padding:12px 16px; font-size:14px; margin-top:16px; max-width:none}
+  .note b{color:var(--amber)}
+
+  /* rails — the laws */
+  .rules{list-style:none; padding:0; margin:20px 0 0; display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px}
+  .rules li{background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--amber); border-radius:6px; padding:12px 16px; font-size:14px; line-height:1.5}
+  .rules li b{display:flex; align-items:center; gap:7px; font-family:ui-monospace,Menlo,monospace; font-size:13px; margin-bottom:3px}
+  .rules li b .lu{width:15px; height:15px; color:var(--amber)}
+  /* if the laws list ends on an orphan cell, make the last item a full-width capstone
+     (title | text) so the wide card reads as a deliberate closing emphasis, not a gap */
+  .rules li:last-child{grid-column:1 / -1; display:flex; align-items:baseline; gap:22px}
+  .rules li:last-child b{margin-bottom:0; flex:none; width:230px}
+  @media (max-width:620px){ .rules li:last-child{flex-direction:column; gap:3px} .rules li:last-child b{width:auto} }
+  .loopback{display:flex; gap:10px; margin-top:12px; font-size:13.5px; color:var(--muted); line-height:1.55; max-width:none}
+  .loopback .ic{color:var(--accent); flex:none; margin-top:1px}
+  .loopback .ic .lu{width:17px; height:17px}
+  .loopback b{color:var(--ink)}
+
+  /* details / appendix */
+  details.disc{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:0; margin-top:14px}
+  details.disc summary{cursor:pointer; padding:13px 18px; font-family:ui-monospace,Menlo,monospace; font-size:13.5px; color:var(--accent); list-style:none; display:flex; align-items:center; gap:8px}
+  details.disc summary::before{content:"▸"; color:var(--glyph); transition:transform .12s ease}
+  details.disc[open] summary::before{transform:rotate(90deg)}
+  details.disc summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  details.disc>div{padding:2px 18px 16px}
+  details.disc .tblwrap{margin-top:8px}
+  details.disc p{font-size:13.5px; color:var(--muted)}
+
+  /* files */
+  .files{background:var(--code-bg); border:1px solid var(--line); border-radius:8px; padding:16px 20px; font-family:ui-monospace,Menlo,monospace; font-size:13px; line-height:1.9; overflow-x:auto; white-space:pre; margin-top:8px}
+  .files .d{color:var(--muted)}
+  .files .hl{color:var(--accent); font-weight:600}
+
+  footer{margin-top:72px; padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
+  /* iOS 26 chrome tint: Safari samples fixed edge elements; theme-color alone is ignored */
+  .edge{position:fixed; left:0; right:0; height:8px; background:var(--bg); z-index:0; pointer-events:none}
+  .edge.top{top:0} .edge.bottom{bottom:0}
+  @media (max-width:720px){
+    .prow{flex-direction:column; align-items:flex-start}
+    .prow .arr{transform:rotate(90deg); margin-left:18px}
+  }
+</style>
+</head>
+<body>
+<div class="edge top" aria-hidden="true"></div>
+<div class="edge bottom" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="lu-file-input" viewBox="0 0 24 24"><path d="M4 11V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M2 15h10"/><path d="m9 18 3-3-3-3"/></symbol>
+  <symbol id="lu-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="lu-scroll-text" viewBox="0 0 24 24"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></symbol>
+  <symbol id="lu-clipboard-list" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
+  <symbol id="lu-clipboard-check" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+  <symbol id="lu-search-check" viewBox="0 0 24 24"><path d="m8 11 2 2 4-4"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="lu-file-output" viewBox="0 0 24 24"><path d="M4.226 20.925A2 2 0 0 0 6 22h12a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.127"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="m5 11-3 3"/><path d="m5 17-3-3h10"/></symbol>
+  <symbol id="lu-files" viewBox="0 0 24 24"><path d="M15 2h-4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/><path d="M16.706 2.706A2.4 2.4 0 0 0 15 2v5a1 1 0 0 0 1 1h5a2.4 2.4 0 0 0-.706-1.706z"/><path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1"/></symbol>
+  <symbol id="lu-sliders-horizontal" viewBox="0 0 24 24"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></symbol>
+  <symbol id="lu-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+  <symbol id="lu-coins" viewBox="0 0 24 24"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48"/><path d="M15 6h1v4"/><path d="m6.134 14.768.866-.5 2 3.464"/><circle cx="16" cy="8" r="6"/></symbol>
+  <symbol id="lu-split" viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></symbol>
+  <symbol id="lu-copy-x" viewBox="0 0 24 24"><line x1="12" x2="18" y1="12" y2="18"/><line x1="12" x2="18" y1="18" y2="12"/><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+  <symbol id="lu-workflow" viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></symbol>
+  <symbol id="lu-layers" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/></symbol>
+  <symbol id="lu-eye" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></symbol>
+</svg>
+<div class="wrap">
+<header>
+  <div class="eyebrow">An agent skill · experience-design router</div>
+  <nav class="toplinks" aria-label="external links">
+    <a href="https://github.com/gabros20/design-skill" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://github.com/gabros20/design-skill#install" target="_blank" rel="noopener">Install</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+  <h1><span class="sl">/</span>design</h1>
+  <p class="lede">Ask an agent to design a product screen and you get a plausible-looking mock with
+  no research behind it, half its states missing, and prototype code passed off as production. <b>design</b>
+  replaces that with a controlled process: name the register, route to the one job that fits, produce a
+  state-complete artifact with exact tokens, and hand it off. Experience design for websites, web apps,
+  iOS, and Android.</p>
+  <div class="term" style="margin-top:22px"><span class="c"># that's the whole start</span>
+<span class="p">/design</span> design an onboarding flow for a mobile budgeting app — state-complete, iOS first</div>
+  <p class="hosts"><span class="hl">runs on</span><span class="ref">Claude Code</span><span>Codex</span><span>Cursor</span><span>Antigravity</span><span>opencode</span><span>Grok Build</span><span>Hermes</span></p>
+  <nav class="secnav" aria-label="page sections">
+    <a href="#arc">how it routes</a><a href="#laws">the laws</a><a href="#pick">pick by job</a>
+    <a href="#refs">reference map</a><a href="#start">start here</a>
+  </nav>
+</header>
+
+<section id="arc">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-workflow"/></svg>How it routes</h2>
+  <p>Not a fixed pipeline — a router. <b>Enter at whatever job you have</b>: "critique this dashboard"
+  jumps straight to the critique gate; "map this checkout" runs one journey; a new surface pulls
+  direction plus its craft leaves. Every route selects the <b>smallest sufficient</b> reference set —
+  one primary job, at most one surface overlay, only the concerns that matter — and nothing unrelated is loaded.</p>
+  <div class="vidwrap" id="vidwrap"></div>
+  <div class="poster" role="img" aria-label="Diagram: the routing loop runs from primary job, through an optional surface overlay and concern overlays, to a produced artifact, then validation, then handoff.">
+    <p class="arcline"><b>primary job</b> <span class="ar">→</span> <b>surface overlay</b> <span class="ar">→</span> <b>concerns</b> <span class="ar">→</span> <b>artifact</b> <span class="ar">→</span> <b>validate</b> <span class="ar">→</span> <b>handoff</b></p>
+  </div>
+  <p class="pcap"><b>The skill operates standalone</b> — invoked alone it runs the full loop; given compatible
+  upstream artifacts it builds on them without silently overriding established decisions.</p>
+
+  <div class="steps">
+    <div><b><svg class="lu" aria-hidden="true"><use href="#lu-sliders-horizontal"/></svg>identify the primary job</b><span>Pick the one design job the request is really about — research, a journey, information architecture, an interaction spec, visual direction, a craft leaf, a prototype, a design system, a critique, or a handoff. → <code>SKILL.md</code></span></div>
+    <div><b><svg class="lu" aria-hidden="true"><use href="#lu-split"/></svg>add at most one surface overlay</b><span>Website, web app, iOS, or Android — the surface picks the register (design <b>IS</b> the product vs design <b>SERVES</b> it) and the platform numbers. Add more than one only when the task explicitly compares platforms.</span></div>
+    <div><b><svg class="lu" aria-hidden="true"><use href="#lu-layers"/></svg>add only the concerns that matter</b><span>Accessibility and content design come in as overlays when the request materially involves them — not by default.</span></div>
+    <div><b><svg class="lu" aria-hidden="true"><use href="#lu-file-output"/></svg>read fully, then produce</b><span>Read each selected reference completely, then emit the design artifact with exact values — tokens, sizes, spacing, timings — and the full state set, not adjectives.</span></div>
+    <div><b><svg class="lu" aria-hidden="true"><use href="#lu-search-check"/></svg>validate &amp; hand off</b><span>Check the artifact against the goal, constraints, and edge states; record assumptions and risks; emit a compact handoff when downstream implementation is expected.</span></div>
+  </div>
+  <div class="loopback"><span class="ic"><svg class="lu" aria-hidden="true"><use href="#lu-shield-check"/></svg></span><span>The critique route is a scored gate with a <b>binary verdict</b> — a fail routes back to the craft reference that owns the problem. And a visual verdict requires rendered evidence: with no build viewed, the skill says "code-level pass, not an art review" rather than signing off on appearance.</span></div>
+</section>
+
+<section id="laws">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-shield-check"/></svg>The non-negotiable laws</h2>
+  <p>These universal invariants govern every reference — the load-bearing ones, condensed.</p>
+  <ul class="rules">
+    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-split"/></svg>Register first</b>Name the register per surface before craft — design <b>IS</b> the product (brand, marketing) vs design <b>SERVES</b> it (dashboards, app shells). The audience picks the aesthetic, not taste; the serve register legitimately inverts several distinctiveness defaults.</li>
+    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-layers"/></svg>Design the full state set</b>Default, hover, focus, active, disabled, loading, error, success — plus empty for every data region. Missing states are the usual gap between a mock and a real product.</li>
+    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-gauge"/></svg>One bold move, then restraint</b>Spend one bold move per section or page and keep everything else quiet. Two bold moves compete; zero reads generic.</li>
+    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-clipboard-check"/></svg>Real content, real lengths</b>Use the longest realistic string, the empty case, the overflow case. Never fabricate metrics, logos, testimonials, or decorative data.</li>
+    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-copy-x"/></svg>Label the maturity</b>Every coded artifact is disposable, design-reference, or production-candidate. Never present prototype code as production-ready without engineering, accessibility, and quality review.</li>
+    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-shield-check"/></svg>Accessibility floors are constraints</b>Contrast, target size, focus order, and reduced-motion hold even when the accessibility reference is never opened.</li>
+    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-eye"/></svg>A visual verdict needs rendered evidence</b>When no build was viewed, the skill states "code-level pass, not an art review" rather than signing off on appearance — and it preserves established product, brand, and architecture constraints, reporting any conflict rather than silently overriding it.</li>
+  </ul>
+</section>
+
+<section id="pick">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-clipboard-list"/></svg>Pick by job</h2>
+  <p>The SKILL.md is a router — load only the reference your current job needs. A condensed cut of the primary-job table:</p>
+  <div class="tblwrap"><table>
+    <tr><th>I need to…</th><th>Read</th></tr>
+    <tr><td>Plan or synthesize UX research — interviews, surveys, usability, design-DNA</td><td><code><a href="https://github.com/gabros20/design-skill/blob/main/skills/design/references/research.md">research.md</a></code></td></tr>
+    <tr><td>Map a flow, onboarding, wizard, checkout, or end-to-end journey</td><td><code><a href="https://github.com/gabros20/design-skill/blob/main/skills/design/references/journeys.md">journeys.md</a></code></td></tr>
+    <tr><td>Model objects, sitemap, navigation, naming, or findability</td><td><code><a href="https://github.com/gabros20/design-skill/blob/main/skills/design/references/information-architecture.md">information-architecture.md</a></code></td></tr>
+    <tr><td>Define component behavior and states — forms, feedback, overlays, search</td><td><code><a href="https://github.com/gabros20/design-skill/blob/main/skills/design/references/interaction.md">interaction.md</a></code></td></tr>
+    <tr><td>Set the point of view, or fix a result that reads generic or templated</td><td><code><a href="https://github.com/gabros20/design-skill/blob/main/skills/design/references/visual-direction.md">visual-direction.md</a></code></td></tr>
+    <tr><td>Build a palette, neutral ramp, accent, dark mode, or check contrast</td><td><code><a href="https://github.com/gabros20/design-skill/blob/main/skills/design/references/color.md">color.md</a></code></td></tr>
+    <tr><td>Build or evaluate a prototype, or compare design options</td><td><code><a href="https://github.com/gabros20/design-skill/blob/main/skills/design/references/prototyping.md">prototyping.md</a></code></td></tr>
+    <tr><td>Create or extend a design system, tokens, or component contracts</td><td><code><a href="https://github.com/gabros20/design-skill/blob/main/skills/design/references/design-systems.md">design-systems.md</a></code></td></tr>
+    <tr><td>Judge or QA a rendered design against its intent — a scored review</td><td><code><a href="https://github.com/gabros20/design-skill/blob/main/skills/design/references/critique.md">critique.md</a></code></td></tr>
+    <tr><td>Prepare an implementation handoff to frontend</td><td><code><a href="https://github.com/gabros20/design-skill/blob/main/skills/design/references/handoff.md">handoff.md</a></code></td></tr>
+  </table></div>
+  <p style="margin-top:12px">Full table — plus the surface and concern overlays: <a href="https://github.com/gabros20/design-skill/blob/main/skills/design/SKILL.md#route-before-acting">SKILL.md</a>.</p>
+  <div class="note"><b>Complementary, not duplicated:</b> production frontend build (<code>frontend-skill</code>), system architecture and feasibility (<code>architecture-skill</code>), acquisition and SEO (<code>marketing-skill</code>), independent audits and release verification (<code>quality-skill</code>), and product strategy and metrics (<code>product-skill</code>) are separate skills in the <a href="https://github.com/gabros20/digital-product-skill">digital-product-skill</a> family that this one hands off to.</div>
+</section>
+
+<section id="refs">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-files"/></svg>Reference map</h2>
+  <p>21 references, grouped by facet — primary jobs, surface overlays, and concern overlays. Every one is
+  copy-pasteable rather than abstract; the whole point of the router is that you never read all of them at once.</p>
+  <dl class="refmap">
+    <div class="refrow">
+      <dt class="reflabel"><svg class="lu" aria-hidden="true"><use href="#lu-clipboard-list"/></svg>primary · research &amp; structure<span class="ct">4</span></dt>
+      <dd class="refchips"><span class="ref"><code>research.md</code></span><span class="ref"><code>journeys.md</code></span><span class="ref"><code>information-architecture.md</code></span><span class="ref"><code>interaction.md</code></span></dd>
+    </div>
+    <div class="refrow">
+      <dt class="reflabel"><svg class="lu" aria-hidden="true"><use href="#lu-layers"/></svg>primary · visual craft<span class="ct">6</span></dt>
+      <dd class="refchips"><span class="ref"><code>visual-direction.md</code></span><span class="ref"><code>typography.md</code></span><span class="ref"><code>layout-composition.md</code></span><span class="ref"><code>color.md</code></span><span class="ref"><code>imagery-depth-decoration.md</code></span><span class="ref"><code>motion.md</code></span></dd>
+    </div>
+    <div class="refrow">
+      <dt class="reflabel"><svg class="lu" aria-hidden="true"><use href="#lu-file-output"/></svg>primary · systems &amp; delivery<span class="ct">4</span></dt>
+      <dd class="refchips"><span class="ref"><code>prototyping.md</code></span><span class="ref"><code>design-systems.md</code></span><span class="ref"><code>critique.md</code></span><span class="ref"><code>handoff.md</code></span></dd>
+    </div>
+    <div class="refrow">
+      <dt class="reflabel"><svg class="lu" aria-hidden="true"><use href="#lu-split"/></svg>surface overlays<span class="ct">4</span></dt>
+      <dd class="refchips"><span class="ref"><code>surface-website.md</code></span><span class="ref"><code>surface-webapp.md</code></span><span class="ref"><code>surface-ios.md</code></span><span class="ref"><code>surface-android.md</code></span></dd>
+    </div>
+    <div class="refrow">
+      <dt class="reflabel"><svg class="lu" aria-hidden="true"><use href="#lu-shield-check"/></svg>concern overlays<span class="ct">2</span></dt>
+      <dd class="refchips"><span class="ref"><code>accessibility.md</code></span><span class="ref"><code>content.md</code></span></dd>
+    </div>
+    <div class="refrow">
+      <dt class="reflabel"><svg class="lu" aria-hidden="true"><use href="#lu-scroll-text"/></svg>sources<span class="ct">1</span></dt>
+      <dd class="refchips"><span class="ref"><code>SOURCES.md</code><i class="d">— traces every technique to its source</i></span></dd>
+    </div>
+  </dl>
+  <p style="margin-top:16px">Browse the full set: <a href="https://github.com/gabros20/design-skill/tree/main/skills/design/references">skills/design/references/</a>.</p>
+</section>
+
+<section id="start">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-file-input"/></svg>Start here</h2>
+  <p>Install once. It's a plain <code>SKILL.md</code> router — no flags, no config, no scripts —
+  so it activates on design language ("design an onboarding flow", "set a visual direction for this app",
+  "critique this dashboard", "spec the states for this form") rather than a fixed command.</p>
+  <div class="term"><span class="c"># skills.sh ecosystem</span>
+npx skills add gabros20/design-skill
+
+<span class="c"># clone + installer (per-host targets)</span>
+git clone https://github.com/gabros20/design-skill && cd design-skill
+./install.sh codex   <span class="c"># or: claude | agents | cursor | antigravity | opencode | grok | hermes | all</span>
+
+<span class="c"># use</span>
+<span class="p">/design</span> set a visual direction for a fintech dashboard — name the register, one bold move
+<span class="p">/design</span> critique this checkout against its intent — scored, go/no-go verdict</div>
+  <p style="margin-top:14px">The same install runs on any <a href="https://agentskills.io">Agent&nbsp;Skills</a>
+  host. Codex installs to <code>${CODEX_HOME:-$HOME/.codex}/skills</code>; <code>agents</code>
+  remains a separate cross-agent installation target.</p>
+  <details class="disc">
+    <summary>install targets by host</summary>
+    <div>
+      <div class="tblwrap"><table>
+        <tr><th>host</th><th>install target</th><th>command</th></tr>
+        <tr><td class="dim">Claude Code</td><td><code>~/.claude/skills</code></td><td><code>./install.sh claude</code></td></tr>
+        <tr><td class="dim">Codex</td><td><code>${CODEX_HOME:-$HOME/.codex}/skills</code></td><td><code>./install.sh codex</code></td></tr>
+        <tr><td class="dim">Cross-agent path</td><td><code>~/.agents/skills</code></td><td><code>./install.sh agents</code></td></tr>
+        <tr><td class="dim">Cursor CLI</td><td><code>~/.cursor/skills</code></td><td><code>./install.sh cursor</code></td></tr>
+        <tr><td class="dim">Antigravity (IDE + agy)</td><td><code>~/.gemini/…/skills</code></td><td><code>./install.sh antigravity</code></td></tr>
+        <tr><td class="dim">opencode</td><td><code>~/.config/opencode/skills</code></td><td><code>./install.sh opencode</code></td></tr>
+        <tr><td class="dim">Grok Build</td><td><code>~/.grok/skills</code></td><td><code>./install.sh grok</code></td></tr>
+        <tr><td class="dim">Hermes</td><td><code>~/.hermes/skills</code></td><td><code>./install.sh hermes</code></td></tr>
+      </table></div>
+      <p style="margin-top:12px">Prefer <code>npx skills add gabros20/design-skill</code> when you have Node — it maps supported clients itself.</p>
+    </div>
+  </details>
+  <details class="disc">
+    <summary>what's in the repo</summary>
+    <div>
+      <div class="files"><span class="hl">skills/design/</span>          <span class="d">the skill: SKILL.md (router) + references/ (21 files)</span>
+<span class="hl">docs/</span>                      <span class="d">installation · usage · recipes</span>
+<span class="hl">site/</span>                      <span class="d">this page — deploys to design-skill.vercel.app</span>
+install.sh                 <span class="d">installer (claude | codex | cursor | antigravity | opencode | grok | hermes | agents | all)</span>
+README.md · CHANGELOG.md · LICENSE</div>
+      <p>More docs: <a href="https://github.com/gabros20/design-skill/blob/main/docs/installation.md">docs/installation.md</a> ·
+      <a href="https://github.com/gabros20/design-skill/blob/main/docs/usage.md">docs/usage.md</a> ·
+      <a href="https://github.com/gabros20/design-skill/blob/main/docs/recipes.md">docs/recipes.md</a>.
+      Part of the <a href="https://github.com/gabros20/digital-product-skill">digital-product-skill</a> family.</p>
+    </div>
+  </details>
+</section>
+
+<footer>
+  <span><span class="mono">/design</span> — Experience design for websites, web apps, iOS, and Android</span>
+  <span><a href="https://github.com/gabros20/design-skill">github.com/gabros20/design-skill</a> · <a href="/llms.txt">llms.txt</a> · MIT</span>
+</footer>
+</div>
+<script>
+(function () {
+  // Progressive enhancement over the static .arcline fallback above: swaps in the
+  // hero Remotion video (light/dark). On any load error it removes the
+  // slot and leaves the static arc line in place.
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (innerWidth < 720) return; // the static line reads better on phones
+  var wrap = document.getElementById("vidwrap");
+  if (!wrap || !document.createElement("video").canPlayType) return;
+  var mq = matchMedia("(prefers-color-scheme: dark)");
+  var v = document.createElement("video");
+  v.muted = true;
+  v.loop = true;
+  v.autoplay = true;
+  v.playsInline = true;
+  v.setAttribute("playsinline", "");
+  v.setAttribute("aria-label", "Animated: a design request routes through the primary job, surface and concern overlays, into a state-complete artifact, validation, and handoff.");
+  v.addEventListener("loadeddata", function () { document.body.classList.add("has-vid"); });
+  v.addEventListener("error", function () { wrap.remove(); });
+  function apply() {
+    var theme = document.documentElement.getAttribute("data-theme") || (mq.matches ? "dark" : "light");
+    v.poster = "assets/hero-" + theme + "-poster.png";
+    v.src = "assets/hero-" + theme + ".mp4";
+    v.play && v.play().catch(function () {});
+  }
+  apply();
+  mq.addEventListener && mq.addEventListener("change", apply);
+  wrap.appendChild(v);
+})();
+</script>
+</body>
+</html>

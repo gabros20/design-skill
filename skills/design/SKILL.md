@@ -4,7 +4,8 @@ description: >-
   Design digital-product experiences across websites, web apps, iOS, and Android. Use for UX
   research, user journeys, information architecture, interaction and state design, visual direction,
   typography, color, layout, motion, content design, accessibility, prototypes, design systems,
-  design critique, and frontend handoff. Do not use for production frontend implementation, backend
+  design critique of rendered work on any surface, and frontend handoff. Do not use for production
+  frontend implementation, backend
   or system architecture, marketing or SEO strategy, or release verification unless the request also
   requires experience design.
 ---

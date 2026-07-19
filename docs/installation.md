@@ -5,8 +5,11 @@ Install the `design` runtime pack from the independently versioned
 
 ## Prerequisites
 
-- An Agent Skills-compatible client.
-- TODO: Add only real skill-specific tools, credentials, or runtime requirements.
+- An Agent Skills-compatible client (Codex, Claude Code, or any cross-agent host).
+- No external CLI is required to route, research, structure, or specify a design.
+- Critique and art review of a *rendered* build require a runnable page, screenshot capability, and
+  a model that can inspect images. Without rendered evidence, the skill labels its review
+  "code-level pass, not an art review" rather than signing off on appearance.
 
 ## Install with skills.sh
 
@@ -53,6 +56,12 @@ For Codex, verify the installed files directly:
 test -f "${CODEX_HOME:-$HOME/.codex}/skills/design/SKILL.md"
 ```
 
+Then run a small route-specific request, for example:
+
+```text
+Use $design to map the checkout flow for this store, every edge and empty state.
+```
+
 ## Update
 
 ```bash
@@ -61,8 +70,8 @@ git pull --ff-only
 ./install.sh codex
 ```
 
-Review `CHANGELOG.md` and GitHub Releases for version history. Version metadata intentionally stays
-outside runtime `SKILL.md`.
+Review [CHANGELOG.md](../CHANGELOG.md) and GitHub Releases for version history. Version metadata
+intentionally stays outside runtime `SKILL.md`.
 
 ## Uninstall
 

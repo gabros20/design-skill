@@ -1,0 +1,72 @@
+# design
+
+> Experience design for websites, web apps, iOS, and Android. Installs as an agent skill.
+
+design turns "design this" into a controlled process instead of an improvised one. It covers the full
+experience-design surface — UX research, user journeys, information architecture, interaction and state
+design, visual direction, typography, color, layout, motion, imagery, content design, accessibility,
+prototypes, design systems, critique, and frontend handoff — as design artifacts and a frontend-ready
+handoff, never production code passed off as production. The SKILL.md is a router: name the register,
+route to the one primary job that fits, add at most one surface overlay and only the concern overlays
+that matter, read those references fully, then produce a state-complete artifact with exact tokens.
+Claude Code is the reference host; it's plain Agent Skills format (agentskills.io), so it installs on
+Codex, Cursor, Antigravity, opencode, Grok Build, and Hermes too.
+
+## Install
+
+- npm/skills.sh: `npx skills add gabros20/design-skill`
+- Clone + installer (per-host targets: claude | codex | cursor | antigravity | opencode | grok | hermes | agents | all): `git clone https://github.com/gabros20/design-skill && cd design-skill && ./install.sh codex`
+- Manual copy: `cp -R skills/design ~/.claude/skills/design`
+
+## Docs
+
+- [README.md](https://raw.githubusercontent.com/gabros20/design-skill/main/README.md): overview, install, the routing model, repo map.
+- [skills/design/SKILL.md](https://raw.githubusercontent.com/gabros20/design-skill/main/skills/design/SKILL.md): the runtime router, universal invariants, artifact contract, and completion rules.
+- [docs/installation.md](https://raw.githubusercontent.com/gabros20/design-skill/main/docs/installation.md): step-by-step installation and verification.
+- [docs/usage.md](https://raw.githubusercontent.com/gabros20/design-skill/main/docs/usage.md): the routing model, activation boundary, and outputs.
+- [docs/recipes.md](https://raw.githubusercontent.com/gabros20/design-skill/main/docs/recipes.md): representative starting prompts for common design jobs.
+
+## Reference inventory (`skills/design/references/`)
+
+Primary jobs — research & structure:
+
+- `research.md` — plan or synthesize UX research (interviews, surveys, usability, design-DNA).
+- `journeys.md` — map a flow, onboarding, wizard, checkout, or end-to-end journey.
+- `information-architecture.md` — model objects, sitemap, navigation, naming, findability.
+- `interaction.md` — define component behavior and the canonical 8-state model.
+
+Primary jobs — visual craft:
+
+- `visual-direction.md` — set the point of view; fix a result that reads generic or templated.
+- `typography.md` — choose and set type — scale, pairing, measure, display.
+- `layout-composition.md` — lay out a screen — grid, spacing, hierarchy, density, elevation.
+- `color.md` — build an OKLCH palette, neutral ramp, accent, dark mode; check contrast.
+- `imagery-depth-decoration.md` — add depth, materials, imagery, or decoration.
+- `motion.md` — choose motion values and per-moment reduced-motion behavior.
+
+Primary jobs — systems & delivery:
+
+- `prototyping.md` — build or evaluate a prototype; compare design options.
+- `design-systems.md` — create or extend a design system, tokens, or component contracts.
+- `critique.md` — judge or QA a rendered design against its intent — a scored review.
+- `handoff.md` — prepare a frontend-ready implementation handoff.
+
+Surface overlays:
+
+- `surface-website.md` — marketing/brand/landing/portfolio sites (design IS the product).
+- `surface-webapp.md` — dashboards, admin, settings, data tools (design SERVES the product).
+- `surface-ios.md` — native iOS / iPadOS (HIG chrome, Dynamic Type, gestures, iPad adaptivity).
+- `surface-android.md` — native Android (Material 3 tonal color, type scale, window classes).
+
+Concern overlays:
+
+- `accessibility.md` — contrast, target size, focus, zoom, reduced-motion floors; what must be announced.
+- `content.md` — labels, microcopy, errors, empty states, notifications, voice/tone, i18n length.
+
+Sources:
+
+- `SOURCES.md` — trace a technique to its source.
+
+## Optional
+
+- [Visual guide](https://design-skill.vercel.app): the routing model, the laws, and the full reference map on one page.
