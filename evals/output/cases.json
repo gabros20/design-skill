@@ -1,10 +1,48 @@
 [
   {
-    "id": "primary-artifact",
-    "prompt": "TODO: add a representative execution request.",
+    "id": "coded-prototype-classification",
+    "prompt": "Prototype a pricing page in code so we can click through it.",
     "assertions": [
-      "TODO: name an observable artifact requirement",
-      "TODO: name an objective validation or completion requirement"
+      "The coded artifact is explicitly labeled disposable, design-reference, or production-candidate.",
+      "It is not presented as production-ready; the note that engineering, accessibility, and quality review are still required is present.",
+      "It states the register and a one-line design read."
+    ]
+  },
+  {
+    "id": "critique-contract",
+    "prompt": "Critique this rendered dashboard screenshot.",
+    "assertions": [
+      "Findings are presented as a Before/After/Why table.",
+      "Each finding carries a severity rank.",
+      "The review closes with a binary go/no-go verdict.",
+      "Any appearance claim is backed by the rendered evidence; if no build was viewed it states 'code-level pass, not an art review' instead of signing off on appearance."
+    ]
+  },
+  {
+    "id": "color-system-contract",
+    "prompt": "Build a color system for light and dark mode.",
+    "assertions": [
+      "Tokens are expressed as exact OKLCH values, not adjectives.",
+      "Contrast is verified against the stated floors and the result is reported.",
+      "A dark-mode ramp is included alongside the light ramp."
+    ]
+  },
+  {
+    "id": "interaction-state-completeness",
+    "prompt": "Design the states for a search input with async results.",
+    "assertions": [
+      "The spec covers the full state set: default, hover, focus, active, disabled, loading, error, success, plus empty for every data region.",
+      "Real content at realistic lengths is used — the longest realistic string, the empty case, and the overflow case.",
+      "Exact values are specified rather than adjectives."
+    ]
+  },
+  {
+    "id": "handoff-package-contract",
+    "prompt": "Hand off the approved onboarding screens to frontend.",
+    "assertions": [
+      "A per-screen spec plus tokens and a motion plan is provided.",
+      "A handoff.yaml companion is included.",
+      "Artifact paths, owners, and constraints are recorded without duplicating the full artifact."
     ]
   }
 ]

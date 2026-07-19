@@ -1,12 +1,102 @@
 [
   {
-    "id": "positive-explicit",
-    "prompt": "Use $design to TODO: add a realistic in-scope request.",
+    "id": "trigger-onboarding-states",
+    "prompt": "Design an onboarding flow for a budgeting app, with every state from empty to error.",
     "should_trigger": true
   },
   {
-    "id": "negative-near-miss",
-    "prompt": "TODO: add a realistic request owned by the closest neighboring skill.",
+    "id": "trigger-fix-generic-direction",
+    "prompt": "Our dashboard looks generic and templated. Set a visual direction that makes it feel distinctive.",
+    "should_trigger": true
+  },
+  {
+    "id": "trigger-color-system",
+    "prompt": "Build an OKLCH color system with a neutral ramp, an accent, and a dark mode, and check the contrast.",
+    "should_trigger": true
+  },
+  {
+    "id": "trigger-coded-prototype",
+    "prompt": "Prototype a clearer mobile checkout and give me something clickable I can test with five users.",
+    "should_trigger": true
+  },
+  {
+    "id": "trigger-critique-rendered",
+    "prompt": "Do a design critique of this rendered landing page and rank the problems by severity.",
+    "should_trigger": true
+  },
+  {
+    "id": "trigger-information-architecture",
+    "prompt": "Map the information architecture for our settings area — the objects, naming, and navigation model.",
+    "should_trigger": true
+  },
+  {
+    "id": "trigger-typography",
+    "prompt": "Pick a type scale and a font pairing for a fintech marketing site.",
+    "should_trigger": true
+  },
+  {
+    "id": "trigger-accessibility-audit",
+    "prompt": "Audit this screen for accessibility — contrast, target sizes, focus order, and reduced motion.",
+    "should_trigger": true
+  },
+  {
+    "id": "trigger-interaction-states",
+    "prompt": "Design the interaction spec for a multi-select data table, including its loading and error states.",
+    "should_trigger": true
+  },
+  {
+    "id": "trigger-design-system",
+    "prompt": "Create a design system with layered tokens and component contracts for our web app.",
+    "should_trigger": true
+  },
+  {
+    "id": "negative-production-frontend",
+    "prompt": "Implement the approved onboarding screens in our production React app.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-backend-architecture",
+    "prompt": "Choose a backend architecture for storing onboarding progress and pick the database.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-seo-strategy",
+    "prompt": "Write an SEO and keyword strategy to grow organic traffic to our marketing site.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-release-verification",
+    "prompt": "Run release verification and sign off that this build is ready to ship to production.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-fix-ci-build",
+    "prompt": "Fix the failing CI pipeline and the TypeScript build errors in our frontend repo.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-product-metrics",
+    "prompt": "Define our north-star metric and set up the analytics dashboards to track activation.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-query-optimization",
+    "prompt": "Optimize our Postgres queries — some dashboard endpoints are timing out.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-ad-copy",
+    "prompt": "Write the ad copy and the email campaign for our Black Friday launch.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-refactor-component",
+    "prompt": "Refactor the checkout component to use our new state-management library.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-infra-cdn",
+    "prompt": "Provision the CDN and configure caching headers for our image assets.",
     "should_trigger": false
   }
 ]

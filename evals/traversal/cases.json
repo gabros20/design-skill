@@ -1,8 +1,100 @@
 [
   {
-    "id": "primary-route",
-    "prompt": "TODO: add a request that selects one reference.",
-    "expected_references": ["references/example.md"],
-    "forbidden_references": []
+    "id": "bundle-accessible-ios-prototype",
+    "prompt": "Create an accessible iOS onboarding prototype.",
+    "expected_references": [
+      "references/prototyping.md",
+      "references/surface-ios.md",
+      "references/accessibility.md"
+    ],
+    "forbidden_references": [
+      "references/surface-android.md",
+      "references/surface-website.md",
+      "references/design-systems.md"
+    ]
+  },
+  {
+    "id": "color-system-dark-mode",
+    "prompt": "Build an OKLCH palette with a neutral ramp, an accent, and a dark mode, and verify contrast.",
+    "expected_references": [
+      "references/color.md"
+    ],
+    "forbidden_references": [
+      "references/typography.md",
+      "references/surface-ios.md",
+      "references/surface-android.md"
+    ]
+  },
+  {
+    "id": "critique-not-direction",
+    "prompt": "Do a scored design critique of this rendered dashboard and rank the issues.",
+    "expected_references": [
+      "references/critique.md"
+    ],
+    "forbidden_references": [
+      "references/visual-direction.md",
+      "references/prototyping.md"
+    ]
+  },
+  {
+    "id": "visual-direction-landing",
+    "prompt": "Set the visual direction for a marketing landing page that should read premium and not templated.",
+    "expected_references": [
+      "references/visual-direction.md",
+      "references/surface-website.md"
+    ],
+    "forbidden_references": [
+      "references/surface-webapp.md",
+      "references/surface-ios.md",
+      "references/critique.md"
+    ]
+  },
+  {
+    "id": "information-architecture-docs",
+    "prompt": "Design the information architecture — objects, sitemap, and navigation — for a documentation site.",
+    "expected_references": [
+      "references/information-architecture.md"
+    ],
+    "forbidden_references": [
+      "references/color.md",
+      "references/motion.md",
+      "references/surface-android.md"
+    ]
+  },
+  {
+    "id": "frontend-handoff",
+    "prompt": "Prepare a frontend handoff for the approved checkout screens.",
+    "expected_references": [
+      "references/handoff.md"
+    ],
+    "forbidden_references": [
+      "references/research.md",
+      "references/surface-android.md"
+    ]
+  },
+  {
+    "id": "webapp-data-table-states",
+    "prompt": "Design the states for a multi-select data table in our admin web app.",
+    "expected_references": [
+      "references/interaction.md",
+      "references/surface-webapp.md"
+    ],
+    "forbidden_references": [
+      "references/surface-ios.md",
+      "references/surface-android.md",
+      "references/surface-website.md"
+    ]
+  },
+  {
+    "id": "motion-tokens-reduced",
+    "prompt": "Choose motion durations and easing for a menu, with a reduced-motion spec.",
+    "expected_references": [
+      "references/motion.md"
+    ],
+    "forbidden_references": [
+      "references/surface-ios.md",
+      "references/surface-android.md",
+      "references/research.md"
+    ]
   }
 ]

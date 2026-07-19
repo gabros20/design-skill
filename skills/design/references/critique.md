@@ -107,7 +107,7 @@ A repeatable go/no-go rubric, run alongside the taste review (agreement = high c
   two. (Formal evaluation: 3–5 evaluators find ~75% of problems; run two independent passes, take
   the median on disagreement.)
 - **Cognitive load.** Classify each demand intrinsic (keep/structure) / extraneous (cut) / germane
-  (keep). **Working memory ≤4 items at once** (Cowan 2001, revising Miller 7±2); the practical caps
+  (keep). **Working memory ≤4 items at once** (Cowan 2001; the Miller 7±2 correction is in interaction.md); the practical caps
   (nav ≤5, hierarchy ≤3 tiers, form group ≤4, ≤3 pricing tiers, ≤4 dashboard metrics) live in
   interaction.md's Laws — 8+ = overloaded. Named failure: "The Wall of Options."
 - **Five test personas.** Power user (fast, keyboardable) · first-timer (is the next step obvious) ·
@@ -138,15 +138,8 @@ origin & physical correctness (no `scale(0)`; popovers from their trigger; modal
 interruptible · GPU-only properties · reduced-motion gentler-not-zero + hover gating · asymmetric
 enter/exit · cohesion.
 
-Flag on sight: `transition: all` · `scale(0)`/pure-fade entrances · `ease-in` on deliberate
-animation · animation on a 100+/day action · UI motion >300ms with no reason ·
-`transform-origin: center` on a trigger-anchored popover · animating layout props · missing
-reduced-motion.
-
-Remedial preference, earliest move first: (1) delete (2) reduce (3) fix easing (4) fix
-origin/physicality (5) make interruptible (6) move to GPU (7) asymmetric timing (8) polish
-(9) accessibility & cohesion. "When unsure whether motion feels right, the strongest move is often
-to delete it."
+Score each against these; the flag list and remedial preference order live in motion.md — apply them
+to name the violations and to sequence the fixes.
 
 ## Output contract
 

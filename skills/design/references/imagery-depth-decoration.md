@@ -40,8 +40,9 @@ grain and `backdrop-filter` glass leak across sections.
 from **one light source** (top, so vertical offset ≈ 2× horizontal). Elevation ramp = offset↑ blur↑
 **opacity↓**; bake as `--e0…--e4`. **Tint the shadow toward the background hue, never pure `#000`**
 (pure black reads dead grey). On dark themes shadows vanish — dark-mode surfaces
-elevate by **raising L a few percent per level**, each jump barely visible in isolation; worked ladder:
-base → +7% → +9% → +12% absolute offsets from base (≈2–7% per step), plus an inset rim-light + border. Don't animate layered shadows on large elements.
+elevate by **raising L per level** (not by shadow), each jump barely visible in isolation; worked
+four-surface ladder, each value an absolute L offset from the base surface: base +0 → +7% → +9% →
++12%, plus an inset rim-light + border. Don't animate layered shadows on large elements.
 
 **Glassmorphism.** `backdrop-filter: blur(8–15px) saturate(160%)` (saturate revives washed color); bg
 opacity 8–30% (dark UI 6–12%); a 1px low-opacity white border is the edge; an inset top highlight is

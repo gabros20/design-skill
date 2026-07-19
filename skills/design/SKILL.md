@@ -75,7 +75,7 @@ Trace a technique to its source → [Sources](references/SOURCES.md).
 Read these together — the router encodes the pairing so no lateral hop is required:
 
 - Native mobile prototype → [Prototyping](references/prototyping.md) + [iOS](references/surface-ios.md) (or [Android](references/surface-android.md)).
-- A new surface from scratch → [Visual direction](references/visual-direction.md) first, then the craft leaves it points to, plus the one surface overlay.
+- A new surface from scratch → [Visual direction](references/visual-direction.md) first, then its craft leaves — [Typography](references/typography.md), [Layout & composition](references/layout-composition.md), [Color](references/color.md), [Imagery, depth, decoration](references/imagery-depth-decoration.md), [Motion](references/motion.md) — plus the one surface overlay.
 - A design system for a specific surface → [Design systems](references/design-systems.md) + that surface overlay.
 - Any flow, screen, or system where accessibility is explicit → the primary reference + [Accessibility](references/accessibility.md).
 

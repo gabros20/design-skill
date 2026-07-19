@@ -1,8 +1,30 @@
 [
   {
-    "id": "representative-ablation",
-    "prompt": "TODO: add a request that exercises a load-bearing instruction.",
+    "id": "ablation-coded-prototype-maturity",
+    "prompt": "Prototype a signup flow in code so the team can click through it.",
     "variants": ["no-skill", "current", "compressed-candidate"],
-    "preserve": ["task success", "safety", "artifact completeness", "required-reference recall"]
+    "preserve": ["task success", "safety", "artifact completeness", "required-reference recall"],
+    "load_bearing": "The maturity-label invariant — a coded artifact must be labeled disposable / design-reference / production-candidate and must not be presented as production-ready without review."
+  },
+  {
+    "id": "ablation-dark-mode-contrast",
+    "prompt": "Build a dark-mode OKLCH palette and check the contrast.",
+    "variants": ["no-skill", "current", "compressed-candidate"],
+    "preserve": ["task success", "safety", "artifact completeness", "required-reference recall"],
+    "load_bearing": "Exact OKLCH values plus contrast-floor verification rather than adjective-level color guidance."
+  },
+  {
+    "id": "ablation-accessible-ios-prototype-routing",
+    "prompt": "Create an accessible iOS onboarding prototype.",
+    "variants": ["no-skill", "current", "compressed-candidate"],
+    "preserve": ["task success", "safety", "artifact completeness", "required-reference recall"],
+    "load_bearing": "Bundle routing recall — prototyping + surface-ios + accessibility are read while surface-android is not."
+  },
+  {
+    "id": "ablation-critique-rendered-evidence",
+    "prompt": "Critique this landing page.",
+    "variants": ["no-skill", "current", "compressed-candidate"],
+    "preserve": ["task success", "safety", "artifact completeness", "required-reference recall"],
+    "load_bearing": "The visual-verdict safety rule (rendered evidence required, else 'code-level pass, not an art review') plus Before/After/Why and a binary verdict."
   }
 ]
