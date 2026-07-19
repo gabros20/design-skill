@@ -1,7 +1,7 @@
 {
   "name": "design-skill",
-  "version": "1.0.0",
-  "description": "Experience design for websites, web apps, iOS, and Android",
+  "version": "0.1.0",
+  "description": "Experience design across websites, web apps, iOS, and Android — research, journeys, IA, interaction and state design, visual craft, content, accessibility, prototypes, design systems, critique, and frontend handoff.",
   "author": {
     "name": "gabros20",
     "url": "https://github.com/gabros20"
@@ -9,17 +9,31 @@
   "homepage": "https://design-skill.vercel.app",
   "repository": "https://github.com/gabros20/design-skill",
   "license": "MIT",
-  "keywords": ["agent-skill", "design"],
+  "keywords": [
+    "agent-skill",
+    "design",
+    "ux",
+    "ui",
+    "interaction-design",
+    "information-architecture",
+    "design-systems",
+    "prototyping",
+    "accessibility",
+    "content-design",
+    "handoff"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Experience Design",
     "shortDescription": "Experience design for websites, web apps, iOS, and Android",
-    "longDescription": "Experience design for websites, web apps, iOS, and Android",
+    "longDescription": "Design digital-product experiences end to end — UX research, user journeys, information architecture, interaction and state design, visual direction, typography, color, layout, motion, content design, accessibility, prototypes, design systems, design critique, and frontend handoff — across websites, web apps, iOS, and Android.",
     "developerName": "gabros20",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": [
-      "Use $design to TODO: provide one short starter request."
+      "Use $design to art-direct a landing page for a developer tool and set its visual direction.",
+      "Use $design to design an accessible onboarding flow with every state for an iOS app.",
+      "Use $design to build an OKLCH color system and tokens for a dashboard in light and dark mode."
     ],
     "brandColor": "#7c3aed"
   }

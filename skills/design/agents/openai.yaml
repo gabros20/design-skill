@@ -1,6 +1,6 @@
 interface:
   display_name: "Experience Design"
   short_description: "Experience design for websites, web apps, iOS, and Android"
-  default_prompt: "Use $design to TODO: provide one short, realistic starting request."
+  default_prompt: "Use $design to design an onboarding flow and its states for a mobile app."
 policy:
   allow_implicit_invocation: true
