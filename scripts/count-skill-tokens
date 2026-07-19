@@ -10,7 +10,7 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 skill_dirs = sorted(path for path in (root / "skills").iterdir() if path.is_dir())
-if len(skill_dirs) != 1 or skill_dirs[0].name == "__SKILL_NAME__":
+if len(skill_dirs) != 1 or skill_dirs[0].name == "design":
     raise SystemExit("count-skill-tokens: instantiate exactly one skill first")
 
 skill = skill_dirs[0]
