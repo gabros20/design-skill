@@ -77,7 +77,7 @@ Every repeated element (card, row, tile, KPI, result) is a **fixed slot model**:
 ## Elevation and z-index
 
 - **Elevation scale**, light and diffuse (heavy black shadows read dated): none / xs `0 1px 2px /.06` / sm `0 1px 3px /.10, 0 1px 2px /.06` / md `0 4px 6px /.08, 0 2px 4px /.06` / lg `0 10px 15px /.08` / xl `0 20px 25px /.08`. One light source (vertical offset = 2× horizontal, light from top-left); on the ramp, offset↑ blur↑ **opacity↓**.
-- **Tint the shadow toward the background hue, never pure `#000`** (pure black reads as dead grey). White cards pair a shadow with a 1px border 1.5–2× darker than the shadow tone. On dark themes shadows vanish → use an inset rim-light + border instead. Product surfaces can encode elevation as **lightness steps** (dark base → +7% → +9% → +12%) rather than shadow.
+- **Tint the shadow toward the background hue, never pure `#000`** (pure black reads as dead grey). White cards pair a shadow with a 1px border 1.5–2× darker than the shadow tone. On dark themes shadows vanish → use an inset rim-light + border instead. Product surfaces can encode elevation as **lighter surfaces** rather than shadow (ladder in imagery-depth-decoration.md).
 - **Named z-index scale, never `9999`**: base 0 / dropdown 100 / sticky 200 / header 300 / modal 400 / toast 500 / tooltip 600.
 - **Sticky over fixed** — prefer section-scoped `sticky` to globally `fixed`; header 48–64px, compensate with `body { padding-top: var(--header-height) }`; bottom bar `padding-bottom: env(safe-area-inset-bottom)`. Max simultaneous fixed layers: header + one bottom element.
 

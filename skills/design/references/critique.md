@@ -107,13 +107,13 @@ A repeatable go/no-go rubric, run alongside the taste review (agreement = high c
   two. (Formal evaluation: 3–5 evaluators find ~75% of problems; run two independent passes, take
   the median on disagreement.)
 - **Cognitive load.** Classify each demand intrinsic (keep/structure) / extraneous (cut) / germane
-  (keep). **Working memory ≤4 items at once** (Cowan 2001, revising Miller 7±2): nav ≤5, hierarchy
-  ≤3 tiers, a form group ≤4 fields, ≤3 pricing tiers, ≤4 dashboard metrics; 8+ = overloaded. Named
-  failure: "The Wall of Options."
+  (keep). **Working memory ≤4 items at once** (Cowan 2001, revising Miller 7±2); the practical caps
+  (nav ≤5, hierarchy ≤3 tiers, form group ≤4, ≤3 pricing tiers, ≤4 dashboard metrics) live in
+  interaction.md's Laws — 8+ = overloaded. Named failure: "The Wall of Options."
 - **Five test personas.** Power user (fast, keyboardable) · first-timer (is the next step obvious) ·
   accessibility user (focus order, contrast, labels, reduced motion) · stress-tester (long strings,
   empty/overflow/error) · distracted-mobile (one thumb, sunlight, half-attention).
-- **Findability:** first-click success **>65%** = good findability.
+- **Findability:** first-click success **>65%** = good findability (metric defined in research.md).
 - **Close with a peak-end read:** the emotional high point and the last thing the user feels shape
   memory disproportionately.
 
@@ -160,10 +160,9 @@ to delete it."
   because [reason]."
 - **Read-only audit variant:** group by severity, don't edit; per finding `[severity] Tell —
   file:line / why / →fix`, then `Summary — N critical · M major · K minor` and a `Verdict` line.
-- **High-stakes (Jobs) verdict:** steps-to-value ≤3; audit the "back of the fence" — unseen surfaces
-  (404, error copy, settings, loading, emails, invoices, cancel flow) to hero-screen quality; review
-  the worst touchpoint, not the happy path; the verdict is binary — insanely great or not done, no
-  "pretty good." Demo on the target device at target data scale.
+- **High-stakes (Jobs) verdict:** run journeys.md's end-to-end touchpoint audit (back of the fence,
+  worst touchpoint, steps-to-value ≤3) as the review lens; the verdict is binary — insanely great or
+  not done, no "pretty good." Demo on the target device at target data scale.
 
 ## Failure modes and routing
 

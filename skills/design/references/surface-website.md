@@ -35,7 +35,7 @@ Produces: macrostructure choice, section-by-section composition, dial setting, a
 
 ## The premium↔information dial
 
-A niche site must be **premium** (noticed, remembered, trusted — signaled by what you leave OUT: whitespace, restraint, one idea) AND deliver **information + proof** (signaled by structured density: scannable IA, credentials/E-E-A-T, case results, social proof by the CTA).
+A niche site must be **premium** (noticed, remembered, trusted — signaled by what you leave OUT: whitespace, restraint, one idea) AND deliver **information + proof** (signaled by structured density: scannable IA, credentials/proof, case results, social proof by the CTA).
 
 **Don't blend — sequence:** restrained emotional hero → progressively denser proof as the visitor self-qualifies → low-friction action. **Set the dial by stakes and emotion, not taste:** higher money/health/legal risk → proof leads, register conservative; lifestyle/prestige → premium can lead; proof always carries equal final weight. Never let aesthetics bury the phone number, the credentials, or the next step.
 

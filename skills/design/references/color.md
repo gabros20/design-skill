@@ -76,9 +76,10 @@ facts only) and meodai/color-expert (CC BY 4.0). Procedural token functions live
 
 Add **0.005–0.015 chroma toward the brand hue** for greys — warm accent → warm neutrals; never
 reflex to default-warm or default-cool. The single most common AI color tell is the warm-neutral
-band **OKLCH L 0.84–0.97, C < 0.06, hue 40–100** (reads cream/sand/paper regardless of the token
-name `--paper/--sand/--linen/…`). Don't reflex to hue 250 (blue) or 60 (orange) either — the dominant
-defaults. The full anti-default catalog is in visual-direction.md; do not restate it here.
+cream/sand/paper band (a specific OKLCH range catalogued in visual-direction.md), which reads cream
+regardless of the token name `--paper/--sand/--linen/…`. Don't reflex to hue 250 (blue) or 60
+(orange) either — the dominant defaults. The full anti-default catalog is in visual-direction.md; do
+not restate it here.
 
 ## Color-strategy commitment axis
 
@@ -115,19 +116,19 @@ neutral gray beats a misused semantic.
 
 Dark mode is **a second verified palette, not an algorithmic flip** — contrast that passes on light
 routinely fails on dark. Recipe: paper L 0.12–0.18, ink 0.92–0.96; **build surface elevation from
-lightness steps, not shadow** (each level ~+3% L; shadows barely read on dark); desaturate the accent
+lighter surfaces, not shadow** (shadows barely read on dark; ladder in imagery-depth-decoration.md); desaturate the accent
 0.02–0.04 and raise its L 5–10%; drop body font weight ~one notch (light-on-dark reads heavier from
 halation); **never switch hue between modes.** Redefine only the semantic token layer for dark.
 
 ## Contrast and gamut
 
-Full numeric floors live in accessibility.md. The design-level math to carry here:
+Full numeric floors — the APCA/WCAG pass table and the scarcity stat — live in accessibility.md. The
+design-level math to carry here:
 
 - **APCA is the perceptually accurate default and pairs naturally with OKLCH; WCAG 2 is still required
-  for formal conformance claims.** APCA passes (Lc, absolute value): body ~75, medium 60, large 45, UI
-  30. Bridge to WCAG 2: Lc 58 ≈ 3:1, Lc 72 ≈ 4.5:1, Lc 85 ≈ 7:1. Feed the lighter color as the
-  "background" input. Accessible pairs are scarce — only ~12% of random color pairs meet WCAG 4.5:1 —
-  so treat contrast as a real constraint, not a checkbox.
+  for formal conformance claims.** Feed the lighter color as the "background" input, and fix any failing
+  pair by moving L only (chroma has negligible contrast effect; hold C and H). Accessible pairs are a
+  scarce, constrained search — see accessibility.md for the floors — not a checkbox.
 - **Gamut:** the most common mistake is requesting chroma the gamut can't show, which clips to a
   duller, hue-shifted color. **Reduce chroma, holding L and H** (clamp toward the boundary). CSS
   gamut-maps `oklch()` automatically; a naive JS oklch→hex only truncates channels. Ship an sRGB base

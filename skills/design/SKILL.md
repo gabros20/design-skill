@@ -49,7 +49,7 @@ them automatically unless the user requested a composition workflow.
 | Choose motion values or decide whether to animate | [Motion](references/motion.md) | Duration/easing/spring tokens and a per-moment reduced-motion spec |
 | Build or evaluate a prototype, or compare design options | [Prototyping](references/prototyping.md) | Classified prototype (disposable / design-reference / production-candidate) + test plan |
 | Create or extend a design system, tokens, or component contracts | [Design systems](references/design-systems.md) | Layered token set, component specs, DESIGN.md/PRODUCT.md contract |
-| Review, critique, or QA a rendered design | [Critique](references/critique.md) | Severity-ranked Before/After/Why punch-list and a binary verdict |
+| Judge or QA a rendered design against its intent — a scored review, not setting direction | [Critique](references/critique.md) | Severity-ranked Before/After/Why punch-list and a binary verdict |
 | Prepare an implementation handoff to frontend | [Handoff](references/handoff.md) | Frontend-ready per-screen spec, tokens, motion plan, handoff.yaml |
 
 ### Surface overlay

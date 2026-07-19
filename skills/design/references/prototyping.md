@@ -63,7 +63,7 @@ If an inline visual-render tool exists, show over describe at three moments: pro
 
 ## Definition of done
 
-Real content (no lorem), semantic-first markup, deliberate spacing, and realistic state coverage: default, hover, focus-visible, active, disabled, loading, error, success, empty, overflow, long-and-short, first-run. A coherent icon set. Verify image URLs before referencing them. Respect the build pipeline (edit source, run the build; never write into `dist/`). Reduced-motion respected and keyboard focus visible (floors in accessibility.md).
+Real content (no lorem), semantic-first markup, deliberate spacing, and realistic state coverage — interaction.md's 8-state model plus empty, extended for prototypes with overflow, long-and-short, and first-run. A coherent icon set. Verify image URLs before referencing them. Respect the build pipeline (edit source, run the build; never write into `dist/`). Reduced-motion respected and keyboard focus visible (floors in accessibility.md).
 
 ## Anti-slop test (two altitudes)
 

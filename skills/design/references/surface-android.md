@@ -61,10 +61,11 @@ Min 12sp body, labels down to 11sp. Test at 200% font scale. Component usage: bu
 
 ## Layout and window classes
 
-Use window size classes, not raw pixels — margins / gutters / columns:
+Use window size classes, not raw pixels — breakpoints **600 / 840 / 1200 / 1600dp** (margins / gutters / columns):
 - **Compact < 600dp** (phone) — 16dp / 8dp / 4 col.
 - **Medium 600–839dp** (tablet portrait/foldable) — 24dp / 16dp / 8 col.
-- **Expanded 840dp+** (tablet landscape/desktop) — 24dp / 24dp / 12 col.
+- **Expanded 840–1199dp** (tablet landscape/desktop) — 24dp / 24dp / 12 col.
+- **Large 1200–1599dp / Extra-large 1600dp+** — cap content, prefer list-detail/panes over spanning.
 
 Max content width ~840dp on expanded (or list-detail); don't span full width. **Edge-to-edge is enforced on Android 15+** (`enableEdgeToEdge()`; `Scaffold` handles insets). Foldables: `ListDetailPaneScaffold` / `SupportingPaneScaffold`; never place critical content across the hinge. Base spacing = 4dp grid.
 
@@ -88,5 +89,5 @@ Button emphasis order: **Filled > Filled Tonal > Elevated > Outlined > Text.** *
 
 - **Min touch target 48×48dp** (Material components handle it by default; `IconButton` is already 48dp) — pad, don't shrink. `contentDescription` on every interactive element (`null` if decorative), describing the action not the appearance.
 - **System gesture insets:** never place interactive elements in the **bottom 20dp / left+right 24dp** edges (`WindowInsets.systemGestures`). All tappables get a Material ripple; swipe-to-dismiss must be undoable (snackbar) or confirmed.
-- **Motion:** use the canon in motion.md for defaults. M3-specific tokens if you follow Material motion: emphasized easing `cubic-bezier(0.2,0,0,1)`; a 16-step duration ladder 50→1000ms (Short 50–200, Medium 250–400, Long 450–600). Enters use Emphasized Decelerate ~400ms; permanent exits Emphasized Accelerate ~200ms.
+- **Motion:** take all durations from the canon in motion.md — do not restate an M3 duration ladder here. If you follow Material motion, its one platform-specific curve still applies: **Emphasized** easing `cubic-bezier(0.2,0,0,1)` for the standard on-screen path (enters decelerate, permanent exits accelerate), bound to motion.md's duration scale.
 - **Notifications** importance: HIGH (sound + heads-up: messages/calls) · DEFAULT (sound) · LOW (no sound) · MIN (silent). One channel per type. **Photo Picker (Android 13+)** needs no permission — use it instead of media-read permissions. Widgets via Glance + `GlanceTheme` dynamic color.
