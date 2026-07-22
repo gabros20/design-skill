@@ -10,6 +10,25 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ### Added
 - Queue unreleased changes here.
 
+## [0.1.2] — 2026-07-22
+
+Visual-guide (site + Remotion) refresh only. The runtime pack — `SKILL.md` and every reference —
+is unchanged from 0.1.1; nothing about routing, artifacts, or behavior differs for installers.
+
+### Changed
+- Rebuilt the [visual guide](https://designskill.vercel.app) from a lightly-filled template into a
+  tailored page: sections and purpose-built components derived from the skill's own model rather
+  than the scaffold defaults.
+- Rebalanced the site so both registers read as co-equal — a distinctive brand/marketing site
+  ("design IS the product") and a dense product screen ("design SERVES it") — instead of leading
+  UI-first.
+- Refactored the page to represent the full capability surface: an "upstream" section for research,
+  journeys, and information architecture; a flagship "craft" showcase with a type-scale specimen,
+  OKLCH ramp, grid, and motion tokens; the eight-state grid demoted to one compact panel.
+- Replaced the Remotion hero with an eight-beat storyboard sweeping the whole arc
+  (ask → research → register → direction → craft → states → critique → handoff), light and dark,
+  with the craft composition as the poster frame; states are no longer the visual centerpiece.
+
 ## [0.1.1] — 2026-07-19
 
 ### Changed
@@ -37,4 +56,5 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 - Evaluation fixtures across four dimensions — activation, traversal, output, and
   compression-ablation — replacing the placeholder sets.
 
+[0.1.2]: https://github.com/gabros20/design-skill/releases/tag/v0.1.2
 [0.1.0]: https://github.com/gabros20/design-skill/releases/tag/v0.1.0
