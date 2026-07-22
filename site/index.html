@@ -195,6 +195,78 @@
   .files .d{color:var(--muted)}
   .files .hl{color:var(--accent); font-weight:600}
 
+  /* facet-composition diagram — the poster/no-motion fallback for the hero: three lanes,
+     one chip selected per lane, mirroring the video's route scene */
+  .facet{display:flex; flex-direction:column; gap:12px}
+  .flane{display:grid; grid-template-columns:132px 1fr; gap:14px; align-items:center}
+  .flane .fl{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.1em; font-weight:600; font-size:12px; color:var(--muted); text-align:right}
+  .fchips{display:flex; flex-wrap:wrap; gap:7px}
+  .fchips span{font-family:ui-monospace,Menlo,monospace; font-size:12.5px; padding:4px 10px; border-radius:7px; border:1px solid var(--line); background:var(--bg); color:var(--muted)}
+  .fchips span.on{background:var(--accent); color:var(--accent-ink); border-color:var(--accent); font-weight:600}
+
+  /* register split — design IS vs SERVES the product */
+  .split{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:20px}
+  .rcard{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:18px 20px}
+  .rcard.is{border-top:3px solid var(--accent)}
+  .rcard.serves{border-top:3px solid var(--amber)}
+  .rcard .rk{font-family:ui-monospace,Menlo,monospace; font-size:15px; color:var(--ink); display:flex; align-items:baseline; gap:8px; margin-bottom:2px}
+  .rcard.is .rk b{color:var(--accent)} .rcard.serves .rk b{color:var(--amber)}
+  .rcard .rbar{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.08em; font-size:12px; font-weight:600; color:var(--muted); margin:2px 0 12px}
+  .rcard ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:7px}
+  .rcard li{font-size:13.5px; color:var(--muted); line-height:1.5; padding-left:16px; position:relative}
+  .rcard li::before{content:"›"; position:absolute; left:0; color:var(--glyph)}
+  .rcard li b{color:var(--ink); font-weight:600}
+  @media (max-width:640px){ .split{grid-template-columns:1fr} .flane{grid-template-columns:1fr; gap:5px} .flane .fl{text-align:left} }
+
+  /* the eight-state grid — each state rendered, not described */
+  .stategrid{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:20px}
+  .scell{background:var(--panel); border:1px solid var(--line); border-radius:9px; padding:16px 12px 12px; display:flex; flex-direction:column; align-items:center; gap:11px; min-height:96px; justify-content:center}
+  .scell .sn{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.1em; font-size:11px; font-weight:600; color:var(--muted)}
+  .sbtn{font-family:ui-monospace,Menlo,monospace; font-size:13px; font-weight:600; padding:7px 14px; border-radius:8px; border:1.5px solid transparent; white-space:nowrap}
+  .sbtn.def{background:var(--accent); color:var(--accent-ink)}
+  .sbtn.hov{background:color-mix(in srgb,var(--accent) 82%,#000); color:var(--accent-ink)}
+  .sbtn.foc{background:var(--accent); color:var(--accent-ink); outline:2.5px solid var(--accent); outline-offset:2px}
+  .sbtn.act{background:color-mix(in srgb,var(--accent) 68%,#000); color:var(--accent-ink); transform:translateY(1.5px)}
+  .sbtn.dis{background:var(--line); color:var(--muted)}
+  .sbtn.loa{background:var(--accent); color:var(--accent-ink); letter-spacing:2px}
+  .sbtn.err{background:transparent; color:var(--bad); border-color:var(--bad)}
+  .sbtn.suc{background:transparent; color:var(--good); border-color:var(--good)}
+  .sbtn.emp{background:transparent; color:var(--muted); border:1.5px dashed var(--line)}
+  .scell.wide{grid-column:1 / -1; flex-direction:row; gap:14px; justify-content:flex-start; border-left:3px solid var(--accent)}
+  .scell.wide .sn{color:var(--accent)}
+  .scell.wide span.t{font-size:13.5px; color:var(--muted); line-height:1.5; text-align:left}
+  .scell.wide span.t b{color:var(--ink)}
+  @media (max-width:560px){ .stategrid{grid-template-columns:repeat(2,1fr)} .scell.wide{flex-direction:column; align-items:flex-start} }
+
+  /* critique scorecard */
+  .score{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:20px 22px; margin-top:20px}
+  .scorehead{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+  .scorehead .lbl{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.09em; font-size:12.5px; font-weight:600; color:var(--muted); width:120px; flex:none}
+  .bar{flex:1; height:16px; border-radius:8px; background:var(--code-bg); border:1px solid var(--line); overflow:hidden; position:relative}
+  .bar i{display:block; height:100%; width:85%; background:var(--accent); border-radius:8px}
+  .scorehead .num{font-family:ui-monospace,Menlo,monospace; font-size:18px; color:var(--ink); font-variant-numeric:tabular-nums; width:72px; text-align:right; flex:none}
+  .bands{display:flex; gap:0; margin:0 0 18px 134px; font-family:ui-monospace,Menlo,monospace; font-size:10.5px; color:var(--muted); flex-wrap:wrap}
+  .bands span{padding:2px 7px; border-right:1px solid var(--line)}
+  .bands span:last-child{border-right:none} .bands span.hit{color:var(--accent); font-weight:600}
+  .sevrow{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:9px 14px; border:1px solid var(--line); border-radius:8px; margin-top:8px; font-size:13.5px; background:var(--bg)}
+  .sevrow .sk{font-family:ui-monospace,Menlo,monospace; color:var(--muted)} .sevrow .sk b{color:var(--ink)}
+  .sevrow .sv{font-weight:600; color:var(--good); font-family:ui-monospace,Menlo,monospace; font-size:12.5px}
+  .verdict{display:flex; align-items:center; gap:10px; margin-top:16px}
+  .verdict .go{font-family:ui-monospace,Menlo,monospace; font-weight:700; font-size:15px; letter-spacing:.04em; color:var(--accent-ink); background:var(--accent); padding:6px 20px; border-radius:8px}
+  .verdict .vt{font-size:13px; color:var(--muted)}
+
+  /* handoff — the design→frontend seam */
+  .seam{display:grid; grid-template-columns:1fr auto 1fr; gap:16px; align-items:center; margin-top:20px}
+  .yamlcard{background:var(--code-bg); border:1px solid var(--line); border-radius:9px; padding:16px 20px; font-family:ui-monospace,Menlo,monospace; font-size:13px; line-height:1.85; overflow-x:auto; white-space:pre}
+  .yamlcard .k{color:var(--accent)} .yamlcard .s{color:var(--tok-val)} .yamlcard .c{color:var(--muted)}
+  .seamarr{display:flex; flex-direction:column; align-items:center; gap:6px; color:var(--muted)}
+  .seamarr .a{font-family:ui-monospace,Menlo,monospace; font-size:26px; color:var(--accent)}
+  .seamarr .at{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.1em; font-size:11px; font-weight:600; text-align:center; line-height:1.3}
+  .nextskill{background:var(--panel); border:1px solid var(--line); border-radius:9px; padding:16px 20px}
+  .nextskill b{font-family:ui-monospace,Menlo,monospace; font-size:14px; color:var(--ink)}
+  .nextskill p{font-size:13px; color:var(--muted); margin:6px 0 0; max-width:none}
+  @media (max-width:640px){ .seam{grid-template-columns:1fr} .seamarr .a{transform:rotate(90deg)} }
+
   footer{margin-top:72px; padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
   /* iOS 26 chrome tint: Safari samples fixed edge elements; theme-color alone is ignored */
   .edge{position:fixed; left:0; right:0; height:8px; background:var(--bg); z-index:0; pointer-events:none}
@@ -244,8 +316,9 @@
 <span class="p">/design</span> design an onboarding flow for a mobile budgeting app — state-complete, iOS first</div>
   <p class="hosts"><span class="hl">runs on</span><span class="ref">Claude Code</span><span>Codex</span><span>Cursor</span><span>Antigravity</span><span>opencode</span><span>Grok Build</span><span>Hermes</span></p>
   <nav class="secnav" aria-label="page sections">
-    <a href="#arc">how it routes</a><a href="#laws">the laws</a><a href="#pick">pick by job</a>
-    <a href="#refs">reference map</a><a href="#start">start here</a>
+    <a href="#arc">how it routes</a><a href="#register">register</a><a href="#states">the 8 states</a>
+    <a href="#laws">the laws</a><a href="#pick">pick by job</a><a href="#critique">critique gate</a>
+    <a href="#refs">reference map</a><a href="#handoff">handoff</a><a href="#start">start here</a>
   </nav>
 </header>
 
@@ -256,8 +329,14 @@
   direction plus its craft leaves. Every route selects the <b>smallest sufficient</b> reference set —
   one primary job, at most one surface overlay, only the concerns that matter — and nothing unrelated is loaded.</p>
   <div class="vidwrap" id="vidwrap"></div>
-  <div class="poster" role="img" aria-label="Diagram: the routing loop runs from primary job, through an optional surface overlay and concern overlays, to a produced artifact, then validation, then handoff.">
-    <p class="arcline"><b>primary job</b> <span class="ar">→</span> <b>surface overlay</b> <span class="ar">→</span> <b>concerns</b> <span class="ar">→</span> <b>artifact</b> <span class="ar">→</span> <b>validate</b> <span class="ar">→</span> <b>handoff</b></p>
+  <div class="poster" role="img" aria-label="Diagram: routing an example request. Primary job selects interaction out of research, journeys, interaction, visual direction, critique; surface overlay selects iOS out of website, web app, iOS, Android; concerns select accessibility over content. Three of twenty-one references load; the request then becomes a state-complete artifact and a handoff.">
+    <p class="arcline" style="margin:0 0 4px"><b>/design</b> an onboarding flow — iOS, state-complete <span class="ar">→</span> the router composes the <b>smallest sufficient set</b>:</p>
+    <div class="facet">
+      <div class="flane"><div class="fl">primary job</div><div class="fchips"><span>research</span><span>journeys</span><span class="on">interaction</span><span>visual</span><span>critique</span></div></div>
+      <div class="flane"><div class="fl">surface · ≤1</div><div class="fchips"><span>website</span><span>web app</span><span class="on">iOS</span><span>android</span></div></div>
+      <div class="flane"><div class="fl">concerns</div><div class="fchips"><span class="on">accessibility</span><span>content</span></div></div>
+    </div>
+    <p class="arcline" style="margin:2px 0 0; font-size:13px"><b>3 of 21</b> references loaded <span class="ar">→</span> artifact <span class="ar">→</span> validate <span class="ar">→</span> handoff · <span style="color:var(--accent)">nothing unrelated is read</span></p>
   </div>
   <p class="pcap"><b>The skill operates standalone</b> — invoked alone it runs the full loop; given compatible
   upstream artifacts it builds on them without silently overriding established decisions.</p>
@@ -270,6 +349,55 @@
     <div><b><svg class="lu" aria-hidden="true"><use href="#lu-search-check"/></svg>validate &amp; hand off</b><span>Check the artifact against the goal, constraints, and edge states; record assumptions and risks; emit a compact handoff when downstream implementation is expected.</span></div>
   </div>
   <div class="loopback"><span class="ic"><svg class="lu" aria-hidden="true"><use href="#lu-shield-check"/></svg></span><span>The critique route is a scored gate with a <b>binary verdict</b> — a fail routes back to the craft reference that owns the problem. And a visual verdict requires rendered evidence: with no build viewed, the skill says "code-level pass, not an art review" rather than signing off on appearance.</span></div>
+</section>
+
+<section id="register">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-split"/></svg>Register first</h2>
+  <p>Before any craft, the skill names the <b>register</b> — per surface, not per project. It's the
+  single decision that sets the bar for everything after, and the audience picks it, not taste. Get it
+  wrong and a dashboard tries to be memorable, or a landing page settles for competent.</p>
+  <div class="split">
+    <div class="rcard is">
+      <div class="rk"><b>design IS the product</b></div>
+      <div class="rbar">distinctiveness is the bar</div>
+      <ul>
+        <li>Brand sites, landing pages, launch microsites — anything whose job is to be <b>noticed and remembered</b>.</li>
+        <li>Take the aesthetic risk; type can be a character; <b>one signature element</b> carries the boldness.</li>
+        <li>Prefer fluid <code>clamp()</code> scales, expressive imagery, a committed aesthetic lane.</li>
+      </ul>
+    </div>
+    <div class="rcard serves">
+      <div class="rk"><b>design SERVES the product</b></div>
+      <div class="rbar">earned familiarity is the bar</div>
+      <ul>
+        <li>Dashboards, app shells, settings, dense daily tools — a fluent Linear/Figma user must <b>trust and operate it on sight</b>.</li>
+        <li>Surprise is a cost. This register <b>inverts several defaults</b>: fixed <code>rem</code> over fluid, proven patterns over novelty.</li>
+        <li>Every interactive component gets its full state set; <b>Inter / SF Pro is a legitimate pick, not a tell</b>.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="pcap" style="margin-top:14px"><b>One bold move, then restraint.</b> The shared trait of Linear, Stripe, and
+  Vercel is restraint, not a look — spend boldness in one place per section and keep everything else quiet.
+  Two bold moves compete; zero reads generic.</p>
+</section>
+
+<section id="states">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-layers"/></svg>The eight-state model</h2>
+  <p>The fastest tell of an unfinished interface is missing states. Every interactive element is designed
+  in <b>eight states</b> — and every data region adds a ninth, <b>empty</b>. This is the canonical state set;
+  the interaction reference owns it, and every other reference points here.</p>
+  <div class="stategrid">
+    <div class="scell"><span class="sbtn def">Continue</span><span class="sn">default</span></div>
+    <div class="scell"><span class="sbtn hov">Continue</span><span class="sn">hover</span></div>
+    <div class="scell"><span class="sbtn foc">Continue</span><span class="sn">focus</span></div>
+    <div class="scell"><span class="sbtn act">Continue</span><span class="sn">active</span></div>
+    <div class="scell"><span class="sbtn dis">Continue</span><span class="sn">disabled</span></div>
+    <div class="scell"><span class="sbtn loa">• • •</span><span class="sn">loading</span></div>
+    <div class="scell"><span class="sbtn err">Try again</span><span class="sn">error</span></div>
+    <div class="scell"><span class="sbtn suc">✓ Saved</span><span class="sn">success</span></div>
+    <div class="scell"><span class="sbtn emp">No data yet</span><span class="sn">empty</span></div>
+    <div class="scell wide"><span class="sn">+ discipline</span><span class="t">Keyboard users never see hover, so <b>focus is designed separately</b> (<code>:focus-visible</code>, never a bare <code>outline:none</code>). Disabled is exempt from contrast. Border width stays constant across states — signal changes via background, outline, or shadow, never by shifting layout.</span></div>
+  </div>
 </section>
 
 <section id="laws">
@@ -306,6 +434,29 @@
   <div class="note"><b>Complementary, not duplicated:</b> production frontend build (<code>frontend-skill</code>), system architecture and feasibility (<code>architecture-skill</code>), acquisition and SEO (<code>marketing-skill</code>), independent audits and release verification (<code>quality-skill</code>), and product strategy and metrics (<code>product-skill</code>) are separate skills in the <a href="https://github.com/gabros20/digital-product-skill">digital-product-skill</a> family that this one hands off to.</div>
 </section>
 
+<section id="critique">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-shield-check"/></svg>The critique gate</h2>
+  <p>Critique is its own route — a scored review, not a vibe check, kept strictly separate from fixing.
+  The bar isn't "does the grid align" but "would a design lead at Linear or Apple put their name on this?"
+  It judges against the design's <b>own intent</b>, then returns a <b>binary verdict</b> and a Before/After/Why
+  punch-list — never a patch.</p>
+  <div class="score" role="img" aria-label="Scored critique example: Nielsen heuristics 34 of 40, landing in the good band. Bands: 0 to 11 critical, 12 to 19 poor, 20 to 27 acceptable, 28 to 35 good, 36 to 40 excellent. Severity checks A0 direction clear, A1 composition and detail clear, presumptive blockers none. Verdict: GO.">
+    <div class="scorehead">
+      <div class="lbl">heuristics</div>
+      <div class="bar"><i></i></div>
+      <div class="num">34/40</div>
+    </div>
+    <div class="bands"><span>0–11 critical</span><span>12–19 poor</span><span>20–27 accept</span><span class="hit">28–35 good</span><span>36–40 ship</span></div>
+    <div class="sevrow"><span class="sk"><b>A0</b> · direction — off-palette, anti-default tell, broken hierarchy</span><span class="sv">clear ✓</span></div>
+    <div class="sevrow"><span class="sk"><b>A1</b> · composition &amp; detail — no focal point, misalignment, overflow</span><span class="sv">clear ✓</span></div>
+    <div class="sevrow"><span class="sk">presumptive blockers — missing states, timid palette, structural hacks</span><span class="sv">none ✓</span></div>
+    <div class="verdict"><span class="go">GO</span><span class="vt">Any P0, or a P1 you can't immediately fix, is <b style="color:var(--bad)">NO-GO</b>. Round 1 never signs off.</span></div>
+  </div>
+  <div class="note"><b>Honesty rule:</b> most shipped interfaces score 20–32 — a 38 means you aren't looking hard
+  enough. And a visual verdict requires rendered evidence: with no build viewed, the skill reports a
+  <b>"code-level pass, not an art review"</b> rather than signing off on appearance.</div>
+</section>
+
 <section id="refs">
   <h2><svg class="lu" aria-hidden="true"><use href="#lu-files"/></svg>Reference map</h2>
   <p>21 references, grouped by facet — primary jobs, surface overlays, and concern overlays. Every one is
@@ -337,6 +488,40 @@
     </div>
   </dl>
   <p style="margin-top:16px">Browse the full set: <a href="https://github.com/gabros20/design-skill/tree/main/skills/design/references">skills/design/references/</a>.</p>
+</section>
+
+<section id="handoff">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-file-output"/></svg>The handoff</h2>
+  <p>The skill owns experience <em>intent</em>, not production code — so a route that expects downstream
+  work ends in a <b>handoff</b>: a package an engineer who was never in the room can build from. It ships
+  tokens twice (a structured JSON block for tooling and a human design map), a motion plan with exact
+  curves and durations, and a compact <code>handoff.yaml</code> companion for pipeline routing.</p>
+  <div class="seam">
+    <div class="yamlcard"><span class="c"># handoff.yaml — an index, not a copy</span>
+<span class="k">skill:</span> design
+<span class="k">status:</span> complete
+<span class="k">objective:</span> <span class="s">"iOS onboarding, state-complete"</span>
+<span class="k">artifacts_created:</span>
+  - path: onboarding/*, tokens.json
+<span class="k">assumptions:</span> [...]
+<span class="k">constraints:</span> [brand, a11y floors]
+<span class="k">validation:</span>
+  performed: [states, contrast]
+  remaining: [device test]
+<span class="k">recommended_next:</span>
+  - skill: frontend</div>
+    <div class="seamarr"><span class="a">→</span><span class="at">frontend<br>build</span></div>
+    <div class="nextskill">
+      <b>Complementary, not duplicated.</b>
+      <p>The handoff is the seam with the rest of the <a href="https://github.com/gabros20/digital-product-skill">digital-product-skill</a>
+      family. <code>design</code> hands the approved intent to <code>frontend-skill</code> to implement, and recommends
+      <code>architecture</code>, <code>marketing</code>, <code>quality</code>, or <code>product</code> when the job calls for them —
+      it recommends, never auto-invokes.</p>
+    </div>
+  </div>
+  <p class="pcap" style="margin-top:14px">The package targets at least <b>Level 4</b> on a 1–5 maturity ladder
+  (screenshot → annotated → interactive spec → full spec → integrated). When cutting scope, it never cuts
+  error states or accessibility.</p>
 </section>
 
 <section id="start">
