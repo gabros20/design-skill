@@ -7,11 +7,11 @@ const schema = z.object({
   theme: z.enum(["light", "dark"]),
 });
 
-// 16:9 · 22s. One composition per theme so each renders to its own file with no --props juggling.
+// 16:9 · 26s. One composition per theme so each renders to its own file with no --props juggling.
 const COMMON = {
   component: HeroAnimation,
   schema,
-  durationInFrames: 660,
+  durationInFrames: 780,
   fps: 30,
   width: 1280,
   height: 720,

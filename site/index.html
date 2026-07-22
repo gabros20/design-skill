@@ -307,13 +307,15 @@
     <a href="/llms.txt">llms.txt</a>
   </nav>
   <h1><span class="sl">/</span>design</h1>
-  <p class="lede">Ask an agent to design a product screen and you get a plausible-looking mock with
-  no research behind it, half its states missing, and prototype code passed off as production. <b>design</b>
-  replaces that with a controlled process: name the register, route to the one job that fits, produce a
-  state-complete artifact with exact tokens, and hand it off. Experience design for websites, web apps,
-  iOS, and Android.</p>
-  <div class="term" style="margin-top:22px"><span class="c"># that's the whole start</span>
-<span class="p">/design</span> design an onboarding flow for a mobile budgeting app — state-complete, iOS first</div>
+  <p class="lede">Ask an agent for a landing page and you get the same templated hero, the same three
+  feature cards, the same indigo gradient. Ask for a product screen and half its states are missing, with
+  prototype code passed off as production. <b>design</b> replaces both with a controlled process: name the
+  register — whether the design <b>IS</b> the product (a brand site built to be remembered) or <b>SERVES</b>
+  it (a dashboard trusted on sight) — route to the one job that fits, then produce a distinctive,
+  state-complete artifact with exact tokens. Experience design for websites, web apps, iOS, and Android.</p>
+  <div class="term" style="margin-top:22px"><span class="c"># one skill, two registers — the register sets the bar</span>
+<span class="p">/design</span> set a visual direction for a studio's landing page — pick a macrostructure, one bold move
+<span class="p">/design</span> design an onboarding flow for a budgeting app — state-complete, iOS first</div>
   <p class="hosts"><span class="hl">runs on</span><span class="ref">Claude Code</span><span>Codex</span><span>Cursor</span><span>Antigravity</span><span>opencode</span><span>Grok Build</span><span>Hermes</span></p>
   <nav class="secnav" aria-label="page sections">
     <a href="#arc">how it routes</a><a href="#register">register</a><a href="#states">the 8 states</a>
@@ -324,19 +326,20 @@
 
 <section id="arc">
   <h2><svg class="lu" aria-hidden="true"><use href="#lu-workflow"/></svg>How it routes</h2>
-  <p>Not a fixed pipeline — a router. <b>Enter at whatever job you have</b>: "critique this dashboard"
-  jumps straight to the critique gate; "map this checkout" runs one journey; a new surface pulls
-  direction plus its craft leaves. Every route selects the <b>smallest sufficient</b> reference set —
-  one primary job, at most one surface overlay, only the concerns that matter — and nothing unrelated is loaded.</p>
+  <p>Not a fixed pipeline — a router. <b>Enter at whatever job you have</b>: "set a visual direction for
+  this landing page" pulls direction plus its craft leaves; "critique this dashboard" jumps straight to the
+  critique gate; "map this checkout" runs one journey. Every route selects the <b>smallest sufficient</b>
+  reference set — one primary job, at most one surface overlay, only the concerns that matter — and nothing
+  unrelated is loaded.</p>
   <div class="vidwrap" id="vidwrap"></div>
-  <div class="poster" role="img" aria-label="Diagram: routing an example request. Primary job selects interaction out of research, journeys, interaction, visual direction, critique; surface overlay selects iOS out of website, web app, iOS, Android; concerns select accessibility over content. Three of twenty-one references load; the request then becomes a state-complete artifact and a handoff.">
-    <p class="arcline" style="margin:0 0 4px"><b>/design</b> an onboarding flow — iOS, state-complete <span class="ar">→</span> the router composes the <b>smallest sufficient set</b>:</p>
+  <div class="poster" role="img" aria-label="Diagram: routing a creative-register request. Primary job selects visual direction out of research, journeys, interaction, visual direction, critique; surface overlay selects website out of website, web app, iOS, Android; concerns select content over accessibility. Three of twenty-one references load; the request then becomes a distinctive, art-directed artifact and a handoff.">
+    <p class="arcline" style="margin:0 0 4px"><b>/design</b> a studio landing page — macrostructure, one bold move <span class="ar">→</span> the router composes the <b>smallest sufficient set</b>:</p>
     <div class="facet">
-      <div class="flane"><div class="fl">primary job</div><div class="fchips"><span>research</span><span>journeys</span><span class="on">interaction</span><span>visual</span><span>critique</span></div></div>
-      <div class="flane"><div class="fl">surface · ≤1</div><div class="fchips"><span>website</span><span>web app</span><span class="on">iOS</span><span>android</span></div></div>
-      <div class="flane"><div class="fl">concerns</div><div class="fchips"><span class="on">accessibility</span><span>content</span></div></div>
+      <div class="flane"><div class="fl">primary job</div><div class="fchips"><span>research</span><span>journeys</span><span>interaction</span><span class="on">visual direction</span><span>critique</span></div></div>
+      <div class="flane"><div class="fl">surface · ≤1</div><div class="fchips"><span class="on">website</span><span>web app</span><span>iOS</span><span>android</span></div></div>
+      <div class="flane"><div class="fl">concerns</div><div class="fchips"><span>accessibility</span><span class="on">content</span></div></div>
     </div>
-    <p class="arcline" style="margin:2px 0 0; font-size:13px"><b>3 of 21</b> references loaded <span class="ar">→</span> artifact <span class="ar">→</span> validate <span class="ar">→</span> handoff · <span style="color:var(--accent)">nothing unrelated is read</span></p>
+    <p class="arcline" style="margin:2px 0 0; font-size:13px"><b>3 of 21</b> references loaded <span class="ar">→</span> a distinctive artifact <span class="ar">→</span> validate <span class="ar">→</span> handoff · <span style="color:var(--accent)">nothing unrelated is read</span></p>
   </div>
   <p class="pcap"><b>The skill operates standalone</b> — invoked alone it runs the full loop; given compatible
   upstream artifacts it builds on them without silently overriding established decisions.</p>
@@ -361,9 +364,9 @@
       <div class="rk"><b>design IS the product</b></div>
       <div class="rbar">distinctiveness is the bar</div>
       <ul>
-        <li>Brand sites, landing pages, launch microsites — anything whose job is to be <b>noticed and remembered</b>.</li>
+        <li>Brand sites, landing pages, portfolios, launch microsites — anything whose job is to be <b>noticed and remembered</b>.</li>
         <li>Take the aesthetic risk; type can be a character; <b>one signature element</b> carries the boldness.</li>
-        <li>Prefer fluid <code>clamp()</code> scales, expressive imagery, a committed aesthetic lane.</li>
+        <li>Pick a <b>macrostructure</b> and a committed <b>aesthetic lane</b>, set the premium↔information dial, and spend expressive type on one signature — never the reflexive templated hero.</li>
       </ul>
     </div>
     <div class="rcard serves">
