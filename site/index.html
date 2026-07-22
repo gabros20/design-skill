@@ -267,6 +267,75 @@
   .nextskill p{font-size:13px; color:var(--muted); margin:6px 0 0; max-width:none}
   @media (max-width:640px){ .seam{grid-template-columns:1fr} .seamarr .a{transform:rotate(90deg)} }
 
+  /* upstream strip — research / journeys / IA */
+  .stripgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:20px}
+  .upanel{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px 18px; display:flex; flex-direction:column; gap:11px}
+  .uhead{display:flex; align-items:center; gap:8px; font-family:ui-monospace,Menlo,monospace; font-size:13.5px; color:var(--ink)}
+  .uhead .lu{color:var(--accent); width:16px; height:16px}
+  .jobstory{font-size:14px; line-height:1.5; color:var(--ink); border-left:3px solid var(--accent); padding-left:12px}
+  .tags{display:flex; gap:6px; flex-wrap:wrap}
+  .tags span{font-family:ui-monospace,Menlo,monospace; font-size:11px; padding:2px 9px; border-radius:999px; border:1px solid var(--line)}
+  .tags .tobs{color:var(--good); border-color:var(--good)}
+  .tags .tinf{color:var(--accent); border-color:var(--accent)}
+  .tags .tasm{color:var(--muted)}
+  .mini{font-family:ui-monospace,Menlo,monospace; font-size:12px; line-height:1.7; color:var(--ink); margin:0; white-space:pre; overflow-x:auto; background:var(--code-bg); border-radius:7px; padding:12px 14px}
+  .mini b{color:var(--accent); font-weight:600}
+  .mini .d{color:var(--muted)}
+  .mini .ar{color:var(--glyph)}
+  .uf{font-size:12.5px; color:var(--muted); line-height:1.5; margin-top:auto}
+  .uband{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px}
+  .ublock{display:flex; gap:11px; background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px 16px; font-size:13px; line-height:1.55; color:var(--muted)}
+  .ublock .lu{color:var(--accent); flex:none; margin-top:2px; width:17px; height:17px}
+  .ublock b{color:var(--ink)}
+  .clabel{display:inline-block; font-family:ui-monospace,Menlo,monospace; font-size:11px; color:var(--accent); background:var(--code-bg); border:1px solid var(--line); border-radius:5px; padding:1px 7px; margin:1px 1px}
+  @media (max-width:720px){ .stripgrid{grid-template-columns:1fr} .uband{grid-template-columns:1fr} }
+
+  /* craft showcase — purpose-built card per craft leaf */
+  .craftgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:20px}
+  .craftcard{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px 18px; display:flex; flex-direction:column}
+  .craftcard .ch{display:flex; align-items:center; gap:8px; font-family:ui-monospace,Menlo,monospace; font-size:13.5px; color:var(--ink); margin-bottom:14px}
+  .craftcard .ch .lu{color:var(--accent); width:16px; height:16px}
+  .craftcard .cf{font-size:12px; color:var(--muted); line-height:1.5; margin-top:auto}
+  .craftcard .cf b{color:var(--ink)}
+  .craftcard .cf .mono, .craftcard .cf code{font-size:11px; background:var(--code-bg); padding:1px 5px; border-radius:4px; white-space:nowrap}
+  /* typography specimen */
+  .typescale{display:flex; flex-direction:column; gap:6px; margin-bottom:14px}
+  .typescale>div{display:flex; align-items:baseline; gap:14px; border-bottom:1px solid var(--line); padding-bottom:4px}
+  .typescale .tz{font-weight:700; color:var(--ink); letter-spacing:-.02em; line-height:1.05}
+  .typescale .tl{font-family:ui-monospace,Menlo,monospace; font-size:11.5px; color:var(--muted); margin-left:auto}
+  .typescale .tl b{color:var(--accent)}
+  /* color ramp */
+  .ramp{display:flex; border-radius:7px; overflow:hidden; border:1px solid var(--line); height:34px}
+  .ramp span{flex:1}
+  .semrow{display:flex; gap:6px; margin-bottom:10px}
+  .semrow span{flex:1; text-align:center; font-family:ui-monospace,Menlo,monospace; font-size:11px; color:#fff; padding:5px 0; border-radius:6px; text-shadow:0 1px 2px rgba(0,0,0,.35)}
+  /* layout grid viz */
+  .gridviz{display:grid; grid-template-columns:repeat(12,1fr); grid-auto-rows:30px; gap:5px; margin-bottom:6px}
+  .gfoc{grid-column:1 / 8; grid-row:1 / 3; background:color-mix(in srgb,var(--accent) 20%,var(--panel)); border:1px solid var(--accent); border-radius:6px; display:flex; align-items:center; justify-content:center; font-family:ui-monospace,Menlo,monospace; font-size:11px; color:var(--accent)}
+  .gside{grid-column:8 / 13; background:var(--code-bg); border:1px solid var(--line); border-radius:6px}
+  .gwide{grid-column:1 / 13; background:var(--code-bg); border:1px solid var(--line); border-radius:6px}
+  .gruler{display:grid; grid-template-columns:repeat(12,1fr); gap:5px; margin-bottom:14px}
+  .gruler i{height:4px; background:var(--line); border-radius:2px}
+  /* motion tiers */
+  .mtiers{display:flex; flex-direction:column; gap:9px; margin-bottom:14px}
+  .mtiers>div{display:grid; grid-template-columns:110px 1fr auto; align-items:center; gap:10px}
+  .mbar{height:8px; background:var(--accent); border-radius:4px; min-width:16px}
+  .mtiers .mk{font-family:ui-monospace,Menlo,monospace; font-size:12px; color:var(--ink); white-space:nowrap}
+  .mtiers .mk b{color:var(--accent); font-weight:600}
+  .mtiers .mu{font-size:11.5px; color:var(--muted); white-space:nowrap}
+  /* compact state row (demoted 8-state model) */
+  .staterow{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+  .staterow .sbtn{font-size:11.5px; padding:5px 11px; border-radius:7px}
+  /* elevation ladder */
+  .elev{display:flex; gap:12px; padding:8px 4px 16px; margin-bottom:8px}
+  .elev span{flex:1; height:46px; border-radius:8px; background:var(--panel); border:1px solid var(--line); display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; font-family:ui-monospace,Menlo,monospace; font-size:11px; color:var(--muted)}
+  .elev .e1{box-shadow:0 1px 2px rgba(0,0,0,.06)}
+  .elev .e2{box-shadow:0 1px 3px rgba(0,0,0,.10),0 1px 2px rgba(0,0,0,.06)}
+  .elev .e3{box-shadow:0 4px 6px rgba(0,0,0,.08),0 2px 4px rgba(0,0,0,.06)}
+  .elev .e4{box-shadow:0 10px 15px rgba(0,0,0,.10)}
+  .elev .e5{box-shadow:0 20px 25px rgba(0,0,0,.10)}
+  @media (max-width:720px){ .craftgrid{grid-template-columns:1fr} }
+
   footer{margin-top:72px; padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
   /* iOS 26 chrome tint: Safari samples fixed edge elements; theme-color alone is ignored */
   .edge{position:fixed; left:0; right:0; height:8px; background:var(--bg); z-index:0; pointer-events:none}
@@ -318,9 +387,9 @@
 <span class="p">/design</span> design an onboarding flow for a budgeting app — state-complete, iOS first</div>
   <p class="hosts"><span class="hl">runs on</span><span class="ref">Claude Code</span><span>Codex</span><span>Cursor</span><span>Antigravity</span><span>opencode</span><span>Grok Build</span><span>Hermes</span></p>
   <nav class="secnav" aria-label="page sections">
-    <a href="#arc">how it routes</a><a href="#register">register</a><a href="#states">the 8 states</a>
-    <a href="#laws">the laws</a><a href="#pick">pick by job</a><a href="#critique">critique gate</a>
-    <a href="#refs">reference map</a><a href="#handoff">handoff</a><a href="#start">start here</a>
+    <a href="#arc">how it routes</a><a href="#register">register</a><a href="#upstream">before the pixels</a>
+    <a href="#craft">the craft</a><a href="#laws">the laws</a><a href="#pick">pick by job</a>
+    <a href="#critique">critique gate</a><a href="#refs">reference map</a><a href="#handoff">handoff</a><a href="#start">start here</a>
   </nav>
 </header>
 
@@ -384,22 +453,114 @@
   Two bold moves compete; zero reads generic.</p>
 </section>
 
-<section id="states">
-  <h2><svg class="lu" aria-hidden="true"><use href="#lu-layers"/></svg>The eight-state model</h2>
-  <p>The fastest tell of an unfinished interface is missing states. Every interactive element is designed
-  in <b>eight states</b> — and every data region adds a ninth, <b>empty</b>. This is the canonical state set;
-  the interaction reference owns it, and every other reference points here.</p>
-  <div class="stategrid">
-    <div class="scell"><span class="sbtn def">Continue</span><span class="sn">default</span></div>
-    <div class="scell"><span class="sbtn hov">Continue</span><span class="sn">hover</span></div>
-    <div class="scell"><span class="sbtn foc">Continue</span><span class="sn">focus</span></div>
-    <div class="scell"><span class="sbtn act">Continue</span><span class="sn">active</span></div>
-    <div class="scell"><span class="sbtn dis">Continue</span><span class="sn">disabled</span></div>
-    <div class="scell"><span class="sbtn loa">• • •</span><span class="sn">loading</span></div>
-    <div class="scell"><span class="sbtn err">Try again</span><span class="sn">error</span></div>
-    <div class="scell"><span class="sbtn suc">✓ Saved</span><span class="sn">success</span></div>
-    <div class="scell"><span class="sbtn emp">No data yet</span><span class="sn">empty</span></div>
-    <div class="scell wide"><span class="sn">+ discipline</span><span class="t">Keyboard users never see hover, so <b>focus is designed separately</b> (<code>:focus-visible</code>, never a bare <code>outline:none</code>). Disabled is exempt from contrast. Border width stays constant across states — signal changes via background, outline, or shadow, never by shifting layout.</span></div>
+<section id="upstream">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-clipboard-list"/></svg>Before the pixels</h2>
+  <p>Most of the work lands before a single pixel is styled. The upstream jobs — <b>research</b>,
+  <b>journeys</b>, and <b>information architecture</b> — decide what's true, what path a person takes, and
+  where everything lives. Skip them and you get a pretty screen answering the wrong question.</p>
+  <div class="stripgrid">
+    <div class="upanel">
+      <div class="uhead"><svg class="lu" aria-hidden="true"><use href="#lu-search-check"/></svg>research</div>
+      <div class="jobstory">"When I'm reviewing my budget mid-month, I want to see what's left — so I can stop before I overspend."</div>
+      <div class="tags"><span class="tobs">observed</span><span class="tinf">inferred</span><span class="tasm">assumed</span></div>
+      <div class="uf">jobs&nbsp;·&nbsp;interviews&nbsp;·&nbsp;surveys&nbsp;·&nbsp;usability&nbsp;·&nbsp;design-DNA — every finding marked by its evidence.</div>
+    </div>
+    <div class="upanel">
+      <div class="uhead"><svg class="lu" aria-hidden="true"><use href="#lu-workflow"/></svg>journeys · breadboard</div>
+      <pre class="mini"><b>Place</b>  Budget overview
+  Add expense <span class="ar">→</span> Expense sheet
+  <span class="d">[ remaining · this month ]</span>
+<b>Place</b>  Expense sheet
+  Save <span class="ar">→</span> Overview
+  <span class="d">edges</span> empty · loading · error · offline</pre>
+      <div class="uf">Structure before pixels — every affordance names a destination; edges are required steps.</div>
+    </div>
+    <div class="upanel">
+      <div class="uhead"><svg class="lu" aria-hidden="true"><use href="#lu-layers"/></svg>information architecture</div>
+      <pre class="mini">Home
+├ <b>Budgets</b>    <span class="d">list + detail</span>
+├ <b>Expenses</b>   <span class="d">list + detail</span>
+└ Settings
+<span class="d">objects</span>  Budget ─&lt; Expense
+<span class="d">nav ≤7 · any item &lt; 3 clicks</span></pre>
+      <div class="uf">An OOUX object model, a sitemap, a navigation model — the load-bearing layer beneath every surface.</div>
+    </div>
+  </div>
+  <div class="uband">
+    <div class="ublock"><svg class="lu" aria-hidden="true"><use href="#lu-copy-x"/></svg><span><b>Every coded artifact carries one label</b> — <span class="clabel">disposable</span> <span class="clabel">design-reference</span> <span class="clabel">production-candidate</span> — so prototype code is never passed off as production.</span></div>
+    <div class="ublock"><svg class="lu" aria-hidden="true"><use href="#lu-files"/></svg><span><b>A design system is a contract</b> — layered tokens (<span class="mono">primitive → semantic → component</span>) plus a <code>DESIGN.md</code> / <code>PRODUCT.md</code> a team and its engineers build against.</span></div>
+  </div>
+</section>
+
+<section id="craft">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-sliders-horizontal"/></svg>The craft, in exact values</h2>
+  <p>When direction is set, the craft leaves carry it — each with precise tokens, not adjectives.
+  Typography, color, layout, motion, interaction states, and depth are separate references the router
+  loads only when the job needs them. A sample of what each one decides:</p>
+  <div class="craftgrid">
+
+    <div class="craftcard">
+      <div class="ch"><svg class="lu" aria-hidden="true"><use href="#lu-scroll-text"/></svg>typography · the scale</div>
+      <div class="typescale">
+        <div><span class="tz" style="font-size:39px">Ag</span><span class="tl"><b>39</b> h1</span></div>
+        <div><span class="tz" style="font-size:31px">Ag</span><span class="tl"><b>31</b> h2</span></div>
+        <div><span class="tz" style="font-size:25px">Ag</span><span class="tl"><b>25</b> h3</span></div>
+        <div><span class="tz" style="font-size:20px">Ag</span><span class="tl"><b>20</b> lead</span></div>
+        <div><span class="tz" style="font-size:16px">Ag</span><span class="tl"><b>16</b> body</span></div>
+      </div>
+      <div class="cf">ratio <b>1.25</b> major third · ≤5 sizes · display caps ≤88px · measure 66ch · 2+1 families</div>
+    </div>
+
+    <div class="craftcard">
+      <div class="ch"><svg class="lu" aria-hidden="true"><use href="#lu-eye"/></svg>color · OKLCH, owned</div>
+      <div class="ramp">
+        <span style="background:oklch(0.97 0.02 293)"></span><span style="background:oklch(0.93 0.05 293)"></span><span style="background:oklch(0.87 0.09 293)"></span><span style="background:oklch(0.79 0.14 293)"></span><span style="background:oklch(0.67 0.20 293)"></span><span style="background:oklch(0.55 0.24 293)"></span><span style="background:oklch(0.48 0.22 293)"></span><span style="background:oklch(0.40 0.17 293)"></span><span style="background:oklch(0.32 0.12 293)"></span>
+      </div>
+      <div class="cf" style="margin:8px 0 10px">accent hue 293 · <b>hover</b> L−0.03 · <b>active</b> L−0.05 · accent ≤5% of the viewport</div>
+      <div class="semrow">
+        <span style="background:oklch(0.58 0.20 22)">error</span><span style="background:oklch(0.72 0.13 45)">warning</span><span style="background:oklch(0.62 0.14 150)">success</span><span style="background:oklch(0.62 0.12 220)">info</span>
+      </div>
+      <div class="cf">hue anchors — err 0–10 · warn 35–45 · succ 140–160 · info 210–230</div>
+    </div>
+
+    <div class="craftcard">
+      <div class="ch"><svg class="lu" aria-hidden="true"><use href="#lu-layers"/></svg>layout · 12-col grid</div>
+      <div class="gridviz">
+        <div class="gfoc">one focal point</div>
+        <div class="gside"></div><div class="gside"></div>
+        <div class="gwide"></div>
+      </div>
+      <div class="gruler"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="cf">spacing <span class="mono">4·8·12·16·24·32·48·64·96</span> · break ~20%, keep one shared edge · never three equal cards</div>
+    </div>
+
+    <div class="craftcard">
+      <div class="ch"><svg class="lu" aria-hidden="true"><use href="#lu-gauge"/></svg>motion · the canonical scale</div>
+      <div class="mtiers">
+        <div><span class="mbar" style="width:19%"></span><span class="mk">micro <b>80–150ms</b></span><span class="mu">press · hover</span></div>
+        <div><span class="mbar" style="width:38%"></span><span class="mk">UI <b>150–300ms</b></span><span class="mu">menu · tooltip · tab</span></div>
+        <div><span class="mbar" style="width:63%"></span><span class="mk">surface <b>300–500ms</b></span><span class="mu">modal · drawer</span></div>
+        <div><span class="mbar" style="width:100%"></span><span class="mk">entrance <b>400–800ms</b></span><span class="mu">hero reveal</span></div>
+      </div>
+      <div class="cf">exit ≈ 60–75% of enter · ≤3 curves · <span class="mono">cubic-bezier(.16,1,.3,1)</span></div>
+    </div>
+
+    <div class="craftcard">
+      <div class="ch"><svg class="lu" aria-hidden="true"><use href="#lu-copy-x"/></svg>interaction · the 8-state model</div>
+      <div class="staterow">
+        <span class="sbtn def">default</span><span class="sbtn hov">hover</span><span class="sbtn foc">focus</span><span class="sbtn act">active</span><span class="sbtn dis">disabled</span><span class="sbtn loa">loading</span><span class="sbtn err">error</span><span class="sbtn suc">success</span><span class="sbtn emp">empty</span>
+      </div>
+      <div class="cf">every element in eight states — <b>plus empty</b> for every data region; focus designed separately (<code>:focus-visible</code>), border width constant across states.</div>
+    </div>
+
+    <div class="craftcard">
+      <div class="ch"><svg class="lu" aria-hidden="true"><use href="#lu-layers"/></svg>imagery &amp; depth · elevation</div>
+      <div class="elev">
+        <span class="e1">xs</span><span class="e2">sm</span><span class="e3">md</span><span class="e4">lg</span><span class="e5">xl</span>
+      </div>
+      <div class="cf">one light source, light &amp; diffuse — heavy black shadows read dated; on dark, build elevation from <b>lighter surfaces</b>, not shadow.</div>
+    </div>
+
   </div>
 </section>
 

@@ -1,6 +1,6 @@
 # remotion — hero animation
 
-The hero animation for the **design** skill's site. 16:9, 22s, loops.
+The hero animation for the **design** skill's site. 16:9, 33s, loops.
 
 The palette in [`src/theme.ts`](src/theme.ts) mirrors `site/index.html`'s `:root` tokens
 exactly, so the video reads as part of the page in both light and dark.
@@ -17,8 +17,8 @@ Render the two theme variants + poster stills into the site (paths are relative 
 ```bash
 npx remotion render hero-light ../site/assets/hero-light.mp4 --codec=h264 --crf=23
 npx remotion render hero-dark  ../site/assets/hero-dark.mp4  --codec=h264 --crf=23
-npx remotion still hero-light ../site/assets/hero-light-poster.png --frame=372
-npx remotion still hero-dark  ../site/assets/hero-dark-poster.png  --frame=372
+npx remotion still hero-light ../site/assets/hero-light-poster.png --frame=628
+npx remotion still hero-dark  ../site/assets/hero-dark-poster.png  --frame=628
 ```
 
 The page (`site/index.html`) swaps `hero-{light,dark}.mp4` on theme change and falls back to
