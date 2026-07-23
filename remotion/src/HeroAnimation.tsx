@@ -14,17 +14,22 @@ import { themes, MONO, SANS, type ThemeName, type Theme } from "./theme";
 // true and where things live; naming the register forks the work into an art-directed brand surface
 // and a served product surface; the craft leaves (type, color, grid, motion) carry it in exact tokens;
 // the eight-state model finishes the components; the scored critique gate judges it; a handoff ships it.
-// 33s, loops (opens and closes on an empty stage). States is one brief beat, never the centerpiece.
+// ~57s, loops (opens and closes on an empty stage). States is one brief beat, never the centerpiece.
+//
+// Pacing model (reader-first): every scene animates its content IN, then HOLDS fully still for a
+// reading beat (~2.3–4s, scaled to how much there is to read) before the container fades OUT. The
+// fade-out begins at dur − <envelope hold>, so each scene's dur = content-in-end + reading-hold +
+// fade. Never let the next scene start before this one has been readable at rest.
 //
 // Scene map (30fps):
-//   S1 ask      0–108    two /design asks type in — one per register
-//   S2 upstream 108–240  research → IA: a sitemap forms (structure before pixels)
-//   S3 register 240–370  name the register: a fork into design IS vs design SERVES the product
-//   S4 direction 370–510 design IS: an art-directed landing composition forms
-//   S5 craft    510–666  the craft leaves compose — type scale, OKLCH ramp, grid, motion (poster beat)
-//   S6 states   666–762  interaction: the eight-state model, one compact beat
-//   S7 critique 762–902  scored gate: Nielsen bar fills, severities clear, GO verdict stamps
-//   S8 handoff  902–998  the artifact collapses to handoff.yaml + tokens → frontend, fades to loop
+//   S1 ask      0–170      two /design asks type in — one per register
+//   S2 upstream 170–402    research → IA: a sitemap forms (structure before pixels)
+//   S3 register 402–644    name the register: a fork into design IS vs design SERVES the product
+//   S4 direction 644–858   design IS: an art-directed landing composition forms
+//   S5 craft    858–1092   the craft leaves compose — type scale, OKLCH ramp, grid, motion (poster beat)
+//   S6 states   1092–1280  interaction: the eight-state model, one compact beat
+//   S7 critique 1280–1516  scored gate: Nielsen bar fills, severities clear, GO verdict stamps
+//   S8 handoff  1516–1700  the artifact collapses to handoff.yaml + tokens → frontend, fades to loop
 
 const EASE = Easing.bezier(0.16, 1, 0.3, 1);
 
@@ -392,7 +397,7 @@ const SceneHandoff: React.FC<{ t: Theme; dur: number }> = ({ t, dur }) => {
 };
 
 // ── persistent chrome + master timeline ──────────────────────────────────────
-const BOUNDS = [108, 240, 370, 510, 666, 762, 902, 998];
+const BOUNDS = [170, 402, 644, 858, 1092, 1280, 1516, 1700];
 const LABELS = ["ask", "research", "register", "direction", "craft", "states", "critique", "handoff"];
 
 const PhaseBar: React.FC<{ t: Theme; frame: number }> = ({ t, frame }) => {
@@ -423,14 +428,14 @@ export const HeroAnimation: React.FC<{ theme: ThemeName }> = ({ theme }) => {
     <AbsoluteFill style={{ backgroundColor: t.bg, fontFamily: SANS }}>
       <AbsoluteFill style={{ background: `radial-gradient(circle at 82% 16%, color-mix(in srgb, ${t.accent} 13%, transparent), transparent 44%), radial-gradient(circle at 8% 92%, color-mix(in srgb, ${t.accent} 9%, transparent), transparent 48%)`, opacity: glow }} />
       <AbsoluteFill style={{ opacity: master }}>
-        <Sequence from={0} durationInFrames={108}><SceneAsk t={t} dur={108} /></Sequence>
-        <Sequence from={108} durationInFrames={132}><SceneUpstream t={t} dur={132} /></Sequence>
-        <Sequence from={240} durationInFrames={130}><SceneRegister t={t} dur={130} /></Sequence>
-        <Sequence from={370} durationInFrames={140}><SceneDirection t={t} dur={140} /></Sequence>
-        <Sequence from={510} durationInFrames={156}><SceneCraft t={t} dur={156} /></Sequence>
-        <Sequence from={666} durationInFrames={96}><SceneStates t={t} dur={96} /></Sequence>
-        <Sequence from={762} durationInFrames={140}><SceneCritique t={t} dur={140} /></Sequence>
-        <Sequence from={902} durationInFrames={96}><SceneHandoff t={t} dur={96} /></Sequence>
+        <Sequence from={0} durationInFrames={170}><SceneAsk t={t} dur={170} /></Sequence>
+        <Sequence from={170} durationInFrames={232}><SceneUpstream t={t} dur={232} /></Sequence>
+        <Sequence from={402} durationInFrames={242}><SceneRegister t={t} dur={242} /></Sequence>
+        <Sequence from={644} durationInFrames={214}><SceneDirection t={t} dur={214} /></Sequence>
+        <Sequence from={858} durationInFrames={234}><SceneCraft t={t} dur={234} /></Sequence>
+        <Sequence from={1092} durationInFrames={188}><SceneStates t={t} dur={188} /></Sequence>
+        <Sequence from={1280} durationInFrames={236}><SceneCritique t={t} dur={236} /></Sequence>
+        <Sequence from={1516} durationInFrames={184}><SceneHandoff t={t} dur={184} /></Sequence>
         <PhaseBar t={t} frame={frame} />
       </AbsoluteFill>
     </AbsoluteFill>
