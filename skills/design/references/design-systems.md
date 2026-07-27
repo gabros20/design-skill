@@ -9,7 +9,7 @@ Read when:
 
 Skip when:
 - The task is a single screen or one-off visual (route to visual-direction / layout-composition).
-- The work is production component-API engineering, Tailwind wiring, or a build registry (route to frontend-skill).
+- The work is production component-API engineering, Tailwind wiring, or a build registry (route to `frontend`).
 
 Inputs: brand/register intent, existing tokens or codebase, target surfaces, dark/light needs.
 

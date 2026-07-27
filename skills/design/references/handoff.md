@@ -9,7 +9,7 @@ Read when:
 
 Skip when:
 - The design is still being explored (route to prototyping.md).
-- You are doing the production implementation yourself (route to frontend-skill).
+- You are doing the production implementation yourself (route to `frontend`).
 
 Inputs: the approved design artifact(s), tokens, and the target codebase's stack and conventions.
 
@@ -56,7 +56,7 @@ When motion ships, the plan gives exact values, never approximated: curves, dura
 
 ## Tokens: two formats
 
-Ship tokens twice: a structured JSON block (spacing scale plus base unit, typography roles, colors by role, radius, shadows, grid) for tooling, and a human design map (concrete values, no prose). Export maps to the target: `tokens.css`, Tailwind `@theme`, DTCG `tokens.json`, or shadcn CSS variables. The token contract and what pages must share are design-owned; the framework wiring is frontend-skill's.
+Ship tokens twice: a structured JSON block (spacing scale plus base unit, typography roles, colors by role, radius, shadows, grid) for tooling, and a human design map (concrete values, no prose). Export maps to the target: `tokens.css`, Tailwind `@theme`, DTCG `tokens.json`, or shadcn CSS variables. The token contract and what pages must share are design-owned; the framework wiring is `frontend`'s.
 
 ## Review gates and QA
 

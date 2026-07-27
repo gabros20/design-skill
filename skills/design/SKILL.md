@@ -18,10 +18,10 @@ description: >-
 Design how people understand, navigate, and interact with a digital product — the research, structure,
 behavior, visual craft, content, and system decisions, expressed as design artifacts and a
 frontend-ready handoff. Own experience intent; do not present prototype code as production
-implementation. Adjacent work this pack does not own: production frontend build (frontend-skill),
-system architecture and feasibility (architecture-skill), acquisition/SEO strategy (marketing-skill),
-independent audits and release verification (quality-skill), product strategy and metrics
-(product-skill).
+implementation. Adjacent work this pack does not own: production frontend build (`frontend`),
+system architecture and feasibility (`architecture`), acquisition/SEO strategy (`marketing`),
+independent audits and release verification (`quality`), product strategy and metrics (`product`),
+deployment and monitoring (`operate`), and cross-system business process automation (`automation`).
 
 Operate independently when invoked alone. When compatible upstream artifacts are supplied, use them
 without silently overriding established decisions. Recommend adjacent skills when useful; do not invoke

@@ -11,7 +11,7 @@ Read when:
 Skip when:
 - You need to build or fix the design (this file produces a punch-list, not the patch).
 - You need contrast/target/focus floors → `accessibility.md`; motion timing canon → `motion.md`;
-  the anti-default catalog → `visual-direction.md`; an independent WCAG audit → quality-skill.
+  the anti-default catalog → `visual-direction.md`; an independent WCAG audit → `quality`.
 
 Inputs:
 - The design's own intent (brief, `DESIGN.md`/design system, inferred user/task/feel).
@@ -163,4 +163,4 @@ to name the violations and to sequence the fixes.
 - Contrast math, target-size floors, focus and reduced-motion floors → `accessibility.md`.
 - Design-audit findings that must prove they reach the rendered surface (Contract/Runtime/
   Correction three-proof gate) → `handoff.md`.
-- Build-health, coverage, route-parity gates, and independent WCAG audits → quality-skill.
+- Build-health, coverage, route-parity gates, and independent WCAG audits → `quality`.

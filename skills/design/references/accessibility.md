@@ -10,8 +10,8 @@ Read when:
 - Any surface or visual reference needs an accessibility floor (they cite this file).
 
 Skip when:
-- You need ARIA attribute wiring, semantic-HTML implementation, or live-region code → frontend-skill.
-- You need an independent WCAG audit or automated-tool run as conformance evidence → quality-skill.
+- You need ARIA attribute wiring, semantic-HTML implementation, or live-region code → `frontend`.
+- You need an independent WCAG audit or automated-tool run as conformance evidence → `quality`.
 
 Inputs:
 - The design under review (rendered or specified), its palette, and target surfaces.
@@ -136,6 +136,6 @@ first, before typography, color, or polish.
 Design owns the **decisions**: which state must be announced, which control needs a name, target
 size, contrast floor, focus and reading order intent, reduced-motion intent. Route the rest:
 
-- ARIA attribute wiring, semantic-HTML structure, live-region implementation → frontend-skill.
+- ARIA attribute wiring, semantic-HTML structure, live-region implementation → `frontend`.
 - Automated tooling (Axe/Lighthouse/WAVE — catches only ~30–40% of issues), manual screen-reader
-  and keyboard test execution, and WCAG audits **as conformance evidence** → quality-skill.
+  and keyboard test execution, and WCAG audits **as conformance evidence** → `quality`.

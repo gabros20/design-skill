@@ -7,7 +7,7 @@ Read when:
 - You need voice and tone rules or an i18n length budget for the copy.
 
 Skip when:
-- The work is acquisition/marketing copywriting, positioning, or SEO keyword research (route to marketing-skill).
+- The work is acquisition/marketing copywriting, positioning, or SEO keyword research (route to `marketing`).
 
 Inputs: the flow and its states, brand voice, audience, and the real product vocabulary.
 

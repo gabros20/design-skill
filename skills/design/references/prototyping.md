@@ -7,8 +7,8 @@ Read when:
 - The team needs evidence about an experience before production implementation.
 
 Skip when:
-- The task is production frontend implementation (route to frontend-skill).
-- The uncertainty is technical feasibility, not user experience (route to architecture-skill).
+- The task is production frontend implementation (route to `frontend`).
+- The uncertainty is technical feasibility, not user experience (route to `architecture`).
 
 Inputs: the hypothesis or decision to inform; audience and surface; known constraints; existing design context (codebase, UI kit, screenshots).
 

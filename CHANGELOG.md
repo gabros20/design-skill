@@ -10,6 +10,16 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ### Added
 - Queue unreleased changes here.
 
+## [0.1.3] — 2026-07-27
+
+### Fixed
+- Normalized sibling-skill references from repo names to the backticked runtime id convention used
+  by every other pack in the family (`frontend`, `architecture`, `marketing`, `quality`, `product`)
+  across `SKILL.md` and six reference files.
+- Added `operate` and `automation` to the boundary sentence in "Mission and boundary" — a shipped
+  design still needs deployment/monitoring, and a designed flow can trigger a cross-system business
+  process.
+
 ## [0.1.2] — 2026-07-22
 
 Visual-guide (site + Remotion) refresh only. The runtime pack — `SKILL.md` and every reference —
