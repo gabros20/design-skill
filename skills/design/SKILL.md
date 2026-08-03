@@ -121,3 +121,11 @@ Before completion:
 - Record decisions, assumptions, risks, and unresolved questions.
 - Distinguish validation performed from validation remaining — and state plainly when a visual was not rendered.
 - When downstream work is expected, provide artifact paths, owners, constraints, and a recommended next skill without duplicating the full artifact.
+
+## Artifact home
+
+Deliverables this skill produces default to `digital-product/design/` at the working repository's
+root, with cross-skill state in `digital-product/LEDGER.md` — created on first use and committed
+with the repo. The `digital-product` composer skill owns this convention; solo use writes to the
+same place. Never write into `.orchestrate/` — that folder belongs to an orchestration run's
+execution state, not to this family's deliverables.
