@@ -5,6 +5,7 @@ Purpose: Design the conceptual model, domain vocabulary, sitemap, navigation, an
 Read when:
 - The request involves objects/entities, sitemap, navigation, findability, labels, or "where does this live."
 - Surface problems (wrong words, scattered actions, confusing structure) may root in a deeper model.
+- Redesigning an existing site: inventory it and assign every page and section a disposition.
 
 Skip when:
 - The task is a flow across screens → `journeys.md`.
@@ -19,7 +20,7 @@ Produces: an object/relationship model with vocabulary; a sitemap with page type
 - Conceptual model (OOUX)
 - Domain vocabulary
 - Naming is design
-- Sitemap
+- Sitemap (redesign inventory, multi-offer hub)
 - Navigation and findability
 - Section sequence is IA
 - Hide, don't delete
@@ -44,7 +45,11 @@ Use the user's vocabulary, not the engineer's; name actions by their effect ("Ar
 
 ## Sitemap
 
-Assign each route a `page_type`. **Preserve IA** (SEO + familiarity) → keep routes 1:1, no rename/merge/drop. **Restructure IA** → the new sitemap must still satisfy any committed redirect map (every moved-to URL needs a matching route; the redirect target set is the authoritative new IA). Keep every nav/footer link even when its target wasn't built — a nav with links quietly removed looks broken.
+Assign each route a `page_type`. **Preserve IA** (SEO + familiarity) → keep routes 1:1, no rename/merge/drop. **Restructure IA** → the new sitemap must still satisfy any committed redirect map (every moved-to URL needs a matching route; the redirect target set is the authoritative new IA). Keep every nav/footer link even when its target wasn't built — a nav with links quietly removed looks broken; route each unbuilt target to a page inside the real header/footer that names the link and says it is not part of this build yet, never a raw 404.
+
+**Redesigning an existing site: inventory, then dispose.** Map the current site as a model, not text — routes and hierarchy, header/footer (nav, dropdowns, CTAs), each page's sections in rendered order, repeated and global components, and a source → page → section → content trail. Then give every page and section one disposition — **keep · modernize · merge · remove · redesign · new** — with a rationale; a merge names its sources. Dedupe the per-page section blueprints into a **section catalog** (distinct section types + their fields): the bridge to the content model, and the trail lets any element on the new site be traced to its source.
+
+**Several offers, different buyers:** a hub home that routes (identity, proof, one card per offer) plus one spoke page per offer that sells, all converging on one conversion endpoint — not every offer stacked on one long page. Group the spokes under one nav parent. Launch the hub, the spokes, and the endpoint; add proof pages (case studies, resources) when there is real proof to fill them.
 
 ## Navigation and findability
 
