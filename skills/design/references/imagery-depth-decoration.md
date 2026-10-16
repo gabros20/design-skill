@@ -1,12 +1,14 @@
 # Imagery, depth, and decoration
 
 Purpose: Make a surface read as crafted rather than flat — the depth build order, materials (shadow,
-glass, grain, Apple translucency), image treatment, the enrichment-tier decision, and decoration
-discipline that keeps all of it from tipping into slop.
+glass, grain, Apple translucency), image treatment, the enrichment-tier decision, sourcing and
+generating imagery, and decoration discipline that keeps all of it from tipping into slop.
 
 Read when:
 - A section reads flat and needs depth; choosing shadow/glass/grain/gradient treatments; placing text
   over imagery; deciding how much visual enrichment a page needs and at what fidelity.
+- Sourcing icons, illustrations, logos, or patterns (and checking their licences), or art-directing a
+  generated image set that must read as one family.
 
 Skip when:
 - The register is a dense serve-the-product tool where stillness is the brand (use one hairline/shadow
@@ -24,6 +26,7 @@ Produces:
 - 3D tilt and scroll depth
 - Image treatment and text-over-image
 - Enrichment tiers and image-need
+- Sourcing and generating imagery
 - Decoration discipline and authenticity
 
 ## Depth build order
@@ -101,7 +104,7 @@ Reach for the **highest tier you can genuinely ship** — skipping tiers is the 
 
 0. **Typography-only** — always acceptable; the strongest fail-state.
 - A **Pure CSS art** → B **Hand-built SVG** → C **Generated illustration** (post-processed, with
-  provenance) → D **Library illustration** (customized) → E **Lottie** — last resort, articulated
+  provenance; art direction below) → D **Library illustration** (customized) → E **Lottie** — last resort, articulated
   character motion only. "Reaching for E because it's familiar is the signature of a templated page."
 
 **Image-need by domain** (default is typography-only): e-commerce / portfolio / food / team / travel /
@@ -112,6 +115,41 @@ subject. Hero discipline: footprint 70–90% of the first viewport (not `100vh`;
 `min-height: clamp(60vh, 75dvh, 88dvh)`), asymmetric padding (`padding-block-end ≥ 1.3× start`), one
 orchestrated reveal, max one polish move + one enrichment per hero. Video: `muted`/`loop`/`playsinline`
 + poster; never `loading="lazy"` on a hero video — use `preload="metadata"` + `fetchpriority="high"`.
+
+## Sourcing and generating imagery
+
+**Library assets.** Specify each by library + exact name (icon lookup: design-systems.md); one
+illustration family per site; seeded generators (blob/wave) or your own simple SVG geometry make
+decoration reproducible and licence-free. **Licence gate — per asset, read at the source.** On a
+client deliverable prefer MIT / ISC /
+Apache-2.0 / CC0 with no forced attribution. **Forced credit** (CC BY — e.g. Hero Patterns — and
+"free with attribution" tiers) is out unless the brief accepts it; **NC** disqualifies; **ND**
+forbids recolor/resize, so it cannot join a token palette. Read past the licence name:
+unDraw needs no attribution but forbids AI/ML training use and redistributing its assets as packs —
+embed rendered assets in the build, never hand over a reusable asset library. An aggregator's licence
+is not each set's: one Iconify search for "home" (checked 2026-10) returns sets under Apache-2.0, MIT,
+OFL-1.1, and CC BY 4.0 — honour the licence of the set you render. **Logos are trademarks:** a CC0
+file grants no trademark right (Simple Icons is CC0 yet asks users to seek permission and follow each
+brand's guidelines) — render marks unaltered, never implying endorsement. Record source + licence
+per asset in the handoff.
+
+**Generated sets — pick the strategy first.** *Diversity* (independent spots, iteration) → generate
+in parallel. *Consistency* (a set that must read as one family) → one engine, anchored, serial;
+spreading a cohesive set across engines maximizes drift. **Anchor-first:** (1) generate the
+most-scrutinized slot (usually the hero) first; (2) gate it against DESIGN.md (palette, register,
+Do's and Don'ts) until it passes; (3) pass the approved anchor as a **reference image** to every
+downstream slot. Session or text continuity carries the description, not the pixels — a weak lock. The anchor sets style, not geometry: each slot renders at its own ratio and
+size. Write a structured spec (every count paired with labels, literal text quoted "render exactly")
+for layout-critical images (diagrams, UI references, cards with copy) and dense prose for mood,
+hero, and texture. Spend top fidelity where a person scrutinizes (hero, social card).
+
+**Curation pass.** Read every image and score **on-brand** (palette/type/register, no Do's-and-Don'ts
+breach) · **consistency** (one family with the anchor) · **slot-fit** (right subject and composition
+for this section's job) · **technical** (geometry; no garbled text, extra fingers, watermark,
+artifacts). Regenerate only failing slots — fix the prompt field or re-anchor; never re-roll a pass.
+Provenance per asset: captured vs generated, slot, prompt, model, date. A clip needs a shot spec
+(subject action, camera move, beats, audio or silent); seed image-to-video with a still from the
+anchored set so the clip inherits its style.
 
 ## Decoration discipline and authenticity
 
