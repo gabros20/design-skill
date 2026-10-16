@@ -8,7 +8,20 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ## [Unreleased]
 
 ### Added
-- Queue unreleased changes here.
+- `imagery-depth-decoration.md`: sourcing and generating imagery — a per-asset licence gate
+  (forced credit, NC, ND, no-AI-training and no-repackaging clauses, per-set licences inside
+  aggregators, logos as trademarks), the diversity-vs-consistency strategy, the anchor-first
+  reference-image workflow, and a four-axis curation pass with per-asset provenance.
+- `design-systems.md`: icon lookup by a library's name/tag index; DESIGN.md authoring by change
+  mode and the `@google/design.md` `lint` / `diff` / `export` gate (pin the `alpha` format).
+- `visual-direction.md`: the change mode (reproduce / redesign / rebrand) named with the design
+  read; `critique.md` calibrates the rubric to it (reproduce is judged on source fidelity) and
+  records residuals at the loop cap.
+- `information-architecture.md`: redesign inventory and per-page/section dispositions, the section
+  catalog, an in-chrome notice for kept links to unbuilt pages, and the multi-offer hub-and-spokes
+  sitemap.
+- Router rows, SOURCES primary documents, and activation / traversal / output eval cases for the
+  above.
 
 ## [0.1.3] — 2026-07-27
 

@@ -41,13 +41,13 @@ them automatically unless the user requested a composition workflow.
 |---|---|---|
 | Plan or synthesize UX research — jobs, interviews, surveys, usability studies, design-DNA | [Research](references/research.md) | Method choice and synthesized findings, each marked observed / inferred / assumed |
 | Map a flow, onboarding, wizard, checkout, or end-to-end journey | [Journeys](references/journeys.md) | Breadboard, flow, or journey/service map with every required edge |
-| Model objects, sitemap, navigation, naming, or findability | [Information architecture](references/information-architecture.md) | Object/relationship model, vocabulary, sitemap, navigation model |
+| Model objects, sitemap, navigation, naming, or findability — including inventorying a site before a redesign | [Information architecture](references/information-architecture.md) | Object/relationship model, vocabulary, sitemap, navigation model |
 | Define component behavior and states — forms, feedback, overlays, selection, search | [Interaction](references/interaction.md) | State-complete interaction spec (the canonical 8-state model) |
 | Set the point of view, or fix a result that reads generic or templated | [Visual direction](references/visual-direction.md) | Design read, named register + aesthetic lane, one bold move, refuse-list |
 | Choose or set type — scale, pairing, measure, display | [Typography](references/typography.md) | Type scale and a justified pairing with measure/leading/display settings |
 | Lay out a screen — grid, spacing, hierarchy, density, elevation | [Layout & composition](references/layout-composition.md) | Grid, spacing scale, one focal point, alignment/elevation plan |
 | Build a palette, neutral ramp, accent, dark mode, or check contrast | [Color](references/color.md) | OKLCH token set verified for contrast and gamut |
-| Add depth, materials, imagery, or decoration | [Imagery, depth, decoration](references/imagery-depth-decoration.md) | Depth/material spec and enrichment plan with reduced-motion fallbacks |
+| Add depth, materials, imagery, or decoration; source licensed icons/illustrations/logos or art-direct a generated image set | [Imagery, depth, decoration](references/imagery-depth-decoration.md) | Depth/material spec and enrichment plan with reduced-motion fallbacks; per-asset source + licence; anchored, curated image set |
 | Choose motion values or decide whether to animate | [Motion](references/motion.md) | Duration/easing/spring tokens and a per-moment reduced-motion spec |
 | Build or evaluate a prototype, or compare design options | [Prototyping](references/prototyping.md) | Classified prototype (disposable / design-reference / production-candidate) + test plan |
 | Create or extend a design system, tokens, or component contracts | [Design systems](references/design-systems.md) | Layered token set, component specs, DESIGN.md/PRODUCT.md contract |

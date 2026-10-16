@@ -98,5 +98,10 @@
   "id": "negative-infra-cdn",
   "prompt": "Provision the CDN and configure caching headers for our image assets.",
   "should_trigger": false
+ },
+ {
+  "id": "trigger-licensed-illustrations",
+  "prompt": "Pick openly licensed icons and illustrations for a client's marketing site and tell me which ones need attribution.",
+  "should_trigger": true
  }
 ]

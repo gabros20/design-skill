@@ -96,5 +96,30 @@
       "references/surface-android.md",
       "references/research.md"
     ]
+  },
+  {
+    "id": "asset-sourcing-website",
+    "prompt": "Source icons, illustrations, and partner logos for a client landing page; nothing that forces a credit link.",
+    "expected_references": [
+      "references/imagery-depth-decoration.md",
+      "references/surface-website.md"
+    ],
+    "forbidden_references": [
+      "references/surface-webapp.md",
+      "references/motion.md",
+      "references/critique.md"
+    ]
+  },
+  {
+    "id": "redesign-site-inventory",
+    "prompt": "We're redesigning an existing 30-page site. Inventory what's there and decide what to keep, merge, or drop.",
+    "expected_references": [
+      "references/information-architecture.md"
+    ],
+    "forbidden_references": [
+      "references/surface-android.md",
+      "references/motion.md",
+      "references/color.md"
+    ]
   }
 ]
