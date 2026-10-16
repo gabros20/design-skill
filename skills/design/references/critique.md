@@ -52,7 +52,11 @@ Produces:
    intended feel. Everything downstream is judged against that intent. **Calibrate scope to
    fidelity:** a wireframe is judged on hierarchy/flow/missing states only (no color or brand
    notes); low-fi adds layout & labeling; hi-fi adds visual & brand; a prototype adds
-   transitions & error paths.
+   transitions & error paths. **Calibrate the rubric to the change mode** (visual-direction.md): a
+   *reproduce* build is judged on fidelity, each section against the source screenshot, with
+   anti-default findings advisory; *redesign* and *rebrand* are judged on taste and anti-default
+   first-class. The reviewer is ideally the author of the direction — the eye that set the brief
+   checks the build; a builder grading its own output is not an art review.
 2. **See the whole first.** Look at the rendered output as a user: does one thing lead, does it
    breathe, does it look like *this* product? Squint. "The worst slop is compositional."
 3. **Run the lenses independently, section by section, writing each finding as you go** (never
@@ -81,7 +85,8 @@ Two compatible scales; a finding on either blocks if it lands in a blocking band
 **No first-pass sign-off.** Round 1 must never be a sign-off — if genuinely no A0/A1, promote the
 1–3 highest-value refinements into the blocking list for one real polish pass. From round 2,
 approve the moment A0/A1 are clear. Converge, don't chase perfection: round-over-round only
-escalate, adding no new low-value nitpicks. Cap the loop (default 3 rounds).
+escalate, adding no new low-value nitpicks. Cap the loop (default 3 rounds); at the cap, record the residual findings and hand on — release
+go/no-go stays with `quality`.
 
 ## Presumptive blockers and the false-positive filter
 
