@@ -23,6 +23,11 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
   sitemap.
 - Router rows, SOURCES primary documents, and activation / traversal / output eval cases for the
   above.
+- Cross-pack alignment with `frontend` and `quality` (ruling D-8): in reproduce mode a missing asset
+  stays a counted, labeled gap, with a generated fill only in an owner-approved non-brand, non-hero
+  decorative slot recorded as `generated`; placeholder routes for unbuilt pages carry `noindex`, stay
+  out of the sitemap, and are listed in the gap report; "reproduce" names quality's "fidelity" and
+  frontend's "faithful rebuild".
 
 ## [0.1.3] — 2026-07-27
 
