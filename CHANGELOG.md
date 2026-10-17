@@ -8,6 +8,11 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ## [Unreleased]
 
 ### Added
+- Queue unreleased changes here.
+
+## [0.2.0] — 2026-10-17
+
+### Added
 - `imagery-depth-decoration.md`: sourcing and generating imagery — a per-asset licence gate
   (forced credit, NC, ND, no-AI-training and no-repackaging clauses, per-set licences inside
   aggregators, logos as trademarks), the diversity-vs-consistency strategy, the anchor-first
@@ -85,5 +90,6 @@ is unchanged from 0.1.1; nothing about routing, artifacts, or behavior differs f
 - Evaluation fixtures across four dimensions — activation, traversal, output, and
   compression-ablation — replacing the placeholder sets.
 
+[0.2.0]: https://github.com/gabros20/design-skill/releases/tag/v0.2.0
 [0.1.2]: https://github.com/gabros20/design-skill/releases/tag/v0.1.2
 [0.1.0]: https://github.com/gabros20/design-skill/releases/tag/v0.1.0
