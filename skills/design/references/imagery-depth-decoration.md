@@ -119,29 +119,29 @@ orchestrated reveal, max one polish move + one enrichment per hero. Video: `mute
 ## Sourcing and generating imagery
 
 **Library assets.** Specify each by library + exact name (icon lookup: design-systems.md); one
-illustration family per site; seeded generators (blob/wave) or your own simple SVG geometry make
-decoration reproducible and licence-free. **Licence gate — per asset, read at the source.** On a
-client deliverable prefer MIT / ISC /
-Apache-2.0 / CC0 with no forced attribution. **Forced credit** (CC BY — e.g. Hero Patterns — and
-"free with attribution" tiers) is out unless the brief accepts it; **NC** disqualifies; **ND**
-forbids recolor/resize, so it cannot join a token palette. Read past the licence name:
-unDraw needs no attribution but forbids AI/ML training use and redistributing its assets as packs —
-embed rendered assets in the build, never hand over a reusable asset library. An aggregator's licence
-is not each set's: one Iconify search for "home" (checked 2026-10) returns sets under Apache-2.0, MIT,
-OFL-1.1, and CC BY 4.0 — honour the licence of the set you render. **Logos are trademarks:** a CC0
-file grants no trademark right (Simple Icons is CC0 yet asks users to seek permission and follow each
-brand's guidelines) — render marks unaltered, never implying endorsement. Record source + licence
-per asset in the handoff.
+illustration family per site; seeded generators (blob/wave) or your own SVG geometry make decoration
+reproducible and licence-free. **Licence gate — per asset, read at the source.** On a client
+deliverable prefer MIT / ISC / Apache-2.0 / CC0: no visible credit (keep their notices in the repo).
+**Forced credit** (CC BY — e.g. Hero Patterns — and "free with attribution" tiers) is out unless the
+brief accepts it; **NC** disqualifies; **ND** forbids sharing an altered version (recolor, redraw),
+so it cannot join a token palette. Read past the licence name: unDraw needs no attribution but
+forbids AI/ML training, scraping or bulk download, and repackaging — hand-pick files, embed rendered
+assets, never hand over a reusable library. Licences vary inside a collection: one Iconify search for
+"home" (checked 2026-10) returns Apache-2.0, MIT, OFL-1.1, and CC BY 4.0 sets; Simple Icons is
+released under CC0 but says not every icon is — check each icon's licence. **Logos are trademarks:**
+no file licence grants trademark rights; seek permission, follow the brand's guidelines, render marks
+unaltered, never implying endorsement. Record source + licence per asset in the handoff.
 
-**Generated sets — pick the strategy first.** *Diversity* (independent spots, iteration) → generate
-in parallel. *Consistency* (a set that must read as one family) → one engine, anchored, serial;
-spreading a cohesive set across engines maximizes drift. **Anchor-first:** (1) generate the
-most-scrutinized slot (usually the hero) first; (2) gate it against DESIGN.md (palette, register,
-Do's and Don'ts) until it passes; (3) pass the approved anchor as a **reference image** to every
-downstream slot. Session or text continuity carries the description, not the pixels — a weak lock. The anchor sets style, not geometry: each slot renders at its own ratio and
-size. Write a structured spec (every count paired with labels, literal text quoted "render exactly")
-for layout-critical images (diagrams, UI references, cards with copy) and dense prose for mood,
-hero, and texture. Spend top fidelity where a person scrutinizes (hero, social card).
+**Generated sets — pick the strategy first.** *Diversity* (independent spots, iteration) → parallel.
+*Consistency* (one family) → one engine, anchored, serial; spreading a set across engines maximizes
+drift. **Anchor-first:** (1) generate the most-scrutinized slot (usually the hero) first; (2) gate it
+against DESIGN.md (palette, register, Do's and Don'ts) until it passes; (3) pass it as a **reference
+image** to every downstream slot — text or session continuity carries the description, not the
+pixels. The anchor sets style, not geometry: each slot renders at its own ratio and size. Structured
+spec (every count paired with labels, literal text quoted "render exactly") for layout-critical
+images (diagrams, UI references, cards with copy); dense prose for mood, hero, and texture. Spend top
+fidelity where a person scrutinizes (hero, social card). Never generate a stand-in for a real person,
+product, place, or work (image-need above).
 
 **Curation pass.** Read every image and score **on-brand** (palette/type/register, no Do's-and-Don'ts
 breach) · **consistency** (one family with the anchor) · **slot-fit** (right subject and composition

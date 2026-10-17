@@ -61,6 +61,8 @@
     "assertions": [
       "The change mode is named as reproduce and the rubric is fidelity to the source screenshot, section by section.",
       "Anti-default findings are marked advisory, not blocking, in reproduce mode.",
+      "Accessibility floors stay blocking in reproduce mode; a source that fails them is reported, not reproduced silently.",
+      "Any image slot that would need a real person, product, place, or work of the business stays a real photo or a placeholder; no generated stand-in is proposed.",
       "The output is a Before/After/Why table with a binary verdict, and states 'code-level pass, not an art review' if no rendered build was viewed."
     ]
   }

@@ -15,8 +15,9 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 - `design-systems.md`: icon lookup by a library's name/tag index; DESIGN.md authoring by change
   mode and the `@google/design.md` `lint` / `diff` / `export` gate (pin the `alpha` format).
 - `visual-direction.md`: the change mode (reproduce / redesign / rebrand) named with the design
-  read; `critique.md` calibrates the rubric to it (reproduce is judged on source fidelity) and
-  records residuals at the loop cap.
+  read (reproduce never generates stand-ins for real people, products, places, or work, and never
+  suspends accessibility floors); `critique.md` calibrates the rubric to it (reproduce is judged on
+  source fidelity) and records residuals at the loop cap.
 - `information-architecture.md`: redesign inventory and per-page/section dispositions, the section
   catalog, an in-chrome notice for kept links to unbuilt pages, and the multi-offer hub-and-spokes
   sitemap.

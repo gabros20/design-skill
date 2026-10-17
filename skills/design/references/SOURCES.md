@@ -63,7 +63,7 @@ CC BY 4.0:
 ## Primary documents (checked 2026-10)
 
 - **google-labs-code/design.md** (Apache-2.0) README — `lint` / `diff` / `export` / `spec` behavior and the `alpha` format version (design-systems.md).
-- Asset licence terms, read at the source (imagery-depth-decoration.md): unDraw licence page (no attribution; no AI/ML training, no repackaging), Hero Patterns (CC BY 4.0), Simple Icons `LICENSE.md` (CC0) and `DISCLAIMER.md` (trademark and brand-guideline caveat), Lucide (ISC) and Tabler Icons (MIT) licences and their `tags.json` / `icons.json` indices, and the Iconify API's per-collection SPDX metadata.
+- Asset licence terms, read at the source (imagery-depth-decoration.md): unDraw licence page (no attribution; no AI/ML training, scraping or bulk download, or repackaging), Hero Patterns (CC BY 4.0), Simple Icons `LICENSE.md` (CC0) and `DISCLAIMER.md` (per-icon licences vary; trademark and brand-guideline caveat), Lucide (ISC; Feather-derived icons MIT) and Tabler Icons (MIT) licences and their `tags.json` / `icons.json` indices, and the Iconify API's per-collection SPDX metadata.
 
 ## Named technique authors
 

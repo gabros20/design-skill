@@ -54,7 +54,7 @@ Produces:
    notes); low-fi adds layout & labeling; hi-fi adds visual & brand; a prototype adds
    transitions & error paths. **Calibrate the rubric to the change mode** (visual-direction.md): a
    *reproduce* build is judged on fidelity, each section against the source screenshot, with
-   anti-default findings advisory; *redesign* and *rebrand* are judged on taste and anti-default
+   anti-default findings advisory and accessibility floors still blocking; *redesign* and *rebrand* are judged on taste and anti-default
    first-class. The reviewer is ideally the author of the direction — the eye that set the brief
    checks the build; a builder grading its own output is not an art review.
 2. **See the whole first.** Look at the rendered output as a user: does one thing lead, does it
