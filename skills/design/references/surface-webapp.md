@@ -93,7 +93,7 @@ imagery-depth-decoration.md "Solid glass"):
 
 **Legibility first:** full tokens pass AA; faded muted text (3.0–4.3:1), light-theme status hues as
 text (amber 2.6:1) and ~1.2:1 hairlines do not. Keep text at full token, give each hue dot a word, a
-field's edge 3:1 where it identifies the field. Build: `frontend` `shadcn.md` "Solid Glass theme".
+field's edge 3:1 where it identifies the field. Build: `frontend` `solid-glass.md` "Install".
 
 ## Color-mode decision
 
