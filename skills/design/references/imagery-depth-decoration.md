@@ -38,9 +38,7 @@ canvas; elsewhere skip to (3), since a glow behind text is the generated default
 foreground on layered shadows/glass; (4) lay one shared grain over everything to fuse it; (5) add
 motion (parallax/tilt) as the final ~10%. Cool/dark recede; warm/bright/high-contrast advance. Put
 `isolation: isolate` on the section, or `mix-blend-mode` grain and `backdrop-filter` glass leak
-across sections. A layered hero hands off a **layer contract**: each plane's asset, relative travel and contact rule
-(what moves together is one plane), opening/midpoint/exit in words, a phone composition; code:
-`scroll-animation` `layered-visuals.md` "2. Depth parallax".
+across sections. Layered and composited heroes hand off a layer contract (composition-layers.md).
 
 ## Materials
 
@@ -127,7 +125,7 @@ loud lanes commit to hard edges across the whole system — one loud device in a
 the subject *is* a canvas, map, plan or instrument (opacity 3–8%, edge-faded with `mask-image`) —
 elsewhere they are the generated background; color-matched dividers (a loud rainbow wave is a 2017
 tell); organic blobs (blurred, low-sat, partly off-canvas); connectors only where they encode a true
-sequence; 2–4 relevant PNG/3D cutouts max (`pointer-events: none`, `aria-hidden`); a brand mark as
+sequence; Restrained default 2–4 relevant cutouts, composited lanes budget by the kit (composition-layers.md) — `pointer-events: none`, `aria-hidden`; a brand mark as
 ghosted texture ≤6% opacity. A subject's world never licenses hate or militarist emblems as ornament
 (Rising Sun rays, the Confederate flag, Nazi-era marks or their stylisations); use its neutral forms.
 

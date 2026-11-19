@@ -34,7 +34,8 @@ Produces:
 ## Using the catalog
 
 A tell is an *unchosen* default: reflex, not law. The catalog is an anti-drift check on the agent's own
-defaults — it never overrides the direction contract or a chosen convention (conventions.md). Refuse an
+defaults — it never overrides the direction contract or a chosen convention (conventions.md). Rotated elements, stickers, tape, halftone, visible grids and overlapping type are lane
+values in collage, zine, poster and Y2K lanes — tells only where no contract chose them. Refuse an
 unchosen tell, then replace it; a ban with no substitute breeds the next tell. These are **brand-register**
 tells; the serve register legitimately uses many (system fonts, familiar cards). Keep the dated and
 exact values; they are the point. One hit proves little — clusters are the signal. Floor, Reflex and

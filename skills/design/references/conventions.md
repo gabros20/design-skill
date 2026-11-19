@@ -28,7 +28,8 @@ Produces:
 
 ## Precedence
 
-Floors (WCAG, HIG/M3 and platform requirements, honesty, legal, licence, perf, maths) never bend. Above them the direction
+Floors (WCAG, HIG/M3 and platform requirements, honesty, legal, licence, perf, maths) never bend; an
+existing brand's mandatories come next. Above them the direction
 contract — register, lane, dimensions — outranks every leaf default and every catalogued tell. Leaf
 numbers are defaults for a Restrained lane in a Persuade register unless the leaf says otherwise. A
 tell is an *unchosen* default; a chosen convention is not a finding.
@@ -41,11 +42,18 @@ Full · Drenched, color.md; light, dark or paper) · **depth and material** (fla
 tactile) · **motion intensity and scroll model** (still · functional · expressive · cinematic; native
 scroll, reveal, pinned or scrubbed) · **imagery** (none · product · photo-led · illustration · 3D) ·
 **composition** (convention · one bold move · many moves in one system) · **chrome** (conventional nav ·
-lane-specific).
+lane-specific) · **shape language** (sharp · soft · round · organic — the most visible brand lever) ·
+**image treatment and texture** (raw · graded · duotone or halftone · cutout · drawn; clean · grain ·
+print) · **era** (timeless · of the moment · a named period). Composition also takes **composited**
+(layered planes; composition-layers.md).
 
 ## Product types
 
-Proven conventions per type; "inverts" names the pack defaults that flip here.
+A row is the category standard: the codes a visitor already reads. **Keep** the codes that carry
+function or trust (navigation, the buy box, form patterns); **break** one to three that carry only
+sameness (palette source, type voice, imagery, composition), each for a reason in the brief, recorded
+in DEPARTS. Zero departures is the category-standard choice, named as one. "Inverts" names the pack
+defaults that flip here.
 
 - **Marketing site** — standard–airy; characterful display; Restrained or Committed; layered; expressive reveals; product capture; one bold move per section; conventional nav. Pack defaults apply as written.
 - **Dense web app / SaaS** — workbench; quiet UI face (Inter/SF fine), 400/500/600 steps; near-neutral ground, accent for state; flat or Solid Glass (surface-webapp.md); functional motion only; no imagery; convention over novelty. *Inverts:* fixed rem, zero bold moves, no doubled spacing, no weight extremes.
@@ -57,11 +65,18 @@ Proven conventions per type; "inverts" names the pack defaults that flip here.
 - **Native iOS / Android** — platform density; SF / Roboto (platform defaults, not reflexes); system colour roles; Liquid Glass (surface-ios.md) or Material 3 Expressive (surface-android.md); platform motion; platform chrome. *Inverts:* reflex-font rejection, custom chrome, web target sizes.
 - **Docs / Read** — standard; reading face for the column, mono only for code; neutral; flat; still; diagrams only; predictable structure is the affordance; sidebar nav. *Inverts:* layout-family variety, eyebrow caps on section kickers.
 - **E-commerce** — standard; quiet; Restrained or brand-Committed; flat; functional; product photos lead; uniform product grids are the convention; conventional nav and buy box. *Inverts:* "uniform card grids" as a tell; price and rating belong in the hero when the job is *buy*.
+- **Portfolio / studio** — the work is the interface: a project index or grid, case pages, almost no chrome; Experience mode. *Inverts:* proof sections, conventional nav.
+- **Campaign / launch microsite** — one idea, short life, the highest licence for expression; composited or cinematic; a single action. *Inverts:* ≤3 motion primitives, layout-family variety.
+- **Longform / scrollytelling** — a reading column that pauses for full-bleed, pinned or stepped figures; text always wins (scroll-animation). *Inverts:* screen budget, photo quotas.
+- **Event / festival / conference** — date and place are the headline; one identity system (colour, type, a modular or generative device) runs across schedule, lineup and tickets; tickets in the nav.
 
 ## Lanes
 
 A lane executes the dimensions as one system; match implementation complexity to the vision (a Rams
-interface ~50 lines, a Neo-Memphis ~300 — both correct).
+interface ~50 lines, a Neo-Memphis ~300 — both correct). The table is a set of worked examples, not a
+menu: author a lane from the concept, or build a hybrid **by axis** (one lane's structure with
+another's imagery or type), never by averaging two lanes on one axis; a hybrid has one kill sentence or
+it is two half-styles.
 
 | Lane | Load-bearing signature |
 |---|---|
@@ -78,6 +93,18 @@ interface ~50 lines, a Neo-Memphis ~300 — both correct).
 | Maximalist / playful | Committed or Full palette; loud hard edges across the whole system; stickers, rotation, bounce; one loud device in a quiet system reads cheap |
 | Dense instrument | Workbench rows 28–36px; mono numerals, tabular; status colour only; many metrics grouped and labelled; zero decoration |
 | Platform-native | The platform language is the lane: Liquid Glass (surface-ios.md), Material 3 Expressive (surface-android.md), Solid Glass (surface-webapp.md); brand lives in tint, type and content |
+| Collage / mixed media | Cutouts and paper over a ground; decisive overlap; one treatment on every image; marks from one kit; the interface plane stays clean (composition-layers.md) |
+| Poster / type-as-image | One word or phrase is the picture, sized to its container; flush left on a visible grid; one colour + black; the real heading stays intact in the DOM |
+| Art-directed editorial | Layout changes per story; type and image interlock; captions, credits and folios are designed; white space as a shape |
+| Print / riso / zine | Two or three inks, overprint by multiply, slight misregistration, halftone; paper ground; contrast measured on the printed result |
+| Y2K / retro-futurist | Chrome and gloss, bubble geometry, mesh gradients, pixel or system-UI quotes; committed across the system or not at all |
+| Illustration-led | One hand, one line weight, a fixed palette; the drawing carries meaning, never filler; licence and provenance recorded |
+| Photographic / full-bleed | The image is the page; one grade; type small, set in the image's quiet zones; chrome nearly absent |
+| Mono / terminal | One monospaced face in every role; character-cell grid; rules and brackets as ornament; native for technical audiences, a costume elsewhere |
+
+**A period lane is researched, not remembered:** name the decade and three primary artefacts (a
+poster, a magazine, packaging, an interface); take its type, palette, shapes and print process, and
+apply the period's *constraints* (limited inks, its tools' grid), not its clichés.
 
 ## Write the lane down
 
