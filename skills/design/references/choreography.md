@@ -81,9 +81,10 @@ Code: `frontend` `ui-motion.md` "Springs and interruption".
 
 ## Scroll and reveal
 
-- Prefer pure CSS: `animation-timeline: view()` + `animation-range: entry 0% cover 40%`, gated behind `@media (prefers-reduced-motion: no-preference)` so the default state is the finished, visible one — with motion off **and with scripting off**: a reveal never depends on script to become visible (robustness).
+- **Never let a reveal depend on script to become visible** (robustness): with motion off or scripting off the finished state shows.
+- **Default: content (text, cards) arrives by trigger**, the pre-JS gate its guarantee; a scrubbed fade leaves copy half-faded at rest. Decoration and media may scrub on `view()`. CSS scroll-triggered animations merge the two once portable.
 - Reveal once, cap staggered items at ~6, keep displacement small; no parallax on text being read; display type may move when the lane is cinematic.
-- Readable text never moves while it is read (legibility): reveal, then rest; no word-by-word reveals of body copy. A sticky label that updates as content passes animates only the token that changed. Code: `scroll-animation` `entrances.md`.
+- Readable text never moves while it is read (legibility): reveal, then rest; no word-by-word reveals of body copy. A sticky label that updates as content passes animates only the token that changed. Code: `scroll-animation` `entrances.md` "Triage by clock", "The gate, the failsafe and the server".
 
 ## Loops, idle and demo loops
 

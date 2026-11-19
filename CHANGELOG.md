@@ -7,8 +7,12 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 
 ## [Unreleased]
 
-### Added
-- Queue unreleased changes here.
+### Changed
+- `choreography.md` "Scroll and reveal" takes the family's content-reveal ruling: never let a reveal
+  depend on script (the floor); by default content (text, cards) arrives by trigger with the pre-JS
+  gate as its guarantee, since a scrubbed fade leaves copy half-faded at rest; decoration and media
+  may scrub on `view()`. Points at `scroll-animation` `entrances.md` "Triage by clock" and "The gate,
+  the failsafe and the server". Replaces the "prefer `view()` reveals" default.
 
 ## [0.3.0] — 2026-11-19
 
