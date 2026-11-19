@@ -22,7 +22,7 @@ Produces:
 ## Contents
 
 - Using the catalog
-- Predict, then refuse
+- Predict, then decide
 - Color
 - Typography
 - Layout and structure
@@ -33,7 +33,9 @@ Produces:
 
 ## Using the catalog
 
-Refuse, then replace — a ban with no substitute breeds the next tell. These are **brand-register**
+A tell is an *unchosen* default: reflex, not law. The catalog is an anti-drift check on the agent's own
+defaults — it never overrides the direction contract or a chosen convention (conventions.md). Refuse an
+unchosen tell, then replace it; a ban with no substitute breeds the next tell. These are **brand-register**
 tells; the serve register legitimately uses many (system fonts, familiar cards). Keep the dated and
 exact values; they are the point. One hit proves little — clusters are the signal. Floor, Reflex and
 Finish tiers (which tells may be waived on the record) are in critique.md.
@@ -43,27 +45,28 @@ Finish tiers (which tells may be waived on the record) are in critique.md.
 neutral surfaces, one accent, plain hairlines — and spend colour, material and detail on one or two
 content moments.
 
-## Predict, then refuse
+## Predict, then decide
 
-Before designing, write the page this prompt gets without trying and its obvious twist; neither
-ships. The default page: head-left/picture-right hero, three numbered steps, label-and-value rows
+Before designing, write the page this prompt gets without trying and its obvious twist; neither ships
+*by accident* — the predicted page ships only when the contract names it as the category-standard
+choice. The default page: head-left/picture-right hero, three numbered steps, label-and-value rows
 between hairlines, a closing band with a form, a dark footer under a huge wordmark, small grey
 labels, a pale ground with one careful accent — two of these in one plan means the plan is the
-template. The test: if someone could guess the aesthetic from the category, or from category plus
-your anti-reference, rework.
+template. The test: if someone could guess the aesthetic from the category, it must be a choice
+the contract names, not a landing.
 
 ## Color
 
 - Cream/sand/beige body background — the saturated AI default of 2026. Suspect the band **OKLCH L
-  0.84–0.97, C < 0.06, hue 40–100**; tell token names `--paper --cream --sand --linen --parchment
+  0.84–0.97, C < 0.06, hue 40–100**; tell token names when the contract never chose paper: `--paper --cream --sand --linen --parchment
   --bone --flour --wheat --ivory`.
 - Premium-consumer palette (cookware/wellness/luxury/DTC) — banned defaults: backgrounds `#f5f1ea
   #f7f5f1 #fbf8f1 #efeae0 #ece6db #faf7f1 #e8dfcb`; accents `#b08947 #b6553a #9a2436 #9c6e2a
   #bc7c3a`; text `#1a1714 #1a1814`. Rotate to a different family (cold-luxury silver+chrome,
-  forest+bone+amber, cobalt+cream, terracotta+slate); never ship the same premium palette twice.
+  forest+bone+amber, cobalt+cream, terracotta+slate); rotation breaks ties, never overrides fit.
 - Purple→blue / indigo→violet gradients, on text or as accent ("the lila rule"); saturated diagonal
   gradients (purple→pink); gradient-filled hero headings; dark mode + single acid-green/vermilion
-  glow. Max one accent, saturation < 80%.
+  glow. In a Restrained plan, one accent at saturation < 80%.
 - A hue picked for the category (blue for software, green for health); **dev-tool dark** (blue-grey
   near-black ~`#0D1117`) reads as an editor screenshot — take the dark from the brand's world.
 - An accent that collides with semantics (brand red meaning "new" beside red errors): move the hue or
@@ -99,7 +102,7 @@ one word of each headline (italic, bold or colour) as the only typographic idea.
 ## Surfaces and effects
 
 - Ghost card (`1px` border + `box-shadow` ≥16px blur on the *same* element); over-rounding
-  (`border-radius: 32px+`); hand-drawn / sketch **displacement** filters (static `feTurbulence` grain
+  (one large radius on every element regardless of hierarchy); hand-drawn / sketch **displacement** filters (static `feTurbulence` grain
   at ≤0.08 is the texture, not the tell); `repeating-linear-gradient` candy stripes.
 - **Hard offset shadow** (zero blur) outside a world that chose neobrutalism; a **zero-offset coloured
   halo** — shadows need offset and blur.
@@ -119,7 +122,7 @@ rotated text; crosshair/hairline grid decoration; **div-based fake product UI / 
 the hero (the #1 tell)** — the honest route is product-visuals.md; fake version footers; "Quietly
 trusted by"; poetic sidebar labels ("Field notes"); weather/locale strips ("LIS 14:23 · 18°C"); live
 counters ("Reservation 412 of 800"); hero-bottom decoration strips ("BRAND. MOTION. SPATIAL.");
-scroll cues ("Scroll to explore"); emoji or Unicode glyphs standing in for an icon set, or mixed icon
+scroll cues ("Scroll to explore"); typewriter/rotator headlines and decorative pill badges; emoji or Unicode glyphs standing in for an icon set, or mixed icon
 families; sparklines, rings or tallies standing in for content; hover that moves the target or its
 neighbours. **Invented metrics** (fabricated `92%`/`4.1×`/`48k`) — a stat is never the hero's sole
 headline; use a real number or `—` + a labeled block. **Re-drawn chrome** (fake browser bars, phone
@@ -140,8 +143,8 @@ to justify, never a destination to drift into:
    hierarchy, the same soft grey shadow, gradient washes as decoration.
 
 **This model's measured prior:** warm, bookish, family or child subjects drift to cream, italic serif
-and "lamplight" unasked. Treat that palette as spent and start from the subject's saturated materials
-(bookcloth, thread, jackets, endpapers) — a book subject is no licence for cream. A pinned world pins
+and "lamplight" unasked. Start from the subject's saturated materials (bookcloth, thread, jackets,
+endpapers); choose cream only when the contract names paper as the world. A pinned world pins
 the world, not its softest rendition.
 
 ## Templated-design diagnosis and system fixes

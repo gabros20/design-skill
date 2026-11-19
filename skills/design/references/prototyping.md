@@ -72,4 +72,4 @@ Real content (no lorem), semantic-first markup, deliberate spacing, and realisti
 
 ## Anti-slop test (two altitudes)
 
-Before shipping, both must be non-obvious. First-order: could someone guess the theme and palette from the product category alone? Second-order: could they guess the aesthetic family from category plus your anti-reference? If either is obvious, the design defaulted. The general anti-default catalog lives in anti-defaults.md.
+Before shipping, ask: could someone guess the theme and palette from the product category alone, or the aesthetic family from category plus your anti-reference? If yes, it must be a choice the contract names (the category standard), never a landing. The general anti-default catalog lives in anti-defaults.md.

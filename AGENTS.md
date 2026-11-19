@@ -24,10 +24,15 @@ artifacts and emit a handoff. Do not silently expand this skill into a lifecycle
 - **Canonical homes — one source of truth, others point to it, never restate.** Motion
   duration/easing values live in `motion.md`; sequencing, gesture and loop values in
   `choreography.md`. Universal accessibility floors (contrast, target sizes, focus, zoom,
-  reduced-motion, pause/stop/hide) live in `accessibility.md`. Register doctrine lives in
-  `visual-direction.md`; the anti-default catalog in `anti-defaults.md`. The 8-state model lives in
+  reduced-motion, pause/stop/hide) live in `accessibility.md`. Register doctrine and the direction
+  contract live in `visual-direction.md`; lanes, style dimensions and product-type conventions in
+  `conventions.md`; the anti-default catalog in `anti-defaults.md`. The 8-state model lives in
   `interaction.md`; form layout, validation timing and the save model in `forms.md`; the handoff
   package in `handoff.md`; token architecture in `design-systems.md`.
+
+- **Precedence.** Floors (WCAG, HIG/M3 requirements, honesty, licence, maths) never bend; the
+  direction contract outranks leaf defaults and catalogued tells. Phrase floors as never/must with
+  their basis, heuristics as "Default X; Y when Z", taste as a reflex or a lane value.
 
 ## Change rules
 

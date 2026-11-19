@@ -31,7 +31,7 @@ Produces:
 
 ## Preconditions and evidence
 
-- **The bar** is "would a design lead at Linear or Apple put their name on this?", judged against the design's *own* intent.
+- **The bar** is "would the best practitioner of *this lane* sign it?", judged against the direction contract (lane, dimensions, fail-if list) — a value the contract chose is not a finding.
 - **No vision, no art review.** A visual verdict needs rendered evidence + a multimodal reviewer: per-section crops at ~1440×900 and iPhone-class (plus the user's real viewport), reduced motion emulated, ~2s settle after each scroll, in an ordered manifest; a headless 390px shot is not a device test. Cite one detail visible only in the image.
 - **Validate evidence first:** no blank, black, wrong-section or half-loaded frame; entrance motion settled (a timing-hidden element reads as missing). Invalid evidence yields *recapture*, never a verdict.
 - **Degrade honestly.** No render → "code-level pass — not an art review; no build was viewed." Value-determined defects (a fixed 384px panel at 320px) are still findings; visual judgments are not; an unrendered check is unchecked, never passed.
@@ -47,14 +47,14 @@ Produces:
 
 ## Severity, tiers and rounds
 
-- **One scale, P0–P3:** **P0** blocks the core task or excludes a user · **P1** "would a real user contact support over this?", or an art defect — a direction violation (off-palette/type/register, a tell, broken hierarchy) or a composition/detail failure (centered-everything, uniform card grids, mis-sized icon, overflow/clip, misalignment) · **P2** friction with a workaround, or a refinement · **P3** polish or delight. **Any P0, or a P1 you can't fix now, is NO-GO.** **P0 on sight, never averaged down or capped:** unnamed control · invisible focus · pointer-only path · motion ignoring reduced motion · clip or loss at 320px/200% · text failing contrast · meaning by colour or motion alone · destructive action with no confirm, undo or distinct treatment · truncation or hidden content with no way back · an error with no recovery · a semantic colour against its meaning · a deceptive pattern (journeys.md).
+- **One scale, P0–P3:** **P0** blocks the core task or excludes a user · **P1** "would a real user contact support over this?", or an art defect — a contract violation (off-palette/type/register, an *unchosen* tell, broken hierarchy) or a detail failure (mis-sized icon, overflow/clip, misalignment) · **P2** friction with a workaround, or a refinement · **P3** polish or delight. **Any P0, or a P1 you can't fix now, is NO-GO.** **P0 on sight, never averaged down or capped:** unnamed control · invisible focus · pointer-only path · auto-motion >5s with no pause (2.2.2) or vestibular-scale motion with no reduced path · clip or loss at 320px/200% · text failing contrast · meaning by colour or motion alone · destructive action with no confirm, undo or distinct treatment · truncation or hidden content with no way back · an error with no recovery · a semantic colour against its meaning · a deceptive pattern (journeys.md).
 - **Waivers:** a *Floor* finding (honesty, access, correctness) is never waived; a *Reflex* (a model default) may be, on the record with a reason about *this* page and who decided — three builds running makes it house style (write it into DESIGN.md), >~5 on a page means fix.
 - **Rounds:** round 1 never signs off — with no P0/P1, promote the 1–3 best refinements for one polish pass; from round 2, approve once P0/P1 clear. **Re-review scores the listed fixes, not narration:** a fix not visible in the recapture is unresolved; name ≤3 regressions, no new hunt; a pass approves the list, not the surface. The user's own screenshot reopens a full review. Cap at 3 rounds, record the residual — release go/no-go is `quality`'s.
 ## Presumptive blockers and the false-positive filter
 
-**Presumptive blockers** — any one → not approved: no focal point · size-only or defaulted typography ·
-monotone layout · timid or competing-accent palette · harsh or fragmented surfaces · missing states ·
-**under-filled sections** (a heading + paragraph posing as a section) · structural hacks (negative
+**Presumptive blockers**, judged against the contract's fail-if list, not the catalog — any one → not
+approved: no focal point *where the lane wants one* · unchosen typography or palette · competing
+accents · harsh or fragmented surfaces · missing states · under-fill *where the lane promises mass* · structural hacks (negative
 margins undoing padding, escape-hatch `calc()`, absolute positioning to dodge flow) · an inaccessible
 hand-rolled control where a keyboard-accessible primitive exists.
 

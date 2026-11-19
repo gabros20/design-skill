@@ -31,8 +31,9 @@ them automatically unless the user requested a composition workflow.
 1. Identify the primary design job.
 2. When the request names or implies a surface, its overlay counts as part of the smallest sufficient set — add it (at most one unless the task explicitly compares platforms).
 3. Add only the concern overlays that materially affect the request.
-4. Read every selected reference completely before producing the affected artifact.
-5. Do not scan or load unrelated references.
+4. A craft task with no direction contract sets the lane and dimensions first, briefly ([Conventions](references/conventions.md)).
+5. Read every selected reference completely before producing the affected artifact.
+6. Do not scan or load unrelated references.
 
 ### Primary job
 
@@ -43,7 +44,8 @@ them automatically unless the user requested a composition workflow.
 | Model objects, sitemap, navigation, naming, or findability — including inventorying a site before a redesign | [Information architecture](references/information-architecture.md) | Object/relationship model, vocabulary, sitemap, navigation model |
 | Define component behavior and states — feedback, overlays, selection, search | [Interaction](references/interaction.md) | State-complete interaction spec (the canonical 8-state model) |
 | Design a form, field, sign-in, checkout step, or settings input — layout, control choice, validation timing, save model | [Forms](references/forms.md) | Field list with controls, validation and recovery behaviour, field states, save model |
-| Set the point of view — register, visitor mode, change depth, concept, lane | [Visual direction](references/visual-direction.md) | Design read, register + mode, direction contract, one bold move, committed lane |
+| Set the point of view — register, visitor mode, change depth, concept, direction contract | [Visual direction](references/visual-direction.md) | Design read, register + mode, direction contract |
+| Choose style dimensions and a lane from the product type's conventions | [Conventions](references/conventions.md) | DIMENSIONS line and a named lane with its fail-if list |
 | Fix a result that reads generic, templated, or AI-made, or write the refuse-list | [Anti-defaults](references/anti-defaults.md) | Tells found or refused, each with its replacement |
 | Plan a website page's sections — anatomy by visitor job, narrative, compositions, pricing, nav/footer | [Page anatomy](references/page-anatomy.md) | Section sequence with compositions, feeling curve, chrome |
 | Choose or set type — scale, pairing, measure, display | [Typography](references/typography.md) | Type scale and a justified pairing with measure/leading/display settings |
@@ -85,7 +87,7 @@ Trace a technique to its source → [Sources](references/SOURCES.md).
 Read these together — the router encodes the pairing so no lateral hop is required:
 
 - Native mobile prototype → [Prototyping](references/prototyping.md) + [iOS](references/surface-ios.md) (or [Android](references/surface-android.md)).
-- A new surface from scratch → [Visual direction](references/visual-direction.md) first, then only the craft leaves the brief makes material — [Typography](references/typography.md), [Layout & composition](references/layout-composition.md), [Color](references/color.md), [Imagery, depth, decoration](references/imagery-depth-decoration.md), [Motion](references/motion.md) — plus the one surface overlay. Add [Page anatomy](references/page-anatomy.md) only when the page's sections are being planned, [Anti-defaults](references/anti-defaults.md) only for a deslop or refuse-list.
+- A new surface from scratch → [Visual direction](references/visual-direction.md) + [Conventions](references/conventions.md) first, then only the craft leaves the brief makes material — [Typography](references/typography.md), [Layout & composition](references/layout-composition.md), [Color](references/color.md), [Imagery, depth, decoration](references/imagery-depth-decoration.md), [Motion](references/motion.md) — plus the one surface overlay. Add [Page anatomy](references/page-anatomy.md) only when the page's sections are being planned, [Anti-defaults](references/anti-defaults.md) only for a deslop or refuse-list.
 - A design system for a specific surface → [Design systems](references/design-systems.md) + that surface overlay.
 - A motion spec where several things move → [Motion](references/motion.md) + [Choreography](references/choreography.md).
 - Any flow, screen, or system where accessibility is explicit → the primary reference + [Accessibility](references/accessibility.md).
@@ -96,10 +98,14 @@ Read these together — the router encodes the pairing so no lateral hop is requ
 - Design the full state set when it applies: default, hover, focus, active, disabled, loading, error, success, plus empty for every data region.
 - Use real content at real lengths — the longest realistic string, the empty case, the overflow case. Never fabricate claims — metrics, logos, testimonials, prices, customers, capabilities, outcomes, or decorative data. Demonstration content may be authored at full fidelity only when labelled synthetic and listed for replacement.
 - Label every coded artifact disposable, design-reference, or production-candidate. Never present prototype code as production-ready without engineering, accessibility, and quality review.
-- Spend one bold move per section or page and keep everything else restrained; two bold moves compete, zero reads generic.
-- Treat accessibility floors — contrast, target size, focus order, reduced-motion — as design constraints even when the accessibility reference is not opened.
+- **Precedence:** floors never bend. Above them the direction contract — register, lane, dimensions — outranks every leaf default and every catalogued tell; leaf numbers are Restrained-lane defaults unless the leaf says otherwise. A tell is an *unchosen* default.
+- Treat accessibility floors as design constraints even when accessibility.md is not opened: every control named and keyboard-operable, text 4.5:1 / UI 3:1, targets ≥24px (44pt / 48dp touch), visible focus, a reduced-motion path.
 - Preserve established product, brand, and architecture constraints. When the design and a constraint conflict, report it explicitly rather than silently overriding.
 - A visual verdict requires rendered evidence. When no build was viewed, state "code-level pass, not an art review" rather than signing off on appearance.
+
+**How rules are phrased.** *Floor:* never / must, with its basis in parentheses (WCAG, HIG, M3,
+licence, honesty, maths) — never bends. *Default:* "Default X; Y when Z" — bends to the contract.
+*Reflex:* "choose it, don't land on it" — a lane value, never a ban.
 
 ## Core workflow
 
