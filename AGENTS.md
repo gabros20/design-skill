@@ -26,7 +26,7 @@ artifacts and emit a handoff. Do not silently expand this skill into a lifecycle
   `choreography.md`. Universal accessibility floors (contrast, target sizes, focus, zoom,
   reduced-motion, pause/stop/hide) live in `accessibility.md`. Register doctrine lives in
   `visual-direction.md`; the anti-default catalog in `anti-defaults.md`. The 8-state model lives in
-  `interaction.md`; the handoff package in `handoff.md`; token architecture in `design-systems.md`.
+  `interaction.md`; form layout, validation timing and the save model in `forms.md`; the handoff package in `handoff.md`; token architecture in `design-systems.md`.
 
 ## Change rules
 

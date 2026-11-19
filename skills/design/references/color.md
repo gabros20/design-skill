@@ -120,7 +120,7 @@ capability delta; a base model picks state colors ad hoc). Re-expressed as OKLCH
 
 Exactly four semantic roles, each mapped to one meaning product-wide: **Red** error/destructive ·
 **Amber** warning only · **Green** success · **Blue** info. Hue anchors (OKLCH): error 20–30, warning 65–90,
-success 140–160, info 235–260 (sRGB red sits at 29°, yellow 110°, green 142°, blue 264°). Align
+success 140–160, info 235–265 (sRGB red sits at 29°, yellow 110°, green 142°, blue 264°). Align
 chroma and lightness to the brand (muted brand → muted semantics); amber fills are light (L
 ≈0.75–0.85) and take ink text, never white. **Hues within 15° read as one
 colour, one meaning:** keep every status hue ≥15° from the accent; where convention forbids (red brand,

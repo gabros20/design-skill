@@ -109,7 +109,7 @@ Default target: **WCAG 2.2 AA** unless the brief sets another. Decided in design
 - **Accessible authentication (3.3.8):** no step that depends on memory, transcription or a puzzle without an alternative; paste and password managers work; offer a passkey or emailed link.
 - **Consistent help (3.2.6):** help and contact sit in the same place on every page.
 - **Timeouts (2.2.1):** warn ≥20s before expiry, extend with one action, keep what was entered.
-- **Headings follow structure, not size:** one `h1`, no skipped levels; the look comes from a type role.
+- **Headings follow structure, not size** (structural best practice, not a WCAG criterion): one `h1`, no skipped levels; the look comes from a type role.
 
 ## Reduced motion
 
