@@ -119,7 +119,7 @@ Default target: **WCAG 2.2 AA** unless the brief sets another. Decided in design
   finished, usable design, not a degraded one. Every motion device ships a reduced-motion path.
 - Reduced means **gentler, not necessarily zero**, decided per moment: essential motion (a state
   transition that carries meaning) may remain in a calmer form; decorative motion (parallax,
-  ambient loops, scroll-hijack) collapses to static. Default: never carry meaning by motion alone (a11y best practice).
+  ambient loops, scroll-hijack) collapses to static. Never carry meaning by motion alone (logic: the reduced-motion path must keep the meaning).
 - **Pause, stop, hide (2.2.2, Level A, independent of the OS setting):** anything that moves, blinks
   or auto-updates on its own for more than 5s beside other content — a muted looping hero video, a
   carousel, marquee, ticker, ambient loop — has a visible pause/stop control and pauses on hover and
