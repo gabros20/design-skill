@@ -51,6 +51,10 @@ Row/card selection, the mass-action toolbar, and sticky header/first-column patt
 - **Dashboard composition:** title the screen by its page or period ("October 2026"), never a greeting; lead with one hero figure, one main chart that is clearly the biggest thing, and one table or ranked list — a KPI wall of equal gauges is the tell. A stat card is label, figure and change with what it compares to — no sparkline, icon tile or tally as filler. Vary several blocks' form by weight (hero number, bar, status-coloured number, stat row) in one voice; a figure in a warning state has its fix action beside it. The signature is the object the tool is known by (the ledger, the queue).
 - **Pick the chart form first:** one value → a stat tile, never a one-bar chart · a few values → a stat row or horizontal bars · a trend → a line · parts of a whole → one stacked horizontal bar or a ranked list, never pie, donut or gauge · >~7 categories → a table. Familiar over exotic ("novelty in a chart type is a tax on comprehension"). Bars start at zero; a truncated axis that exaggerates a change is an invented metric unless it says "axis starts at 94%"; two units become small multiples, never a second y-axis. One accent on the series that argues, the rest neutral or a lightness ramp of that hue; separate categories by opacity, pattern or line style before a new hue; >3 series take a CVD-safe categorical set (Okabe-Ito), never a rainbow; label lines directly rather than through a legend; labels stay in ink.
 - **Tables:** numeric columns lining + tabular, right- or decimal-aligned; text left; icon/status centred; each header aligned like its data. On a phone keep the column that names each row and the one that acts on it in view (restack rows as labelled blocks or pin the first column); content a desktop shows is never simply hidden on a phone.
+- **Paging:** goal-directed lists (search results, tables, anything compared or returned to) paginate — position is addressable, the footer reachable; feeds browsed for discovery may scroll endlessly; the safe default is **Load more** with the count ("Showing 40 of 312"). Back restores scroll position and loaded items; a table states its total.
+- **Table hygiene:** the default sort is stated and the sorted column marked with its direction; zebra *or* row dividers, never both; an empty cell shows "—", never blank or 0; filters sit above as removable chips with "Clear all"; past ~7 columns offer hide/reorder and pin the identifying column.
+- **Shortcuts:** each listed in a `?` sheet and shown beside its command in menus, tooltips and the command palette; never override browser, OS or screen-reader keys; single keys follow accessibility.md (2.1.4); sequences ("G then I") for navigation, modifiers for actions.
+- **Ordered data** takes a sequential ramp (one hue, monotonic lightness); a diverging ramp only around a meaningful midpoint, neutral at the centre, both ends at equal lightness.
 - **Coordinated views:** selection state lives in ONE shared store both views read/write; clicking a visual scrolls the table row into view; colour is identical across views from one source. Highlight (hover, transient) ≠ Selection (click, persistent); debounce hover.
 
 ## Expert and operational tools
@@ -63,17 +67,13 @@ Domain language over technical (`max_concurrent_jobs` → "Maximum tasks running
 
 ## Enterprise design systems
 
-Enterprise webapps deviate from consumer-web defaults. **Consensus: UI text is 13–14px, not 16px** (long-form reading stays 16px; typography.md floors). Canvas convention is either gray-canvas + white-card or white-canvas + layer alternation (Carbon layers white ↔ `#f4f4f4` instead of shadows). App-shell dimensions run tight: Modus navbar 56px + sidebar 60/300px (collapsed/expanded) · Carbon header 48px (`#161616`) · Salesforce/SLDS header 50px + 3px blue border · Polaris top bar 56px dark + nav 240px.
-
-If the brief matches one of these systems, adopt it — don't recreate its CSS or override 90% of its tokens. Their distinguishing deviations (the ones a model gets wrong):
-
-| System | Font / body | Signature deviations |
-|---|---|---|
-| Carbon (IBM) | IBM Plex Sans / 14px | radius **0** (signature); large headings weight **300**; layer tokens (not shadows); ON-state green `#198038`; primary `#0f62fe`; focus 2px inset outline; 16-col / 32px-gutter grid; motion Productive 70–240ms / Expressive 150–400ms |
-| Modus (Trimble) | Open Sans / 14px | radius 4px (cards 8, never >8); **uniform non-directional shadows** `0 0 Npx rgba(37,42,46,0.3)`; cool grays; buttons 32px/600; disabled opacity 0.3; alerts with 12px left border; `#0063A3` |
-| Polaris (Shopify) | system stack / 13px | primary buttons **dark `#303030`, not blue**; links `#005BD3` separate from brand green `#008060`; radius 8 buttons / 12 cards; borders **0.66px**; motion 150ms |
-| Spectrum (Adobe) | Adobe Clean | accent `#0D80D8` light / `#2A9AF4` dark; radius 4/8; disabled opacity **0.38**; focus = 2px outline + 2px offset (not box-shadow); transitions 130ms ease-out; pure-neutral grays |
-| Lightning/SLDS (Salesforce) | Salesforce Sans / 13px | **gray page bg `#F3F3F3` + white cards** (inverted from white-page systems); focus = glow `0 0 3px #0070D2`; buttons weight 400; brand `#0176d3` |
+Enterprise webapps deviate from consumer-web defaults. **Consensus: UI text is 13–14px, not 16px**
+(long-form reading stays 16px; typography.md floors). Canvases are grey + white cards or white + layer
+alternation; app shells run tight (headers 48–56px, sidebars ~240–300px, collapsed ~60px). If the
+brief matches a system, adopt it — never recreate its CSS. The deviation a model gets wrong: **Carbon**
+radius 0, layer tokens instead of shadows, light 300 headings · **Polaris** dark primary buttons,
+links separate from brand green · **SLDS** grey page with white cards · **Spectrum** outline focus with
+offset, not box-shadow · **Modus** uniform non-directional shadows, cards ≤8px radius.
 
 ## Color-mode decision
 
@@ -81,10 +81,10 @@ Mode is a brand/context decision, not a user preference by default. Offer a them
 
 ## Web-platform specifics
 
-Floors live in accessibility.md (targets: 24×24 CSS px AA with the spacing exception, 44×44 AAA, `::after { inset: -10px }` to expand; reflow at 320px; never `maximum-scale=1`; focus indicator perimeter × 2px at 3:1 via `:focus-visible`). Web-specific:
+Floors (targets, reflow, zoom, focus) live in accessibility.md; expand a small target with `::after { inset: -10px }`. Web-specific:
 
 - **Label in Name (SC 2.5.3):** the accessible name contains the visible label (voice control activates by visible text).
 - **Container queries** size components by container, not viewport; content-based breakpoints, web defaults **640 / 768 / 1024px** plus an 80rem (1280) step.
 - `prefers-contrast: more` = macOS/iOS Increase Contrast; forced colors = Windows High Contrast (system keywords `ButtonText`/`ButtonFace`/`ButtonBorder`); `color-scheme: light dark`.
-- `min-h-dvh`, never `100vh`, on mobile; logical properties for RTL; don't disable submit buttons — validate on submit.
+- `min-h-dvh`, never `100vh`, on mobile; logical properties for RTL; submit behaviour per forms.md.
 - **PWA manifest** requires `name` + `icons` + `start_url` + `display: standalone` + HTTPS + a service worker with a `fetch` handler; `theme_color` tints browser chrome.

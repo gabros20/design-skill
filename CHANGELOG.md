@@ -26,9 +26,22 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 - Craft folds across typography, color, layout, interaction, content, design systems, research,
   prototyping, handoff, and the four surfaces; activation, traversal and output eval cases.
 
+- `forms.md` (new, router-wired): layout, control choice by answer type, validation timing (reward
+  early, punish late), forgiving input, passwords and sign-in, field states, save model — moved and
+  expanded from interaction.md. WCAG 2.2 AA decisions design owns (1.4.13, 2.1.4, 3.3.7, 3.3.8, 3.2.6,
+  2.2.1); deceptive-pattern floor; Liquid Glass (current HIG); Material 3 Expressive; webapp paging,
+  table hygiene, shortcuts and ordered colour scales; web column spec; warm-ramp hue rotation.
+
 ### Fixed
 - WCAG large text is ≥24px / ≥18.66px bold (18pt / 14pt), not 18px / 14px; the 2.5.8 spacing rule
   is the 24px-circle exception, not a 24px gap.
+- Advisory corrections: OKLCH semantic hue anchors (error 20–30, warning 65–90, info 235–260);
+  WCAG 2 AA is the contrast gate with APCA as a second lens (WCAG 3 is a draft); focus indicator
+  criteria (2.4.7 / 1.4.11 / 2.4.11 AA, 2.4.13 AAA); iOS alert button order and Dynamic Type at AX5
+  (17→53pt); form-control 16px zoom rule; `mix-blend-mode: difference` legibility; known dates as three
+  fields, not a picker; submit stays enabled (one statement); sentence case by default; display cap as
+  a default with a declared exception; F-pattern as a failure to design out; tree tests over click
+  counts; equal cells for equal rank; browser gamut clipping.
 - Measure is counted in characters, not `ch`; ramp lightness is spaced unevenly; dismiss on distance
   *or* velocity; tabs never slide; the focus ring is never animated; short UI exits ease out;
   Motion's `x`/`y`/`scale` shorthands are accelerated from v14.2.

@@ -185,5 +185,17 @@
       "references/research.md",
       "references/brand-mark.md"
     ]
+  },
+  {
+    "id": "forms-signup",
+    "prompt": "Design the sign-up and billing-details form for our app: which controls, when to validate, and how errors show.",
+    "expected_references": [
+      "references/forms.md"
+    ],
+    "forbidden_references": [
+      "references/brand-mark.md",
+      "references/surface-website.md",
+      "references/motion.md"
+    ]
   }
 ]

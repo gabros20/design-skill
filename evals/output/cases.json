@@ -85,5 +85,15 @@
       "The test ladder is applied (16px, one-colour, reversed, mirror/rotate, familiarity) with results stated.",
       "No trademark clearance is claimed; a trademark-database and reverse-image search is recommended, and the font licence is checked for logo use."
     ]
+  },
+  {
+    "id": "forms-validation-and-dates",
+    "prompt": "Spec the validation for a long application form that asks for date of birth, passport expiry, and an appointment date.",
+    "assertions": [
+      "Fields validate on leaving them, never while first typed; a field already in error re-checks on every keystroke; an untouched empty required field errors only on submit.",
+      "Submit stays enabled and pressing it focuses the first error, with a linked error summary on a long form.",
+      "Date of birth and passport expiry use three text fields in locale order; the appointment date uses a calendar that also accepts typing.",
+      "Nothing already asked is asked again, and paste and password managers are not blocked (WCAG 3.3.7 / 3.3.8)."
+    ]
   }
 ]

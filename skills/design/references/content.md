@@ -31,7 +31,8 @@ Write the copy before designing the UI (content-first); the words are the signpo
 Write from the end user's side of the screen: name things by what people control and recognize, never
 by how the system is built (a person manages notifications, not webhook config). Describe what
 something does in plain terms rather than selling it. Specific beats clever. Each element does exactly
-one job. Register: conversational, plain verbs, sentence case, no filler, never "just", "simply" or
+one job. Public-facing copy targets a lower-secondary reading level, one idea per sentence, a term
+of art defined on first use. Register: conversational, plain verbs, sentence case, no filler, never "just", "simply" or
 "easily". **Inventory first:** read the locale files and nearby copy, list the noun for each object, the
 verb for each action and the case per element, and reuse them.
 
@@ -58,12 +59,12 @@ link to a referenced setting instead of narrating its menu path.
 
 ## Capitalization and length
 
-Capitalization is systematic, not taste. Sentence case: body, helper text, errors, tooltips, button
-labels, H3 and below, captions. Title Case: page and modal titles, nav menu items, form field labels.
-ALL-CAPS: only overlines of 3 words or fewer, plus acronyms. A dropdown action item is a button
+One capitalization system per product. Default sentence case everywhere, titles, buttons and labels
+included; Title Case only where the platform (Apple) or the brand's existing style sets it. ALL-CAPS:
+only overlines of 3 words or fewer, plus acronyms. A dropdown action item is a button
 (sentence case); a button pointing to a named page keeps that page's case. Store copy in natural case
-and apply caps with `text-transform`. Numbers use numerals, spell the month ("August 5, 2025"), drop
-ordinal suffixes. Relative times ("3 hours ago") switch to an absolute date after about a week.
+and apply caps with `text-transform`. Numbers use numerals; dates and numbers format by locale (`frontend` `i18n.md` "`Intl` APIs and
+pluralization"), never a bare `8/5/2025`. Relative times ("3 hours ago") switch to an absolute date after about a week.
 
 Length tracks comprehension: 8 words or fewer is fully understood, 14 drops to about 90%, 25 is the
 cliff. Limits: buttons 2–4 words (15–25 chars), titles 3–6 words (~40 chars), errors 12–18 words

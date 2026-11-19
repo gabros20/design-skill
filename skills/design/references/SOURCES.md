@@ -16,6 +16,13 @@ Inputs:
 Produces:
 - The originating skill or author and the applicable license.
 
+## Contents
+
+- Mined skills
+- No-license sources
+- Primary documents
+- Named technique authors
+
 The pack was composed by mining our own `webdesign` skill plus the external design skills below,
 keeping only what `design` owns and rewriting it to the authoring standard. Values and algorithms are
 re-expressed, not copied; only sources with a permissive license contribute any verbatim prose, and
@@ -79,7 +86,10 @@ CC BY 4.0:
 
 ## Primary documents (checked 2026-10)
 
-- **W3C WCAG 2.2** Understanding pages (checked 2026-11): 1.4.3 large scale (18pt / 14pt bold), 1.4.12, 2.2.2, 2.4.1, 2.5.7, 2.5.8 spacing exception.
+- **Apple HIG** Materials, Tab bars, Toolbars, App icons, Alerts, Typography (Dynamic Type tables) — Liquid Glass guidance and alert button order (checked 2026-11).
+- **Android Developers** Material 3 in Compose and the compose-material3 release notes — Material 3 Expressive components and motion schemes (checked 2026-11).
+- **W3C WCAG 3.0** status: Working Draft (checked 2026-11) — APCA is in no ratified standard.
+- **W3C WCAG 2.2** Understanding pages (checked 2026-11): 2.4.13 Focus Appearance text, 1.4.3 large scale (18pt / 14pt bold), 1.4.12, 2.2.2, 2.4.1, 2.5.7, 2.5.8 spacing exception.
 - **motiondivision/motion** CHANGELOG (checked 2026-11): 14.2.0 hardware-accelerated independent transforms.
 - **google-labs-code/design.md** (Apache-2.0) README — `lint` / `diff` / `export` / `spec` behavior and the `alpha` format version (design-systems.md).
 - Asset licence terms, read at the source (imagery-depth-decoration.md): unDraw licence page (no attribution; no AI/ML training, scraping or bulk download, or repackaging), Hero Patterns (CC BY 4.0), Simple Icons `LICENSE.md` (CC0) and `DISCLAIMER.md` (per-icon licences vary; trademark and brand-guideline caveat), Lucide (ISC; Feather-derived icons MIT) and Tabler Icons (MIT) licences and their `tags.json` / `icons.json` indices, and the Iconify API's per-collection SPDX metadata.
@@ -95,4 +105,6 @@ principles) · Jakob Nielsen (heuristics) · Jim Kalbach (journey/experience map
 Lupton, Rutter, Brown, Hochuli, Elam, Coles, Stocks, Santa Maria, Latin, Kupferschmid
 (skeleton/flesh/skin pairing matrix), Nix, Walton · Eugene Schwartz (five
 awareness levels) · Joseph Nunes and Xavier Drèze (endowed progress) · Stephen Few (dashboard precision)
-· Okabe and Ito (CVD-safe categorical palette).
+· Okabe and Ito (CVD-safe categorical palette) · Luke Wroblewski (inline validation), GOV.UK Design
+System (date input, question pages), Baymard Institute, Nielsen Norman Group (F-pattern, toggles,
+infinite scroll), Porter / UIE (three-click rule) — form and interaction canon.

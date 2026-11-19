@@ -47,7 +47,7 @@ reference set from three facets and reads only those files before producing an a
 
 Declared bundles encode the common pairings (a native mobile prototype, a new surface from scratch,
 a design system for a surface) so no lateral discovery is needed. The runtime router is
-[skills/design/SKILL.md](skills/design/SKILL.md); it links directly to 27 focused references and
+[skills/design/SKILL.md](skills/design/SKILL.md); it links directly to 28 focused references and
 loads only what the job needs.
 
 ## Install
@@ -98,10 +98,10 @@ a skill tool, or natural-language activation. The skill should **not** activate 
 frontend build, system architecture, marketing/SEO, or release verification unless the request also
 requires experience design.
 
-## The 27 references
+## The 28 references
 
 The router selects from a primary-job set, a surface overlay, and concern overlays. It loads the
-smallest sufficient set — never all 27.
+smallest sufficient set — never all 28.
 
 **Primary job**
 
@@ -110,7 +110,8 @@ smallest sufficient set — never all 27.
 | [research.md](skills/design/references/research.md) | UX research: jobs, interviews, surveys, usability studies, design-DNA |
 | [journeys.md](skills/design/references/journeys.md) | Flows and journeys: breadboards, journey maps, service blueprints, onboarding |
 | [information-architecture.md](skills/design/references/information-architecture.md) | Object model (OOUX), vocabulary, sitemap, navigation, findability |
-| [interaction.md](skills/design/references/interaction.md) | State design (8-state model), forms, feedback, overlays, selection, search |
+| [interaction.md](skills/design/references/interaction.md) | State design (8-state model), feedback, overlays, selection, search |
+| [forms.md](skills/design/references/forms.md) | Form layout, control choice, validation timing, sign-in, field states, save model |
 | [visual-direction.md](skills/design/references/visual-direction.md) | Register and visitor modes, design read, change depths, concept/world, direction contract, lanes |
 | [anti-defaults.md](skills/design/references/anti-defaults.md) | The dated tell catalog, the current AI cluster, predict-then-refuse, system fixes |
 | [page-anatomy.md](skills/design/references/page-anatomy.md) | Website page structure: anatomy by visitor job, macrostructures, narrative, SaaS deck, pricing, chrome |
@@ -183,7 +184,7 @@ sources contribute any verbatim prose. Full attribution and licenses:
 ```text
 .codex-plugin/plugin.json  Codex plugin and release metadata
 AGENTS.md / CLAUDE.md      repository and client-specific maintainer guidance
-skills/design/             portable runtime skill and client metadata (27 references)
+skills/design/             portable runtime skill and client metadata (28 references)
 evals/                     activation, traversal, output, and compression fixtures
 docs/                      installation, usage, and recipes
 site/                      visual guide (deployed to designskill.vercel.app)

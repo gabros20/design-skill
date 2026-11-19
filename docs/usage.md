@@ -36,7 +36,7 @@ producing the affected artifact:
    floors) and content (copy, voice, i18n length).
 
 That "read only what you need" discipline is the whole point. A one-section color job loads
-`color.md`, not all 27 references.
+`color.md`, not all 28 references.
 
 ### Declared bundles
 
@@ -64,7 +64,8 @@ reference file(s)".
 | **Plan or synthesize UX research** — jobs, interviews, surveys, usability studies, design-DNA | `research.md` |
 | **Map a flow, onboarding, wizard, checkout, or end-to-end journey** | `journeys.md` |
 | **Model objects, sitemap, navigation, naming, or findability** | `information-architecture.md` |
-| **Define component behavior and states** — forms, feedback, overlays, selection, search | `interaction.md` |
+| **Define component behavior and states** — feedback, overlays, selection, search | `interaction.md` |
+| **Design a form** — layout, controls, validation timing, sign-in, save model | `forms.md` |
 | **Set the point of view** — register, visitor mode, change depth, concept, lane | `visual-direction.md` |
 | **Fix a result that reads generic, templated, or AI-made** | `anti-defaults.md` |
 | **Plan a website page's sections** — anatomy by job, narrative, pricing, nav/footer | `page-anatomy.md` |

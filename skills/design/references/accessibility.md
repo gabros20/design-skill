@@ -25,6 +25,7 @@ Produces:
 - Target sizes (per-platform divergence)
 - Zoom and reflow
 - Focus
+- WCAG 2.2 AA decisions design owns
 - Reduced motion
 - Color independence and CVD
 - Forced colors / high contrast
@@ -34,9 +35,10 @@ Produces:
 ## Contrast
 
 Contrast is always foreground vs the background it actually sits on (nearest parent's background;
-for text over an image, the brightest region under the text). **APCA is the recommended default**
-(perceptually accurate, pairs naturally with OKLCH); **WCAG 2 is still required for any formal
-conformance claim.**
+for text over an image, the worst region under the text). **Every pair passes WCAG 2 AA — that is
+the gate** (EN 301 549, Section 508 and ADA rules cite WCAG 2.x; WCAG 3 is a draft). APCA is a second,
+stricter lens for body text, thin weights and dark mode, where WCAG 2 misjudges; where they disagree,
+satisfy both.
 
 | Content | WCAG 2 (ratio) |
 |---|---|
@@ -44,18 +46,14 @@ conformance claim.**
 | Large text (≥24px, or ≥18.66px bold — WCAG's 18pt / 14pt bold; 1pt = 1.333px) | 3:1 AA · 4.5:1 AAA |
 | UI components, graphical objects, focus rings | 3:1 AA |
 
-**APCA tiers** (Lc is signed; compare the absolute value): body and column text **75** (aim 90) · other
+**APCA lens** (Lc is signed; compare the absolute value): body and column text **75** (aim 90) · other
 text — labels, headings **60** · large text (≥36px, or ≥24px bold) and fine-line icons **45** · solid
 icons, controls, focus rings **30** · dividers **15**. Body copy at Lc 60 is a fail.
 
-- **Fix contrast by adjusting lightness only** (OKLCH): chroma has negligible effect; keep C and H,
-  change the L distance between foreground and its background.
-- **Lightness-gap guide:** on a light bg (L > 0.85) foreground L < 0.45; on a dark bg (L < 0.25)
-  foreground L > 0.75. Approximations — always verify with an actual contrast calculation.
+- **Fix contrast by moving lightness only** (OKLCH; hold C and H). Guide: on a light bg (L > 0.85)
+  foreground L < 0.45; on a dark bg (L < 0.25) foreground L > 0.75 — then measure.
 - Error and success colors must themselves meet 4.5:1; placeholder text meets 4.5:1.
-- **A background that changes** with scroll, time, chapter or theme: text colour follows one global variable and passes at every stop — check each page's end state and the 404, not just the hero. Fixed UI over imagery stays legible via a scrim or white text with `mix-blend-mode: difference`.
-- **Scarcity framing:** accessible pairs are rare, not a checkbox — roughly 12% of random color
-  pairs clear WCAG 4.5, and ~0.08% clear APCA Lc 90. Treat contrast as a constrained search.
+- **A background that changes** with scroll, time, chapter or theme: text colour follows one global variable and passes at every stop — check each page's end state and the 404, not just the hero. Fixed UI over imagery stays legible via a scrim or a solid chip; `mix-blend-mode: difference` fails over mid-tones (white over 50% grey is ~1:1).
 
 ## Target sizes (per-platform divergence)
 
@@ -67,6 +65,7 @@ A web-trained default flattens these to one number. They differ by platform:
 | iOS / iPadOS | **44×44 pt** | Apple HIG |
 | Android | **48×48 dp** | Material 3 |
 
+- **24px is the conformance floor, not the target:** a touch-first web layout designs to the native numbers (44–48px); 24–32px targets are for dense, pointer-first tools.
 - The target is the interactive area, not the visual glyph. A 16–24px icon can carry a 44pt tap
   area — expand hit area with padding, `::after { inset: -10px }`, or `hitSlop`, not visual size.
 - Keep ≥8px / 8dp between adjacent targets; keep targets clear of the notch, Dynamic Island,
@@ -82,11 +81,11 @@ A web-trained default flattens these to one number. They differ by platform:
 
 - Content **reflows at 320px width with no horizontal scroll** (WCAG 1.4.10) — that is 1280px at 400%. Genuinely two-dimensional content (data tables, maps, code) may scroll inside its own box; text containers take `min-height`, never a fixed height.
 - **Text spacing (1.4.12):** the layout survives a user override of line-height 1.5×, paragraph spacing 2em, letter-spacing 0.12em and word-spacing 0.16em with no clipping or overlap; fixed heights, `overflow: hidden` and fixed-width labels break first. Contrast, 200% zoom and text spacing fail independently.
-- Support browser zoom to **200% and 400%**; iOS Dynamic Type scales text up to ~200% and layouts
-  must reflow to fit it (no truncation of essential content).
+- Support browser zoom to **200% and 400%**; iOS Dynamic Type takes Body from 17pt to 53pt at AX5
+  (~3×) — review at AX5: rows stack, nothing essential truncates.
 - Never set `maximum-scale=1` or `user-scalable=no` — it breaks pinch-zoom (WCAG 1.4.4). Use
   `viewport width=device-width, initial-scale=1`.
-- Body text ≥16px on mobile web (below it, iOS auto-zooms the field on focus).
+- Form-control text ≥16px on mobile web (iOS zooms the page on focus below that).
 
 ## Focus
 
@@ -94,10 +93,23 @@ A web-trained default flattens these to one number. They differ by platform:
   visible replacement.
 - **Focus order follows visual/reading order.** No positive `tabindex`; an irregular collage keeps its source order in the story's order (read the page with CSS off to check).
 - **Skip link:** on any page with repeated navigation, the first Tab stop is a "Skip to content" link, visible on focus, landing on `<main>` (2.4.1); repeated landmarks get distinguishing labels (Primary, Breadcrumbs).
-- Indicator spec (WCAG 2.2 focus appearance, 2.4.13 AAA — the target to design to): area ≥ the component's perimeter × 2px thickness,
-  ≥3:1 contrast against adjacent colors; implement with `:focus-visible`.
+- **Focus indicator:** visible (2.4.7 AA), ≥3:1 against the colours it touches (1.4.11 AA), never
+  fully hidden by sticky or fixed chrome (2.4.11 AA). Design to 2.4.13 (AAA): a ring ≥2px around the
+  perimeter whose pixels change ≥3:1 between unfocused and focused; implement with `:focus-visible`.
 - Overlays: trap focus inside a modal, set initial focus inside it, restore focus to the trigger on
   close, and let Escape close it.
+
+## WCAG 2.2 AA decisions design owns
+
+Default target: **WCAG 2.2 AA** unless the brief sets another. Decided in design, not in code:
+
+- **Content on hover or focus (1.4.13):** a tooltip or flyout closes on Escape without moving the pointer, lets the pointer travel onto it, and stays until dismissed; essential information never lives only in a tooltip.
+- **Single-key shortcuts (2.1.4):** can be turned off, remapped, or work only while their component has focus.
+- **Redundant entry (3.3.7):** nothing asked twice in one flow — prefill or offer to reuse.
+- **Accessible authentication (3.3.8):** no step that depends on memory, transcription or a puzzle without an alternative; paste and password managers work; offer a passkey or emailed link.
+- **Consistent help (3.2.6):** help and contact sit in the same place on every page.
+- **Timeouts (2.2.1):** warn ≥20s before expiry, extend with one action, keep what was entered.
+- **Headings follow structure, not size:** one `h1`, no skipped levels; the look comes from a type role.
 
 ## Reduced motion
 
@@ -123,9 +135,8 @@ A web-trained default flattens these to one number. They differ by platform:
 - **Links in body text** keep an underline or another non-colour cue at rest; colour alone passes
   1.4.1 only with 3:1 against the surrounding text *and* a non-colour cue on hover and focus. Nav and
   buttons, recognisable by position and shape, are exempt.
-- CVD affects ~8% of males, ~0.5% of females. **Orange↔blue is the single most robust CVD-safe
-  pair:** orange spans both opponent axes (reddish + yellowish), blue is its opposite on the
-  yellow–blue axis, so contrast survives whichever axis is lost. Avoid red/green as the sole signal.
+- CVD affects ~8% of males, ~0.5% of females. **Orange↔blue is the most robust CVD-safe pair**
+  (why: color.md); avoid red/green as the sole signal.
 - A grayscale/lightness-separation check is a fast screen, not proof — still verify WCAG/APCA and
   test deuteranopia + protanopia.
 
@@ -138,23 +149,14 @@ A web-trained default flattens these to one number. They differ by platform:
 
 ## Design-decidable priority ladder
 
-Rank a11y work by user impact; the top three block release:
-
-1. **Accessible names (critical):** every interactive control has a name; icon-only buttons carry
-   a label; every input/select/textarea is labeled; links use meaningful text (never "click here");
-   decorative icons are hidden.
-2. **Keyboard access (critical):** no `div`/`span`-as-button without full keyboard support; every
-   interactive element reachable by Tab with visible focus; Escape closes overlays.
-3. **Focus & dialogs (critical):** trap and restore focus (see Focus); opening a dialog must not
-   scroll the page unexpectedly.
-4. **Contrast & states (medium):** meet the contrast table; disabled states are not conveyed by
-   color alone; hover-only interactions have keyboard equivalents.
-5. **Media & motion (low–medium):** meaningful (or empty) `alt`; captions for spoken video; respect
-   reduced motion; no autoplaying audio — sound only when the concept is about sound, off by default,
-   started by a gesture, behind a toggle that states its state.
-
-In a full UI review, Accessibility and Touch/target sizing are the two CRITICAL categories checked
-first, before typography, color, or polish.
+Rank a11y work by user impact; the top three block release: (1) **accessible names** — every control
+named, icon-only buttons labelled, inputs labelled, meaningful link text, decorative icons hidden ·
+(2) **keyboard access** — no `div`-as-button, everything reachable by Tab with visible focus, Escape
+closes overlays · (3) **focus & dialogs** — trap and restore focus; opening a dialog never scrolls the
+page · (4) contrast and states — disabled not by colour alone, hover-only interactions have keyboard
+equivalents · (5) media and motion — meaningful or empty `alt`, captions for spoken video, reduced
+motion; no autoplaying audio, and sound only when the concept is about sound, off by default, behind a
+toggle that states its state.
 
 ## Boundary and routing
 

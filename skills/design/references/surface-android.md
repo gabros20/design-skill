@@ -20,6 +20,7 @@ Produces: M3 theme (color roles + tone mapping), type scale, navigation model, r
 - Shape scale
 - Layout and window classes
 - Navigation matrix and predictive back
+- Material 3 Expressive
 - Components
 - Targets, gestures, motion, system
 
@@ -83,6 +84,14 @@ Navigation Bar: bottom, 80dp, elevation L2, **always show labels** (icon-only no
 
 **Predictive back (Android 13+):** opt in via `android:enableOnBackInvokedCallback="true"`; drive the exit animation from `BackEventCompat.progress` (0.0→1.0) — the exiting screen scales down (`1f - progress*0.1f`) and shifts toward the initiating edge (±`progress*32.dp`, from `swipeEdge` EDGE_LEFT/EDGE_RIGHT). **Back gesture = navigate back in the stack; Up button = navigate up the hierarchy** (they may differ). Never override deprecated `onBackPressed()`.
 
+## Material 3 Expressive
+
+Check the target Material version and say which. Material 3 Expressive changes defaults: motion is
+spring-based, with a *spatial* scheme (position and size, may overshoot) and an *effects* scheme
+(colour and opacity, never overshoots) that replace the Emphasized curve where adopted; new components
+include button groups, split buttons, a FAB menu, floating toolbars and a shape-morphing loading
+indicator; a short navigation bar and a wide navigation rail expand in place of a drawer.
+
 ## Components
 
 Button emphasis order: **Filled > Filled Tonal > Elevated > Outlined > Text.** **FAB:** at most one per screen (single most important action), bottom-end, `primaryContainer`; prefer `ExtendedFloatingActionButton`, collapse to icon on scroll. Top App Bar: small 64dp / medium 112dp / large 152dp, tied to scroll behavior; limit action icons to 2–3, overflow to a menu. Bottom sheets: **must have a visible drag handle.** Dialogs: critical only; **confirm = text button (not filled); dismiss button always on the left.** Snackbar: brief, auto-dismiss, `inverseSurface`, one action max (e.g. Undo). Chips: `FilterChip` (leading check when selected) / `AssistChip` / `InputChip` / `SuggestionChip` — arrange horizontally, never stacked vertically.
@@ -91,5 +100,5 @@ Button emphasis order: **Filled > Filled Tonal > Elevated > Outlined > Text.** *
 
 - **Min touch target 48×48dp** (Material components handle it by default; `IconButton` is already 48dp) — pad, don't shrink. `contentDescription` on every interactive element (`null` if decorative), describing the action not the appearance.
 - **System gesture insets:** never place interactive elements in the **bottom 20dp / left+right 24dp** edges (`WindowInsets.systemGestures`). All tappables get a Material ripple; swipe-to-dismiss must be undoable (snackbar) or confirmed; haptics fire on the causal moment, never as the only feedback; Remove-animations → crossfade or instant cut.
-- **Motion:** take all durations from the canon in motion.md — do not restate an M3 duration ladder here. If you follow Material motion, its one platform-specific curve still applies: **Emphasized** easing `cubic-bezier(0.2,0,0,1)` for the standard on-screen path (enters decelerate, permanent exits accelerate), bound to motion.md's duration scale.
+- **Motion:** take all durations from the canon in motion.md — do not restate an M3 duration ladder here. Baseline Material motion keeps one platform curve: **Emphasized** `cubic-bezier(0.2,0,0,1)` for the standard on-screen path (enters decelerate, permanent exits accelerate); Expressive's spring schemes replace it where adopted.
 - **Notifications** importance: HIGH (sound + heads-up: messages/calls) · DEFAULT (sound) · LOW (no sound) · MIN (silent). One channel per type. **Photo Picker (Android 13+)** needs no permission — use it instead of media-read permissions. Widgets via Glance + `GlanceTheme` dynamic color.

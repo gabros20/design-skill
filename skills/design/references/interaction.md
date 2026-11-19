@@ -1,12 +1,12 @@
 # Interaction
 
-Purpose: Design how components behave — the full state set, forms, feedback and latency, overlays, selection, search, and attention devices — with exact defaults that a base model gets wrong or omits.
+Purpose: Design how components behave — the full state set, feedback and latency, overlays, selection, search, and attention devices — with exact defaults that a base model gets wrong or omits.
 
 Read when:
-- The request involves component states, forms, loading/error/empty behavior, modals/overlays, selection, tables, search, or where to place attention.
+- The request involves component states, loading/error/empty behavior, modals/overlays, selection, tables, search, or where to place attention.
 
 Skip when:
-- The task is multi-screen flow structure → `journeys.md`.
+- The task is multi-screen flow structure → `journeys.md`; a form's fields, validation and save model → `forms.md`.
 - You need animation timing/easing values → `motion.md` (this file references it, never restates it).
 - You need numeric accessibility floors (contrast, target size, focus, zoom) → `accessibility.md`.
 
@@ -17,8 +17,6 @@ Produces: a state-complete interaction spec — every state, feedback timing, er
 ## Contents
 - The eight-state model
 - Feedback and latency ladder
-- Forms
-- Input-field state discipline
 - Overlays and modals
 - Confirm, undo, and destructive actions
 - Selection and mass actions
@@ -53,19 +51,11 @@ Perceived-latency thresholds (Doherty) govern *when* to show feedback — distin
 
 **Never show a loading state for actions under ~400ms** — the spinner flash is itself disruptive (delay the spinner 300–500ms; minimum display 500ms once shown). Toasts auto-dismiss 4–6s, pause on hover/focus, max one at a time (queue the rest); a toast carrying an action (Undo) or an error persists until dismissed. Feedback hierarchy, most-preferred first: inline/contextual → component-level → page-level → system. **Minimum feedback rule:** animate the element itself (the button), not a separate toast, when that communicates the result. **A success state appears only from a real answer:** a form with no endpoint yet validates, sends nothing and says so ("Nothing was sent — this form isn't connected yet"); a fake "Sent" is an invented outcome. An AI activity indicator maps the real lifecycle to a truthful state (a generic "working" beats a wrong specific one), disappears on done, error or cancel, announces once, and never shows a percentage it cannot know.
 
-## Forms
-
-**Single column** almost always. **Labels above** the field; never placeholder-as-only-label. **Validate on blur, not keystroke** (cross-field on submit; debounce real-time 300–500ms); error directly **below** the field. **Mark the minority** (required or optional, whichever is fewer). Placeholder shows a **format example** (`+358 40 123 4567`), not an instruction. Correct `type`/`inputmode`/`autocomplete` for keyboard and autofill. ≤5 options → radios; 6+ → select; dates → picker, never freeform. Error copy states cause + fix ("Email must include @", not "Invalid"). Disable submit only when known-invalid or in-flight — never at idle on long forms.
-
-## Input-field state discipline
-
-**Border width stays constant across all states** — signal state via background/outline/box-shadow (border-width shifts layout); reserve a transparent focus-outline slot. Hover = background 4–6% darker. Input height = button height (44px floor). Reserve a right-edge slot (~24px) for a status icon and a `min-height` for the helper line so validation doesn't reflow. Disabled = three channels (opacity ~0.5, `not-allowed`, `aria-disabled`), never color alone.
-
 ## Overlays and modals
 
 Choose the lightest surface that fits, by whether the user can keep using the rest of the app:
 
-Tooltip (hover ~300–400ms, 0ms on keyboard focus, no interactive content; once one in a group is open, its neighbours open instantly with no transition until the pointer leaves the group) → Popover → Dropdown (add search at >8–10 items) → Bottom sheet (mobile) → Drawer (320–480px) → **Modal** (scrim, blocking) → Full-screen. Modals: native `<dialog>` + `showModal()`, `inert` background, first focus to the first interactive element (not the close button), centered; body scrolls, header/footer fixed. **No stacked modals** (an IA smell — popover-in-modal instead); on mobile, bottom sheets. Dropdown clipping inside `overflow:hidden` is the #1 generated-code bug → anchor positioning or a portal, flipping near edges.
+Tooltip (hover ~300–400ms, 0ms on keyboard focus, no interactive content; it names an icon-only control or adds a hint, never the only home of something the user needs — no hover on touch (accessibility.md, 1.4.13); once one in a group is open, its neighbours open instantly with no transition until the pointer leaves the group) → Popover → Dropdown (add search at >8–10 items) → Bottom sheet (mobile) → Drawer (320–480px) → **Modal** (scrim, blocking) → Full-screen. Modals: native `<dialog>` + `showModal()`, `inert` background, first focus to the first interactive element (not the close button), centered; body scrolls, header/footer fixed. **No stacked modals** (an IA smell — popover-in-modal instead); on mobile, bottom sheets. Dropdown clipping inside `overflow:hidden` is the #1 generated-code bug → anchor positioning or a portal, flipping near edges.
 
 ## Confirm, undo, and destructive actions
 
@@ -77,7 +67,7 @@ The **entire row/card is the hit area**, not the 16px checkbox (the checkbox is 
 
 ## Search
 
-Autocomplete after 2–3 characters; **5–8** suggestions (Hick); order recent → trending → predicted; bold the typed portion. **Zero-results is a retention moment, never a blank page** — confirm the query, suggest corrections and broader terms, offer browse/support. Design for search-as-navigation ("settings", "invoices"); persist the query; fully keyboard-navigable. Logged queries are the most honest feedback you have.
+Autocomplete after 2–3 characters; **5–8** suggestions (Hick); order recent → trending → predicted; bold the typed portion. **Zero-results is a retention moment, never a blank page** — confirm the query, suggest corrections and broader terms, offer browse/support. Design for search-as-navigation ("settings", "invoices"); persist the query; fully keyboard-navigable.
 
 ## Tabs and scroll areas
 
@@ -89,7 +79,7 @@ One machine per concern; no impossible states (loading + error); every state has
 
 ## Laws that set defaults
 
-**Fitts:** the target is the interactive area, not the icon; keep destructive actions small and distant. **Hick:** reduce *simultaneous* choices; group before cutting; three pricing tiers. **Working memory is ~4±1 chunks (Cowan 2001)** — the "7±2" figure is a myth; cite chunking. Practical caps: ≤5 nav items, ≤4 fields per group, ≤4 dashboard metrics; 3–5 named onboarding phases, not a raw step count.
+**Fitts:** the target is the interactive area, not the icon; keep destructive actions small and distant. **Hick:** reduce *simultaneous* choices; group before cutting; three pricing tiers. **Working memory is ~4±1 chunks (Cowan 2001)** — the "7±2" figure is a myth; cite chunking. Practical caps (top-level nav: information-architecture.md): ≤4 fields per group, ≤4 dashboard metrics; 3–5 named onboarding phases, not a raw step count.
 ## Attention devices
 
 **Isolation:** the single boldest colour goes only to the primary CTA and works only when the surroundings are consistent; it survives grayscale and all states. **One primary action per view;** more than three secondary actions go behind a menu. Show progress ("Step 2 of 3") on multi-step tasks. **Delight** is sized to frequency and stakes — routine actions should just feel certain; never fake work, delay completion or invent progress to stage a moment; no jokes near money, loss or privacy; it survives the 100th use; no sound without consent.

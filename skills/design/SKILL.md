@@ -1,9 +1,9 @@
 ---
 name: design
 description: >-
-  Design digital-product experiences across websites, web apps, dashboards and product UI, iOS, and
+  Design digital-product experiences across websites, web apps, dashboards, product UI, iOS, and
   Android. Use for UX research, journeys, information architecture, page anatomy, interaction and
-  state design, visual direction, typography, color, layout, motion, content design, accessibility,
+  state design, forms, visual direction, typography, color, layout, motion, content, accessibility,
   product shots, illustration, logos, prototypes, design systems, critique of rendered work on any
   surface, and frontend handoff. Do not use for production frontend implementation, backend or system
   architecture, marketing or SEO strategy, or release verification unless the request requires
@@ -41,7 +41,8 @@ them automatically unless the user requested a composition workflow.
 | Plan or synthesize UX research — jobs, interviews, surveys, usability studies, design-DNA | [Research](references/research.md) | Method choice and synthesized findings, each marked observed / inferred / assumed |
 | Map a flow, onboarding, wizard, checkout, or end-to-end journey | [Journeys](references/journeys.md) | Breadboard, flow, or journey/service map with every required edge |
 | Model objects, sitemap, navigation, naming, or findability — including inventorying a site before a redesign | [Information architecture](references/information-architecture.md) | Object/relationship model, vocabulary, sitemap, navigation model |
-| Define component behavior and states — forms, feedback, overlays, selection, search | [Interaction](references/interaction.md) | State-complete interaction spec (the canonical 8-state model) |
+| Define component behavior and states — feedback, overlays, selection, search | [Interaction](references/interaction.md) | State-complete interaction spec (the canonical 8-state model) |
+| Design a form, field, sign-in, checkout step, or settings input — layout, control choice, validation timing, save model | [Forms](references/forms.md) | Field list with controls, validation and recovery behaviour, field states, save model |
 | Set the point of view — register, visitor mode, change depth, concept, lane | [Visual direction](references/visual-direction.md) | Design read, register + mode, direction contract, one bold move, committed lane |
 | Fix a result that reads generic, templated, or AI-made, or write the refuse-list | [Anti-defaults](references/anti-defaults.md) | Tells found or refused, each with its replacement |
 | Plan a website page's sections — anatomy by visitor job, narrative, compositions, pricing, nav/footer | [Page anatomy](references/page-anatomy.md) | Section sequence with compositions, feeling curve, chrome |

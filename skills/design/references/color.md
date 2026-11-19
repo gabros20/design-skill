@@ -32,17 +32,14 @@ Produces:
 
 Use OKLCH as the canonical space for design tokens. Its capability delta over hex/HSL:
 
-- **Perceptual uniformity:** equal L steps look equally different; `oklch(0.5 …)` is visually mid.
-  HSL `lightness: 50%` varies wildly by hue — `hsl(60 100% 50%)` yellow and `hsl(240 100% 50%)` blue
-  share L=50% but read at very different brightness (sRGB CIELAB L* is ~98 for yellow, ~30 for blue).
-- **Stable hue:** OKLCH hue holds across the lightness range; HSL blue drifts toward purple as it
-  lightens. Auditing an old HSL ramp: convert each step to OKLCH — hue spread >10° is visible drift.
-- **Independent chroma:** an absolute measure of colorfulness, so ramps stay coherent.
-- **Finite gamut:** not every OKLCH value is displayable; high chroma clips — gamut awareness required.
+- **Perceptual uniformity:** equal L steps look equally different; HSL `50%` yellow and blue read at
+  very different brightness. **Stable hue:** HSL blue drifts toward purple as it lightens — audit an old
+  ramp in OKLCH; unplanned hue spread >10° is drift. **Independent chroma**, and a **finite gamut**:
+  high chroma clips.
 
 Syntax: `oklch(L C H)` or `oklch(L C H / alpha)` — L 0–1, C 0–~0.4 (0 = gray), H 0–360°, alpha via
-slash only. Relative-color keeps identity: `oklch(from var(--brand) calc(l + 0.1) c h)`. Baseline 2023
-(~96% support); ship a hex fallback under `@supports (color: oklch(0 0 0))`.
+slash only. Relative-color keeps identity: `oklch(from var(--brand) calc(l + 0.1) c h)` (it reached
+browsers later than `oklch()` — verify current support); ship a hex fallback under `@supports`.
 
 ## Palette construction
 
@@ -73,6 +70,8 @@ hue` (polar spaces can pass through hues you didn't pick — check the midpoint)
    0.07–0.10. Two adjacent steps under 0.03 apart are one decision — drop one.
 3. **Clamp chroma per step to the gamut:** `step.C = (chroma% / 100) · maxChroma(step.L, H)`. High-chroma
    bases correctly thin out at the lightest and darkest ends.
+4. Hold hue for blues, greens and neutrals. Yellow, amber and orange ramps rotate toward red as they
+   darken (~15–30° across the ramp) or the dark steps turn olive; the rotation is monotonic and recorded.
 
 **Every step has a job** — never generate a step no role consumes. Map steps to roles (page bg,
 subtle bg, component bg, hover, selected, separator, border/focus, solid fill, solid hover, secondary
@@ -81,10 +80,7 @@ Solid fills sit at 600 — white on most 500s fails 4.5:1 and some hues (green, 
 so measure. A 300 border on white is decoration, not an input boundary or focus ring (those need 3:1).
 
 **Multi-hue palettes:** hold the same **L** and the same **chroma percentage** across hues (not the
-same absolute C) — equal brightness, and equal vividness relative to each hue's own maximum.
-
-*(Model, ramp algorithm, and contrast numbers re-expressed from jakubkrehel/oklch-skill (no license —
-facts only) and meodai/color-expert (CC BY 4.0). Procedural token functions live in design-systems.md.)*
+same absolute C) — equal brightness, and equal vividness relative to each hue's own maximum. Procedural token functions: design-systems.md.
 
 ## Tinted neutrals and the anti-cream band
 
@@ -123,9 +119,10 @@ capability delta; a base model picks state colors ad hoc). Re-expressed as OKLCH
 ## Semantic color
 
 Exactly four semantic roles, each mapped to one meaning product-wide: **Red** error/destructive ·
-**Amber** warning only · **Green** success · **Blue** info. Hue anchors: error 0–10, warning 35–45,
-success 140–160, info 210–230. Align S/L to the brand (muted brand → muted semantics); **reduce
-warning L by 5–10%** because yellow/orange read brighter at equal L. **Hues within 15° read as one
+**Amber** warning only · **Green** success · **Blue** info. Hue anchors (OKLCH): error 20–30, warning 65–90,
+success 140–160, info 235–260 (sRGB red sits at 29°, yellow 110°, green 142°, blue 264°). Align
+chroma and lightness to the brand (muted brand → muted semantics); amber fills are light (L
+≈0.75–0.85) and take ink text, never white. **Hues within 15° read as one
 colour, one meaning:** keep every status hue ≥15° from the accent; where convention forbids (red brand,
 red danger) mark destructive by treatment — outlined, with an icon. A meaning-colour appears wherever
 its meaning does. Status ramps need four roles (subtle bg, border, solid, text). Meaning is
@@ -146,18 +143,18 @@ widening each pair's L gap by ≥0.15, body aiming Lc 90. Redefine only the sema
 
 ## Contrast and gamut
 
-Full numeric floors — the APCA/WCAG pass table and the scarcity stat — live in accessibility.md. The
-design-level math to carry here:
+Floors and the gate (WCAG 2 AA, with APCA as a second lens) live in accessibility.md. The design-level
+math:
 
-- **APCA is the perceptually accurate default and pairs naturally with OKLCH; WCAG 2 is still required
-  for formal conformance claims.** Fix a failing pair by moving L only (chroma has negligible contrast
+- Fix a failing pair by moving L only (chroma has negligible contrast
   effect; hold C and H). A mid-L background caps contrast: near L 0.75 even black text reaches only
   ~Lc 60, so for body text move the *background* toward an extreme. Choose text polarity by measuring
   both — at `oklch(65% 0 0)` black clears 4.5:1 and white does not, and APCA and WCAG can disagree.
 - **Gamut:** the most common mistake is requesting chroma the gamut can't show, which clips to a
-  duller, hue-shifted color. **Reduce chroma, holding L and H** (clamp toward the boundary). CSS
-  gamut-maps `oklch()` automatically; a naive JS oklch→hex only truncates channels. Ship an sRGB base
-  and enhance under `@media (color-gamut: p3)`. Cyan has the lowest max chroma; purple the highest.
+  duller, hue-shifted color. **Reduce chroma, holding L and H** (clamp toward the boundary). Don't
+  rely on the browser: out-of-gamut values may be clipped per channel with a hue shift, and a naive JS
+  oklch→hex truncates too. Keep base tokens inside sRGB (a gamut-mapping tool); wider values only
+  under `@media (color-gamut: p3)`. Cyan has the lowest max chroma; purple the highest.
 
 ## CVD and harmony
 

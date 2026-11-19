@@ -66,12 +66,12 @@ Size steps are a **ratio**, not increments — `size(n) = base × ratio^n` from 
 
 ## Display craft
 
-- **Display max ≤ 5.5–6rem (~88–96px)** — bigger reads generated. Default hero `clamp(2.75rem, 5vw + 1rem, 5.25rem)`.
+- **Default display cap 5.5–6rem (~88–96px)**; larger only as the page's declared bold move (type as image) — sized to its container, one per page, checked at 390px. Default hero `clamp(2.75rem, 5vw + 1rem, 5.25rem)`.
 - **Tracking by size, in `em`, never px:** display floor **≥ −0.04em** (tighter and letters touch); headings ≥24px −0.01 to −0.02em; body 0; ≤13px +0.01–0.03em; caps and small caps +0.05–0.12em with common ligatures off on any tracked run. Disabling kerning is never a fix.
-- **Hero headline sizing by character count**: ≤20 chars → full display; 21–50 → the sweet spot; 51–90 → cap at display-small and split into a lead-in + headline; >90 → rewrite. When you write it: ≤7 words, ≤50 chars, no gerund opener.
+- **Hero headline sizing by character count**: ≤20 chars → full display; 21–50 → the sweet spot; 51–90 → cap at display-small and split into a lead-in + headline; >90 → rewrite. Write it ≤7 words, no gerund opener.
 - **Line breaks:** `text-wrap: balance` on h1–h3 and short descriptions (ignored past ~6 lines — never paragraphs), `pretty` on prose. On the hero, break by sense group by hand (≤~24 chars a line) and check every width; if wrapping can't fix a column, edit the copy or widen it.
 - **All-caps line-height floor 1.0** (rec 1.02–1.08) — below 1.0 cap-tops collide on wrap; a single-line poster word in heavy caps may run 0.85–0.95.
-- **Optical alignment:** hang large display ≈ −0.06em so the glyph's side-bearing lines up with body text; hang opening quotes (`hanging-punctuation: first`). Centre a label on cap height to baseline, not its line box (capitals sit low in pills, discs and icon labels); a centred amount centres its digits with the currency sign hung. A word that must fill a width is sized to its container (`cqi`), checked at 390px. CSS: `frontend` `typography-css.md` "Trimming and optical alignment".
+- **Optical alignment:** hang large display ≈ −0.06em so its side-bearing lines up with body text; hang opening quotes. Centre a label on cap height to baseline, not its line box (capitals sit low in pills and discs); a centred amount centres its digits, currency sign hung. A word that must fill a width is sized to its container (`cqi`). CSS: `frontend` `typography-css.md` "Trimming and optical alignment".
 - `font-optical-sizing: auto`; `tabular-nums` (lining) for data/prices/timers/columns; oldstyle proportional figures for body prose.
 
 ## Editorial devices

@@ -15,6 +15,7 @@ Produces: chrome/target spec, navigation model, Dynamic Type plan, iPad adaptivi
 ## Contents
 - Layout and targets
 - Chrome dimensions
+- Liquid Glass (current HIG)
 - Navigation and reserved gestures
 - Typography / Dynamic Type
 - Color and dark mode
@@ -34,7 +35,19 @@ HIG governs structure; brand lives in the expressive layer (tint, type, motion, 
 
 ## Chrome dimensions
 
-Status bar **20pt** classic / **44–54pt** on Dynamic Island devices · Navigation bar **44pt** row + **~52pt** large title (~96pt total) · **Tab bar 49pt**, translucent + blur · Home indicator **34pt** inset. App icon exported **1024×1024**; iOS masks to a squircle — for a matching custom shape, corner radius = side × **0.2225**, corner smoothing **61%** (Figma iOS preset).
+Status bar **20pt** classic / **44–54pt** on Dynamic Island devices · Navigation bar **44pt** row + **~52pt** large title (~96pt total) · **Tab bar 49pt**, translucent + blur · Home indicator **34pt** inset (pre-Liquid Glass numbers). App icon exported **1024×1024**; iOS masks to a squircle — for a matching custom shape, corner radius = side × **0.2225**, corner smoothing **61%** (Figma iOS preset).
+
+## Liquid Glass (current HIG)
+
+Bars, tab bars, toolbars and sheets are system glass floating over content; content runs edge to edge
+beneath them, so take chrome sizes from the system, not the numbers above. Glass belongs to the
+controls-and-navigation layer only, never to content (cards, lists, media); never glass on glass; no
+custom bar backgrounds or tints — let the content layer inform the bar, with a scroll-edge effect where
+separation is needed; one tinted primary action, trailing. Custom components keep corners concentric
+with their bar. A tab bar may minimize on scroll around an accessory and host search as its own
+trailing tab; group toolbar items by function. App icons are layered (a background plus foreground
+layers) so the system can render default, dark and tinted appearances. Review with Reduce Transparency
+and Increase Contrast on.
 
 ## Navigation and reserved gestures
 
@@ -45,7 +58,7 @@ Status bar **20pt** classic / **44–54pt** on Dynamic Island devices · Navigat
 
 ## Typography / Dynamic Type
 
-System font = **SF Pro**. Use semantic text styles (`.headline`, `.body`, `.caption`) — never hardcoded `.system(size:)`. Sizes: Large Title 34pt Bold · Title/Body 17pt · Caption 12–13pt · secondary text 15pt @ 60% · tab labels 10pt. **Minimum 11pt** (captions only); prefer 17pt body; line height ≥1.3×. Dynamic Type scales text to **~200%** at the largest accessibility sizes; layouts must reflow (switch HStack→VStack via `ViewThatFits`/`AnyLayout`). Prefer weight + color variation over extreme size for hierarchy. Custom fonts must scale via `Font.custom(_:size:relativeTo:)`.
+System font = **SF Pro**. Use semantic text styles (`.headline`, `.body`, `.caption`) — never hardcoded `.system(size:)`. Sizes: Large Title 34pt Bold · Title/Body 17pt · Caption 12–13pt · secondary text 15pt @ 60% · tab labels 10pt. **Minimum 11pt** (captions only); prefer 17pt body; line height ≥1.3×. Dynamic Type takes Body from 17pt to **53pt at AX5 (~3×)**; review every screen at AX5 — layouts must reflow (switch HStack→VStack via `ViewThatFits`/`AnyLayout`). Prefer weight + color variation over extreme size for hierarchy. Custom fonts must scale via `Font.custom(_:size:relativeTo:)`.
 
 ## Color and dark mode
 
@@ -54,7 +67,7 @@ Semantic colors: `Color(.label)`, `.secondaryLabel`, `.systemBackground`, `.sepa
 ## Components
 
 - Buttons: `.borderedProminent` (primary) · `.bordered` (secondary) · `.borderless` (tertiary/inline) · `role: .destructive` (red).
-- Alerts: critical decisions only, prefer 2 buttons, max 3; **destructive button on the LEFT** (less-expected), Cancel on the right. Not for tips (use banner/toast/inline).
+- Alerts: critical decisions only, prefer 2 buttons, max 3; **Cancel on the leading side** (bottom of a stack), the likely choice trailing; Cancel is never the default. The destructive style marks a destructive action the person did *not* deliberately choose; for one they started, offer choices in an action sheet (confirmation dialog). Not for tips (use banner/toast/inline).
 - Sheets: `.presentationDetents([.medium, .large])`; always dismissable; Cancel = `.cancellationAction`, confirm = `.confirmationAction`. Never stack modals on modals.
 - Lists: `.insetGrouped` default, `.swipeActions`, min row 44pt. Pickers: segmented for 2–5 options, wheel for many.
 - **SF Symbols** rendering modes: monochrome / hierarchical / palette / multicolor (don't override multicolor to gray). Match symbol weight to adjacent text; use scale variants, not explicit sizes. Loading = skeleton via `.redacted(reason: .placeholder)`, never a full-screen blocking spinner.

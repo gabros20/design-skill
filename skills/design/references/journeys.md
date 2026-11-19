@@ -54,6 +54,14 @@ Goal priority: get to first value fast > orient (don't educate) > build confiden
 
 ## Wizards and guided paths
 
-Use a wizard when there are **≥3 sequential steps, later steps depend on earlier ones, and one screen would overwhelm**. Rules: step indicator always visible; back always available without losing later progress; forward disabled until the current step is valid (validate on Continue, not on final Submit); autosave drafts; final step is a summary before commit; deep-linking into step 3 works; land somewhere meaningful afterward, not a generic home. Step titles in user-goal language ("Your delivery address", not "Address input"). Only guide when the task has a natural order.
+Use a wizard when there are **≥3 sequential steps, later steps depend on earlier ones, and one screen would overwhelm**. Rules: step indicator always visible; back always available without losing later progress; Continue stays enabled and validates the current step when pressed (forms.md "Validation timing"); autosave drafts; final step is a summary before commit; deep-linking into step 3 works; land somewhere meaningful afterward, not a generic home. Step titles in user-goal language ("Your delivery address", not "Address input"). Only guide when the task has a natural order.
 
 Purchase/checkout: collect only what each stage requires; keep a persistent order summary; put trust signals near payment; confirm before charging; show immediate post-purchase confirmation with next steps.
+
+**Refuse deceptive patterns — a floor, never waived:** cancelling takes no more steps than signing up,
+in the same channel; decline is as visible as accept, on the same layer (consent banners included);
+nothing consent-like or paid is pre-ticked; the full price with fees shows before the commitment step;
+no countdown, stock or "3 people viewing" claim without live data behind it; no guilt-worded decline
+("No thanks, I like paying more"); a trial states the charge date and amount before card entry and
+reminds before charging. When a brief asks for one, name the pattern, state the risk, and offer the
+honest variant.
