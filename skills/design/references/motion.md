@@ -110,7 +110,7 @@ Gesture phases, momentum and dismissal: choreography.md.
 - **CSS animations beat JS under load** (CSS runs off the main thread; rAF loops stutter while the page loads). Use CSS/WAAPI for predetermined motion, JS/springs for dynamic/interruptible.
 - **Motion (Framer Motion) shorthands** `x`/`y`/`scale` are compositor-accelerated from v14.2; on older versions use the full `transform` string. `layout`/`layoutId`, `onUpdate`, inertia and anything driven per frame by a motion value stay on the main thread in every version — the motion that drops frames during navigation or hydration.
 - **CSS variables are inheritable:** driving a child's transform by setting a var on a parent recalcs every child; in a drawer with many items, set `element.style.transform` directly.
-- Pause looping/offscreen animation; cap DPR/particle count; hold 60fps on a mid-range phone. Component motion code is `frontend`'s; scroll-linked code is `scroll-animation`'s.
+- Pause offscreen loops; cap DPR/particles; hold 60fps on a mid-range phone. Code: `frontend` `ui-motion.md` "Motion performance traps"; scroll-linked: `scroll-animation`.
 
 ## Reduced motion
 

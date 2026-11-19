@@ -72,7 +72,7 @@ Size steps are a **ratio**, not increments — `size(n) = base × ratio^n` from 
 - **Hero headline sizing by character count**: ≤20 chars → full display (single word → up to 7rem); 21–50 → the sweet spot; 51–90 → cap at display-small and split into a lead-in + headline; >90 → rewrite. When you write it: ≤7 words, ≤50 chars, no gerund opener.
 - **Line breaks:** `text-wrap: balance` on h1–h3 and short descriptions (ignored past ~6 lines — never paragraphs), `pretty` on prose. On the hero, break by sense group by hand (≤~24 chars a line) and check every width; if wrapping can't fix a column, edit the copy or widen it.
 - **All-caps line-height floor 1.0** (rec 1.02–1.08) — below 1.0 cap-tops collide on wrap; a single-line poster word in heavy caps may run 0.85–0.95.
-- **Optical alignment:** hang large display ≈ −0.06em so the glyph's side-bearing lines up with body text; hang opening quotes (`hanging-punctuation: first`). Centre a label on cap height to baseline, not its line box (capitals sit low in pills, discs and icon labels); a centred amount centres its digits with the currency sign hung. A word that must fill a width is sized to its container (`cqi`), checked at 390px.
+- **Optical alignment:** hang large display ≈ −0.06em so the glyph's side-bearing lines up with body text; hang opening quotes (`hanging-punctuation: first`). Centre a label on cap height to baseline, not its line box (capitals sit low in pills, discs and icon labels); a centred amount centres its digits with the currency sign hung. A word that must fill a width is sized to its container (`cqi`), checked at 390px. CSS: `frontend` `typography-css.md` "Trimming and optical alignment".
 - `font-optical-sizing: auto`; `tabular-nums` (lining) for data/prices/timers/columns; oldstyle proportional figures for body prose.
 
 ## Editorial devices
@@ -99,7 +99,7 @@ with every optional device missing (no hero, no quote, no subtitle).
 
 - `font-display: swap` (or `optional` for zero CLS); metric-match the fallback via `size-adjust`/`ascent-override`/`descent-override` (Fontaine automates this).
 - Preload only the critical weight; use a variable font when you need 3+ weights.
-- Never name a paid font in code without confirming it is licensed; logo use needs its own permission (brand-mark.md).
+- Never name a paid font in code unlicensed; logo use needs its own permission (brand-mark.md).
 
 ## Validation
 

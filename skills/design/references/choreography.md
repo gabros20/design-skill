@@ -10,8 +10,8 @@ Read when:
 - Reviewing a sequence that feels slow, busy, or broken.
 
 Skip when:
-- One element's duration, curve or spring → motion.md. Motion code → `frontend` (component and UI
-  motion) or `scroll-animation` (scroll-linked, entrance, page-transition code).
+- One element's duration, curve or spring → motion.md. Motion code → `frontend` `ui-motion.md`
+  (component and UI motion) or `scroll-animation` (scroll-linked, entrance, page-transition code).
 
 Inputs:
 - The movers, the event that causes them, their frequency, and the surface register.
@@ -71,7 +71,7 @@ children. Order by importance, not DOM. Two leads is a hierarchy bug motion cann
 - **Track** (pointer down): position maps 1:1 — no easing, no spring, keep the grab offset; respond on touch-down, not release.
 - **Release:** a spring seeded with the finger's exact velocity (no seam). **Momentum projection** (Apple's shipped form): `project(v, decel=0.998) = (v/1000)·decel/(1−decel)`; project the resting point, then snap to the nearest target.
 - **Dismiss on distance (~40–50% of travel) OR velocity (> ~0.11 px/ms)** — distance alone ignores flicks, velocity alone can't commit a slow drag. Snap-back is fast. Rubber-band soft boundaries rather than a hard stop.
-- Bounce only at the end of a drag that carried force; the same element closed by a button gets none. Overlay opacity and backdrop scale derive from the one drag value, never a parallel animation. A "weird" spring is usually fixed by raising damping.
+- Bounce only at the end of a drag that carried force; the same element closed by a button gets none. Overlay opacity and backdrop scale derive from the one drag value, never a parallel animation. A "weird" spring is usually fixed by raising damping. Code: `frontend` `ui-motion.md` "Gestures and drag".
 
 ## Scroll and reveal
 
