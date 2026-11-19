@@ -65,10 +65,10 @@ defaults that flip here.
 - **Native iOS / Android** — platform density; SF / Roboto (platform defaults, not reflexes); system colour roles; Liquid Glass (surface-ios.md) or Material 3 Expressive (surface-android.md); platform motion; platform chrome. *Inverts:* reflex-font rejection, custom chrome, web target sizes.
 - **Docs / Read** — standard; reading face for the column, mono only for code; neutral; flat; still; diagrams only; predictable structure is the affordance; sidebar nav. *Inverts:* layout-family variety, eyebrow caps on section kickers.
 - **E-commerce** — standard; quiet; Restrained or brand-Committed; flat; functional; product photos lead; uniform product grids are the convention; conventional nav and buy box. *Inverts:* "uniform card grids" as a tell; price and rating belong in the hero when the job is *buy*.
-- **Portfolio / studio** — the work is the interface: a project index or grid, case pages, almost no chrome; Experience mode. *Inverts:* proof sections, conventional nav.
-- **Campaign / launch microsite** — one idea, short life, the highest licence for expression; composited or cinematic; a single action. *Inverts:* ≤3 motion primitives, layout-family variety.
-- **Longform / scrollytelling** — a reading column that pauses for full-bleed, pinned or stepped figures; text always wins (scroll-animation). *Inverts:* screen budget, photo quotas.
-- **Event / festival / conference** — date and place are the headline; one identity system (colour, type, a modular or generative device) runs across schedule, lineup and tickets; tickets in the nav.
+- **Portfolio / studio** — airy; quiet or type-as-image; neutral ground; flat; gentle transitions; the work leads; composition by the work; minimal nav. The work is the interface: a project index or grid, case pages, almost no chrome; Experience mode. *Inverts:* proof sections, conventional nav.
+- **Campaign / launch microsite** — airy; type-as-image; Committed or Drenched; layered or 3D; cinematic; campaign imagery; many moves in one system; minimal nav. One idea, short life, the highest licence for expression; composited or cinematic; a single action. *Inverts:* ≤3 motion primitives, layout-family variety.
+- **Longform / scrollytelling** — standard; reading face plus display; paper or dark; flat; scrubbed figures, still text; photo or data-led; editorial grid; masthead. A reading column that pauses for full-bleed, pinned or stepped figures; text always wins (scroll-animation). *Inverts:* screen budget, photo quotas.
+- **Event / festival / conference** — standard; characterful display; Committed or Full; flat or layered; expressive; photo or illustration; modular system; conventional nav. Date and place are the headline; one identity system (colour, type, a modular or generative device) runs across schedule, lineup and tickets; tickets in the nav.
 
 ## Lanes
 
@@ -95,7 +95,7 @@ it is two half-styles.
 | Platform-native | The platform language is the lane: Liquid Glass (surface-ios.md), Material 3 Expressive (surface-android.md), Solid Glass (surface-webapp.md); brand lives in tint, type and content |
 | Collage / mixed media | Cutouts and paper over a ground; decisive overlap; one treatment on every image; marks from one kit; the interface plane stays clean (composition-layers.md) |
 | Poster / type-as-image | One word or phrase is the picture, sized to its container; flush left on a visible grid; one colour + black; the real heading stays intact in the DOM |
-| Art-directed editorial | Layout changes per story; type and image interlock; captions, credits and folios are designed; white space as a shape |
+| Art-directed editorial | Per story, unlike Editorial/magazine's publication system: layout changes per story; type and image interlock; captions, credits and folios are designed; white space as a shape |
 | Print / riso / zine | Two or three inks, overprint by multiply, slight misregistration, halftone; paper ground; contrast measured on the printed result |
 | Y2K / retro-futurist | Chrome and gloss, bubble geometry, mesh gradients, pixel or system-UI quotes; committed across the system or not at all |
 | Illustration-led | One hand, one line weight, a fixed palette; the drawing carries meaning, never filler; licence and provenance recorded |

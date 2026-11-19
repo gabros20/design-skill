@@ -137,8 +137,17 @@
     "prompt": "Design a collage-style hero for a music festival site: cutouts, tape, overlapping type.",
     "assertions": [
       "The answer names its planes (ground, field, image, display type, marks, interface, finish) or the subset it uses, with the interface plane clean and unrotated.",
-      "It uses two angles at most (0° and one other) and three sizes, with decisive overlaps.",
+      "It uses two angles at most (0° and one other) and three sizes, with decisive overlaps — or states the contract's reason for more.",
       "It specifies a phone stage or flow restack, keeps DOM order as reading order, and measures text contrast on the worst patch."
+    ]
+  },
+  {
+    "id": "composed-run-no-reask",
+    "prompt": "Continue the family run: design the landing page. digital-product/LEDGER.md Context already records the product, audience, primary action, assets on hand and two references.",
+    "assertions": [
+      "Design reads the LEDGER Context first and asks nothing that it already holds.",
+      "Any remaining question is design-only (e.g. a direction choice shown as three cards) and new assumptions are recorded in the Context block.",
+      "Recorded facts are not overwritten; a needed change is raised as a conflict."
     ]
   }
 ]

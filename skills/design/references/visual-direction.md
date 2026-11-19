@@ -60,7 +60,8 @@ Quiet constraints — accessibility-first, public-sector, regulated, trust-comme
 aesthetic preference.** Negative constraints rule out *devices*, not energy: "no gamification"
 forbids streaks and confetti, not a committed palette; "calm coaching" describes the product's
 behaviour, not the page's volume. No brief → the standalone context check (SKILL.md; intake.md). A question never carries a look (the
-answer only confirms it); directions are shown as a labelled set of three with a recommendation. Rank
+answer only confirms it); directions are shown as a labelled set of three with a recommendation. A good owner prompt under
+references: what would make a polished result feel wrong? Rank
 the brief's assets (a photograph, a number, a quote, the product at its best moment, the name): the
 first viewport is built on the strongest; with none, type leads.
 

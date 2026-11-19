@@ -45,8 +45,8 @@ Before producing anything the user will have to live with:
 This pack's questions: 1. What is it, and what is the one thing a visitor or user should do? 2. Who
 is it for, and what must they believe before they act? 3. What exists: logo, colours, type, photos,
 video, copy, product screenshots, a current site? 4. One to three things you like and one you don't
-want to resemble, from any field. 5. What is fixed: platform, languages, brand rules, accessibility or
-legal requirements, deadline? 6. *(asked by showing, not by question)* Which of three directions is
+want to resemble, from any field. 5. *(only when the signals could not answer it)* What is fixed: platform, languages, brand rules,
+accessibility or legal requirements, deadline? 6. *(asked by showing, not by question)* Which of three directions is
 closest? — never ask for a style, palette or font; show three labelled directions (category standard,
 recommended, bolder) in plain words instead. Signals, direction cards, the vocabulary bridge,
 feedback translation and the headless rule: [Intake](references/intake.md). The brief block feeds the
@@ -54,7 +54,7 @@ design read and the direction contract; write it to `digital-product/design/brie
 
 ## Route before acting
 
-0. No brief or contract and the work sets a look or structure → run the standalone context check first.
+0. No brief or contract and the work sets a look or structure → run the standalone context check first (and read [Intake](references/intake.md)).
 1. Identify the primary design job.
 2. When the request names or implies a surface, its overlay counts as part of the smallest sufficient set — add it (at most one unless the task explicitly compares platforms).
 3. Add only the concern overlays that materially affect the request.

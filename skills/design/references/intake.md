@@ -75,9 +75,9 @@ The three differ on ≥3 axes including composition; each states what it needs (
 illustrator, a licence); never show one you would not build. Mixing is by axis ("B's layout, C's
 colour"), never averaged. Before committing, sketch six or more first-viewport arrangements as boxes;
 the first is the predicted one. Where you can render, each card is one first-viewport tile at one
-size. For axes the cards leave open, at most four this-or-that pairs: calm ↔ energetic · spacious ↔
-packed · classic ↔ of the moment · soft ↔ sharp · playful ↔ serious · real photos ↔ drawn ↔ words
-only · light ↔ dark · familiar ↔ surprising.
+size. Look axes (light ↔ dark, photos ↔ drawn ↔ words only, soft ↔ sharp) are never asked in words — they
+are shown inside the cards. Only feel pairs may be asked, at most four, for what the cards leave open:
+calm ↔ energetic · familiar ↔ surprising · premium ↔ approachable · quiet ↔ loud.
 
 ## Vocabulary bridge
 

@@ -43,13 +43,13 @@ Back to front; each plane has one job, and a plane with nothing to say is delete
 | 2 Image | Photographs, cutouts, drawings — the subject |
 | 3 Display type | The headline as an image; interlocks with plane 2, in front of or behind it |
 | 4 Marks | The decoration kit: labels, stamps, arrows, tape, annotations |
-| 5 Interface | Navigation, body copy, actions — always on top, never rotated, always clean |
+| 5 Interface | Navigation, body copy, actions — on top, unrotated and unoccluded (legibility; WCAG 1.4.3 / 2.4.11 for controls) |
 | 6 Finish | Grain, print texture, overprint; fuses the stack |
 
 ## Depth cues
 
 Strongest first: overlap · scale · contact shadow (one light; a hard short shadow says paper on a
-table, a soft long one says floating — never both) · focus and atmosphere · value and temperature (dark
+table, a soft long one says floating — default one shadow kind per composition) · focus and atmosphere · value and temperature (dark
 and cool recede) · bleed off the frame. Default: use two or three, not all.
 
 ## The grid under the chaos
@@ -63,8 +63,8 @@ and cool recede) · bleed off the frame. Default: use two or three, not all.
 
 ## The decoration kit
 
-Define it before composing: five to nine marks in one material logic (all print ephemera, or all screen
-artefacts — never both), two or three palette colours, one line weight, a count budget per viewport,
+Define it before composing: five to nine marks in one material logic by default (all print ephemera, or all
+screen artefacts; Y2K and collage may cross on purpose), two or three palette colours, one line weight, a count budget per viewport,
 and a job for each mark (point, label, bridge two planes, bleed). A mark that states a fact states a
 true one (honesty).
 
@@ -79,14 +79,14 @@ close — no two neighbours the same).
 
 ## Text and image interleave
 
-Six ways: type over image (scrim rules, imagery-depth-decoration.md) · type behind a cutout subject (at
-most a quarter of the letterforms hidden, never a word's first letter) · type wrapped to a contour ·
+Six ways: type over image (scrim rules, imagery-depth-decoration.md) · type behind a cutout subject (default: at
+most a quarter of the letterforms hidden, a word's first letter kept clear) · type wrapped to a contour ·
 image inside type (display sizes and heavy weights only) · type as a frame along the edges ·
 overprint. Reading text never interleaves: it sits in a quiet zone with measured contrast (WCAG 1.4.3).
 
 ## Responsive stage or flow
 
-A composition is recomposed, never shrunk. Choose per section:
+Default: a composition is recomposed, not shrunk. Choose per section:
 - **Stage** — one picture with a locked aspect ratio that scales as a unit; author two or three stages (wide, tall) and swap between them. Text inside has a size floor; when it is hit, switch stage.
 - **Flow** — layers anchored to grid cells overlap through the grid and restack in reading order on narrow screens.
 
@@ -96,7 +96,7 @@ planes become three or four; side-by-side overlap becomes vertical overlap.
 ## Floors and performance
 
 - DOM order is reading order whatever the z-order (WCAG 1.3.2); a cropped or occluded display word still exists intact as the heading.
-- Decorative planes are hidden from assistive tech and take no pointer events; nothing covers a control or its focus ring (WCAG 2.4.11).
+- Decorative planes are hidden from assistive tech (WCAG 1.1.1) and take no pointer events; a focused control is never fully covered (WCAG 2.4.11 AA); default: nothing overlaps a control or its ring (2.4.12 AAA).
 - Contrast is measured on the worst patch behind each line (WCAG 1.4.3).
 - At 320px and 200% zoom a stage gives way to flow: no clipped text, no sideways scroll (WCAG 1.4.10, 1.4.4). Reduced motion holds the composed still.
 - Performance defaults: planes that never move apart are flattened into one plate; six to eight image layers above the fold at most; alpha images in a modern format at 2×; the subject or headline loads first and decoration after; at most two blended layers per viewport.
