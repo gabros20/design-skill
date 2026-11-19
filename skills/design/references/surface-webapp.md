@@ -77,9 +77,9 @@ DeepLethe's web design language (a shadcn/ui theme) for ever-changing AI screens
 answers, running agents, pending decisions. Its stated case: near-clear glass makes text fight the
 background, so panes are thick smoky glass, solid from afar. A claim, not a verdict: the HIG answers
 legibility by keeping Liquid Glass off the content layer (surface-ios.md). **Choose:** native iOS →
-Liquid Glass; Android → Material 3 Expressive; a text-dense AI/agent web app wanting depth without
-show-through → Solid Glass (dark-first); stillness as the brand → flat. Principles as rules (values:
-imagery-depth-decoration.md "Solid glass"):
+Liquid Glass; Android → surface-android.md "Material 3 Expressive"; a text-dense AI/agent web app
+wanting depth without show-through → Solid Glass (dark-first); stillness as the brand → flat.
+Principles as rules (values: imagery-depth-decoration.md "Solid glass"):
 
 - **Materiality:** finish only at the edge (top rim of light, hairline, shadow beneath), no face gradient.
 - **Physicality:** depth is thickness, panel < card < popover, thicker more opaque: no menu shows through.
@@ -91,9 +91,9 @@ imagery-depth-decoration.md "Solid glass"):
   with a hue dot. Tool calls fold into one line named by effect ("Read search.py"); an answered
   question stays as a record, choices withdrawn.
 
-**Legibility first:** full tokens pass AA; faded muted text (3.0–4.3:1), light-theme status hues as
-text (amber 2.6:1) and ~1.2:1 hairlines do not. Keep text at full token, give each hue dot a word, a
-field's edge 3:1 where it identifies the field. Build: `frontend` `solid-glass.md` "Install".
+**Legibility first:** full tokens pass AA; muted text at /70, or /80 in light (3.0–4.3:1),
+light-theme status hues as text (amber 2.6:1) and ~1.2:1 hairlines do not. Keep text at full token,
+give each hue dot a word, a field's edge 3:1 where it identifies the field. Build: `frontend` `solid-glass.md` "Install".
 
 ## Color-mode decision
 

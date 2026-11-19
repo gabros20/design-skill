@@ -47,7 +47,7 @@ separation is needed; one tinted primary action, trailing. Custom components kee
 with their bar. A tab bar may minimize on scroll around an accessory and host search as its own
 trailing tab; group toolbar items by function. App icons are layered (a background plus foreground
 layers) so the system can render default, dark and tinted appearances. Review with Reduce Transparency
-and Increase Contrast on. Sibling languages: Material 3 Expressive (surface-android.md); Solid Glass,
+and Increase Contrast on. Sibling languages: surface-android.md "Material 3 Expressive"; Solid Glass,
 thick legibility-first glass for AI/agent web apps (surface-webapp.md "Solid Glass (AI and agent apps)").
 
 ## Navigation and reserved gestures
