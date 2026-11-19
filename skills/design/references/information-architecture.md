@@ -10,7 +10,7 @@ Read when:
 Skip when:
 - The task is a flow across screens → `journeys.md`.
 - The task is on-screen state/behavior of one component → `interaction.md`.
-- The task is marketing-page section shapes → `surface-website.md` (macrostructures live there).
+- The task is marketing-page section shapes → `page-anatomy.md` (macrostructures live there).
 
 Inputs: domain material, entities and their relationships, existing routes/nav, any committed URL/redirect map.
 
@@ -57,7 +57,7 @@ Primary nav **2–7 items**; **>7 top-level = choice paralysis, revisit the IA**
 
 ## Section sequence is IA
 
-Order is meaning, not decoration. When the domain implies an order (portfolio: work → case study → proof → CTA), use it, and place proof/trust where it converts — **proof before the ask, never buried after.** (Marketing-page macrostructures and the domain→trio menu live in `surface-website.md`.)
+Order is meaning, not decoration. When the domain implies an order (portfolio: work → case study → proof → CTA), use it, and place proof/trust where it converts — **proof before the ask, never buried after.** (Marketing-page macrostructures and the domain→trio menu live in `page-anatomy.md`.)
 
 ## Hide, don't delete
 

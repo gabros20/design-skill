@@ -2,13 +2,12 @@
 name: design
 description: >-
   Design digital-product experiences across websites, web apps, dashboards and product UI, iOS, and
-  Android. Use for UX
-  research, user journeys, information architecture, interaction and state design, visual direction,
-  typography, color, layout, motion, content design, accessibility, prototypes, design systems,
-  design critique of rendered work on any surface, and frontend handoff. Do not use for production
-  frontend implementation, backend
-  or system architecture, marketing or SEO strategy, or release verification unless the request also
-  requires experience design.
+  Android. Use for UX research, journeys, information architecture, page anatomy, interaction and
+  state design, visual direction, typography, color, layout, motion, content design, accessibility,
+  product shots, illustration, logos, prototypes, design systems, critique of rendered work on any
+  surface, and frontend handoff. Do not use for production frontend implementation, backend or system
+  architecture, marketing or SEO strategy, or release verification unless the request requires
+  experience design.
 ---
 
 # Experience Design
@@ -43,12 +42,18 @@ them automatically unless the user requested a composition workflow.
 | Map a flow, onboarding, wizard, checkout, or end-to-end journey | [Journeys](references/journeys.md) | Breadboard, flow, or journey/service map with every required edge |
 | Model objects, sitemap, navigation, naming, or findability — including inventorying a site before a redesign | [Information architecture](references/information-architecture.md) | Object/relationship model, vocabulary, sitemap, navigation model |
 | Define component behavior and states — forms, feedback, overlays, selection, search | [Interaction](references/interaction.md) | State-complete interaction spec (the canonical 8-state model) |
-| Set the point of view, or fix a result that reads generic or templated | [Visual direction](references/visual-direction.md) | Design read, named register + aesthetic lane, one bold move, refuse-list |
+| Set the point of view — register, visitor mode, change depth, concept, lane | [Visual direction](references/visual-direction.md) | Design read, register + mode, direction contract, one bold move, committed lane |
+| Fix a result that reads generic, templated, or AI-made, or write the refuse-list | [Anti-defaults](references/anti-defaults.md) | Tells found or refused, each with its replacement |
+| Plan a website page's sections — anatomy by visitor job, narrative, compositions, pricing, nav/footer | [Page anatomy](references/page-anatomy.md) | Section sequence with compositions, feeling curve, chrome |
 | Choose or set type — scale, pairing, measure, display | [Typography](references/typography.md) | Type scale and a justified pairing with measure/leading/display settings |
 | Lay out a screen — grid, spacing, hierarchy, density, elevation | [Layout & composition](references/layout-composition.md) | Grid, spacing scale, one focal point, alignment/elevation plan |
 | Build a palette, neutral ramp, accent, dark mode, or check contrast | [Color](references/color.md) | OKLCH token set verified for contrast and gamut |
-| Add depth, materials, imagery, or decoration; source licensed icons/illustrations/logos or art-direct a generated image set | [Imagery, depth, decoration](references/imagery-depth-decoration.md) | Depth/material spec and enrichment plan with reduced-motion fallbacks; per-asset source + licence; anchored, curated image set |
+| Add depth, materials, image treatment, or decoration | [Imagery, depth, decoration](references/imagery-depth-decoration.md) | Depth/material spec and enrichment plan with reduced-motion fallbacks |
+| Source licensed icons, illustrations, logos or photos, capture product screenshots, or art-direct a generated image set | [Image sourcing](references/image-sourcing.md) | Per-slot source, licence and provenance; anchored, curated image set |
+| Show the product or explain a concept in a picture — product shots, bento, explanatory figures, illustration sets, empty-state art | [Product visuals](references/product-visuals.md) | Product-shot or figure spec with real strings, and a review sheet |
+| Design, redesign, or critique a logo, wordmark, monogram, app icon, or identity kit | [Brand mark](references/brand-mark.md) | Three greyscale directions, then master files, lockups and usage sheet |
 | Choose motion values or decide whether to animate | [Motion](references/motion.md) | Duration/easing/spring tokens and a per-moment reduced-motion spec |
+| Sequence motion — stagger, exits, view swaps, gestures, loops, loaders, page transitions | [Choreography](references/choreography.md) | Cast, order, offsets, gesture model, loop and reduced-motion plan |
 | Build or evaluate a prototype, or compare design options | [Prototyping](references/prototyping.md) | Classified prototype (disposable / design-reference / production-candidate) + test plan |
 | Create or extend a design system, tokens, or component contracts | [Design systems](references/design-systems.md) | Layered token set, component specs, DESIGN.md/PRODUCT.md contract |
 | Judge or QA a rendered design against its intent — a scored review, not setting direction | [Critique](references/critique.md) | Severity-ranked Before/After/Why punch-list and a binary verdict |
@@ -79,15 +84,16 @@ Trace a technique to its source → [Sources](references/SOURCES.md).
 Read these together — the router encodes the pairing so no lateral hop is required:
 
 - Native mobile prototype → [Prototyping](references/prototyping.md) + [iOS](references/surface-ios.md) (or [Android](references/surface-android.md)).
-- A new surface from scratch → [Visual direction](references/visual-direction.md) first, then its craft leaves — [Typography](references/typography.md), [Layout & composition](references/layout-composition.md), [Color](references/color.md), [Imagery, depth, decoration](references/imagery-depth-decoration.md), [Motion](references/motion.md) — plus the one surface overlay.
+- A new surface from scratch → [Visual direction](references/visual-direction.md) and [Anti-defaults](references/anti-defaults.md) first (a website page adds [Page anatomy](references/page-anatomy.md)), then its craft leaves — [Typography](references/typography.md), [Layout & composition](references/layout-composition.md), [Color](references/color.md), [Imagery, depth, decoration](references/imagery-depth-decoration.md), [Motion](references/motion.md) — plus the one surface overlay.
 - A design system for a specific surface → [Design systems](references/design-systems.md) + that surface overlay.
+- A motion spec where several things move → [Motion](references/motion.md) + [Choreography](references/choreography.md).
 - Any flow, screen, or system where accessibility is explicit → the primary reference + [Accessibility](references/accessibility.md).
 
 ## Universal invariants
 
-- Name the register per surface before craft — design-IS-the-product vs design-SERVES-the-product. The audience picks the aesthetic, not taste; the serve register legitimately inverts several distinctiveness defaults.
+- Name the register per surface before craft — design-IS-the-product (Persuade, Experience) vs design-SERVES-the-product (Operate, Read). The audience picks the aesthetic, not taste; the serve register legitimately inverts several distinctiveness defaults.
 - Design the full state set when it applies: default, hover, focus, active, disabled, loading, error, success, plus empty for every data region.
-- Use real content at real lengths — the longest realistic string, the empty case, the overflow case. Never fabricate metrics, logos, testimonials, or decorative data.
+- Use real content at real lengths — the longest realistic string, the empty case, the overflow case. Never fabricate claims — metrics, logos, testimonials, prices, customers, capabilities, outcomes, or decorative data. Demonstration content may be authored at full fidelity only when labelled synthetic and listed for replacement.
 - Label every coded artifact disposable, design-reference, or production-candidate. Never present prototype code as production-ready without engineering, accessibility, and quality review.
 - Spend one bold move per section or page and keep everything else restrained; two bold moves compete, zero reads generic.
 - Treat accessibility floors — contrast, target size, focus order, reduced-motion — as design constraints even when the accessibility reference is not opened.

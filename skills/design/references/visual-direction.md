@@ -1,97 +1,163 @@
 # Visual direction
 
-Purpose: Decide the point of view before any craft — which register a surface serves, which aesthetic lane it commits to, the one bold move it spends, and the named defaults it must refuse. This is the canonical home of the anti-default catalog.
+Purpose: Decide the point of view before any craft — register and visitor mode, change depth,
+concept or world, the one bold move, and the committed lane.
 
 Read when:
-- Starting a new surface, or a result reads generic, templated, or "AI-generated."
-- Choosing a register, aesthetic direction, or accent strategy, or judging whether a design is distinctive enough.
+- Starting a new surface, or a result reads generic, templated, or "AI-generated" (pair with
+  anti-defaults.md).
+- Choosing a register, change depth, concept, aesthetic lane, or accent strategy, or judging whether
+  a design is distinctive enough.
 
 Skip when:
-- The direction is already set and the task is executing one craft layer — go to typography, layout-composition, color, imagery-depth-decoration, or motion.
+- The direction is already set and the task is executing one craft layer — go to typography,
+  layout-composition, color, imagery-depth-decoration, or motion.
 - The concern is native-platform convention (surface-ios / surface-android) or a scored review (critique).
 
 Inputs:
 - Brief, audience, subject, and any brand assets or reference sites.
 
 Produces:
-- A one-line design read, a named register and aesthetic lane, the one bold move, and a refuse-list of defaults this design will not use.
+- A design read, a named register and mode, the change depth, a concept or world, a direction
+  contract, the one bold move, a committed lane, and a refuse-list (from anti-defaults.md).
 
 ## Contents
 
-- Register doctrine (sets the bar)
+- Register doctrine and visitor modes
 - Read the brief before generating
+- Change modes and depths
+- Concept and world (is-the-product surfaces)
+- Direction contract
 - One bold move + restraint
 - Aesthetic lanes (commit to one)
-- The anti-default catalog
-- Templated-design diagnosis and system fixes
-- Four validation checks
+- Validation checks
 
-## Register doctrine (sets the bar)
+## Register doctrine and visitor modes
 
-Name the register per **surface**, not per project — most products are mostly-serve with a few is-the-product surfaces (a marketing home over an app).
+Name the register per **surface**, not per project — most products are mostly-serve with a few
+is-the-product surfaces (a marketing home over an app).
 
-- **Design IS the product** — brand sites, landing pages, launch microsites, anything whose job is to be noticed and remembered. **Distinctiveness is the bar.** Take the aesthetic risk; type can be a character; one signature element carries the boldness.
-- **Design SERVES the product** — dashboards, app shells, settings, dense daily tools. **Earned familiarity is the bar**; a fluent Linear/Figma/Notion user must trust and operate it on sight, and surprise is a cost. This register *inverts* several defaults: prefer fixed `rem` scale over fluid `clamp()`; give every interactive component its full state set; reach for proven patterns; **Inter/SF Pro is a legitimate pick here, not a tell.**
+- **Design IS the product** — brand sites, landing pages, launch microsites. **Distinctiveness is the bar:** take the aesthetic risk; type can be a character; one signature element carries the boldness.
+- **Design SERVES the product** — dashboards, app shells, settings, dense daily tools. **Earned familiarity is the bar**: a fluent Linear/Figma/Notion user must operate it on sight; surprise is a cost. This register *inverts* defaults: fixed `rem` over fluid `clamp()`, the full state set, proven patterns; **Inter/SF Pro is legitimate here, not a tell.**
+
+Each register splits into two **visitor modes**, named from the requested surface, not the product (a
+tool's landing page is Persuade; a fashion house's docs are Read). IS → **Persuade** (decide and act:
+landing, pricing, campaign) and **Experience** (inside the work: portfolio, gallery — the artifact
+leads from the first viewport and the interface recedes). SERVES → **Operate** (finish a task;
+surface-webapp.md) and **Read** (understand: docs, articles, help, changelogs).
+
+**Read surfaces: frame vs column.** The world owns the frame (masthead, nav rail, ground, openers, how
+code, tables and callouts are set); the column stays calm — a reading face, 45–75 characters, ~16px,
+real contrast; mono only for code and parameters. Borrow from publishing (manuals, field guides,
+timetables). A page that reads as an artifact before a document has let the world into the column.
 
 ## Read the brief before generating
 
-Emit a one-line **design read** before any code: *"Reading this as: <page kind> for <audience>, with a <vibe> language, leaning toward <aesthetic lane>."* The **audience picks the aesthetic, not your taste.** Quiet constraints — accessibility-first, public-sector, regulated, trust-commerce, kids — **override aesthetic preference.** If ambiguous, ask exactly **one** question; if confidently inferable, do not ask.
+Emit a **design read** before code, in five lines: **Product** (one plain sentence) · **Character**
+(2–3 concrete words; "clean, modern, sleek, minimal, premium" decide nothing) · **World** (the place or
+material it belongs to — monitoring near instruments and night shifts; it tints neutrals and picks the
+accent) · **Moments** (the one or two places that get the richness) · **Signature** (one detail only
+this product has). The **audience picks the aesthetic, not your taste.**
 
-When the work changes an existing surface, name the **change mode** with the read, per dimension — copy, look, brand, routes: **reproduce** (`quality` calls it fidelity, `frontend` a faithful rebuild: tokens extracted from the source; the anti-default catalog and the one-bold-move rule are *suspended* — fidelity to the source is the bar; imagery is reused, and a missing asset stays a counted, labeled gap — a generated fill only in a non-brand, non-hero decorative slot, in the source's style, recorded as `generated` in provenance and approved by the owner; never a stand-in for a real person, product, place, or work, which stays a real photo or a placeholder (imagery-depth-decoration.md); accessibility floors never suspend — report a source that fails them), **redesign** (new composition and look; logo, core brand colors/type, and routes kept, copy preserved or lightly tightened), or **rebrand** (new palette, type, voice, and IA, with a redirect map, from a strategy brief; the full doctrine applies). Copy fidelity levels are in information-architecture.md.
+Quiet constraints — accessibility-first, public-sector, regulated, trust-commerce, kids — **override
+aesthetic preference.** Negative constraints rule out *devices*, not energy: "no gamification"
+forbids streaks and confetti, not a committed palette; "calm coaching" describes the product's
+behaviour, not the page's volume. If ambiguous, ask **one** round of product questions — never a taste menu,
+never a look floated inside a question (the answer just confirms it): what is uniquely true here; what
+would make a polished result feel wrong; what must stay untouched; min/typical/max content. If
+confidently inferable, do not ask.
 
-Intent must be **systemic**: if the intent is "warm," then surfaces, text, borders, accents, and type are all warm. Check every token against the stated intent; a token that contradicts it is a defect.
+Intent is **systemic**: "warm" means surfaces, text, borders, accents and type are all warm; a token
+that contradicts it is a defect.
+
+## Change modes and depths
+
+When the work changes an existing surface, name the mode with the read, per dimension — copy, look,
+brand, routes. Depths never blend:
+
+- **Reproduce** (`quality`: fidelity; `frontend`: faithful rebuild) — tokens extracted from the source; the anti-default catalog and one-bold-move rule are *suspended*, fidelity is the bar; imagery is reused and a missing asset stays a counted, labeled gap (the generated-fill limits are in image-sourcing.md); accessibility floors never suspend — report a source that fails them.
+- **Polish** — system and layout kept; only named tells, contrast, states and tokens change. A polish that finds the concept wrong says *redesign* and stops; it never smuggles one in.
+- **Restyle** — layout kept; colour, type, radius, shadow, motion and controls change.
+- **Refine** — one named target; everything outside it stays; ask before touching factual copy. A section added to an established surface inherits it, never becoming an identity exercise.
+- **Redesign** — new composition and look; logo, core brand colours/type, routes kept, copy lightly tightened. The old look is evidence, never authority: don't split the difference into polish on a look you are replacing.
+- **Rebrand** — new palette, type, voice, and IA, with a redirect map, from a strategy brief; the full doctrine applies.
+
+Restyle and polish only when asked in so many words; never change a working screen just to make it
+different. Every depth keeps the content (claims listed to verify) and legal, terms and consent wording
+verbatim; a framework default or catalogued tell is not a brand. Before a redesign or rebrand, **audit
+equity** — what recognition rests on (colour, symbol shape, a letter, the name's type, a mascot),
+strongest first; the strongest one or two survive. The review asks: what could a visitor do or find
+before that is now harder? Copy fidelity levels: information-architecture.md.
+
+## Concept and world (is-the-product surfaces)
+
+**Derive the world, don't pick it.** State the mechanism in one sentence; name the category's default
+page *and* its predictable opposite (both are the rut; the brief's own metaphor gets one slot at most).
+List seven artifacts, places or rituals the audience knows by heart, each with why and how it looks;
+more than three from one material family means you stopped at the obvious. Operate and Read surfaces
+never borrow from the tools their users operate (it comes back as a costume).
+
+**A concept is a rule system borrowed from a world, not a style** ("the site is a contact sheet":
+strips, film advance, edge-print labels, loupe — not "dark minimal with WebGL"). A sentence that
+dictates fewer than four decisions (layout rule, motion verb, type voice, palette source, signature
+moment) is a style. Draft three from different territories (the name, the profession's material, place,
+process, one formal rule taken to the extreme); write each one's **anchor**, the real fact it depends on,
+then swap the subject — if it still works, it is generic. It must reach the footer, an inner page and
+the 404. Name one **motion verb** ("settle like paper"); every animation varies it.
+
+## Direction contract
+
+Before code, ~150 words: **THESIS** (the idea and the default it refuses) · **OWN-WORLD**
+(recognisable with the content removed) · **STORY** (what the visitor understands, believes, does) ·
+**FIRST VIEWPORT** (exact composition, scale, primary action) · **FINISH** (the exit condition). A block
+that reads like a mood is undecided. Run the validation checks on this plan ("would a generic model land
+here?"), revise each yes and record what changed. The review audits the render against it; it never
+ships in the artifact (comments, `data-*`, hidden DOM).
 
 ## One bold move + restraint
 
-The shared trait of Linear/Stripe/Vercel/Notion is **restraint, not a look.** Spend boldness in **one** place per section or page and keep everything else quiet. Two bold moves compete and cancel; zero reads generic. Test: *"What is the one thing someone remembers about this section?"* — if the answer is "nothing" or "five things," recompose.
+The shared trait of Linear/Stripe/Vercel/Notion is **restraint, not a look.** Spend boldness in
+**one** place per section or page and keep everything else quiet. Two bold moves compete and cancel;
+zero reads generic. Test: *"What is the one thing someone remembers about this section?"* — if the
+answer is "nothing" or "five things," recompose.
+
+- **Bolder:** a flat section usually opts out of the system's strongest moves — raise it to its neighbours in the system's own vocabulary, no new primitive, one move (if everything got louder, it got flatter). Skeleton test: with the copy stripped, the structure still says what the section is.
+- **Quieter** keeps the point of view: saturation ~70–85%, weights down a step (900→600, 700→500), motion travel 10–20px, smaller scale jumps, thinner borders, one anchor kept. Grey-on-white in one weight is generic, not quiet.
 
 ## Aesthetic lanes (commit to one)
 
-Pick a lane and execute its whole system; **match implementation complexity to the vision** (a Rams interface is ~50 lines, a Neo-Memphis ~300 — both correct). **Rotate lanes; do not reuse the same one across consecutive projects.**
+Pick a lane and execute its whole system; **match implementation complexity to the vision** (a Rams interface ~50 lines, a Neo-Memphis ~300 — both correct). **Rotate lanes across consecutive projects.**
 
 | Lane | Load-bearing signature |
 |---|---|
 | Dieter Rams functionalist | Monochrome + one functional accent; strict grid; borders over shadows |
-| Swiss / International | Black + white + one primary; rigid multi-column, asymmetric balance; flat |
+| Swiss / International | Black + white + one primary; rigid multi-column, asymmetric balance; flat; motion brief, near none |
 | Japanese minimal (Ma) | Muted naturals; line-height 1.8–2.0; whitespace 2–3× normal; slow 400–600ms fades |
-| Brutalist / tactical | Mono or heavy display; 90° corners, exposed box model; hairline `grid gap:1px` |
+| Brutalist / tactical | Mono or heavy display; 90° corners, exposed box model; hairline `grid gap:1px`. Neo-brutalist: 2–3px black borders + zero-blur offset shadow; press translates by the offset; snappy |
 | Scandinavian | Warm whites, no pure black; rounded 8–12px; soft large-blur low-opacity shadows |
-| Editorial / magazine | Display serif + drop caps; 3–5 column grid, full-bleed; folio numbers, thin rules |
+| Editorial / magazine | Display serif + drop caps; 3–5 column grid, full-bleed; folio numbers, thin rules; kinetic type |
 | Warm-monochrome (Notion-adj.) | Off-black text never `#000`; paired pastel accent+text; 1px `#EAEAEA` cards |
 | Soft / awwwards depth | Concentric "double-bezel" nesting; custom `cubic-bezier(0.32,0.72,0,1)`; magnetic hover |
+| Quiet luxury | Type set *small*, space and copy carry the page; hairlines; outline or text-plus-arrow buttons; radius 0–tiny; slow soft fades, no bounce |
 
-## The anti-default catalog
+**Write the lane down or it is a mood:** ground + ink, type (face, weight, tracking, case, labels),
+edges (radius, border, shadow), containers, motion (how things arrive, how fast); the **accent's job
+list** (where it may appear, nowhere else); each signature device with a **count budget**; a **kill
+sentence** (the trait whose removal ends the style); the two nearest lanes it is *not*; a numeric
+fail-if list (max radius, accent count, min section gap). **Diluting a lane is the failure:** Swiss or
+brutalist softened with blur shadows and rounding reads as generic SaaS.
 
-Refuse, then replace. These are **brand-register** tells — the serve register legitimately uses many of them (system fonts, familiar cards). Keep the dated/exact values; they are the point.
+**The category standard is a legitimate choice:** ask which 2–3 products it should sit beside and match
+their craft exactly, no smuggled quirk. A product cited in the brief sets the craft bar, not the look.
+Re-pick a direction only on factual grounds, never taste.
 
-**Color**
-- Cream/sand/beige body background — the saturated AI default of 2026. Suspect the band **OKLCH L 0.84–0.97, C < 0.06, hue 40–100**; tell token names `--paper --cream --sand --linen --parchment --bone --flour --wheat --ivory`.
-- Premium-consumer palette (cookware/wellness/luxury/DTC) — banned defaults: backgrounds `#f5f1ea #f7f5f1 #fbf8f1 #efeae0 #ece6db #faf7f1 #e8dfcb`; accents `#b08947 #b6553a #9a2436 #9c6e2a #bc7c3a`; text `#1a1714 #1a1814`. Rotate to a different family (cold-luxury silver+chrome, forest+bone+amber, cobalt+cream, terracotta+slate) and never ship the same premium palette twice in a row.
-- Purple→blue / indigo→violet gradients, on text or as accent ("the lila rule"); saturated diagonal linear gradients (purple→pink); gradient-filled hero headings; dark mode + single acid-green/vermilion glow. Max one accent, saturation < 80%.
+## Validation checks
 
-**Typography** (full discipline in typography.md)
-- Display `clamp()` max **≤ 6rem** (bigger reads generated); display letter-spacing floor **≥ −0.04em**. Inter body everywhere (legit only in serve). Reflex-reject font list is canonical in typography.md.
-
-**Layout / structure**
-- Tiny uppercase tracked eyebrow above every section (appears on 55–95% of generations — the definition of a tell); numbered section markers `01/02/03` as decoration; nested-card soup; icon-tile stacks (grid of rounded squares, each one line-icon + label); **centered three-up identical feature cards**; split-header ("left big headline + right small explainer"); left-text/right-image hero as the reflexive first instinct.
-
-**Harness defects (GPT/Codex)**
-- Ghost card (`1px` border + `box-shadow` ≥16px blur on the *same* element); over-rounding (`border-radius: 32px+`); hand-drawn / `feTurbulence` "sketchy" filters; `repeating-linear-gradient` candy stripes; meta-criticism copy ("not your average…", "this isn't just another…").
-
-**Production tells (refuse by default)**
-- Version labels in hero (`V0.6`/`BETA`); "Brand · No.01" sub-eyebrows; section-number eyebrows (`00/INDEX`, `001·Capabilities`); `01/4` pagination on tiles; middle-dot `·` more than once per line; decorative status dots on every list/nav item; `<br>`-broken italicized headlines; vertical rotated text; crosshair/hairline grid decoration; **div-based fake product UI / terminal / dashboard in the hero (the #1 tell)**; fake version footers; "Quietly trusted by"; poetic sidebar labels ("Field notes"); weather/locale strips ("LIS 14:23 · 18°C"); live counters ("Reservation 412 of 800"); hero-bottom decoration strips ("BRAND. MOTION. SPATIAL."); scroll cues ("Scroll to explore"). **Invented metrics** (fabricated `92%`/`4.1×`/`48k`) — a stat is never the hero's sole headline; use a real number or `—` + a labeled block. **Re-drawn chrome** (fake browser bars/phone frames/code windows) — use a real screenshot.
-
-**Calibration — the current AI cluster.** Three looks recur regardless of subject: (1) warm cream `~#F4F1EA` + high-contrast serif display + terracotta accent; (2) near-black bg + a single acid-green/vermilion accent; (3) broadsheet with hairline rules, zero radius, dense columns. Each is legitimate for *some* brief; treat it as a default to justify, not a destination to drift into.
-
-## Templated-design diagnosis and system fixes
-
-Models default to the statistically common pattern (hero + three feature cards + testimonials + pricing + CTA, Inter, indigo-600/slate-900, even spacing, stock imagery) because it is the average of a billion tutorials. Fixes are **system-level**, not cosmetic: kill the default font; kill the default color and ration ONE accent; break the symmetric grid once; vary section rhythm; use real content; add one or two intentional micro-interactions; and above all **feed references, not adjectives** — "make it premium" yields the average, a specific reference ("a 1970s university lecture handout") steers the whole system.
-
-**Second-order rebound.** Avoid the predictable anti-default rebound (fintech-not-navy → terminal dark; wellness-not-sage → brutalist mono). The rebound is as templated as what it flees.
-
-## Four validation checks
+Run on the plan, then on the render:
 
 - **Swap** — swap your typeface/layout for the usual one; where nothing would feel different is where you defaulted.
 - **Squint** — blur the screen; hierarchy and the one focal point must survive.
 - **Signature** — point to five specific elements that carry this design's signature; if you can't, it's generic.
 - **Token** — read the CSS variable names aloud; `--ink`/`--parchment` evoke a world, `--gray-700`/`--surface-2` evoke a template.
+- **Poster** — any paused frame (motion off, mid-scroll, page end) looks intentional alone; motion amplifies a composition, never rescues one.
+- **Reskin** — two directions rendered as one still and squinted must read as different pages; composition (headline position, containers, image treatment) separates directions, tint does not.

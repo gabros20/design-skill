@@ -22,9 +22,10 @@ artifacts and emit a handoff. Do not silently expand this skill into a lifecycle
 - **A visual verdict requires rendered evidence.** When no build was viewed, state "code-level pass,
   not an art review" rather than signing off on appearance.
 - **Canonical homes — one source of truth, others point to it, never restate.** Motion
-  duration/easing values live in `motion.md`. Universal accessibility floors (contrast, target
-  sizes, focus, zoom, reduced-motion) live in `accessibility.md`. The anti-default catalog and
-  register doctrine live in `visual-direction.md`. The 8-state model lives in `interaction.md`; the
+  duration/easing values live in `motion.md`; sequencing, gesture and loop values in
+  `choreography.md`. Universal accessibility floors (contrast, target sizes, focus, zoom,
+  reduced-motion, pause/stop/hide) live in `accessibility.md`. Register doctrine lives in
+  `visual-direction.md`; the anti-default catalog in `anti-defaults.md`. The 8-state model lives in `interaction.md`; the
   handoff package in `handoff.md`; token architecture in `design-systems.md`.
 
 ## Change rules

@@ -1,77 +1,114 @@
 # Surface: Website
 
-Purpose: Design marketing, brand, landing, and portfolio sites — surfaces whose job is to persuade and inform, where the design IS the product. Owns page macrostructure, section craft, the premium↔information dial, per-vertical register, the product-narrative question chain, and the award tier.
+Purpose: Design marketing, brand, landing, and portfolio sites — surfaces whose job is to persuade and
+inform, where the design IS the product. Owns the premium↔information dial, section craft and hero
+discipline, the phone composition, finish details, and the award tier. What the page contains and in
+what order is page-anatomy.md.
 
 Read when:
 - The request is a marketing site, landing page, brand/launch microsite, portfolio, or any page selling or explaining to a visitor.
-- You are choosing page shape, section sequence, or how "premium" vs "dense with proof" a niche site should read.
+- You are setting how "premium" vs "dense with proof" a niche site should read, or crafting its sections and hero.
 
 Skip when:
 - The surface is product/app UI (→ surface-webapp) or native (→ surface-ios / surface-android).
-- The need is generic craft: register doctrine + anti-default catalog → visual-direction.md; grids/spacing → layout-composition.md; type/color/motion → their leaves.
-- The flow is a wizard, checkout, or multi-step purchase → journeys.md (this file owns only the landing question chain).
+- The need is generic craft: register doctrine → visual-direction.md; tells → anti-defaults.md; grids/spacing → layout-composition.md; type/color/motion → their leaves.
+- The flow is a wizard, checkout, or multi-step purchase → journeys.md.
 
 Inputs: brief (niche, ideal client, the page's one job), brand assets, register decision.
-Produces: macrostructure choice, section-by-section composition, dial setting, anti-boring pass.
+Produces: dial setting, section-by-section craft, hero spec, phone composition, finish list, anti-boring pass.
 
 ## Contents
-- Structural anti-templating (macrostructures)
 - The premium↔information dial
 - Section craft and hero discipline
-- Product-narrative question chain
-- Section-repetition bans
-- SaaS sequence
+- Compose the phone
+- Finish details
 - Award / experimental tier
-
-## Structural anti-templating
-
-**Structural sameness is the AI fingerprint, not visual sameness.** Two briefs must yield different *sites*, not color-swaps of one skeleton.
-
-**21 macrostructures** (each bundles heading placement + body composition + divider + button voice + image treatment + reveal): Bento Grid · Long Document · Marquee Hero · Stat-Led · Workbench · Conversational FAQ · Manifesto · Photographic · Quote-Led · Specimen · Catalogue · Letter · Index-First · Narrative Workflow · Split Studio · Feature Stack · Type Specimen · Portfolio Grid · Map/Diagram · Ecosystem Index · Component Playground. Vague brief → pick from the first ten. **Specimen is not a default** (its fall-through was the most-repeated failure).
-
-**Domain → offer a trio of categorically different macros** (never default one): podcast → Photographic/Quote-Led/Letter · shop → Catalogue/Photographic/Bento · docs → Workbench/Long-Document/Component-Playground · SaaS-B2B → Bento/Workbench/Stat-Led · agency → Portfolio-Grid/Split-Studio/Index-First · restaurant → Photographic/Long-Document/Catalogue · fashion → Photographic/Catalogue/Marquee-Hero · fintech → Stat-Led/Workbench/Long-Document · conference → Marquee-Hero/Manifesto/Photographic. Docs vs marketing for one domain get different trios.
-
-**6 structural axes** (vary these when deviating from a macro; no two pages share >3 of 6): heading placement · body composition · divider language · button voice · image treatment · reveal. Fingerprint = one pick per axis.
 
 ## The premium↔information dial
 
-A niche site must be **premium** (noticed, remembered, trusted — signaled by what you leave OUT: whitespace, restraint, one idea) AND deliver **information + proof** (signaled by structured density: scannable IA, credentials/proof, case results, social proof by the CTA).
+A niche site must be **premium** (noticed, remembered, trusted — signaled by what you leave OUT:
+whitespace, restraint, one idea) AND deliver **information + proof** (structured density: scannable IA,
+credentials, case results, social proof by the CTA).
 
-**Don't blend — sequence:** restrained emotional hero → progressively denser proof as the visitor self-qualifies → low-friction action. **Set the dial by stakes and emotion, not taste:** higher money/health/legal risk → proof leads, register conservative; lifestyle/prestige → premium can lead; proof always carries equal final weight. Never let aesthetics bury the phone number, the credentials, or the next step.
+**Don't blend — sequence:** restrained emotional hero → progressively denser proof as the visitor
+self-qualifies → low-friction action. **Set the dial by stakes and emotion, not taste:** higher
+money/health/legal risk → proof leads, register conservative; lifestyle/prestige → premium can lead;
+proof always carries equal final weight. Never let aesthetics bury the phone number, the credentials,
+or the next step.
 
-**Per-vertical register cues:** finance = deep navy + crisp white, most conservative · law = navy/charcoal/burgundy/muted gold · healthcare = soft blues/greens/teal + white · luxury = mono/neutral + gallery whitespace + slow motion + 1–2 type families. Curation: architects ~8–25 projects; photographers ~15–40 (20-60-20 rule); artists 10–15.
+**Per-vertical register cues:** finance = deep navy + crisp white, most conservative · law =
+navy/charcoal/burgundy/muted gold · healthcare = soft blues/greens/teal + white · luxury = mono/neutral
++ gallery whitespace + slow motion + 1–2 type families (lane in visual-direction.md). Curation:
+architects ~8–25 projects; photographers ~15–40 (20-60-20 rule); artists 10–15.
 
 ## Section craft and hero discipline
 
-A boring section is one flat plane (text + image-square on solid fill). A great section has **depth** (≥2 Z-planes), **tension** (asymmetry/scale contrast), and **one deliberate move**. **Cardinal rule: one or two devices per section, executed precisely — never all at once.**
+A boring section is one flat plane (text + image-square on solid fill). A great section has **depth**
+(≥2 Z-planes), **tension** (asymmetry/scale contrast), and **one deliberate move**. **Cardinal rule:
+one or two devices per section, executed precisely — never all at once.**
 
-**Anti-boring checklist (run every section)** — MUST be yes: depth (≥2 planes or one unifying texture/glow/shadow) · one focal point (squint) · a contrast move · one signature · grayscale test passes · spacing system · quality floor. MUST be no: centered-everything · three identical cards as the only idea · same rhythm every section · weak heading↔body contrast · `01/02/03` on non-sequences · more than two bold moves fighting.
+**Anti-boring checklist (run every section)** — MUST be yes: depth (≥2 planes or one unifying
+texture/glow/shadow) · one focal point (squint) · a contrast move · one signature · grayscale test
+passes · spacing system · quality floor. MUST be no: centered-everything · three identical cards as the
+only idea · same rhythm every section · weak heading↔body contrast · `01/02/03` on non-sequences · more
+than two bold moves fighting.
 
-**Composition anchors:** the left-text / right-image hero is the single most-overused AI pattern — allowed, never the default first instinct. Rotate anchors: centered-over-bg, bottom-left/right over image, stacked-center, image-as-canvas, off-grid editorial, mini-minimalist. Use ≥3 different anchors per site; never the same anchor >2 sections in a row, never the same background mode >3 in a row.
+**Composition anchors:** the left-text / right-image hero is the single most-overused AI pattern —
+allowed only when the picture is the strongest thing the brief has. Rotate anchors: centered-over-bg,
+bottom-left/right over image, stacked-center, image-as-canvas, off-grid editorial, mini-minimalist,
+plus three from the job: **Counter** (the action is the visual — the subscribe field beside the latest
+issue, the next booking times, the buy box set large), **Index** (the content list is the visual — the
+lineup, the menu), **Banner** (50–60% tall so the first section shows; docs, references, utilities).
+Use ≥3 different anchors per site; never the same anchor >2 sections in a row, never the same
+background mode >3 in a row.
 
-**Hero discipline:** hero fits the initial viewport (`min-height: clamp(60vh, 75dvh, 88dvh)`, footprint 70–90%, not `100vh`); headline ≤2 lines desktop; subtext ≤20 words and ≤3–4 lines; CTAs visible without scroll; hero top padding max `pt-24`; **max 4 hero text elements** (eyebrow-or-brand-strip, headline, subtext, primary CTA + max one secondary). Banned in hero: tiny tagline below CTAs, trust micro-strip, pricing teaser, feature bullets, avatar row, version labels. "Used by / Trusted by" logo wall lives UNDER the hero.
+**Hero discipline:** hero fits the initial viewport (`min-height: clamp(60vh, 75dvh, 88dvh)`,
+footprint 70–90%, not `100vh`); headline ≤2 lines desktop; subtext ≤20 words and ≤3–4 lines; CTAs
+visible without scroll; hero top padding max `pt-24`; **max 4 hero text elements** (brand strip or a
+passing label, headline, subtext, primary CTA + max one secondary). Banned in hero: decorative tagline
+below CTAs (one line answering commitment or cost — "14 days, no card" — is part of the CTA), trust
+micro-strip, pricing teaser, feature bullets, avatar row, version labels. A logo wall lives UNDER the
+hero.
 
-For the full named-tell catalog (AI-purple gradients, decoration strips, fake product chrome, poetic sidebar labels), see visual-direction.md — do not restate it here.
+**Screen budget:** about 80 words per 900px window at 1440, labels included; the first screen holds at
+most six things (nav, one proof line, headline, one sentence, one CTA group, one visual) and no more
+than about four compete anywhere. Fill a thin screen with scale or a picture, never more copy. **Fold
+checks:** at 1280×800 the headline, sentence, primary action and the visual's focal point are visible;
+at 1920×1080 the container is capped (gutters grow, columns don't) and the hero still fits. The first
+screen ends on a whole element or a deliberate bleed (≥~96px), never a card sliced by a sliver; re-check
+with the longest realistic headline.
 
-## Product-narrative question chain
+## Compose the phone
 
-Landing pages carry **8 beats:** 1 Hook · 2 Problem empathy · 3 USP · 4 Value props · 5 Proof points · 6 How it works · 7 Stakes · 8 CTA. Beats stay the same across audiences; weight and evidence vary (industrial buyer reads more, wants spec; fashion carries the hook in imagery, short scroll).
+Compose the 390px layout, don't shrink it: re-tune the type scale, collapse grids to 1–2 columns with
+deliberate offsets, step section spacing down. Replace hover-dependent ideas — a hover-preview list
+becomes inline thumbnails, cursor effects become tap or scroll equivalents, a pinned horizontal pan
+becomes a native scroll-snap row. Adapt the signature moment; never drop it without a replacement.
+Phone-only failures: a hero row set to fill height leaves a hole on tall phones; a display word sized
+from the viewport breaks mid-word; a section's top row collides with fixed chrome (layout-composition.md).
 
-**The question chain (the sharpest test)** — walk top-to-bottom and mark where each answer lands: *What is this? → Is it for me? → Why better? → Can I trust it? → How does it work? → How much effort? → What next?* Answering **early is also a defect** (pricing above the fold to someone still asking "what is this"). Hook is a question, not a summary. Value props = benefits not feature nouns ("survives a season of gravel roads", not "14mm hardened steel"). Every claim carries proof. Stakes come from consequence, not manufactured scarcity (fake countdowns spend trust). CTA names the action ("Check fitment", not "Learn more"). One message per viewport; CTA repeats down the page.
+## Finish details
 
-## Section-repetition bans
-
-- A layout family appears at most once per page; 8 sections need ≥4 families.
-- Zigzag alternation cap: max 2 consecutive image+text-split sections.
-- Eyebrow restraint (the most-violated rule): max 1 uppercase-tracked eyebrow per 3 sections (hero counts as one) — `count ≤ ceil(sectionCount / 3)`.
-- Split-header ban: "left big headline + right small explainer paragraph" section head is not a default; stack vertically.
-- Bento: N items → exactly N cells, no empty cells; ≥2–3 cells need real visual variation (image/gradient/pattern), not white-on-white text cards.
-- One corner-radius scale and one page theme (light/dark) for the whole page; no section inverts mid-scroll (exception: one deliberate color-block story).
-
-## SaaS sequence
-
-Hero → logo-wall → features → testimonials → pricing → FAQ → CTA-strip → footer. Show the actual price. Testimonials need role + company + specific use case. FAQ answers like a person. CTA strip = one button.
+Selection colour, scrollbar and focus ring from the palette (interaction.md); a favicon that matches the
+identity and a social image composed for 1200×630, not a crop (brand-mark.md); the footer as a final
+composition; a 404 in the concept's voice with a way back; legal links; no dead links (`#` is linked or
+visibly disabled); one aspect-ratio family, one image reveal and one image hover across the site.
 
 ## Award / experimental tier
 
-WebGL shader/liquid backgrounds, canvas particle systems, custom lerping cursors (the lag is the premium feel), View Transitions, generative accents. Discipline: **one signature moment, not twenty.** Ration to a single signature; lazy-init; hold 60fps on mid-range; provide a static reduced-motion fallback; gate cursor effects behind `@media (hover: hover)` so touch and mobile are never stranded.
+WebGL shader/liquid backgrounds, canvas particle systems, custom lerping cursors (the lag is the premium
+feel), View Transitions, generative accents. Discipline: **one signature moment, not twenty.** Propose
+2–3 ambitious directions with their cost (support, performance, complexity) before building any;
+lazy-init; hold 60fps on mid-range; provide a static reduced-motion fallback; gate cursor effects
+behind `@media (hover: hover)`. Over a 3D or moving hero, the headline and CTA read within ~3s.
+
+**Judged on the public jury weights** — Design 40%, Usability 30%, Creativity 20%, Content 10% (re-check
+the evaluation page; weights change). Anchors: 6 clean but any template · 7 a clear type system, an
+intentional palette, one or two memorable compositions · 8 every frame composed, type used as image,
+rhythm varied on purpose, every detail designed (hover, focus, captions, footer, 404) · 9 inevitable,
+recognisable from a crop. Punished: a polished template with no point of view, effects bolted on, hard
+cuts between states, a WebGL hero at ~20fps on a mid-range phone, a multi-MB page, a long progress bar,
+a squeezed phone layout, a hidden native cursor, primary hovers that only recolour, a concept that
+freezes when the visitor stops. **Award-winning is not accessible:** juries rarely tab, run axe or
+throttle a phone, and measured winners shipped serious violations — take craft from them, floors from
+accessibility.md.
