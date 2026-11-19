@@ -39,9 +39,23 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
   2.2.1); deceptive-pattern floor; Liquid Glass (current HIG); Material 3 Expressive; webapp paging,
   table hygiene, shortcuts and ordered colour scales; web column spec; warm-ramp hue rotation.
 
+- Law-vs-taste pass (decision D6): `conventions.md` (new, router-wired) holds the precedence rule,
+  style dimensions, a product-type × dimension matrix (marketing, SaaS, UX flow, editorial, cinematic
+  scroll, luxury/hospitality, AI app, native, docs, e-commerce) and the lane table (moved from
+  visual-direction, plus cinematic, maximalist, dense-instrument and platform-native lanes). SKILL.md
+  states precedence (floors > direction contract > leaf defaults > tells) and a phrasing legend;
+  the direction contract gains LANE + DIMENSIONS; craft leaves carry an override line; critique is
+  judged against the contract (unchosen tells, the best practitioner of this lane).
+
 ### Fixed
 - WCAG large text is ≥24px / ≥18.66px bold (18pt / 14pt), not 18px / 14px; the 2.5.8 spacing rule
   is the 24px-circle exception, not a 24px gap.
+- Law-vs-taste reclassification: ~50 rules stated as law are now defaults with conditions or lane
+  values (one bold move, anti-boring checklist, presumptive blockers, double-the-spacing, accent cap,
+  hero bans, rotation, weight extremes, size and family caps, fluid body, motion primitives, aurora,
+  photo quotas, nav as reflex, repetition bans, hamburger, hand-tuned M3 schemes); under-stated floors
+  restored (names and keyboard in the universal list, 2.2.2 HIGH, label wrap at zoom, luxury-lane
+  contrast, keyboard scroll in scroll scenes, App Store 4.8, 1.4.3 exemptions, clamp ratio basis).
 - Advisory corrections: OKLCH semantic hue anchors (error 20–30, warning 65–90, info 235–260);
   WCAG 2 AA is the contrast gate with APCA as a second lens (WCAG 3 is a draft); focus indicator
   criteria (2.4.7 / 1.4.11 / 2.4.11 AA, 2.4.13 AAA); iOS alert button order and Dynamic Type at AX5

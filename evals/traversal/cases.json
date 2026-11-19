@@ -210,5 +210,19 @@
       "references/surface-android.md",
       "references/surface-website.md"
     ]
+  },
+  {
+    "id": "conventions-hotel-type",
+    "prompt": "Set the type for a boutique hotel site.",
+    "expected_references": [
+      "references/conventions.md",
+      "references/typography.md",
+      "references/surface-website.md"
+    ],
+    "forbidden_references": [
+      "references/surface-webapp.md",
+      "references/forms.md",
+      "references/brand-mark.md"
+    ]
   }
 ]

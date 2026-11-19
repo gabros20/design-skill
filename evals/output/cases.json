@@ -95,5 +95,15 @@
       "Date of birth and passport expiry use three text fields in locale order; the appointment date uses a calendar that also accepts typing.",
       "Nothing already asked is asked again, and paste and password managers are not blocked (WCAG 3.3.7 / 3.3.8)."
     ]
+  },
+  {
+    "id": "lane-conditioned-hotel-type",
+    "prompt": "Set the type for a boutique hotel site.",
+    "assertions": [
+      "Before choosing faces, the answer names a lane (e.g. quiet luxury or editorial) and the style dimensions for a typography-led hospitality site, from conventions.md.",
+      "Type choices are justified by that lane (refined display serif or type-as-image, small refined text, tracked caps legitimate) rather than by generic leaf defaults such as the 5.5–6rem display cap or a two-weight budget.",
+      "Floors still hold: small and light type meets 4.5:1, the fluid scale keeps a rem anchor, and nothing is claimed for a font without a licence check.",
+      "Reflex-reject fonts are treated as choices to justify, not bans."
+    ]
   }
 ]
