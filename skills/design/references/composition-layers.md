@@ -10,7 +10,7 @@ Read when:
 
 Skip when:
 - Atmosphere and materials (glow, glass, grain, shadow) → imagery-depth-decoration.md; a plain grid
-  section → layout-composition.md; the code → `frontend` `css-craft.md` "Grid single-cell stacking".
+  section → layout-composition.md; the code → `frontend` `css-craft.md` "Composited layouts".
 
 Inputs:
 - The direction contract (lane, image treatment), the assets and their alpha, the headline.
