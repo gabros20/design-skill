@@ -36,6 +36,8 @@ Per screen or view: name, purpose, layout (grid or flex, widths, heights, margin
 - Assets, and which project files hold the design.
 - Edge cases: min and max content, per breakpoint, ARIA/keyboard/screen-reader.
 
+**Assign a medium per region:** painted, photographic, perspectival or textured regions ship as raster plates; text, controls, chrome, countable diagrams and anything that moves are code; never rasterise core UI text or controls. CSS standing in for painted material is a silent deletion of the approved design — flag any region you would flatten and let the owner decide; a framed view splits into frame plate (transparent opening), view and moving parts. Name the endpoint every form needs. Write each spec rule with the failure it prevents ("an independent sine reads as a wobble"), not the quality it aims at; turn ambition words into observable pass/fail gates.
+
 Include every state, not just the happy path (empty, loading, error, success). Precision on measurements, color, and type is load-bearing. When cutting scope, never cut error states or accessibility. For consequential decisions, record a short rationale (decision, context, options considered, evidence, trade-offs, and how you will know it was right) so the implementer inherits the reasoning, not just the values.
 
 ## Annotation standards
@@ -52,7 +54,7 @@ When the handoff is a correction to an existing surface, write read-only plans u
 
 ## Motion plan
 
-When motion ships, the plan gives exact values, never approximated: curves, durations, spring configs, and the token each maps to. Include a feel-check the executor runs: trigger the interaction, watch at 10% playback in DevTools, toggle reduced-motion, and check on a real device. The canonical duration and easing scale is in motion.md; cite it, do not restate it.
+When motion ships, the plan gives exact values, never approximated: curves, durations, spring configs, and the token each maps to. Include a feel-check the executor runs: trigger the interaction, step it frame by frame (or 10% playback), toggle reduced motion, look again the next day, and judge gestures on a real 120Hz phone (desktop monitors hide opacity roughness; native: a release build on the slowest supported device). Values are in motion.md and choreography.md; cite, never restate.
 
 ## Tokens: two formats
 
@@ -89,4 +91,4 @@ recommended_next:
     reason: "Implement the approved interaction and component states"
 ```
 
-Only `objective` is universally required; downstream consumers tolerate absent fields.
+Only `objective` is universally required; downstream consumers tolerate absent fields. `unresolved` lists every placeholder, assumed fact and stand-in image with what replaces it.

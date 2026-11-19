@@ -38,17 +38,22 @@ for text over an image, the brightest region under the text). **APCA is the reco
 (perceptually accurate, pairs naturally with OKLCH); **WCAG 2 is still required for any formal
 conformance claim.**
 
-| Content | APCA (Lc, absolute value) | WCAG 2 (ratio) |
-|---|---|---|
-| Normal text (<18px / <14px bold) | 60 (pass+ 75) | 4.5:1 AA · 7:1 AAA |
-| Large text (≥18px / ≥14px bold) | 45 (pass+ 60) | 3:1 AA · 4.5:1 AAA |
-| UI components, graphical objects, focus rings | 30 (no pass+) | 3:1 AA |
+| Content | WCAG 2 (ratio) |
+|---|---|
+| Normal text (<24px, or <18.66px bold) | 4.5:1 AA · 7:1 AAA |
+| Large text (≥24px, or ≥18.66px bold — WCAG's 18pt / 14pt bold; 1pt = 1.333px) | 3:1 AA · 4.5:1 AAA |
+| UI components, graphical objects, focus rings | 3:1 AA |
+
+**APCA tiers** (Lc is signed; compare the absolute value): body and column text **75** (aim 90) · other
+text — labels, headings **60** · large text (≥36px, or ≥24px bold) and fine-line icons **45** · solid
+icons, controls, focus rings **30** · dividers **15**. Body copy at Lc 60 is a fail.
 
 - **Fix contrast by adjusting lightness only** (OKLCH): chroma has negligible effect; keep C and H,
   change the L distance between foreground and its background.
 - **Lightness-gap guide:** on a light bg (L > 0.85) foreground L < 0.45; on a dark bg (L < 0.25)
   foreground L > 0.75. Approximations — always verify with an actual contrast calculation.
 - Error and success colors must themselves meet 4.5:1; placeholder text meets 4.5:1.
+- **A background that changes** with scroll, time, chapter or theme: text colour follows one global variable and passes at every stop — check each page's end state and the 404, not just the hero. Fixed UI over imagery stays legible via a scrim or white text with `mix-blend-mode: difference`.
 - **Scarcity framing:** accessible pairs are rare, not a checkbox — roughly 12% of random color
   pairs clear WCAG 4.5, and ~0.08% clear APCA Lc 90. Treat contrast as a constrained search.
 
@@ -58,18 +63,25 @@ A web-trained default flattens these to one number. They differ by platform:
 
 | Surface | Minimum interactive target | Source |
 |---|---|---|
-| Web | **24×24 CSS px** with ≥24px spacing (WCAG 2.5.8 AA); **44×44** is AAA (2.5.5) | WCAG 2.2 |
+| Web | **24×24 CSS px** (WCAG 2.5.8 AA), or smaller when 24px circles centred on each target overlap no other target or circle (20px targets need a 4px gap); **44×44** is AAA (2.5.5) | WCAG 2.2 |
 | iOS / iPadOS | **44×44 pt** | Apple HIG |
 | Android | **48×48 dp** | Material 3 |
 
 - The target is the interactive area, not the visual glyph. A 16–24px icon can carry a 44pt tap
   area — expand hit area with padding, `::after { inset: -10px }`, or `hitSlop`, not visual size.
 - Keep ≥8px / 8dp between adjacent targets; keep targets clear of the notch, Dynamic Island,
-  gesture bar, and screen edges.
+  gesture bar, and screen edges. Before calling a web target undersized, check 2.5.8's exceptions
+  (spacing, an equivalent control, inline text, user-agent native, essential). Expanded hit areas
+  never overlap, and decorative layers over a control (glow, sheen, full-bleed `::after`) are
+  non-interactive.
+- **Every drag has a single-pointer alternative** (2.5.7) — move buttons on sortable rows, a "Move
+  to…" menu on board cards, a list view beside a drag canvas — and every pinch, swipe or path gesture
+  has a tap equivalent (2.5.1).
 
 ## Zoom and reflow
 
-- Content **reflows at 320px width with no horizontal scroll** (WCAG 1.4.10 / SC reflow).
+- Content **reflows at 320px width with no horizontal scroll** (WCAG 1.4.10) — that is 1280px at 400%. Genuinely two-dimensional content (data tables, maps, code) may scroll inside its own box; text containers take `min-height`, never a fixed height.
+- **Text spacing (1.4.12):** the layout survives a user override of line-height 1.5×, paragraph spacing 2em, letter-spacing 0.12em and word-spacing 0.16em with no clipping or overlap; fixed heights, `overflow: hidden` and fixed-width labels break first. Contrast, 200% zoom and text spacing fail independently.
 - Support browser zoom to **200% and 400%**; iOS Dynamic Type scales text up to ~200% and layouts
   must reflow to fit it (no truncation of essential content).
 - Never set `maximum-scale=1` or `user-scalable=no` — it breaks pinch-zoom (WCAG 1.4.4). Use
@@ -80,7 +92,8 @@ A web-trained default flattens these to one number. They differ by platform:
 
 - Every interactive element has a **visible focus indicator**; never `outline: none` without a
   visible replacement.
-- **Focus order follows visual/reading order.** No positive `tabindex`.
+- **Focus order follows visual/reading order.** No positive `tabindex`; an irregular collage keeps its source order in the story's order (read the page with CSS off to check).
+- **Skip link:** on any page with repeated navigation, the first Tab stop is a "Skip to content" link, visible on focus, landing on `<main>` (2.4.1); repeated landmarks get distinguishing labels (Primary, Breadcrumbs).
 - Indicator spec (WCAG 2.2 focus-appearance): area ≥ the component's perimeter × 2px thickness,
   ≥3:1 contrast against adjacent colors; implement with `:focus-visible`.
 - Overlays: trap focus inside a modal, set initial focus inside it, restore focus to the trigger on
@@ -93,12 +106,23 @@ A web-trained default flattens these to one number. They differ by platform:
 - Reduced means **gentler, not necessarily zero**, decided per moment: essential motion (a state
   transition that carries meaning) may remain in a calmer form; decorative motion (parallax,
   ambient loops, scroll-hijack) collapses to static. Never carry meaning by motion alone.
+- **Pause, stop, hide (2.2.2, Level A, independent of the OS setting):** anything that moves, blinks
+  or auto-updates on its own for more than 5s beside other content — a muted looping hero video, a
+  carousel, marquee, ticker, ambient loop — has a visible pause/stop control and pauses on hover and
+  focus; carousels start paused under reduced motion. Scroll-linked motion is user-driven and exempt.
+  Never more than 3 flashes per second (2.3.1).
+- **Vestibular triggers** beyond parallax: full-viewport moving backgrounds, slow loops near 0.2 Hz,
+  abrupt light↔dark jumps (ease the theme change), and large objects travelling far (semi-transparent
+  in transit, or fade out and back in at the destination).
 - The canonical duration/easing scale lives in `motion.md`; this file owns only the floor.
 
 ## Color independence and CVD
 
 - **Never carry meaning by color alone** — pair every color signal with icon, label, shape, or
   pattern. The distinction must survive grayscale and every state (hover/focus/disabled).
+- **Links in body text** keep an underline or another non-colour cue at rest; colour alone passes
+  1.4.1 only with 3:1 against the surrounding text *and* a non-colour cue on hover and focus. Nav and
+  buttons, recognisable by position and shape, are exempt.
 - CVD affects ~8% of males, ~0.5% of females. **Orange↔blue is the single most robust CVD-safe
   pair:** orange spans both opponent axes (reddish + yellowish), blue is its opposite on the
   yellow–blue axis, so contrast survives whichever axis is lost. Avoid red/green as the sole signal.
@@ -126,7 +150,8 @@ Rank a11y work by user impact; the top three block release:
 4. **Contrast & states (medium):** meet the contrast table; disabled states are not conveyed by
    color alone; hover-only interactions have keyboard equivalents.
 5. **Media & motion (low–medium):** meaningful (or empty) `alt`; captions for spoken video; respect
-   reduced motion; no autoplaying audio.
+   reduced motion; no autoplaying audio — sound only when the concept is about sound, off by default,
+   started by a gesture, behind a toggle that states its state.
 
 In a full UI review, Accessibility and Touch/target sizing are the two CRITICAL categories checked
 first, before typography, color, or polish.

@@ -67,7 +67,7 @@ Use window size classes, not raw pixels — breakpoints **600 / 840 / 1200 / 160
 - **Expanded 840–1199dp** (tablet landscape/desktop) — 24dp / 24dp / 12 col.
 - **Large 1200–1599dp / Extra-large 1600dp+** — cap content, prefer list-detail/panes over spanning.
 
-Max content width ~840dp on expanded (or list-detail); don't span full width. **Edge-to-edge is enforced on Android 15+** (`enableEdgeToEdge()`; `Scaffold` handles insets). Foldables: `ListDetailPaneScaffold` / `SupportingPaneScaffold`; never place critical content across the hinge. Base spacing = 4dp grid.
+Max content width ~840dp on expanded (or list-detail); don't span full width. **Edge-to-edge is enforced on Android 15+** (`enableEdgeToEdge()`; `Scaffold` handles insets). Foldables: `ListDetailPaneScaffold` / `SupportingPaneScaffold`; never place critical content across the hinge; test folded, open and tabletop. Base spacing = 4dp grid.
 
 ## Navigation matrix and predictive back
 
@@ -79,6 +79,8 @@ Max content width ~840dp on expanded (or list-detail); don't span full width. **
 
 Navigation Bar: bottom, 80dp, elevation L2, **always show labels** (icon-only not permitted), filled active icon + `secondaryContainer` indicator. Rail: side, 80dp. Drawer: 360dp. Decision: 2 destinations → Tabs; 3–5 → bar/rail by size; 6+ → drawer.
 
+**Translating from iOS** (translate, never transplant): tab bar ↔ navigation bar/rail/drawer · edge-swipe back + chevron ↔ predictive back · switch, segmented control, pickers ↔ Material switch, chips, Material pickers · action sheet ↔ bottom sheet or dialog · SF Symbols, SF Pro, Dynamic Type ↔ Material Symbols, Roboto, `sp` · semantic colours + materials ↔ colour roles + tonal elevation · push/sheet ↔ container transform, shared axis, fade through. Brand carries over through the target's theming; a Material-styled cross-platform app still owes iOS its safe areas, Reduce Motion and edge-swipe back. Tab switches never slide.
+
 **Predictive back (Android 13+):** opt in via `android:enableOnBackInvokedCallback="true"`; drive the exit animation from `BackEventCompat.progress` (0.0→1.0) — the exiting screen scales down (`1f - progress*0.1f`) and shifts toward the initiating edge (±`progress*32.dp`, from `swipeEdge` EDGE_LEFT/EDGE_RIGHT). **Back gesture = navigate back in the stack; Up button = navigate up the hierarchy** (they may differ). Never override deprecated `onBackPressed()`.
 
 ## Components
@@ -88,6 +90,6 @@ Button emphasis order: **Filled > Filled Tonal > Elevated > Outlined > Text.** *
 ## Targets, gestures, motion, system
 
 - **Min touch target 48×48dp** (Material components handle it by default; `IconButton` is already 48dp) — pad, don't shrink. `contentDescription` on every interactive element (`null` if decorative), describing the action not the appearance.
-- **System gesture insets:** never place interactive elements in the **bottom 20dp / left+right 24dp** edges (`WindowInsets.systemGestures`). All tappables get a Material ripple; swipe-to-dismiss must be undoable (snackbar) or confirmed.
+- **System gesture insets:** never place interactive elements in the **bottom 20dp / left+right 24dp** edges (`WindowInsets.systemGestures`). All tappables get a Material ripple; swipe-to-dismiss must be undoable (snackbar) or confirmed; haptics fire on the causal moment, never as the only feedback; Remove-animations → crossfade or instant cut.
 - **Motion:** take all durations from the canon in motion.md — do not restate an M3 duration ladder here. If you follow Material motion, its one platform-specific curve still applies: **Emphasized** easing `cubic-bezier(0.2,0,0,1)` for the standard on-screen path (enters decelerate, permanent exits accelerate), bound to motion.md's duration scale.
 - **Notifications** importance: HIGH (sound + heads-up: messages/calls) · DEFAULT (sound) · LOW (no sound) · MIN (silent). One channel per type. **Photo Picker (Android 13+)** needs no permission — use it instead of media-read permissions. Widgets via Glance + `GlanceTheme` dynamic color.

@@ -9,7 +9,7 @@ Read when:
 Skip when:
 - The task is a single screen's state design → `interaction.md`.
 - The task is product-level journeys, roadmaps, or business metrics → product.
-- The task is the marketing-page narrative/question-chain → `surface-website.md`.
+- The task is the marketing-page narrative/question-chain → `page-anatomy.md`.
 
 Inputs: the job story or task; actors and entry conditions; surface(s); the domain's natural order if any.
 
@@ -50,7 +50,7 @@ Work backward from the customer experience. Map the full arc: discovery → purc
 
 ## Onboarding
 
-Goal priority: get to first value fast > orient (don't educate) > build confidence > reduce setup friction. Onboarding's job is the **aha moment**, not teaching the product. Patterns: progressive / setup wizard / sample-data demo / interactive tour (sparingly, **3–5 core concepts, dismissable**). Treat empty states as onboarding — never an empty table with only column headers ("new users spend more time in empty states than any other state"). Metrics: activation rate, time-to-activation, completion, drop-off by step, D7/D30 retention. Name the aha moment explicitly.
+Goal priority: get to first value fast > orient (don't educate) > build confidence > reduce setup friction. Onboarding's job is the **aha moment**, not teaching the product. Patterns: progressive / setup wizard / sample-data demo / interactive tour (sparingly, **3–7 steps on the real UI with sample data that works, teaching a workflow — "Create a project", not "this is the project button" — dismissable and replayable**). Setup asks only what it needs and says why — a field the user gets nothing back for is cut, a question that declares intent ("what do you sell?") stays and branches the journey; show progress already made (credit the first completed step — endowed progress). A selection the visitor makes (a preset, a configuration) carries into the CTA or export instead of resetting. Treat empty states as onboarding — never an empty table with only column headers ("new users spend more time in empty states than any other state"). Metrics: activation rate, time-to-activation, completion, drop-off by step, D7/D30 retention. Name the aha moment explicitly.
 
 ## Wizards and guided paths
 

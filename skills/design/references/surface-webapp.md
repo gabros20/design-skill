@@ -29,7 +29,9 @@ Produces: density mode, layout paradigm, data-display and selection patterns, we
 Generic hierarchy rules apply but live elsewhere: one focal point per view, weight+color over size, and 60/30/10 distribution → layout-composition.md and color.md. Concentric radius and tabular-nums for dynamic figures → interaction.md (Static polish). The webapp-specific layer:
 
 - **Surface elevation is a numbered system of lighter surfaces** (ladder in imagery-depth-decoration.md); light mode stays light and adds shadow instead. Sidebars share the canvas background (a different color fragments into "sidebar world" vs "content world") — a subtle border is enough. Dropdowns/popovers sit one elevation above their parent. Inputs are slightly *darker* than surroundings (inset "type here"). Borders use low-opacity rgba (`rgba(255,255,255,0.06–0.12)` dark), not solid hex.
-- Proportions speak: a 280px sidebar beside full-width content says "navigation serves content"; 360px says "these are peers." If you can't articulate what a proportion says, it isn't saying anything.
+- Proportions speak: a 280px sidebar beside full-width content says "navigation serves content"; 360px says "these are peers." A sidebar is earned by more than ~7 destinations (below that, a top bar); a modal is the last answer, after inline editing and disclosure.
+- **What the world may touch:** on a working screen the visual world lends type, palette, density and *one* signature move ("service health drawn as a transit map"); layout, navigation model and controls stay standard. A world borrowed from an instrument the user operates (terminal, cockpit, ledger) comes back as a costume. App surfaces stay essentially neutral — a background that reads as a colour has gone too far. Grey plus one accent is the category default without the polish, not restraint. Test: cover the name; does it still read as a working product of its category? Alternatives vary the organisation (nav model, work-area split, which data leads, density), never "more world".
+- **The wow is felt, not seen:** an instant optimistic save, a dialog that grows from its button, 100k rows that never stutter.
 
 ## Density modes
 
@@ -43,11 +45,13 @@ Density is a decision expressed in px, held consistently. Defaults: **row 44px �
 
 ## Data display and selection
 
-Row/card selection, the mass-action toolbar, and sticky header/first-column patterns are interaction.md canon (Selection and mass actions) — apply them. Webapp-specific data craft:
+Row/card selection, the mass-action toolbar, and sticky header/first-column patterns are interaction.md canon. Webapp-specific data craft:
 
-- Virtualize lists above ~1000 items.
-- **Make numbers comprehensible:** a bare number communicates little — give a reference (%, average, delta, comparison — "€48,900 (+12% vs last month)"). Chart when the story is trend/distribution/comparison/relationship; choose familiar charts (bar/line/area/pie/sparkline) over exotic (sankey/radar/chord) — "novelty in a chart type is a tax on comprehension." ≤2–3 colors, each meaning one thing; add legend/tooltips, not hues.
-- **Coordinated views:** selection state lives in ONE shared store both views read/write; clicking a visual scrolls the table row into view; color is identical across views from a single source (legend once). Highlight (hover, transient) ≠ Selection (click, persistent) — distinct visuals; debounce hover.
+- Virtualize lists above ~1000 items. **Make numbers comprehensible:** a bare number needs a reference ("€48,900 (+12% vs last month)"); a KPI that moves over time carries its recent trace with the onset of change marked; round to the precision the user acts on (10.2k).
+- **Dashboard composition:** title the screen by its page or period ("October 2026"), never a greeting; lead with one hero figure, one main chart that is clearly the biggest thing, and one table or ranked list — a KPI wall of equal gauges is the tell. A stat card is label, figure and change with what it compares to — no sparkline, icon tile or tally as filler. Vary several blocks' form by weight (hero number, bar, status-coloured number, stat row) in one voice; a figure in a warning state has its fix action beside it. The signature is the object the tool is known by (the ledger, the queue).
+- **Pick the chart form first:** one value → a stat tile, never a one-bar chart · a few values → a stat row or horizontal bars · a trend → a line · parts of a whole → one stacked horizontal bar or a ranked list, never pie, donut or gauge · >~7 categories → a table. Familiar over exotic ("novelty in a chart type is a tax on comprehension"). Bars start at zero; a truncated axis that exaggerates a change is an invented metric unless it says "axis starts at 94%"; two units become small multiples, never a second y-axis. One accent on the series that argues, the rest neutral or a lightness ramp of that hue; separate categories by opacity, pattern or line style before a new hue; >3 series take a CVD-safe categorical set (Okabe-Ito), never a rainbow; label lines directly rather than through a legend; labels stay in ink.
+- **Tables:** numeric columns lining + tabular, right- or decimal-aligned; text left; icon/status centred; each header aligned like its data. On a phone keep the column that names each row and the one that acts on it in view (restack rows as labelled blocks or pin the first column); content a desktop shows is never simply hidden on a phone.
+- **Coordinated views:** selection state lives in ONE shared store both views read/write; clicking a visual scrolls the table row into view; colour is identical across views from one source. Highlight (hover, transient) ≠ Selection (click, persistent); debounce hover.
 
 ## Expert and operational tools
 
@@ -59,7 +63,7 @@ Domain language over technical (`max_concurrent_jobs` → "Maximum tasks running
 
 ## Enterprise design systems
 
-Enterprise webapps deviate from consumer-web defaults. **Consensus: body text is 13–14px, not 16px.** Canvas convention is either gray-canvas + white-card or white-canvas + layer alternation (Carbon layers white ↔ `#f4f4f4` instead of shadows). App-shell dimensions run tight: Modus navbar 56px + sidebar 60/300px (collapsed/expanded) · Carbon header 48px (`#161616`) · Salesforce/SLDS header 50px + 3px blue border · Polaris top bar 56px dark + nav 240px.
+Enterprise webapps deviate from consumer-web defaults. **Consensus: UI text is 13–14px, not 16px** (long-form reading stays 16px; typography.md floors). Canvas convention is either gray-canvas + white-card or white-canvas + layer alternation (Carbon layers white ↔ `#f4f4f4` instead of shadows). App-shell dimensions run tight: Modus navbar 56px + sidebar 60/300px (collapsed/expanded) · Carbon header 48px (`#161616`) · Salesforce/SLDS header 50px + 3px blue border · Polaris top bar 56px dark + nav 240px.
 
 If the brief matches one of these systems, adopt it — don't recreate its CSS or override 90% of its tokens. Their distinguishing deviations (the ones a model gets wrong):
 
@@ -77,13 +81,10 @@ Mode is a brand/context decision, not a user preference by default. Offer a them
 
 ## Web-platform specifics
 
-The web's target and reflow numbers differ from native; accessibility.md owns the full cross-platform floor table — carry these in context here:
+Floors live in accessibility.md (targets: 24×24 CSS px AA with the spacing exception, 44×44 AAA, `::after { inset: -10px }` to expand; reflow at 320px; never `maximum-scale=1`; focus indicator perimeter × 2px at 3:1 via `:focus-visible`). Web-specific:
 
-- **Touch targets:** 44×44 CSS px is WCAG 2.5.5 **AAA**; 2.5.8 **AA** requires only **24×24px** with ≥24px spacing. Expand tap area invisibly via `::after { inset: -10px }`.
-- **Reflow at 320px width with no horizontal scroll** (SC 1.4.10). Never `maximum-scale=1` / `user-scalable=no` (breaks pinch-zoom, SC 1.4.4).
-- **Container queries** (`container-type: inline-size`; `@container`) — size components by container, not viewport. Fluid sizing via `clamp()`/`min()`/`max()`. Content-based breakpoints, web defaults **640 / 768 / 1024px** (40 / 48 / 64rem), plus an 80rem (1280) step for ultra-wide.
-- **Focus indicator (WCAG 2.2):** min area = component perimeter × 2px, 3:1 contrast; use `:focus-visible`.
-- **Label in Name (SC 2.5.3):** the accessible name must contain the visible label as a substring (voice control activates by visible text).
-- `prefers-contrast: more` = macOS/iOS Increase Contrast; `prefers-contrast: forced` = Windows High Contrast (overrides colors — use system keywords `ButtonText`/`ButtonFace`/`ButtonBorder`). Set `color-scheme: light dark`.
-- Use `min-h-dvh` / `h-dvh`, never `100vh`, on mobile. CSS logical properties for RTL (`margin-inline-start`, `inline-size`). Animate only `transform`/`opacity` (compositor). Don't disable submit buttons — validate on submit.
-- **PWA manifest** requires `name` + `icons` + `start_url` + `display: standalone` + HTTPS + a service worker with a `fetch` handler; `theme_color` tints browser chrome and the task switcher.
+- **Label in Name (SC 2.5.3):** the accessible name contains the visible label (voice control activates by visible text).
+- **Container queries** size components by container, not viewport; content-based breakpoints, web defaults **640 / 768 / 1024px** plus an 80rem (1280) step.
+- `prefers-contrast: more` = macOS/iOS Increase Contrast; forced colors = Windows High Contrast (system keywords `ButtonText`/`ButtonFace`/`ButtonBorder`); `color-scheme: light dark`.
+- `min-h-dvh`, never `100vh`, on mobile; logical properties for RTL; don't disable submit buttons — validate on submit.
+- **PWA manifest** requires `name` + `icons` + `start_url` + `display: standalone` + HTTPS + a service worker with a `fetch` handler; `theme_color` tints browser chrome.

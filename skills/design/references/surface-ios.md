@@ -7,7 +7,7 @@ Read when:
 
 Skip when:
 - The surface is web (→ surface-website / surface-webapp) or Android (→ surface-android).
-- The rule is generic: state design → interaction.md; motion timings and Apple fluid-interface physics → motion.md; universal contrast/target floors → accessibility.md.
+- The rule is generic: state design → interaction.md; motion timings → motion.md; Apple fluid-interface gestures → choreography.md; universal contrast/target floors → accessibility.md.
 
 Inputs: app IA (top-level sections), device targets (iPhone / iPad), register decision.
 Produces: chrome/target spec, navigation model, Dynamic Type plan, iPad adaptivity plan, prototype scaffold.
@@ -38,7 +38,7 @@ Status bar **20pt** classic / **44–54pt** on Dynamic Island devices · Navigat
 
 ## Navigation and reserved gestures
 
-- **Tab bar at the bottom for 2–5 top-level sections** (use a "More" tab if >5). Labels 10pt; filled SF Symbol = selected, outline = unselected. Each tab remembers its own nav state; tapping the active tab returns to that tab's root. Never hide the tab bar navigating deeper.
+- **Tab bar at the bottom for 2–5 top-level sections** (use a "More" tab if >5) — tabs are places, never actions, and switching never slides. Labels 10pt; filled SF Symbol = selected, outline = unselected. Each tab remembers its own nav state; tapping the active tab returns to that tab's root. Never hide the tab bar navigating deeper.
 - **Never use a hamburger/drawer menu** — iOS users expect tab bars.
 - Back-button label = the *previous screen's title*, not "Back". Use `NavigationStack` (not deprecated `NavigationView`); large titles collapse to inline on scroll.
 - **Reserved system gestures — never override:** swipe-from-left-edge (back), swipe-down on a modal (dismiss), pull-down on a list (refresh), swipe-left on a row (actions), pinch (zoom), long-press (context menu), plus the top-corner Notification/Control Center and bottom home/app-switcher swipes.
@@ -61,7 +61,7 @@ Semantic colors: `Color(.label)`, `.secondaryLabel`, `.systemBackground`, `.sepa
 
 ## Motion and haptics
 
-For durations and easing, use the canon in motion.md. Apple **fluid-interface** behavior (respond on touch-down not release, 1:1 tracking, every animation interruptible, springs animating from the current value, velocity handoff, momentum projection) is documented in motion.md — apply it here. **Feedback = visual + haptic;** haptics are design intent: `UIImpactFeedbackGenerator` (`.light/.medium/.heavy`) for physical actions, `UINotificationFeedbackGenerator` (`.success/.warning/.error`) for outcomes, `UISelectionFeedbackGenerator` for state changes. Honor Reduce Motion (crossfade, don't zero).
+For durations and easing, use the canon in motion.md. Apple **fluid-interface** behavior (respond on touch-down not release, 1:1 tracking, every animation interruptible, springs animating from the current value, velocity handoff, momentum projection) is documented in choreography.md and motion.md — apply it here. **Feedback = visual + haptic;** haptics are design intent: `UIImpactFeedbackGenerator` (`.light/.medium/.heavy`) for physical actions, `UINotificationFeedbackGenerator` (`.success/.warning/.error`) for outcomes, `UISelectionFeedbackGenerator` for state changes. Fire a haptic on the causal moment (the detent catching, not animation end), on the same frame as the visual; one per step, snap or commit — never on scroll, per frame, or an entrance the user didn't cause — and never as the only feedback. Screen-to-screen keeps the platform push; a self-contained task is a modal, a short interruption a sheet (honour swipe-to-dismiss unless a data-loss guard is needed). Honor Reduce Motion (crossfade, don't zero). Never lock orientation to hide a layout bug — landscape restructures.
 
 ## Permissions
 
