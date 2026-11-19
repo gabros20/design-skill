@@ -59,10 +59,10 @@ this product has). The **audience picks the aesthetic, not your taste.**
 Quiet constraints — accessibility-first, public-sector, regulated, trust-commerce, kids — **override
 aesthetic preference.** Negative constraints rule out *devices*, not energy: "no gamification"
 forbids streaks and confetti, not a committed palette; "calm coaching" describes the product's
-behaviour, not the page's volume. If ambiguous, ask **one** round of product questions — never a taste menu,
-never a look floated inside a question (the answer just confirms it): what is uniquely true here; what
-would make a polished result feel wrong; what must stay untouched; min/typical/max content. If
-confidently inferable, do not ask.
+behaviour, not the page's volume. No brief → the standalone context check (SKILL.md; intake.md). A question never carries a look (the
+answer only confirms it); directions are shown as a labelled set of three with a recommendation. Rank
+the brief's assets (a photograph, a number, a quote, the product at its best moment, the name): the
+first viewport is built on the strongest; with none, type leads.
 
 Intent is **systemic**: "warm" means surfaces, text, borders, accents and type are all warm; a token
 that contradicts it is a defect.
@@ -104,9 +104,11 @@ verb** ("settle like paper"); every animation varies it.
 
 Before code, ~150 words: **THESIS** (the idea and the default it refuses) · **OWN-WORLD**
 (recognisable with the content removed) · **STORY** (what the visitor understands, believes, does) ·
-**FIRST VIEWPORT** (composition, scale, primary action) · **LANE + DIMENSIONS** (one value per axis,
-conventions.md) · **FINISH** (the exit condition). A block that
-reads like a mood is undecided. Run the validation checks on it and record what changed; the review
+**FIRST VIEWPORT** (composition, scale, primary action, and the actual headline — words first) ·
+**LANE + DIMENSIONS** (one value per axis, conventions.md) · **DEPARTS** (the axes that leave the type's
+convention, each with its reason; "none — category standard" is valid) · **FINISH** (the exit
+condition). Each LANE, DIMENSIONS and DEPARTS value cites its reason — a brief fact, an intake answer
+or a ledger assumption; a value with no reason is unchosen. A block that reads like a mood is undecided. Run the validation checks on it and record what changed; the review
 audits the render against it; it never ships in the artifact.
 
 ## Boldness and restraint

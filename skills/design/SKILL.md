@@ -26,8 +26,35 @@ Operate independently when invoked alone. When compatible upstream artifacts are
 without silently overriding established decisions. Recommend adjacent skills when useful; do not invoke
 them automatically unless the user requested a composition workflow.
 
+## Standalone context check
+
+Before producing anything the user will have to live with:
+1. **Look first.** Read `digital-product/LEDGER.md` (Context), `digital-product/<pack>/`, upstream
+   artifacts, the repo and this conversation. A fact found is never asked; a fact recorded is never
+   re-asked.
+2. **Size it.** Reversible and small → proceed, stating assumptions. New, costly or hard to undo →
+   check.
+3. **Ask only what the owner alone knows**, in their words: one round, at most four, highest
+   leverage first, each with a recommended answer ("ok" accepts all). Two rounds at most.
+4. **No or thin answers → decide as the expert.** Record each assumption with its basis and cost to
+   reverse; prefer the reversible option; show the cheapest proof early.
+5. **No way to ask → never block.** Proceed, and open the artifact with the assumptions and the
+   answers that would change it most.
+6. **Write it down.** Answers and assumptions go to the LEDGER's Context block.
+
+This pack's questions: 1. What is it, and what is the one thing a visitor or user should do? 2. Who
+is it for, and what must they believe before they act? 3. What exists: logo, colours, type, photos,
+video, copy, product screenshots, a current site? 4. One to three things you like and one you don't
+want to resemble, from any field. 5. What is fixed: platform, languages, brand rules, accessibility or
+legal requirements, deadline? 6. *(asked by showing, not by question)* Which of three directions is
+closest? — never ask for a style, palette or font; show three labelled directions (category standard,
+recommended, bolder) in plain words instead. Signals, direction cards, the vocabulary bridge,
+feedback translation and the headless rule: [Intake](references/intake.md). The brief block feeds the
+design read and the direction contract; write it to `digital-product/design/brief.md`.
+
 ## Route before acting
 
+0. No brief or contract and the work sets a look or structure → run the standalone context check first.
 1. Identify the primary design job.
 2. When the request names or implies a surface, its overlay counts as part of the smallest sufficient set — add it (at most one unless the task explicitly compares platforms).
 3. Add only the concern overlays that materially affect the request.
@@ -44,6 +71,7 @@ them automatically unless the user requested a composition workflow.
 | Model objects, sitemap, navigation, naming, or findability — including inventorying a site before a redesign | [Information architecture](references/information-architecture.md) | Object/relationship model, vocabulary, sitemap, navigation model |
 | Define component behavior and states — feedback, overlays, selection, search | [Interaction](references/interaction.md) | State-complete interaction spec (the canonical 8-state model) |
 | Design a form, field, sign-in, checkout step, or settings input — layout, control choice, validation timing, save model | [Forms](references/forms.md) | Field list with controls, validation and recovery behaviour, field states, save model |
+| Scope a design request with no brief — discovery questions, direction options, assumptions | [Intake](references/intake.md) | Brief block, three direction cards, assumption ledger |
 | Set the point of view — register, visitor mode, change depth, concept, direction contract | [Visual direction](references/visual-direction.md) | Design read, register + mode, direction contract |
 | Choose style dimensions and a lane from the product type's conventions | [Conventions](references/conventions.md) | DIMENSIONS line and a named lane with its fail-if list |
 | Fix a result that reads generic, templated, or AI-made, or write the refuse-list | [Anti-defaults](references/anti-defaults.md) | Tells found or refused, each with its replacement |
@@ -51,6 +79,7 @@ them automatically unless the user requested a composition workflow.
 | Choose or set type — scale, pairing, measure, display | [Typography](references/typography.md) | Type scale and a justified pairing with measure/leading/display settings |
 | Lay out a screen — grid, spacing, hierarchy, density, elevation | [Layout & composition](references/layout-composition.md) | Grid, spacing scale, one focal point, alignment/elevation plan |
 | Build a palette, neutral ramp, accent, dark mode, or check contrast | [Color](references/color.md) | OKLCH token set verified for contrast and gamut |
+| Compose a collage, layered, poster-led or type-as-image section — plane stack, decoration kit, interleave, responsive stage | [Composition layers](references/composition-layers.md) | Layer contract per section, decoration kit, phone stage |
 | Add depth, materials, image treatment, or decoration | [Imagery, depth, decoration](references/imagery-depth-decoration.md) | Depth/material spec and enrichment plan with reduced-motion fallbacks |
 | Source licensed icons, illustrations, logos or photos, capture product screenshots, or art-direct a generated image set | [Image sourcing](references/image-sourcing.md) | Per-slot source, licence and provenance; anchored, curated image set |
 | Show the product or explain a concept in a picture — product shots, bento, explanatory figures, illustration sets, empty-state art | [Product visuals](references/product-visuals.md) | Product-shot or figure spec with real strings, and a review sheet |
@@ -87,7 +116,7 @@ Trace a technique to its source → [Sources](references/SOURCES.md).
 Read these together — the router encodes the pairing so no lateral hop is required:
 
 - Native mobile prototype → [Prototyping](references/prototyping.md) + [iOS](references/surface-ios.md) (or [Android](references/surface-android.md)).
-- A new surface from scratch → [Visual direction](references/visual-direction.md) + [Conventions](references/conventions.md) first, then only the craft leaves the brief makes material — [Typography](references/typography.md), [Layout & composition](references/layout-composition.md), [Color](references/color.md), [Imagery, depth, decoration](references/imagery-depth-decoration.md), [Motion](references/motion.md) — plus the one surface overlay. Add [Page anatomy](references/page-anatomy.md) only when the page's sections are being planned, [Anti-defaults](references/anti-defaults.md) only for a deslop or refuse-list.
+- A new surface from scratch → [Visual direction](references/visual-direction.md) + [Conventions](references/conventions.md) first, then only the craft leaves the brief makes material — [Typography](references/typography.md), [Layout & composition](references/layout-composition.md), [Color](references/color.md), [Imagery, depth, decoration](references/imagery-depth-decoration.md), [Motion](references/motion.md) — plus the one surface overlay. Add [Composition layers](references/composition-layers.md) when the contract's composition is *composited*, [Page anatomy](references/page-anatomy.md) only when the page's sections are being planned, [Anti-defaults](references/anti-defaults.md) only for a deslop or refuse-list.
 - A design system for a specific surface → [Design systems](references/design-systems.md) + that surface overlay.
 - A motion spec where several things move → [Motion](references/motion.md) + [Choreography](references/choreography.md).
 - Any flow, screen, or system where accessibility is explicit → the primary reference + [Accessibility](references/accessibility.md).
@@ -98,7 +127,7 @@ Read these together — the router encodes the pairing so no lateral hop is requ
 - Design the full state set when it applies: default, hover, focus, active, disabled, loading, error, success, plus empty for every data region.
 - Use real content at real lengths — the longest realistic string, the empty case, the overflow case. Never fabricate claims (honesty) — metrics, logos, testimonials, prices, customers, capabilities, outcomes, or decorative data. Demonstration content may be authored at full fidelity only when labelled synthetic and listed for replacement.
 - Label every coded artifact disposable, design-reference, or production-candidate. Never present prototype code as production-ready without engineering, accessibility, and quality review.
-- **Precedence:** floors never bend. Above them the direction contract — register, lane, dimensions — outranks every leaf default and every catalogued tell; leaf numbers are Restrained-lane defaults unless the leaf says otherwise. A tell is an *unchosen* default.
+- **Precedence:** floors never bend; an existing brand's mandatories come next; above them the direction contract — register, lane, dimensions — outranks every leaf default and every catalogued tell; leaf numbers are Restrained-lane defaults unless the leaf says otherwise. A tell is an *unchosen* default.
 - Treat accessibility floors as design constraints even when accessibility.md is not opened: every control named and keyboard-operable, text 4.5:1 / UI 3:1, meaning never by colour alone (WCAG 1.4.1), targets ≥24px (44pt / 48dp touch), visible focus, a reduced-motion path.
 - Preserve established product, brand, and architecture constraints. When the design and a constraint conflict, report it explicitly rather than silently overriding.
 - A visual verdict requires rendered evidence. When no build was viewed, state "code-level pass, not an art review" rather than signing off on appearance.
