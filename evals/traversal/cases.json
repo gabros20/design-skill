@@ -197,5 +197,18 @@
       "references/surface-website.md",
       "references/motion.md"
     ]
+  },
+  {
+    "id": "solid-glass-agent-webapp",
+    "prompt": "Give our agent workspace web app the Solid Glass look: how thick each pane is, how a running turn and a finished task read, and whether text stays legible.",
+    "expected_references": [
+      "references/imagery-depth-decoration.md",
+      "references/surface-webapp.md"
+    ],
+    "forbidden_references": [
+      "references/surface-ios.md",
+      "references/surface-android.md",
+      "references/surface-website.md"
+    ]
   }
 ]

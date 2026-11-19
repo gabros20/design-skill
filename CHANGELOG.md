@@ -8,6 +8,13 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ## [Unreleased]
 
 ### Added
+- **Solid Glass** (deeplethe/solid-glass, MIT), the thick-glass web design language for AI/agent
+  apps: `surface-webapp.md` "Solid Glass (AI and agent apps)" (when to choose it over Liquid Glass,
+  Material 3 Expressive or flat; its four principles as rules; the motion-means-running AI-state
+  vocabulary; a legibility check with computed contrast), `imagery-depth-decoration.md` "Solid
+  glass" material values, cross-pointers from the iOS and Android language sections, and the web-app
+  router row. Room made by moving domain-expert configuration to `forms.md` "Expert settings" and
+  tightening wording in both references.
 - Design-fold of ~30 external design, motion and illustration skills (MIT / Apache-2.0; unlicensed
   sources as inspiration only), de-duplicated across ten reader lanes. Six new router-wired
   references: `anti-defaults.md` (the tell catalog, moved out of visual-direction, plus the current

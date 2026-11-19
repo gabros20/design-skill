@@ -66,6 +66,8 @@ MIT-licensed:
 - **nateherkai/scroll-craft** — feeling curve and feel check, layer contract, scrim shape, per-build originality gate.
 - **wheresryan22/anatomy**, **teddarific/skills** (`anatomy-asset`, folder MIT), **lucasmarkes/hairline**, **benjitaylor/skills** (`stageshow`, folder MIT) — explanatory figures, illustration craft, product shots, bento as one picture, annotations, demo loops, two-clock motion, hit areas that don't move.
 
+- **deeplethe/solid-glass** (github.com/deeplethe/solid-glass, © 2026 DeepLethe; a design system, not a skill) — the Solid Glass language in surface-webapp.md and its material values in imagery-depth-decoration.md, read from its docs and `src/solid-glass.css`; contrast figures computed from its tokens (2026-11). Its shadcn/ui-derived files (NOTICE.md) were not used.
+
 Apache-2.0:
 
 - **anthropics/skills** — writing-in-design / content design foundations.
