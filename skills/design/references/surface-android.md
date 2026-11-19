@@ -90,7 +90,9 @@ Check the target Material version and say which. Material 3 Expressive changes d
 spring-based, with a *spatial* scheme (position and size, may overshoot) and an *effects* scheme
 (colour and opacity, never overshoots) that replace the Emphasized curve where adopted; new components
 include button groups, split buttons, a FAB menu, floating toolbars and a shape-morphing loading
-indicator; a short navigation bar and a wide navigation rail expand in place of a drawer.
+indicator; a short navigation bar and a wide navigation rail expand in place of a drawer. Sibling
+languages: Liquid Glass (surface-ios.md "Liquid Glass (current HIG)"); Solid Glass for AI/agent web
+apps (surface-webapp.md "Solid Glass (AI and agent apps)").
 
 ## Components
 
