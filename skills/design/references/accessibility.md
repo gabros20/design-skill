@@ -67,10 +67,10 @@ A web-trained default flattens these to one number. They differ by platform:
 | iOS / iPadOS | **44×44 pt** | Apple HIG |
 | Android | **48×48 dp** | Material 3 |
 
-- **24px is the conformance floor, not the target:** a touch-first web layout designs to the native numbers (44–48px); 24–32px targets are for dense, pointer-first tools.
+- **Default — 24px is the conformance floor, not the target:** a touch-first web layout designs to the native numbers (44–48px); 24–32px targets are for dense, pointer-first tools.
 - The target is the interactive area, not the visual glyph. A 16–24px icon can carry a 44pt tap
   area — expand hit area with padding, `::after { inset: -10px }`, or `hitSlop`, not visual size.
-- Keep ≥8px / 8dp between adjacent targets; keep targets clear of the notch, Dynamic Island,
+- Default: keep ≥8px / 8dp between adjacent targets; keep targets clear of the notch, Dynamic Island,
   gesture bar, and screen edges. Before calling a web target undersized, check 2.5.8's exceptions
   (spacing, an equivalent control, inline text, user-agent native, essential). Expanded hit areas
   never overlap, and decorative layers over a control (glow, sheen, full-bleed `::after`) are
@@ -119,13 +119,13 @@ Default target: **WCAG 2.2 AA** unless the brief sets another. Decided in design
   finished, usable design, not a degraded one. Every motion device ships a reduced-motion path.
 - Reduced means **gentler, not necessarily zero**, decided per moment: essential motion (a state
   transition that carries meaning) may remain in a calmer form; decorative motion (parallax,
-  ambient loops, scroll-hijack) collapses to static. Never carry meaning by motion alone.
+  ambient loops, scroll-hijack) collapses to static. Default: never carry meaning by motion alone (a11y best practice).
 - **Pause, stop, hide (2.2.2, Level A, independent of the OS setting):** anything that moves, blinks
   or auto-updates on its own for more than 5s beside other content — a muted looping hero video, a
   carousel, marquee, ticker, ambient loop — has a visible pause/stop control and pauses on hover and
   focus; carousels start paused under reduced motion. Scroll-linked motion is user-driven and exempt.
   Never more than 3 flashes per second (2.3.1).
-- **Vestibular triggers** beyond parallax: full-viewport moving backgrounds, slow loops near 0.2 Hz,
+- **Default — vestibular triggers** beyond parallax: full-viewport moving backgrounds, slow loops near 0.2 Hz,
   abrupt light↔dark jumps (ease the theme change), and large objects travelling far (semi-transparent
   in transit, or fade out and back in at the destination).
 - The canonical duration/easing scale lives in `motion.md`; this file owns only the floor.
@@ -157,8 +157,8 @@ named, icon-only buttons labelled, inputs labelled, meaningful link text, decora
 closes overlays · (3) **focus & dialogs** — trap and restore focus; opening a dialog never scrolls the
 page · (4) contrast and states — disabled not by colour alone, hover-only interactions have keyboard
 equivalents · (5) media and motion — meaningful or empty `alt`, captions for spoken video, reduced
-motion; no autoplaying audio, and sound only when the concept is about sound, off by default, behind a
-toggle that states its state.
+motion; audio playing over 3s gets a pause or stop (WCAG 1.4.2) — Default: none autoplays, and sound
+only when the concept is about sound, off by default, behind a toggle that states its state.
 
 ## Boundary and routing
 

@@ -28,7 +28,7 @@ Produces:
 
 ## Precedence
 
-Floors (WCAG, HIG/M3 requirements, honesty, licence, maths) never bend. Above them the direction
+Floors (WCAG, HIG/M3 and platform requirements, honesty, legal, licence, perf, maths) never bend. Above them the direction
 contract — register, lane, dimensions — outranks every leaf default and every catalogued tell. Leaf
 numbers are defaults for a Restrained lane in a Persuade register unless the leaf says otherwise. A
 tell is an *unchosen* default; a chosen convention is not a finding.
