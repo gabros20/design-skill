@@ -42,7 +42,8 @@ Before producing anything the user will have to live with:
    answers that would change it most.
 6. **Write it down.** Answers and assumptions go to the LEDGER's Context block.
 
-This pack's questions: 1. What is it, and what is the one thing a visitor or user should do? 2. Who
+This pack's questions (a pool — ask the top four that step 1 left open):
+1. What is it, and what is the one thing a visitor or user should do? 2. Who
 is it for, and what must they believe before they act? 3. What exists: logo, colours, type, photos,
 video, copy, product screenshots, a current site? 4. One to three things you like and one you don't
 want to resemble, from any field. 5. *(only when the signals could not answer it)* What is fixed: platform, languages, brand rules,
