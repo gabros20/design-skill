@@ -47,7 +47,7 @@ reference set from three facets and reads only those files before producing an a
 
 Declared bundles encode the common pairings (a native mobile prototype, a new surface from scratch,
 a design system for a surface) so no lateral discovery is needed. The runtime router is
-[skills/design/SKILL.md](skills/design/SKILL.md); it links directly to 29 focused references and
+[skills/design/SKILL.md](skills/design/SKILL.md); it links directly to 31 focused references and
 loads only what the job needs.
 
 ## Install
@@ -98,10 +98,10 @@ a skill tool, or natural-language activation. The skill should **not** activate 
 frontend build, system architecture, marketing/SEO, or release verification unless the request also
 requires experience design.
 
-## The 29 references
+## The 31 references
 
 The router selects from a primary-job set, a surface overlay, and concern overlays. It loads the
-smallest sufficient set — never all 29.
+smallest sufficient set — never all 31.
 
 **Primary job**
 
@@ -113,12 +113,14 @@ smallest sufficient set — never all 29.
 | [interaction.md](skills/design/references/interaction.md) | State design (8-state model), feedback, overlays, selection, search |
 | [forms.md](skills/design/references/forms.md) | Form layout, control choice, validation timing, sign-in, field states, save model |
 | [visual-direction.md](skills/design/references/visual-direction.md) | Register and visitor modes, design read, change depths, concept/world, direction contract |
+| [intake.md](skills/design/references/intake.md) | Standalone intake: signals, owner questions, direction cards, vocabulary bridge, assumption ledger, feedback |
 | [conventions.md](skills/design/references/conventions.md) | Precedence, style dimensions, product-type conventions, lanes, anti-drift checks |
 | [anti-defaults.md](skills/design/references/anti-defaults.md) | The dated tell catalog, the current AI cluster, predict-then-refuse, system fixes |
 | [page-anatomy.md](skills/design/references/page-anatomy.md) | Website page structure: anatomy by visitor job, macrostructures, narrative, SaaS deck, pricing, chrome |
 | [typography.md](skills/design/references/typography.md) | Type scales, pairing, measure/leading, display craft, i18n |
 | [layout-composition.md](skills/design/references/layout-composition.md) | Grids, spacing scales, hierarchy, density, elevation |
 | [color.md](skills/design/references/color.md) | OKLCH model, palette construction, contrast math, dark mode, semantic color |
+| [composition-layers.md](skills/design/references/composition-layers.md) | Collage and layered composition: plane stack, decoration kit, interleave, responsive stage, layer contract |
 | [imagery-depth-decoration.md](skills/design/references/imagery-depth-decoration.md) | Depth build order, materials, image treatment, decoration discipline |
 | [image-sourcing.md](skills/design/references/image-sourcing.md) | Slot sources, licence gate, library photos, generated sets, curation and provenance |
 | [product-visuals.md](skills/design/references/product-visuals.md) | Product shots, honest demo UI, bento, explanatory figures, illustration craft |
@@ -185,7 +187,7 @@ sources contribute any verbatim prose. Full attribution and licenses:
 ```text
 .codex-plugin/plugin.json  Codex plugin and release metadata
 AGENTS.md / CLAUDE.md      repository and client-specific maintainer guidance
-skills/design/             portable runtime skill and client metadata (29 references)
+skills/design/             portable runtime skill and client metadata (31 references)
 evals/                     activation, traversal, output, and compression fixtures
 docs/                      installation, usage, and recipes
 site/                      visual guide (deployed to designskill.vercel.app)

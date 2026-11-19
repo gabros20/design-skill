@@ -224,5 +224,30 @@
       "references/forms.md",
       "references/brand-mark.md"
     ]
+  },
+  {
+    "id": "intake-no-brief",
+    "prompt": "Make me a website for my business.",
+    "expected_references": [
+      "references/intake.md"
+    ],
+    "forbidden_references": [
+      "references/brand-mark.md",
+      "references/surface-webapp.md",
+      "references/forms.md"
+    ]
+  },
+  {
+    "id": "composition-collage",
+    "prompt": "Design a collage-style hero for a music festival site: cutouts, tape, overlapping type.",
+    "expected_references": [
+      "references/composition-layers.md",
+      "references/surface-website.md"
+    ],
+    "forbidden_references": [
+      "references/surface-webapp.md",
+      "references/forms.md",
+      "references/research.md"
+    ]
   }
 ]

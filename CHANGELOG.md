@@ -47,6 +47,16 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
   the direction contract gains LANE + DIMENSIONS; craft leaves carry an override line; critique is
   judged against the contract (unchosen tells, the best practitioner of this lane).
 
+- Fable advisory 2 (D7, D8): a family "Standalone context check" in SKILL.md (common core + design
+  questions; a question never carries a look, three labelled directions are shown instead);
+  `intake.md` (signals, owner questions, direction cards, vocabulary bridge, assumption ledger,
+  reaction round and feedback translation, headless and no-brand rules); `composition-layers.md`
+  (plane stack, depth cues, grid under the chaos, decoration kit, interleave, stage vs flow, layer
+  contract). The contract's values cite reasons, carry a DEPARTS field and the actual headline;
+  brand mandatories join the precedence line; conventions gains keep/break codes, three style axes,
+  four product types, eight lanes, hybrids by axis and the period rule; critique rejects post-hoc
+  contract edits and adds the rhythm strip.
+
 ### Fixed
 - WCAG large text is ≥24px / ≥18.66px bold (18pt / 14pt), not 18px / 14px; the 2.5.8 spacing rule
   is the 24px-circle exception, not a 24px gap.

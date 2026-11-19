@@ -105,5 +105,40 @@
       "Floors still hold: small and light type meets 4.5:1, the fluid scale keeps a rem anchor, and nothing is claimed for a font without a licence check.",
       "Reflex-reject fonts are treated as choices to justify, not bans."
     ]
+  },
+  {
+    "id": "no-brief-intake",
+    "prompt": "Make me a website for my business.",
+    "assertions": [
+      "Before asking anything, the answer states what it inferred from the request, repo and any assets (a harvest).",
+      "It asks at most four owner questions in one round, each with a recommended answer that 'ok' accepts.",
+      "No question asks for a style, palette or font; directions are offered as three labelled options (category standard, recommended, bolder) in plain words."
+    ]
+  },
+  {
+    "id": "headless-deterministic",
+    "prompt": "Design a landing page for a small accounting firm. You cannot ask me anything.",
+    "assertions": [
+      "It proceeds without blocking, taking the product type's convention with one to three departures derived from the subject, so a second run reaches the same lane.",
+      "It opens with an assumption ledger (assumption, basis, cost to reverse) and the three answers that would change it most.",
+      "It invents no brand assets or facts: the name set in type is the wordmark, and no symbol, metric or testimonial is made up."
+    ]
+  },
+  {
+    "id": "make-it-pop",
+    "prompt": "The client says the hero needs to pop more. Fix it.",
+    "assertions": [
+      "The feedback is diagnosed as weak hierarchy rather than applied literally.",
+      "The fix raises scale and value contrast on one element; saturation is not raised across the page and no new accents are added."
+    ]
+  },
+  {
+    "id": "collage-layers",
+    "prompt": "Design a collage-style hero for a music festival site: cutouts, tape, overlapping type.",
+    "assertions": [
+      "The answer names its planes (ground, field, image, display type, marks, interface, finish) or the subset it uses, with the interface plane clean and unrotated.",
+      "It uses two angles at most (0° and one other) and three sizes, with decisive overlaps.",
+      "It specifies a phone stage or flow restack, keeps DOM order as reading order, and measures text contrast on the worst patch."
+    ]
   }
 ]

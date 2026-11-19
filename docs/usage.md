@@ -36,7 +36,7 @@ producing the affected artifact:
    floors) and content (copy, voice, i18n length).
 
 That "read only what you need" discipline is the whole point. A one-section color job loads
-`color.md`, not all 29 references.
+`color.md`, not all 31 references.
 
 ### Declared bundles
 
@@ -67,7 +67,9 @@ reference file(s)".
 | **Define component behavior and states** — feedback, overlays, selection, search | `interaction.md` |
 | **Design a form** — layout, controls, validation timing, sign-in, save model | `forms.md` |
 | **Set the point of view** — register, visitor mode, change depth, concept, direction contract | `visual-direction.md` |
+| **Scope a request with no brief** — owner questions, direction cards, assumptions | `intake.md` |
 | **Choose style dimensions and a lane** from the product type's conventions | `conventions.md` |
+| **Compose a collage or layered section** — plane stack, kit, interleave, stage | `composition-layers.md` |
 | **Fix a result that reads generic, templated, or AI-made** | `anti-defaults.md` |
 | **Plan a website page's sections** — anatomy by job, narrative, pricing, nav/footer | `page-anatomy.md` |
 | **Choose or set type** — scale, pairing, measure, display | `typography.md` |
