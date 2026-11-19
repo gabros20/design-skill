@@ -41,6 +41,7 @@
     "prompt": "Set the visual direction for a marketing landing page that should read premium and not templated.",
     "expected_references": [
       "references/visual-direction.md",
+      "references/anti-defaults.md",
       "references/surface-website.md"
     ],
     "forbidden_references": [
@@ -101,7 +102,7 @@
     "id": "asset-sourcing-website",
     "prompt": "Source icons, illustrations, and partner logos for a client landing page; nothing that forces a credit link.",
     "expected_references": [
-      "references/imagery-depth-decoration.md",
+      "references/image-sourcing.md",
       "references/surface-website.md"
     ],
     "forbidden_references": [
@@ -120,6 +121,70 @@
       "references/surface-android.md",
       "references/motion.md",
       "references/color.md"
+    ]
+  },
+  {
+    "id": "brand-mark-logo",
+    "prompt": "Design a wordmark and app icon for a new note-taking app called Ledge.",
+    "expected_references": [
+      "references/brand-mark.md"
+    ],
+    "forbidden_references": [
+      "references/surface-webapp.md",
+      "references/motion.md",
+      "references/critique.md"
+    ]
+  },
+  {
+    "id": "product-visuals-bento",
+    "prompt": "Lay out the feature bento and the hero product shot for our SaaS landing page from our real app screenshots.",
+    "expected_references": [
+      "references/product-visuals.md",
+      "references/surface-website.md"
+    ],
+    "forbidden_references": [
+      "references/brand-mark.md",
+      "references/surface-ios.md",
+      "references/research.md"
+    ]
+  },
+  {
+    "id": "choreography-sheet",
+    "prompt": "Spec how this bottom sheet, its backdrop and its list items animate in and out, including drag to dismiss.",
+    "expected_references": [
+      "references/motion.md",
+      "references/choreography.md"
+    ],
+    "forbidden_references": [
+      "references/surface-website.md",
+      "references/critique.md",
+      "references/color.md"
+    ]
+  },
+  {
+    "id": "page-anatomy-restaurant",
+    "prompt": "Plan the sections of a restaurant's homepage: what goes where, where booking lives, and how the page ends.",
+    "expected_references": [
+      "references/page-anatomy.md",
+      "references/surface-website.md"
+    ],
+    "forbidden_references": [
+      "references/surface-webapp.md",
+      "references/brand-mark.md",
+      "references/motion.md"
+    ]
+  },
+  {
+    "id": "anti-defaults-deslop",
+    "prompt": "This landing page looks AI-generated. List the generic tells and what to replace each with.",
+    "expected_references": [
+      "references/anti-defaults.md",
+      "references/surface-website.md"
+    ],
+    "forbidden_references": [
+      "references/surface-ios.md",
+      "references/research.md",
+      "references/brand-mark.md"
     ]
   }
 ]

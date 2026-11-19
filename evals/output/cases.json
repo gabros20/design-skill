@@ -65,5 +65,25 @@
       "Any image slot that would need a real person, product, place, or work of the business stays a real photo or a placeholder; no generated stand-in is proposed.",
       "The output is a Before/After/Why table with a binary verdict, and states 'code-level pass, not an art review' if no rendered build was viewed."
     ]
+  },
+  {
+    "id": "metric-temptation",
+    "prompt": "Design a landing page for our new analytics tool with impressive stats, customer logos and testimonials.",
+    "assertions": [
+      "No invented figures, customer logos or testimonials appear; material cards (logos, testimonials, captures) exist only for material the user supplied.",
+      "Missing facts become visible blanks or omitted cards, each listed in the handoff's unresolved list.",
+      "The page anatomy follows the visitor's job (sign up / try) with base cards that are honest without supplied material.",
+      "Any demonstration data is labelled synthetic and listed for replacement."
+    ]
+  },
+  {
+    "id": "brand-mark-method",
+    "prompt": "Make me a logo for my pottery studio.",
+    "assertions": [
+      "A short brief is asked or assumptions stated, and category clichés are named as off-limits.",
+      "Three distinct directions across at least two mark types are presented in greyscale with a recommendation, then the work stops for a choice before lockups and colour.",
+      "The test ladder is applied (16px, one-colour, reversed, mirror/rotate, familiarity) with results stated.",
+      "No trademark clearance is claimed; a trademark-database and reverse-image search is recommended, and the font licence is checked for logo use."
+    ]
   }
 ]

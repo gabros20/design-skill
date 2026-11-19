@@ -47,7 +47,7 @@ reference set from three facets and reads only those files before producing an a
 
 Declared bundles encode the common pairings (a native mobile prototype, a new surface from scratch,
 a design system for a surface) so no lateral discovery is needed. The runtime router is
-[skills/design/SKILL.md](skills/design/SKILL.md); it links directly to 21 focused references and
+[skills/design/SKILL.md](skills/design/SKILL.md); it links directly to 27 focused references and
 loads only what the job needs.
 
 ## Install
@@ -98,10 +98,10 @@ a skill tool, or natural-language activation. The skill should **not** activate 
 frontend build, system architecture, marketing/SEO, or release verification unless the request also
 requires experience design.
 
-## The 21 references
+## The 27 references
 
 The router selects from a primary-job set, a surface overlay, and concern overlays. It loads the
-smallest sufficient set — never all 21.
+smallest sufficient set — never all 27.
 
 **Primary job**
 
@@ -111,12 +111,18 @@ smallest sufficient set — never all 21.
 | [journeys.md](skills/design/references/journeys.md) | Flows and journeys: breadboards, journey maps, service blueprints, onboarding |
 | [information-architecture.md](skills/design/references/information-architecture.md) | Object model (OOUX), vocabulary, sitemap, navigation, findability |
 | [interaction.md](skills/design/references/interaction.md) | State design (8-state model), forms, feedback, overlays, selection, search |
-| [visual-direction.md](skills/design/references/visual-direction.md) | Register doctrine, design read, aesthetic lanes, one bold move, anti-default catalog |
+| [visual-direction.md](skills/design/references/visual-direction.md) | Register and visitor modes, design read, change depths, concept/world, direction contract, lanes |
+| [anti-defaults.md](skills/design/references/anti-defaults.md) | The dated tell catalog, the current AI cluster, predict-then-refuse, system fixes |
+| [page-anatomy.md](skills/design/references/page-anatomy.md) | Website page structure: anatomy by visitor job, macrostructures, narrative, SaaS deck, pricing, chrome |
 | [typography.md](skills/design/references/typography.md) | Type scales, pairing, measure/leading, display craft, i18n |
 | [layout-composition.md](skills/design/references/layout-composition.md) | Grids, spacing scales, hierarchy, density, elevation |
 | [color.md](skills/design/references/color.md) | OKLCH model, palette construction, contrast math, dark mode, semantic color |
 | [imagery-depth-decoration.md](skills/design/references/imagery-depth-decoration.md) | Depth build order, materials, image treatment, decoration discipline |
-| [motion.md](skills/design/references/motion.md) | Duration/easing canon, springs, interruptibility, reduced-motion |
+| [image-sourcing.md](skills/design/references/image-sourcing.md) | Slot sources, licence gate, library photos, generated sets, curation and provenance |
+| [product-visuals.md](skills/design/references/product-visuals.md) | Product shots, honest demo UI, bento, explanatory figures, illustration craft |
+| [brand-mark.md](skills/design/references/brand-mark.md) | Logo and identity: concepts, mark types, construction, test ladder, kit |
+| [motion.md](skills/design/references/motion.md) | Duration/easing canon, motion character, springs, performance, reduced-motion |
+| [choreography.md](skills/design/references/choreography.md) | Cast and stagger, exits, gestures, loops and demo loops, loaders, frame review |
 | [prototyping.md](skills/design/references/prototyping.md) | Fidelity ladder, classification, in-page variants, test plan |
 | [design-systems.md](skills/design/references/design-systems.md) | Token architecture, DESIGN.md/PRODUCT.md contracts, component specs, governance |
 | [critique.md](skills/design/references/critique.md) | Art review (A0–A3), scored critique, cognitive load, personas |
@@ -126,7 +132,7 @@ smallest sufficient set — never all 21.
 
 | Reference | Scope |
 |---|---|
-| [surface-website.md](skills/design/references/surface-website.md) | Marketing/content sites: macrostructure, section craft, premium↔info dial |
+| [surface-website.md](skills/design/references/surface-website.md) | Marketing/content sites: premium↔info dial, section craft, hero, phone, award tier |
 | [surface-webapp.md](skills/design/references/surface-webapp.md) | Product UI: serve-register craft, density modes, data display, dashboards |
 | [surface-ios.md](skills/design/references/surface-ios.md) | iOS/iPadOS: HIG numbers, Dynamic Type, gestures, iPad adaptivity |
 | [surface-android.md](skills/design/references/surface-android.md) | Android: Material 3 tonal color, type scale, window classes, navigation |
@@ -177,7 +183,7 @@ sources contribute any verbatim prose. Full attribution and licenses:
 ```text
 .codex-plugin/plugin.json  Codex plugin and release metadata
 AGENTS.md / CLAUDE.md      repository and client-specific maintainer guidance
-skills/design/             portable runtime skill and client metadata (21 references)
+skills/design/             portable runtime skill and client metadata (27 references)
 evals/                     activation, traversal, output, and compression fixtures
 docs/                      installation, usage, and recipes
 site/                      visual guide (deployed to designskill.vercel.app)

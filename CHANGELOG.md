@@ -8,7 +8,36 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ## [Unreleased]
 
 ### Added
-- Queue unreleased changes here.
+- Design-fold of ~30 external design, motion and illustration skills (MIT / Apache-2.0; unlicensed
+  sources as inspiration only), de-duplicated across ten reader lanes. Six new router-wired
+  references: `anti-defaults.md` (the tell catalog, moved out of visual-direction, plus the current
+  AI cluster and predict-then-refuse), `page-anatomy.md` (anatomy by visitor job, macrostructures and
+  the question chain moved from surface-website, SaaS deck, pricing, nav/footer), `choreography.md`
+  (cast, stagger, exits, gestures, loops, demo loops, loaders, frame review), `image-sourcing.md`
+  (sourcing moved out of imagery, plus capture-before-build and library-photo vetting),
+  `product-visuals.md` (product shots, honest demo UI, bento, explanatory figures, illustration
+  craft), and `brand-mark.md` (logo and identity method, test ladder, kit).
+- Visitor modes (Persuade / Experience / Operate / Read), change depths (polish / restyle / refine),
+  concept and world derivation, the direction contract, lane write-ups with count budgets.
+- Critique: usability P0 list, evidence validation, blind read, staged hero review, element-matrix
+  fidelity, Floor / Reflex / Finish tiers, scoring to a bar, remove-then-group deslop.
+- Accessibility floors: WCAG 2.2.2 pause/stop/hide, 2.4.1 skip link, 2.5.7 dragging alternative,
+  1.4.12 text spacing, inline-link cue, vestibular triggers, changing-background contrast.
+- Craft folds across typography, color, layout, interaction, content, design systems, research,
+  prototyping, handoff, and the four surfaces; activation, traversal and output eval cases.
+
+### Fixed
+- WCAG large text is ≥24px / ≥18.66px bold (18pt / 14pt), not 18px / 14px; the 2.5.8 spacing rule
+  is the 24px-circle exception, not a 24px gap.
+- Measure is counted in characters, not `ch`; ramp lightness is spaced unevenly; dismiss on distance
+  *or* velocity; tabs never slide; the focus ring is never animated; short UI exits ease out;
+  Motion's `x`/`y`/`scale` shorthands are accelerated from v14.2.
+
+### Changed
+- Contested positions settled: aurora glow scoped to atmospheric registers (the single accent
+  spotlight is a tell); gradients limited by hue count, not stop count; near-black and pure black by
+  lane; light-on-dark weight tuned per face; eyebrows kept as a tell with a keep-test; DESIGN.md
+  starts as a seed and is finalised from the first built surface.
 
 ## [0.2.0] — 2026-10-17
 

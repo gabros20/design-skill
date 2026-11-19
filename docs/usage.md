@@ -36,16 +36,17 @@ producing the affected artifact:
    floors) and content (copy, voice, i18n length).
 
 That "read only what you need" discipline is the whole point. A one-section color job loads
-`color.md`, not all 21 references.
+`color.md`, not all 27 references.
 
 ### Declared bundles
 
 Some jobs pair predictably, so the router encodes the pairing — no lateral discovery required:
 
 - **Native mobile prototype** → `prototyping.md` + `surface-ios.md` (or `surface-android.md`).
-- **A new surface from scratch** → `visual-direction.md` first, then its craft leaves
-  (`typography.md`, `layout-composition.md`, `color.md`, `imagery-depth-decoration.md`,
-  `motion.md`) plus the one surface overlay.
+- **A new surface from scratch** → `visual-direction.md` + `anti-defaults.md` first (a website page
+  adds `page-anatomy.md`), then its craft leaves (`typography.md`, `layout-composition.md`,
+  `color.md`, `imagery-depth-decoration.md`, `motion.md`) plus the one surface overlay.
+- **A motion spec where several things move** → `motion.md` + `choreography.md`.
 - **A design system for a specific surface** → `design-systems.md` + that surface overlay.
 - **Any flow, screen, or system where accessibility is explicit** → the primary reference +
   `accessibility.md`.
@@ -63,12 +64,18 @@ reference file(s)".
 | **Map a flow, onboarding, wizard, checkout, or end-to-end journey** | `journeys.md` |
 | **Model objects, sitemap, navigation, naming, or findability** | `information-architecture.md` |
 | **Define component behavior and states** — forms, feedback, overlays, selection, search | `interaction.md` |
-| **Set the point of view / fix a result that reads generic or templated** | `visual-direction.md` |
+| **Set the point of view** — register, visitor mode, change depth, concept, lane | `visual-direction.md` |
+| **Fix a result that reads generic, templated, or AI-made** | `anti-defaults.md` |
+| **Plan a website page's sections** — anatomy by job, narrative, pricing, nav/footer | `page-anatomy.md` |
 | **Choose or set type** — scale, pairing, measure, display | `typography.md` |
 | **Lay out a screen** — grid, spacing, hierarchy, density, elevation | `layout-composition.md` |
 | **Build a palette, neutral ramp, accent, dark mode, or check contrast** | `color.md` |
-| **Add depth, materials, imagery, or decoration** | `imagery-depth-decoration.md` |
+| **Add depth, materials, image treatment, or decoration** | `imagery-depth-decoration.md` |
+| **Source icons, illustrations, logos or photos, or art-direct a generated set** | `image-sourcing.md` |
+| **Show the product or explain a concept in a picture** — product shots, bento, figures, illustration | `product-visuals.md` |
+| **Design or critique a logo, wordmark, app icon, or identity kit** | `brand-mark.md` |
 | **Choose motion values or decide whether to animate** | `motion.md` |
+| **Sequence motion** — stagger, exits, gestures, loops, loaders, page transitions | `choreography.md` |
 | **Build or evaluate a prototype / compare design options** | `prototyping.md` |
 | **Create or extend a design system, tokens, or component contracts** | `design-systems.md` |
 | **Judge or QA a rendered design against its intent** (a scored review, not setting direction) | `critique.md` |

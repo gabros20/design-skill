@@ -15,7 +15,7 @@ one bold move, and give me the type, color, and layout craft to deliver it. Chec
 anti-default catalog before you hand it back.
 ```
 
-**Routes**: `visual-direction.md` (primary) → the new-surface bundle: `typography.md` +
+**Routes**: `visual-direction.md` + `anti-defaults.md` (primary) → the new-surface bundle: `page-anatomy.md` + `typography.md` +
 `layout-composition.md` + `color.md` + `imagery-depth-decoration.md` + `motion.md` +
 `surface-website.md` (surface overlay). **Produces**: a design read, named register + lane, one bold
 move, a refuse-list, and the craft specs with exact tokens.
