@@ -91,7 +91,7 @@ Code: `frontend` `ui-motion.md` "Hover and press".
 - **Origin-aware popovers:** scale from the trigger. **Modals are exempt — they stay `transform-origin: center`.** This exemption recurs everywhere; preserve it.
 - **Press feedback:** `scale(0.96)` on `:active`, ~150ms ease-out (range 0.95–0.98, **never below 0.95**); never on a disabled control; it survives reduced motion (feedback, not travel). *A design system may instead declare stillness — no press transform (nothing-design / dembrandt "component stability"); name which stance the system takes; do not mix.*
 - **Hold-to-confirm:** a linear fill over ~2s while pressed, snapping back in ~200ms ease-out on early release. A newly selected item may glow ~1s, then settles to a static style.
-- **Hover may move the visual, never the hit area** — it stays the resting footprint (interaction.md), or the card slips from under the cursor and flickers; never push a neighbour. Delay hover-in previews only; leaving is immediate.
+- **Hover may move the visual, never the hit area**, which stays the resting footprint (interaction.md); else the card slips from under the cursor and flickers; never push a neighbour. Delay hover-in previews only; leaving is immediate.
 - **Blur masks an imperfect crossfade:** `blur(2px)` during a two-state overlap reads as one transformation; keep blur <20px, never on a plain fade or theme change.
 - **Zoom in log space:** a scale over a ratio ≳1.6 runs `from·(to/from)^ease(p)` so equal time buys an equal ratio; a value-space tween visibly decelerates as it grows.
 - **A flash, pulse or shake has an age:** 40–120ms attack from zero slope, then exponential decay; overlapping events add.

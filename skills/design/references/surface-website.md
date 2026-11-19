@@ -47,8 +47,8 @@ architects ~8–25 projects; photographers ~15–40 (20-60-20 rule); artists 10�
 ## Section craft and hero discipline
 
 A boring section is one flat plane (text + image-square on solid fill). A great section has **depth**
-(≥2 Z-planes), **tension** (asymmetry/scale contrast), and **one deliberate move**. **Cardinal rule:
-one or two devices per section, executed precisely — never all at once.**
+(≥2 Z-planes), **tension** (asymmetry/scale contrast), and **one deliberate move**. **Restrained
+default: one or two devices per section, executed precisely** (maximal lanes commit many in one system).
 
 **Anti-boring pass (Persuade default)** — skip any line the lane's fail-if list overrides (flat in
 Swiss/Rams; centred symmetry in quiet luxury, ceremonial and hospitality). Yes: depth (≥2 planes or one

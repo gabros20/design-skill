@@ -124,7 +124,7 @@ Exactly four semantic roles, each mapped to one meaning product-wide: **Red** er
 **Amber** warning only · **Green** success · **Blue** info. Hue anchors (OKLCH): error 20–30, warning 65–90,
 success 140–160, info 235–265 (sRGB red sits at 29°, yellow 110°, green 142°, blue 264°). Align
 chroma and lightness to the brand (muted brand → muted semantics); amber fills are light (L
-≈0.75–0.85) and take ink text, never white. **Hues within 15° read as one
+≈0.75–0.85) and take ink text, never white (contrast). **Hues within 15° read as one
 colour, one meaning:** keep every status hue ≥15° from the accent; where convention forbids (red brand,
 red danger) mark destructive by treatment — outlined, with an icon. A meaning-colour appears wherever
 its meaning does. Status ramps need four roles (subtle bg, border, solid, text). Meaning is
@@ -162,7 +162,7 @@ math:
 
 - **Orange↔blue is the most robust color-vision-deficient-safe contrast pair:** orange spans both
   opponent axes (red + yellow), so it stays distinct whichever axis a viewer is missing. ~8% of men
-  have CVD. Never carry meaning by hue alone — pair with lightness, icon, or label.
+  have CVD. Never carry meaning by hue alone (WCAG 1.4.1) — pair with lightness, icon, or label.
 - **Harmony is character-first, not hue-first.** Geometric hue schemes (complementary/triadic) are
   weak standalone predictors — every hue plane has a different shape in perceptual space. Organize by
   character (pale/muted/deep/vivid) instead; **chroma + lightness predict emotional response better

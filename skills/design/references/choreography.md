@@ -48,7 +48,7 @@ children. Order by importance, not DOM. Two leads is a hierarchy bug motion cann
 
 - **UI staggers: 30–80ms per item, total ≤500ms;** storytelling staggers follow the concept. Stagger the first ~5 items; the rest land with the 5th.
 - **Never on anything opened many times a day** (menus, dropdown rows, palettes, tab content).
-- **Never uniform:** an identical gap, distance and duration on every item is a metronome tell. Vary gaps ≥15% or ease the delays, let the lead travel furthest, accelerate a run into its payoff, and play a repeated reveal ~40% faster the second time.
+- **Default: not uniform:** an identical gap, distance and duration on every item is a metronome tell. Vary gaps ≥15% or ease the delays, let the lead travel furthest, accelerate a run into its payoff, and play a repeated reveal ~40% faster the second time.
 - **A list that arrives as a list** is staggered; every scrolled section is not.
 - **Hero and first-run entrances stagger semantic chunks**, not containers: title, description, actions ~100ms apart (a short display headline word by word at 80ms), each rising 12px from a 4px blur over 300ms ease-out.
 - **Stagger from the hand** when the pointer triggered it: `delay = |i − a| × 30–60ms`, spreading from what was touched; reach falls off to a clamped floor.
@@ -81,9 +81,9 @@ Code: `frontend` `ui-motion.md` "Springs and interruption".
 
 ## Scroll and reveal
 
-- Prefer pure CSS: `animation-timeline: view()` + `animation-range: entry 0% cover 40%`, gated behind `@media (prefers-reduced-motion: no-preference)` so the default state is the finished, visible one — with motion off **and with scripting off**: a reveal never depends on script to become visible.
+- Prefer pure CSS: `animation-timeline: view()` + `animation-range: entry 0% cover 40%`, gated behind `@media (prefers-reduced-motion: no-preference)` so the default state is the finished, visible one — with motion off **and with scripting off**: a reveal never depends on script to become visible (robustness).
 - Reveal once, cap staggered items at ~6, keep displacement small; no parallax on text being read; display type may move when the lane is cinematic.
-- Readable text never moves while it is read: reveal, then rest; no word-by-word reveals of body copy. A sticky label that updates as content passes animates only the token that changed. Code: `scroll-animation` `entrances.md`.
+- Readable text never moves while it is read (legibility): reveal, then rest; no word-by-word reveals of body copy. A sticky label that updates as content passes animates only the token that changed. Code: `scroll-animation` `entrances.md`.
 
 ## Loops, idle and demo loops
 

@@ -60,7 +60,7 @@ Numbers here are Restrained-lane defaults; the direction contract's dimensions o
 ## Gestalt grouping
 
 - Proximity, similarity, common region, figure/ground, continuity. **Default to whitespace, not divider lines** — a line takes no space, so deleting it leaves groups cramped; removing a separator usually means *adding* spacing. If you need a divider, the spacing is probably wrong.
-- **Weakest container that works**: background tint → border → card surface. Each step adds visual weight; never box the most important element — let it float. **Limit nested containers to two levels.**
+- **Weakest container that works**: background tint → border → card surface. Each step adds visual weight; by default don't box the most important element — let it float. **Limit nested containers to two levels.**
 - Proximity is set by the *ratio*: between-group space ≥2× within-group (8px inside → ≥16px between). Order: space → background shape → hairline separator (dense data only); never a separator plus a gap that already grouped.
 - **Repetition is recognition:** vary a section only when its content or priority changes; on Operate and Read surfaces predictable structure *is* the affordance.
 
@@ -75,7 +75,7 @@ Numbers here are Restrained-lane defaults; the direction contract's dimensions o
 Every repeated element (card, row, tile, KPI, result) is a **fixed slot model**: every slot holds its position even when empty; **one slot absorbs variance** (`flex: 1`); anchors pin with `margin-top: auto` (columns) / `margin-left: auto` (rows).
 
 - **Equal height via a stretched grid/flex track — never a hard-coded `height`** (the tallest instance clips). Reserve optional slots (`min-height`) or overlay them absolutely. Media gets a fixed `aspect-ratio`.
-- Handle length in order: (1) **write to length** (titles ≤60, snippets ≤120 chars), (2) clamp + recover via a detail view or a keyboard- and touch-reachable tooltip (a hover `title` is not recovery), (3) let one slot grow. Never truncate numbers, money, dates or must-read content (errors, legal); middle-truncate file names and shared-domain emails. Design for the long i18n case (German/Finnish +30–40%).
+- Handle length in order: (1) **write to length** (titles ≤60, snippets ≤120 chars), (2) clamp + recover via a detail view or a keyboard- and touch-reachable tooltip (a hover `title` is not recovery), (3) let one slot grow. Never truncate numbers, money, dates or must-read content (errors, legal) (honesty); middle-truncate file names and shared-domain emails. Design for the long i18n case (German/Finnish +30–40%).
 - **Hidden content is always cued:** a horizontal row lets the next item peek 16–32px past the edge (a row ending exactly at the edge looks complete) with an equal inset at both ends at rest; a disclosure names its payload ("Show 12 more results").
 - For `-webkit-line-clamp` inside flex/grid, add `min-width: 0` (`min-inline-size: 0`) or truncation silently fails.
 

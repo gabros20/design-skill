@@ -88,7 +88,9 @@ high-contrast — what separates it from **neumorphism**, the dual light/dark "e
 fails WCAG contrast and breaks dark mode.
 
 **Apple translucency.** Native chrome is system material (surface-ios.md "Liquid Glass (current HIG)").
-Over any translucent surface, raise text contrast and weight slightly and put colour on a solid layer;
+Heavier material is structural, lighter interactive; dim to focus (a scrim, background pushed back)
+for modal tasks, no scrim for parallel panels. Over any translucent surface, raise text contrast and
+weight slightly and put colour on a solid layer;
 where content meets floating chrome, a soft scroll-edge fade beats a hard 1px divider.
 
 ## 3D tilt and scroll depth

@@ -106,4 +106,4 @@ Floors (targets, reflow, zoom, focus, forced colors, increased contrast) live in
 - **Label in Name (SC 2.5.3):** the accessible name contains the visible label (voice control activates by visible text).
 - **Container queries** size components by container, not viewport; content-based breakpoints, web defaults **640 / 768 / 1024px** plus an 80rem (1280) step.
 - `color-scheme: light dark`; `min-h-dvh`, never `100vh`, on mobile; logical properties for RTL; submit behaviour per forms.md.
-- An installable PWA needs a manifest (name, icons, start URL, standalone display) and a service worker; `theme_color` tints browser chrome.
+- An installable PWA needs HTTPS, a manifest (name, icons, start URL, standalone display) and a service worker; `theme_color` tints browser chrome.

@@ -122,7 +122,7 @@ rotated text; crosshair/hairline grid decoration; **div-based fake product UI / 
 the hero (the #1 tell)** — the honest route is product-visuals.md; fake version footers; "Quietly
 trusted by"; poetic sidebar labels ("Field notes"); weather/locale strips ("LIS 14:23 · 18°C"); live
 counters ("Reservation 412 of 800"); hero-bottom decoration strips ("BRAND. MOTION. SPATIAL.");
-scroll cues ("Scroll to explore"); typewriter/rotator headlines and decorative pill badges; emoji or Unicode glyphs standing in for an icon set, or mixed icon
+scroll cues ("Scroll to explore"); typewriter/rotator headlines and decorative pill badges; glassmorphism standing in for content; sparkle or aurora glows used as substance; emoji or Unicode glyphs standing in for an icon set, or mixed icon
 families; sparklines, rings or tallies standing in for content; hover that moves the target or its
 neighbours. **Invented metrics** (fabricated `92%`/`4.1×`/`48k`) — a stat is never the hero's sole
 headline; use a real number or `—` + a labeled block. **Re-drawn chrome** (fake browser bars, phone

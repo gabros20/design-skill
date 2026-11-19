@@ -135,7 +135,7 @@ with replacements: anti-defaults.md. Then run these on the plan, and again on th
 
 - **Swap** — swap your typeface/layout for the usual one; where nothing would feel different is where you defaulted.
 - **Squint** — blur the screen; the hierarchy the lane intends must survive.
-- **Signature** — point to five specific elements that carry this design's signature; if you can't, it's generic.
+- **Signature** (is-the-product surfaces; serve surfaces show the felt wow instead) — point to five elements that carry the signature; if you can't, it's generic.
 - **Token** — read the CSS variable names aloud; names from the contract's world (`--ink`, `--slate`) evoke it, `--gray-700`/`--surface-2` evoke a template.
 - **Poster** — any paused frame (motion off, mid-scroll, page end) looks intentional alone; motion amplifies a composition, never rescues one.
 - **Reskin** — two directions rendered as one still and squinted must read as different pages; composition (headline position, containers, image treatment) separates directions, tint does not.

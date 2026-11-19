@@ -52,7 +52,7 @@ only where a list is native. Test: could this sequence sit under another busines
 ## Macrostructures and fingerprints
 
 **Structural sameness is the AI fingerprint, not visual sameness.** Two briefs must yield different
-*sites*, not colour-swaps of one skeleton. **21 macrostructures** (each bundles heading placement + body
+*sites*, not colour-swaps of one skeleton, unless the contract names the category standard. **21 macrostructures** (each bundles heading placement + body
 composition + divider + button voice + image treatment + reveal): Bento Grid · Long Document · Marquee
 Hero · Stat-Led · Workbench · Conversational FAQ · Manifesto · Photographic · Quote-Led · Specimen ·
 Catalogue · Letter · Index-First · Narrative Workflow · Split Studio · Feature Stack · Type Specimen ·
@@ -103,12 +103,12 @@ page is wrong.
 
 ## Section compositions
 
-Choose each section's composition from its content, using 3–6 different ones a page, never the same
-twice in a row: a **rail** for dated or browsable items (five or more, the next cut by the edge; lateral
+Choose each section's composition from its content, by Persuade default 3–6 different ones a
+page, not the same twice in a row (Read and Letter repeat on purpose): a **rail** for dated or browsable items (five or more, the next cut by the edge; lateral
 travel reads as breadth, never a ranking) · a **switcher** for 2–5 real states (lunch/dinner,
 monthly/yearly; first state visible without script) · an **index** for 6–20 items with facts in columns
 · a **schedule** only for times a visitor plans around · an **offer** for the thing being bought.
-**Mass, not air:** a heading and a paragraph are a head block, never a section (layout-composition.md).
+**Mass, not air:** a heading and a paragraph are a head block, not a section, where the lane promises mass (layout-composition.md).
 
 ## Repetition defaults
 
@@ -151,4 +151,4 @@ craft frames → outcome (real results only, else what shipped) → next project
 The conventional nav (wordmark left, links, primary action right) is the default for Persuade and
 Operate; an edge-aligned bar, masthead, slab or search-led bar is a lane choice for Experience and
 editorial surfaces. Footer: index columns for a real sitemap, else a mast, statement, colophon or
-letter close. Sign-in is a quiet text link, never a second button. One action keeps one label everywhere.
+letter close. Sign-in defaults to a quiet text link, not a second button. One action keeps one label everywhere.

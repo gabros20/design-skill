@@ -76,7 +76,7 @@ Run alongside the taste review (agreement = high confidence):
 
 ## Deslop (fast pass)
 
-- **Pass 1 — Squint (rendered)**, ranked: (1) no focal point (2) flat hierarchy (3) monotone layout (4) timid color (5) borders doing the work of space.
+- **Pass 1 — Squint (rendered), against the contract**, ranked: (1) no focal point (2) flat hierarchy (3) unchosen monotone layout (4) unchosen timid color (5) borders doing the work of space.
 - **Pass 2 — Scan (the diff):** tokens & color · typography — diagnose before swapping the face: slop is usually spacing and finish (one gap everywhere, straight quotes, hyphen-as-dash, untracked caps, 1.2 paragraph leading, no measure cap); fix finish, then setting, then structure · surfaces & depth · states & motion · spacing & structure · reinvention (hand-rolled → reused primitive).
 - **Pass 3 — Remove, then group.** For each suspect (pasteable into an unrelated product; carries no state, action, hierarchy or brand meaning), delete it in your head; if meaning survives, cut it; else the smallest fix inside the system — never a new effect. Group by root cause (generic SaaS kit · card apocalypse · motion theater · fake sophistication · reference mismatch · polish before truth) and close with the one removal that buys the most.
 
