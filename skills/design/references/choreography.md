@@ -53,6 +53,8 @@ children. Order by importance, not DOM. Two leads is a hierarchy bug motion cann
 
 ## Exits, swaps and direction
 
+Code: `frontend` `ui-motion.md` "Enter and exit".
+
 - **Closes are faster and quieter than opens.** The enter carries the distance and blur; the exit travels a fixed ~12px in ~150ms (never its full height) unless the destination means something (a drawer, a card returning to its list). **Never bounce and never delay a close.** Symmetric exceptions — tabs, accordion, icon/text swap — read as one reversible motion; keep one duration both ways.
 - **An exiting element leaves the layout at once**; siblings close the gap while it fades.
 - **A view swap in one container crossfades** (old exits while new enters); wait only between two dense views in a container resizing in both dimensions.
@@ -60,6 +62,8 @@ children. Order by importance, not DOM. Two leads is a hierarchy bug motion cann
 - **Direction follows the mental model:** forward moves content left (new enters from the right), back moves it right; sibling menus enter from the trigger's side; the exiting element reads the direction when it starts.
 
 ## Timing family, overlap and interruptibility
+
+Code: `frontend` `ui-motion.md` "Springs and interruption".
 
 - **One component, one timing family:** a drawer that opens in 500ms and resizes in 200ms reads as two objects; inner motion may take a lighter curve of the same family. Sync secondaries to the lead's start, impact or settle, on the event that caused them.
 - **Scale a resize's fade to the change:** `clamp(0.15s, Δheight/500, 0.27s)`; a tiny jump with a full fade flickers. Smaller elements need more bounce to read alike.
@@ -70,22 +74,24 @@ children. Order by importance, not DOM. Two leads is a hierarchy bug motion cann
 
 - **Track** (pointer down): position maps 1:1 — no easing, no spring, keep the grab offset; respond on touch-down, not release.
 - **Release:** a spring seeded with the finger's exact velocity (no seam). **Momentum projection** (Apple's shipped form): `project(v, decel=0.998) = (v/1000)·decel/(1−decel)`; project the resting point, then snap to the nearest target.
-- **Dismiss on distance (~40–50% of travel) OR velocity (> ~0.11 px/ms)** — distance alone ignores flicks, velocity alone can't commit a slow drag. Snap-back is fast. Rubber-band soft boundaries rather than a hard stop.
+- **Dismiss on distance (~40–50% of travel) OR velocity** (~0.11 px/ms for a toast swipe; sheets often ~0.4–0.5 px/ms) — distance alone ignores flicks, velocity alone can't commit a slow drag. Snap-back is fast. Rubber-band soft boundaries rather than a hard stop.
 - Bounce only at the end of a drag that carried force; the same element closed by a button gets none. Overlay opacity and backdrop scale derive from the one drag value, never a parallel animation. A "weird" spring is usually fixed by raising damping. Code: `frontend` `ui-motion.md` "Gestures and drag".
 
 ## Scroll and reveal
 
 - Prefer pure CSS: `animation-timeline: view()` + `animation-range: entry 0% cover 40%`, gated behind `@media (prefers-reduced-motion: no-preference)` so the default state is the finished, visible one — with motion off **and with scripting off**: a reveal never depends on script to become visible.
-- Fallback: IntersectionObserver (`threshold: 0.15`, `rootMargin: '0px 0px -10% 0px'`), add a class, unobserve after first reveal, stagger `i*80ms`, cap ~6 items. Reveal once; no parallax on text or critical content; keep displacement small.
+- Reveal once, cap staggered items at ~6, keep displacement small; no parallax on text or critical content.
 - Readable text never moves while it is read: reveal, then rest; no word-by-word reveals of body copy. A sticky label that updates as content passes animates only the token that changed. Code: `scroll-animation` `entrances.md`.
 
 ## Loops, idle and demo loops
 
-- **Alive vs busy** (is-the-product): alive is one system that responds everywhere and may keep a slow, small motion at rest (the concept's own object, paused off-screen, zero under reduced motion); busy is many unrelated effects. A quiet brief may stay still if its feedback carries the life — record it.
+Code: `frontend` `ui-motion.md` "Scripted loops and demos".
+
+- **Alive vs busy** (is-the-product): alive is one system that responds everywhere and may keep a slow, small motion at rest (the concept's own object, zero under reduced motion); busy is many unrelated effects. A quiet brief may stay still — record it.
 - **Any loop** rests on its finished frame (never an empty window), changes one thing every 1–2s, holds the finished frame for its last ~15%, pauses on hover and focus and off-screen, and ships a visible pause past 5s (accessibility.md); never two self-moving things on one screen.
 - **Idle invitation** (an icon that occasionally nudges): first run after ~2.5s, then about every 6s, stops on interaction, resumes only after its reset completes.
-- **Demo loops:** the **poster** — thumbnail, reduced motion, first paint — is the beat that tells the story alone, with the result on screen and nothing caught mid-change; open the loop on it. A hero loop runs 10–16s: 3–5 beats and a payoff held ~2s, nothing still for >3s. A reset removes what the loop added as one thing — a visible cause (undo, clear, close), an exit around an anchor (40–80ms reverse stagger, all within 0.5s), or a snap while hidden; data never rewinds in view. UI feedback inside a demo stays as fast as the real product; only storytelling motion slows (travel `cubic-bezier(0.45,0,0.1,1)`, arrival 0.8–1s on `cubic-bezier(0.25,0.8,0.25,1)`); solid things arrive by moving and stay opaque; content arrives after its container.
-- **Interactive figures:** the rest pose is designed and is the thumbnail. Untouched, a tour starts after ~1.4s, visits 3–6 parts in the order a hand would, drives the user's own targets, pauses on hover, focus or press, and resumes ~3.6s after the last input; on take-over the state stays where it is.
+- **Demo loops:** a walkthrough runs 3–5 steps of 4–8s, each holding its result ≥1s; a hero loop runs 10–16s with 3–5 beats, a payoff held ~2s, nothing still >3s. The **poster** (thumbnail, reduced motion, first paint) is the beat that tells the story alone, nothing caught mid-change; open the loop on it. A reset removes what the loop added as one thing — a visible cause (undo, clear), an exit around an anchor (all within 0.5s), or a snap while hidden; data never rewinds in view. UI feedback stays as fast as the real product; only storytelling slows (arrivals 0.8–1s); solid things arrive by moving and stay opaque; content arrives after its container.
+- **Interactive figures:** the designed rest pose is the thumbnail. Untouched, a tour starts after ~1.4s, visits 3–6 parts in hand order, drives the user's own targets, pauses on any input and resumes ~3.6s after it; on take-over the state stays put.
 
 ## Continuity: loaders and page transitions
 
@@ -98,9 +104,9 @@ floor, not the goal; a clicked thumbnail growing into the next hero is the stron
 
 ## Copy in motion
 
-Hold an animated line max(~0.9s, 0.6s + ~0.12s per word) after it resolves, never under ~3 words/s. A
+Hold an animated line max(~0.9s, 0.6s + ~0.12s per word) after it resolves, at least ~1s on screen per 3 words. A
 line arrives whole or in 2–3 chunks and leaves at speed — a slow fade-out on a statement is a tell. No
-two consecutive lines share an entrance.
+two consecutive lines share an entrance. Code: `frontend` `ui-motion.md` "Animated text and numbers".
 
 ## Reduced motion for groups and gestures
 
@@ -109,6 +115,8 @@ with a short opacity or position change. A choreographed group collapses: no del
 opacity step; a sequence that *is* the explanation steps frame to frame.
 
 ## Reviewing motion on frames
+
+Capture harness: `frontend` `ui-motion.md` "Verify motion".
 
 One screenshot never proves motion. Sample before, first, evenly spaced middles, last and settled — in
 normal and reduced motion, entrance and exit apart (an exit only after its setup settles). Hunt five

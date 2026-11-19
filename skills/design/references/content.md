@@ -53,7 +53,7 @@ per action (Delete or Remove, never both) and one flow vocabulary (Get started �
 Destructive labels name the destruction and its scope ("Delete 5 items"); "Delete" is permanent,
 "Remove" recoverable. Match verbs to input (tap, click, or select when both); never mix "My…" and
 "Your…". Label toggles by what ON does ("Send read receipts" — a "Don't…" toggle is a double
-negative). Link text stands alone; suffix every repeated "Learn more" ("Learn more about exports");
+negative). Clickable text never wraps: buttons, primary nav and CTA labels stay one line from 320 to 1920px — shorten the label first. Link text stands alone; suffix every repeated "Learn more" ("Learn more about exports");
 link to a referenced setting instead of narrating its menu path.
 
 ## Capitalization and length

@@ -65,7 +65,7 @@ Loads in addition to the primary job whenever the request names or implies its s
 
 | When the surface is | Read | Expected contribution |
 |---|---|---|
-| A marketing, brand, landing, or portfolio site (design IS the product) | [Website](references/surface-website.md) | Macrostructure, section craft, premium↔information dial, question chain |
+| A marketing, brand, landing, or portfolio site (design IS the product) | [Website](references/surface-website.md) | Premium↔information dial, section craft and hero, phone composition, finish, award tier |
 | Product/app UI on the web — dashboards, admin, settings, data tools (design SERVES the product) | [Web app](references/surface-webapp.md) | Density mode, layout paradigm, data-display and web-platform conformance |
 | A native iOS / iPadOS app | [iOS](references/surface-ios.md) | HIG chrome/target numbers, Dynamic Type, gestures, iPad adaptivity |
 | A native Android app | [Android](references/surface-android.md) | Material 3 tonal color, type scale, window classes, navigation matrix |
@@ -84,7 +84,7 @@ Trace a technique to its source → [Sources](references/SOURCES.md).
 Read these together — the router encodes the pairing so no lateral hop is required:
 
 - Native mobile prototype → [Prototyping](references/prototyping.md) + [iOS](references/surface-ios.md) (or [Android](references/surface-android.md)).
-- A new surface from scratch → [Visual direction](references/visual-direction.md) and [Anti-defaults](references/anti-defaults.md) first (a website page adds [Page anatomy](references/page-anatomy.md)), then its craft leaves — [Typography](references/typography.md), [Layout & composition](references/layout-composition.md), [Color](references/color.md), [Imagery, depth, decoration](references/imagery-depth-decoration.md), [Motion](references/motion.md) — plus the one surface overlay.
+- A new surface from scratch → [Visual direction](references/visual-direction.md) first, then only the craft leaves the brief makes material — [Typography](references/typography.md), [Layout & composition](references/layout-composition.md), [Color](references/color.md), [Imagery, depth, decoration](references/imagery-depth-decoration.md), [Motion](references/motion.md) — plus the one surface overlay. Add [Page anatomy](references/page-anatomy.md) only when the page's sections are being planned, [Anti-defaults](references/anti-defaults.md) only for a deslop or refuse-list.
 - A design system for a specific surface → [Design systems](references/design-systems.md) + that surface overlay.
 - A motion spec where several things move → [Motion](references/motion.md) + [Choreography](references/choreography.md).
 - Any flow, screen, or system where accessibility is explicit → the primary reference + [Accessibility](references/accessibility.md).
@@ -111,7 +111,7 @@ Read these together — the router encodes the pairing so no lateral hop is requ
 
 ## Artifact contract
 
-Every design artifact states, at minimum: the register and one-line design read; the assumptions and
+Every design artifact states, at minimum: the register and the design read; the assumptions and
 constraints it was built under; the states it covers (or explicitly defers); and its maturity when
 coded (disposable / design-reference / production-candidate). Specifications carry exact values —
 tokens, sizes, spacing, timings — not adjectives. Reviews use the Before/After/Why table and a binary

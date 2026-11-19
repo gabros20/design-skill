@@ -43,9 +43,10 @@ That "read only what you need" discipline is the whole point. A one-section colo
 Some jobs pair predictably, so the router encodes the pairing — no lateral discovery required:
 
 - **Native mobile prototype** → `prototyping.md` + `surface-ios.md` (or `surface-android.md`).
-- **A new surface from scratch** → `visual-direction.md` + `anti-defaults.md` first (a website page
-  adds `page-anatomy.md`), then its craft leaves (`typography.md`, `layout-composition.md`,
-  `color.md`, `imagery-depth-decoration.md`, `motion.md`) plus the one surface overlay.
+- **A new surface from scratch** → `visual-direction.md` first, then only the craft leaves the brief
+  makes material (`typography.md`, `layout-composition.md`, `color.md`, `imagery-depth-decoration.md`,
+  `motion.md`) plus the one surface overlay; `page-anatomy.md` only when planning a page's sections,
+  `anti-defaults.md` only for a deslop or refuse-list.
 - **A motion spec where several things move** → `motion.md` + `choreography.md`.
 - **A design system for a specific surface** → `design-systems.md` + that surface overlay.
 - **Any flow, screen, or system where accessibility is explicit** → the primary reference +
@@ -125,7 +126,7 @@ These govern every technique in the references, whether or not the concern overl
 
 There's no fixed run directory or ledger — each route's output is a normal project artifact, kept
 wherever your project convention puts it. Every artifact states, at minimum: the register and
-one-line design read; the assumptions and constraints it was built under; the states it covers (or
+design read; the assumptions and constraints it was built under; the states it covers (or
 defers); and its maturity when coded.
 
 | Route | Artifact |

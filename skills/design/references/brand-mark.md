@@ -73,8 +73,8 @@ render each — SVG written without rendering is drawing blind.
 Equal measurements do not look equal: round shapes overshoot flat edges by 1–3% and points by 3–6%; in
 an icon set circles sit slightly larger than squares, triangles larger still; the optical centre sits a
 little above the geometric one, and an asymmetric glyph (play, arrow) centres on its visual mass;
-horizontals look heavier than verticals, so thin them 5–10%; light-on-dark reads bolder, so thin a
-reversed mark 2–5%. A prominent rounded rectangle wants continuous-curvature (squircle) corners — a
+horizontals look heavier than verticals, so thin them 5–10%; light-on-dark reads bolder (the thinned
+reversed file is in the test ladder). A prominent rounded rectangle wants continuous-curvature (squircle) corners — a
 plain arc pinches the straight side. The same corrections apply to UI icons, badges and play buttons.
 
 ## The test ladder

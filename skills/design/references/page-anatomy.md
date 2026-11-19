@@ -77,9 +77,9 @@ Landing pages carry **8 beats:** 1 Hook · 2 Problem empathy · 3 USP · 4 Value
 6 How it works · 7 Stakes · 8 CTA. Walk top to bottom and mark where each answer lands: *What is this?
 → Is it for me? → Why better? → Can I trust it? → How does it work? → How much effort? → What next?*
 Answering **early is also a defect** (pricing above the fold to someone still asking "what is this").
-Value props are benefits, not feature nouns. Every claim carries proof, beside the claim it supports.
+The hook is a question, not a summary; value props are benefits, not feature nouns. Every claim carries proof, beside the claim it supports.
 Stakes come from consequence, not manufactured scarcity. CTA names the action ("Check fitment", not
-"Learn more"); one message per viewport.
+"Learn more") and repeats down the page; one message per viewport.
 
 **Weight by awareness** (marketing owns the stage; Schwartz's five levels): unaware → open on the
 symptom or identity · problem-aware → the cost of the problem, with numbers · solution-aware → an honest

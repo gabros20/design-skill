@@ -140,7 +140,7 @@ lighter surfaces, not shadow** (shadows barely read on dark; ladder in imagery-d
 0.02–0.04 and raise its L 5–10%; **never switch hue between modes.** Light-on-dark text reads heavier
 (irradiation): thin it with the font's grade axis where it has one (no reflow), else one weight step
 down — but a hairline face that breaks up reversed goes a step *up*; either way add a little leading and
-tracking. Dim bright photos slightly on dark surfaces. Increased contrast is per appearance: give light
+tracking. Never CSS-invert or dim raster images for dark; pick photos that hold up on dark. Increased contrast is per appearance: give light
 and dark their own `prefers-contrast: more` values (a shared override darkens text on dark surfaces),
 widening each pair's L gap by ≥0.15, body aiming Lc 90. Redefine only the semantic token layer for dark.
 

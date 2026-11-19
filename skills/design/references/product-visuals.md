@@ -49,13 +49,12 @@ window, never a client's or real person's data.
 
 ## Product UI in motion
 
-Each step shows the start, the action, the app's own working state, then holds the result ≥1s; 3–5
-steps of 4–8s; time compression states the true numbers; reduced motion shows each step's designed end
-frame. With no live product, label the path `Sample workflow` and ship a replay plus a text transcript;
+Each step shows the start, the action, the app's own working state, then holds the result; time
+compression states the true numbers; reduced motion shows each step's designed end frame (step and
+loop timing: choreography.md "Loops, idle and demo loops"). With no live product, label the path `Sample workflow` and ship a replay plus a text transcript;
 grey bars standing in for a page read as unfinished. **Pause test:** any paused frame is a screenshot —
 dates match weekdays, counts match the items shown and change on the frame their cause lands, a summary
-arrives after the events it sums, newest first, and zero reads "No clashes", never "0 clashes". Loop
-timing: choreography.md.
+arrives after the events it sums, newest first, and zero reads "No clashes", never "0 clashes".
 
 ## Bento as one picture
 
@@ -70,22 +69,19 @@ layout-composition.md.
 
 ## Explanatory figures
 
-**The object is the explanation.** Don't draw boxes, arrows and labels; invent a buildable object
-whose mechanism maps one-to-one onto the concept (a cache key → a pin-tumbler lock; seven buffers → a
-chest of drawers) and say in one sentence what moves and what that means. It fails two ways: too
-abstract (floating slabs, labelled boxes) or one bare slab. Use one only where visitors must understand
-a mechanism, at most one per page; the readout, motion and caption come from one true model, and
-under reduced motion it shows one designed still. Take a reference's finish, never its object.
+Use one only where visitors must understand a mechanism, at most one per page, with a one-sentence
+mapping of what moves and what it means; the readout, motion and caption come from one true model, and
+reduced motion shows one designed still. Two honest forms: a **diagram** of the real system or data
+(imagery-depth-decoration.md tier B), or an **object figure** — a buildable object whose mechanism maps
+one-to-one onto the concept (a cache key → a pin-tumbler lock). An object figure fails as floating
+labelled slabs or one bare slab. Take a reference's finish, never its object.
 
 ## Drawn illustration
 
-- **Concept round:** write 3–5 one-line concepts that differ in kind — **literal** (the product as a well-made machine), **metaphor** (an object whose working is the promise), **scene** (a small diorama) — and pick with five tests: *glance* (named in 1s at shown size), *promise* (says the claim without a caption), *detail* (real parts), *page* (silhouette fits the placement), *brand* (material and era match). Give it one **moment** (a drawer pulled out), carried by the accent. Reject a concept that is dead at rest, needs a label, holds two ideas, or is just the icon of the idea (a padlock for security).
-- **A set is one family:** one camera, one world scale within ~10% (fit the largest object, build the rest at its scale), one ground, one accent family, one part vocabulary, similar visual weight (add parts to the sparse one; never strip the dense one).
-- **Two looks:** at 1× it reads as one object; at 4× every region still holds something true (screws, seams, a label plate). Detail comes from parts that belong to the mechanism, never texture. Every line ends on a face, another line or a terminal dot; a row of ticks ends on a real edge or fades. Words stay out of the drawing.
-- **Tone, not colour, carries hierarchy:** base darkest, structure mid, subject lightest, exactly one lit part — the one to watch. Monochrome unless colour is the subject. An accent is a full ramp: **body** (the part is the colour) or **ink** (only its lines and lit edge); a coloured line on a grey inlay reads as a misprint.
-- **Ground = page:** fill solids with the exact page colour; shift the neutral ramp to the page fully in lightness, ~60% in hue (past ~80% faces look painted). Pulse saturated marks, never pale bodies (an opacity fade turns them grey).
-- **Stroke weight follows display size** (`vector-effect: non-scaling-stroke`): ~0.5px for a 160–320px spot, 0.6–0.7 at 600–900px, 0.8–1 for a 1,200px+ hero; small sizes cut density rather than shrink detail.
-- **Composition:** start from the placement (hero art in the right ~56% with a left ~40% headline safe zone; OG 1200×630 art right ~55%). The object fills 80–90% of its region and leads toward the headline; its moment sits ~⅓ in; the safe zone stays empty (halos and blurs count as art); bleed only along a clean edge, never on the text side.
+- **Concept round:** write 3–5 one-line concepts that differ in kind — **literal** (the product as a well-made machine), **metaphor** (an object whose working is the promise), **scene** (a small diorama) — and pick with five tests: *glance* (named in 1s at shown size), *promise* (says the claim without a caption), *detail* (real parts), *page* (silhouette fits the placement), *brand* (material and era match). Give it one **moment** (a drawer pulled out). Reject a concept that is dead at rest, needs a label, holds two ideas, or is just the icon of the idea (a padlock for security).
+- **A set is one family:** one camera, one world scale within ~10% (build the rest at the largest object's scale), one ground, one accent family, one part vocabulary, similar visual weight (add parts to the sparse one).
+- **Two looks:** at 1× it reads as one thing; at 4× every region still holds something true. Every line ends on a face, another line or a terminal dot.
+- **Object-figure recipe** (a named style — isometric technical line figures — not a rule for all illustration; choose it when the product is a mechanism and the page is calm): tone not colour carries hierarchy (base darkest, subject lightest, one lit part, monochrome unless colour is the subject); detail from mechanism parts, never texture; words out of the drawing; solids filled with the exact page colour, the neutral ramp shifted to the page (all of the lightness, ~60% of the hue); non-scaling strokes ~0.5px at 160–320px, 0.6–0.7 at 600–900px, 0.8–1 at 1,200px+; the object fills 80–90% of its region and leads toward the headline, with the text-side safe zone left empty.
 
 ## Empty-state pictures
 

@@ -41,7 +41,6 @@
     "prompt": "Set the visual direction for a marketing landing page that should read premium and not templated.",
     "expected_references": [
       "references/visual-direction.md",
-      "references/anti-defaults.md",
       "references/surface-website.md"
     ],
     "forbidden_references": [

@@ -37,7 +37,9 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 - Contested positions settled: aurora glow scoped to atmospheric registers (the single accent
   spotlight is a tell); gradients limited by hue count, not stop count; near-black and pure black by
   lane; light-on-dark weight tuned per face; eyebrows kept as a tell with a keep-test; DESIGN.md
-  starts as a seed and is finalised from the first built surface.
+  starts as a seed and is finalised from the first built surface. The new-surface bundle loads only the
+  craft leaves the brief makes material; anti-defaults and page-anatomy load on demand. Motion library
+  internals and versions are left to `frontend` `ui-motion.md`; design points to its headings.
 
 ## [0.2.0] — 2026-10-17
 

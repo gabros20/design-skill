@@ -94,7 +94,7 @@ A web-trained default flattens these to one number. They differ by platform:
   visible replacement.
 - **Focus order follows visual/reading order.** No positive `tabindex`; an irregular collage keeps its source order in the story's order (read the page with CSS off to check).
 - **Skip link:** on any page with repeated navigation, the first Tab stop is a "Skip to content" link, visible on focus, landing on `<main>` (2.4.1); repeated landmarks get distinguishing labels (Primary, Breadcrumbs).
-- Indicator spec (WCAG 2.2 focus-appearance): area ≥ the component's perimeter × 2px thickness,
+- Indicator spec (WCAG 2.2 focus appearance, 2.4.13 AAA — the target to design to): area ≥ the component's perimeter × 2px thickness,
   ≥3:1 contrast against adjacent colors; implement with `:focus-visible`.
 - Overlays: trap focus inside a modal, set initial focus inside it, restore focus to the trigger on
   close, and let Escape close it.

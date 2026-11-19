@@ -73,9 +73,8 @@ your anti-reference, rework.
 
 ## Typography
 
-Full discipline in typography.md. Display `clamp()` max **≤ 6rem** (bigger reads generated); display
-letter-spacing floor **≥ −0.04em**. Inter body everywhere (legit only in serve). Reflex-reject font
-list is canonical in typography.md. Also: one neutral grotesk in every role, display included; a
+Display oversizing, over-tight tracking and the reflex-reject font list: typography.md. Also: Inter body
+everywhere (legit only in serve); one neutral grotesk in every role, display included; a
 **system display face** (Impact, Arial Black, the platform sans) as an own-world display voice — source
 and self-host the face; mono as a "technical" costume, or a mono face on every small label; accenting
 one word of each headline (italic, bold or colour) as the only typographic idea.
@@ -132,14 +131,12 @@ content.md.
 Looks that recur regardless of subject — each legitimate for *some* brief, so treat it as a default
 to justify, never a destination to drift into:
 
-1. Warm cream `~#F4F1EA` + high-contrast serif display + terracotta accent.
+1. Warm cream `~#F4F1EA` + serif display + terracotta accent — including the "tasteful default" of a thin serif with one italic accent word and pill buttons, which looks considered and is why every generator lands on it.
 2. Near-black + a single acid-green/vermilion accent.
 3. Broadsheet: hairline rules, zero radius, dense columns — often plus an italic display serif and
    tracked mono labels.
 4. Flat saturated ink, black boxes, hard offset shadows, heavy condensed display.
-5. The tasteful default: cream page, thin serif display with one italic accent word, pill buttons —
-   it looks considered, which is why every generator lands on it.
-6. The SaaS-card kit: content chopped into identical rounded cards, one radius regardless of
+5. The SaaS-card kit: content chopped into identical rounded cards, one radius regardless of
    hierarchy, the same soft grey shadow, gradient washes as decoration.
 
 **This model's measured prior:** warm, bookish, family or child subjects drift to cream, italic serif

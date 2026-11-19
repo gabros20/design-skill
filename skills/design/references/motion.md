@@ -41,9 +41,9 @@ Durations, keyed by what the motion does (not by pixel count alone):
 
 - **Exit ≈ 60–75% of enter.** Opening invites; closing gets out of the way.
 - **UI stays under 300ms.** Above that needs a reason (a large surface or a marketing moment).
-- **80ms is the "instant" perception threshold**; below ~100ms motion is imperceptible, so a press/toggle can be 0ms and often should be. **The focus ring is never animated** — it appears in full the frame focus lands.
+- **80ms is the "instant" threshold**; a press/toggle can be 0ms and often should be. **The focus ring is never animated** — it appears in full the frame focus lands.
 - **Duration by distance** (within a tier): 8–16px → 100–150ms; 50–100px → 150–250ms; full-screen → 250–350ms. Travel scales down with frequency, up with ceremony.
-- **Tabs are peers: switching never slides** (sliding implies depth, paid dozens of times a session).
+- **Tab bars and bottom nav switch without sliding** (peers, not depth; paid dozens of times a session); swipeable top tabs track the finger laterally.
 - **Motion character** scales the duration tokens system-wide: still (only functional state changes), severe (×0.7–0.75), brisk (×0.85–0.9), calm (×1.0–1.3). A page spends at most three motion primitives — one reveal, one hover signal, one functional loop.
 
 Easing — built-in CSS curves are too weak; use strong custom curves:
@@ -77,17 +77,19 @@ choreography users wait through.
 3. **Speed.** Must fit the scale above.
 4. **Function.** Decoration on dense/functional UI hinders; a functional graph is better still.
 
-**Match on usage, not the nearest number.** Infer the usage (modal close, dropdown open, tooltip, page
-slide), then pick the tier whose usage matches: a "300ms modal close" belongs in the standard tier
-(~150ms) because it is a close, despite the number.
+**Match on usage, not the nearest number:** a "300ms modal close" belongs in the standard tier (~150ms)
+because it is a close.
 
 ## Physical correctness, press and hover
+
+Code: `frontend` `ui-motion.md` "Hover and press".
 
 - **Never animate from `scale(0)`** — start `scale(0.95–0.97)` + `opacity: 0`. Exception: a small icon swap (play→pause, copy→copied) cross-fades from scale 0.25 with a 4px blur over ~300ms, no bounce; tab and nav icons swap instantly.
 - **Origin-aware popovers:** scale from the trigger. **Modals are exempt — they stay `transform-origin: center`.** This exemption recurs everywhere; preserve it.
 - **Press feedback:** `scale(0.96)` on `:active`, ~150ms ease-out (range 0.95–0.98, **never below 0.95**); never on a disabled control; it survives reduced motion (feedback, not travel). *A design system may instead declare stillness — no press transform (nothing-design / dembrandt "component stability"); name which stance the system takes; do not mix.*
+- **Hold-to-confirm:** a linear fill over ~2s while pressed, snapping back in ~200ms ease-out on early release. A newly selected item may glow ~1s, then settles to a static style.
 - **Hover moves a child, never the target or a neighbour.** A self-translating card slips from under the cursor and flickers; hit areas stay the resting footprint (interaction.md). Delay hover-in previews only; leaving is immediate.
-- **Blur to mask an imperfect crossfade:** `filter: blur(2px)` during a two-state overlap reads as one transformation. Keep blur <20px (expensive, especially Safari); never on a plain fade or a theme change.
+- **Blur masks an imperfect crossfade:** `blur(2px)` during a two-state overlap reads as one transformation; keep blur <20px, never on a plain fade or theme change.
 - **Zoom in log space:** a scale over a ratio ≳1.6 runs `from·(to/from)^ease(p)` so equal time buys an equal ratio; a value-space tween visibly decelerates as it grows.
 - **A flash, pulse or shake is an event with an age:** 40–120ms attack with zero slope at onset, then exponential decay; never full in one frame; overlapping events add.
 - **Colour in motion:** distant hues pass through mud — keep it ~200ms, interpolated in OKLab. A new item may take the accent and cool to rest (hold ~0.3s, cool 0.2–0.5s); a label changes first, its colour a beat later.
@@ -106,11 +108,12 @@ Gesture phases, momentum and dismissal: choreography.md.
 
 ## Performance
 
-- **`transform` and `opacity` are the default** (they skip layout and paint). Bounded `filter`, `mask` or `clip-path` on an isolated region is allowed once measured smooth on a mid-range phone; `width/height/margin/padding/top/left`, `box-shadow` spread and `backdrop-filter` stay banned. Never `transition: all`.
-- **CSS animations beat JS under load** (CSS runs off the main thread; rAF loops stutter while the page loads). Use CSS/WAAPI for predetermined motion, JS/springs for dynamic/interruptible.
-- **Motion (Framer Motion) shorthands** `x`/`y`/`scale` are compositor-accelerated from v14.2; on older versions use the full `transform` string. `layout`/`layoutId`, `onUpdate`, inertia and anything driven per frame by a motion value stay on the main thread in every version — the motion that drops frames during navigation or hydration.
-- **CSS variables are inheritable:** driving a child's transform by setting a var on a parent recalcs every child; in a drawer with many items, set `element.style.transform` directly.
-- Pause offscreen loops; cap DPR/particles; hold 60fps on a mid-range phone. Code: `frontend` `ui-motion.md` "Motion performance traps"; scroll-linked: `scroll-animation`.
+`transform` and `opacity` are the default (they skip layout and paint). Bounded `filter`, `mask` or
+`clip-path` on an isolated region is allowed once measured smooth on a mid-range phone;
+`width/height/margin/padding/top/left`, `box-shadow` spread and `backdrop-filter` stay banned; never
+`transition: all`. Pause offscreen loops, cap DPR and particles, hold 60fps on a mid-range phone.
+Drivers, library behaviour and versions: `frontend` `ui-motion.md` "Motion performance traps";
+scroll-linked code: `scroll-animation`.
 
 ## Reduced motion
 
@@ -133,15 +136,14 @@ an infinite pulse, shimmer or glow on a persistent element → once, then static
 (charts, tables, counts) animates only to show a real change, never on every mount; a spinner or
 shimmer on an operation that resolves in <300ms reads as a glitch.
 
-Flag on sight: `transition: all`, `scale(0)`/pure-fade entrances, `ease-in`/weak easing on deliberate
-motion, animation on 100+/day actions, UI >300ms with no reason, `transform-origin: center` on a
+Flag on sight: `transition: all`, `scale(0)`/pure-fade entrances, `ease-in` on an entrance or on-screen move,
+weak easing, animation on 100+/day actions, UI >300ms with no reason, `transform-origin: center` on a
 trigger-anchored popover, keyframes on toasts/toggles, animating layout props, missing reduced-motion,
 symmetric enter/exit on press/hold. Named motion tells live here; general anti-default tells are in
 anti-defaults.md — do not restate them.
 
-**Auditing a codebase's motion:** map the stack, token homes, personality and a frequency tier per
-animated surface (it sets severity); sweep transitions, keyframes, motion props, `ease-in`,
-`transition: all`, `scale(0)`, `transform-origin` and reduced-motion handling; rank HIGH
-(feel-breaking) / MEDIUM (origin, non-interruptible, missing reduced motion) / LOW; confirm each at
-file:line; near-identical hand-typed curves are a token finding. Close with ≤4 missing moments and ≤5
-rejected candidates, each with the gate question that killed it.
+**Auditing a codebase's motion:** give each animated surface a frequency tier (it sets severity);
+rank HIGH (feel-breaking: ease-in on UI, motion on high-frequency UI, dropped frames) / MEDIUM (origin,
+non-interruptible, missing reduced motion) / LOW; close with ≤4 missing moments and ≤5 rejected
+candidates, each with the gate question that killed it. The code sweep: `frontend` `ui-motion.md`
+"Removing and importing motion".

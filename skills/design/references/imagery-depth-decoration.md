@@ -56,9 +56,8 @@ an inset rim-light + border. Don't animate layered shadows on large elements.
 opacity 8–30% (dark UI 6–12%); a 1px low-opacity white border is the edge; an inset top highlight is
 the glass. Max 2–3 glass elements per viewport; **never stack glass on glass** (legibility collapses);
 never animate `backdrop-filter`; ship a `-webkit-` prefix + `@supports not` solid fallback; drop blur to
-6–8px on mobile; check text against the *brightest* backdrop region. Needs a busy backdrop to read.
-Liquid-glass refraction (an SVG displacement over the frost, scale 8–14 subtle, 20–30 pronounced) is
-for one hero element only.
+6–8px on mobile; check text against the *brightest* backdrop region. Needs a busy backdrop to read;
+liquid-glass refraction belongs on one hero element only.
 
 **Grain / film noise** (highest ROI, kills gradient banding). SVG `feTurbulence` on an `::after`,
 `mix-blend-mode: overlay`, `pointer-events: none`, static (per-frame animation is expensive). Levers:
@@ -70,8 +69,8 @@ textured result. Untreated turbulence at these opacities is an invisible haze �
 specks with an `feColorMatrix` alpha row of about ×9 − 4; specks turn light on dark grounds.
 
 **Gradient glow (aurora).** Where the register earns it (step 2 above): stacked `radial-gradient`s + a
-`blur(60–100px)` over a dark base, desaturated and multi-point, animated slowly (15–30s) via
-**`transform` only**, with a reduced-motion off-switch. A single accent "spotlight" behind the headline
+`blur(60–100px)` over a dark base, desaturated and multi-point, and static — never animated (a slow
+drift is a busy background, and `filter`/`background` animation stutters). A single accent "spotlight" behind the headline
 is the tell, not the technique (anti-defaults.md).
 
 **Tactile surfaces.** Raised = a light-to-dark vertical gradient, a 1px edge bright on top and dark
@@ -90,8 +89,8 @@ foreground. Prefer a soft scroll-edge fade where content meets floating chrome o
 
 ## 3D tilt and scroll depth
 
-- **Tilt:** `perspective: 1200px` on the parent for a card (≈1,800–2,600px for a near-full-width panel; less distorts like a wide lens); angles **8–16°** (over-rotation reads as a 2010 app-store mockup); render the asset at 2×; disable on touch. A turned panel lands face-on at rest; light it from one key (rim on the facing edges, shadow away, in the ground's hue). Pointer tilt: ±~15° from pointer position, spring-smoothed, flat on leave; magnetic pull ≈ 0.6 × distance, fading to zero at ~100px; fine pointers only, never on functional data.
-- **Parallax / scroll depth:** pure CSS (`animation-timeline: scroll()` / `view()`), displacement small (≤ a few hundred px). `background-attachment: fixed` is broken on iOS. Never on text or critical content; always a `prefers-reduced-motion` kill-switch. Ken Burns: 12–20s pan-zoom via `translate3d`/`scale3d`, zoom ≤1.15 or faces distort. (Motion values: motion.md.)
+- **Tilt:** `perspective: 1200px` on the parent for a card (≈1,800–2,600px for a near-full-width panel; less distorts like a wide lens); angles **8–16°** (over-rotation reads as a 2010 app-store mockup); render the asset at 2×; disable on touch. A turned panel lands face-on at rest, lit from one key. Pointer tilt ±~15°, spring-smoothed, flat on leave; magnetic pull ≈ 0.6 × distance, zero by ~100px; fine pointers only, never on functional data.
+- **Parallax / scroll depth:** pure CSS (`animation-timeline: scroll()` / `view()`), displacement small (≤ a few hundred px). `background-attachment: fixed` is broken on iOS. Placement and kill-switch rules: choreography.md. Ken Burns: 12–20s pan-zoom via `translate3d`/`scale3d`, zoom ≤1.15 or faces distort. (Motion values: motion.md.)
 
 ## Image treatment and text over image
 
@@ -113,9 +112,7 @@ CLI and editorial/foundry → no imagery. An abstract background (gradient + gra
 archetype, not the aurora. **Deletion test per picture:** remove it — if the page loses no fact, it
 was mood (a city at night, a laptop on a desk). Below the hero, photographs carry about a quarter to a
 third of the page (more only on a photographic or portfolio shape) and never lead two sections in a
-row. Hero discipline: footprint 70–90% of the first viewport (`min-height: clamp(60vh, 75dvh,
-88dvh)`, not `100vh`), `padding-block-end ≥ 1.3× start`, one orchestrated reveal, max one polish move
-+ one enrichment. Video: `muted`/`loop`/`playsinline` + poster, `preload="metadata"` +
+row. Hero footprint and discipline: surface-website.md; max one polish move + one enrichment. Video: `muted`/`loop`/`playsinline` + poster, `preload="metadata"` +
 `fetchpriority="high"` (never `loading="lazy"` on a hero video), and a visible pause (accessibility.md).
 
 ## Decoration discipline and authenticity

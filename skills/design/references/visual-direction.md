@@ -4,10 +4,8 @@ Purpose: Decide the point of view before any craft — register and visitor mode
 concept or world, the one bold move, and the committed lane.
 
 Read when:
-- Starting a new surface, or a result reads generic, templated, or "AI-generated" (pair with
-  anti-defaults.md).
-- Choosing a register, change depth, concept, aesthetic lane, or accent strategy, or judging whether
-  a design is distinctive enough.
+- Starting a new surface, or choosing a register, change depth, concept, lane, or accent strategy.
+- Judging whether a design is distinctive enough (a full deslop or refuse-list → anti-defaults.md).
 
 Skip when:
 - The direction is already set and the task is executing one craft layer — go to typography,
@@ -18,8 +16,8 @@ Inputs:
 - Brief, audience, subject, and any brand assets or reference sites.
 
 Produces:
-- A design read, a named register and mode, the change depth, a concept or world, a direction
-  contract, the one bold move, a committed lane, and a refuse-list (from anti-defaults.md).
+- A design read, register and mode, change depth, concept or world, direction contract, one bold
+  move, and a committed lane.
 
 ## Contents
 
@@ -46,10 +44,9 @@ landing, pricing, campaign) and **Experience** (inside the work: portfolio, gall
 leads from the first viewport and the interface recedes). SERVES → **Operate** (finish a task;
 surface-webapp.md) and **Read** (understand: docs, articles, help, changelogs).
 
-**Read surfaces: frame vs column.** The world owns the frame (masthead, nav rail, ground, openers, how
-code, tables and callouts are set); the column stays calm — a reading face, 45–75 characters, ~16px,
-real contrast; mono only for code and parameters. Borrow from publishing (manuals, field guides,
-timetables). A page that reads as an artifact before a document has let the world into the column.
+**Read surfaces: frame vs column.** The world owns the frame (masthead, nav rail, ground, how code and
+callouts are set); the column stays calm — a reading face, 45–75 characters, ~16px, mono only for code.
+A page that reads as an artifact before a document has let the world into the column.
 
 ## Read the brief before generating
 
@@ -92,27 +89,24 @@ before that is now harder? Copy fidelity levels: information-architecture.md.
 ## Concept and world (is-the-product surfaces)
 
 **Derive the world, don't pick it.** State the mechanism in one sentence; name the category's default
-page *and* its predictable opposite (both are the rut; the brief's own metaphor gets one slot at most).
-List seven artifacts, places or rituals the audience knows by heart, each with why and how it looks;
-more than three from one material family means you stopped at the obvious. Operate and Read surfaces
-never borrow from the tools their users operate (it comes back as a costume).
+page *and* its predictable opposite (both are the rut). List seven artifacts, places or rituals the
+audience knows by heart; more than three from one material family means you stopped at the obvious.
+Operate and Read surfaces never borrow from the tools their users operate (it comes back as a costume).
 
 **A concept is a rule system borrowed from a world, not a style** ("the site is a contact sheet":
-strips, film advance, edge-print labels, loupe — not "dark minimal with WebGL"). A sentence that
-dictates fewer than four decisions (layout rule, motion verb, type voice, palette source, signature
-moment) is a style. Draft three from different territories (the name, the profession's material, place,
-process, one formal rule taken to the extreme); write each one's **anchor**, the real fact it depends on,
-then swap the subject — if it still works, it is generic. It must reach the footer, an inner page and
-the 404. Name one **motion verb** ("settle like paper"); every animation varies it.
+strips, film advance, edge-print labels — not "dark minimal with WebGL"); fewer than four decisions
+dictated (layout rule, motion verb, type voice, palette source, signature moment) means a style. Draft
+three from different territories; write each one's **anchor**, the real fact it depends on, then swap
+the subject — if it still works, it is generic. It reaches the footer and the 404. Name one **motion
+verb** ("settle like paper"); every animation varies it.
 
 ## Direction contract
 
 Before code, ~150 words: **THESIS** (the idea and the default it refuses) · **OWN-WORLD**
 (recognisable with the content removed) · **STORY** (what the visitor understands, believes, does) ·
-**FIRST VIEWPORT** (exact composition, scale, primary action) · **FINISH** (the exit condition). A block
-that reads like a mood is undecided. Run the validation checks on this plan ("would a generic model land
-here?"), revise each yes and record what changed. The review audits the render against it; it never
-ships in the artifact (comments, `data-*`, hidden DOM).
+**FIRST VIEWPORT** (composition, scale, primary action) · **FINISH** (the exit condition). A block that
+reads like a mood is undecided. Run the validation checks on it and record what changed; the review
+audits the render against it; it never ships in the artifact.
 
 ## One bold move + restraint
 
@@ -153,7 +147,11 @@ Re-pick a direction only on factual grounds, never taste.
 
 ## Validation checks
 
-Run on the plan, then on the render:
+**Predict, then refuse:** before designing, write the page this prompt gets without trying and its
+obvious twist; neither ships. The current AI cluster — justify it, never drift into it: cream + serif +
+terracotta (incl. the thin-serif italic-accent "tasteful default"); near-black + one acid accent;
+hairline broadsheet; flat ink + offset shadows; the identical-rounded-card SaaS kit. The full catalog
+with replacements: anti-defaults.md. Then run these on the plan, and again on the render:
 
 - **Swap** — swap your typeface/layout for the usual one; where nothing would feel different is where you defaulted.
 - **Squint** — blur the screen; hierarchy and the one focal point must survive.

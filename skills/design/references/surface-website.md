@@ -36,9 +36,10 @@ money/health/legal risk → proof leads, register conservative; lifestyle/presti
 proof always carries equal final weight. Never let aesthetics bury the phone number, the credentials,
 or the next step.
 
-**Per-vertical register cues:** finance = deep navy + crisp white, most conservative · law =
-navy/charcoal/burgundy/muted gold · healthcare = soft blues/greens/teal + white · luxury = mono/neutral
-+ gallery whitespace + slow motion + 1–2 type families (lane in visual-direction.md). Curation:
+**Per-vertical expectations** (finance navy + crisp white; law navy/charcoal/burgundy/muted gold;
+healthcare soft blues/greens/teal; luxury mono/neutral, gallery whitespace, slow motion): matching one
+is the category-standard choice (visual-direction.md), made on purpose for a conservative register —
+never by default; a hue picked only for the category is a tell (anti-defaults.md). Curation:
 architects ~8–25 projects; photographers ~15–40 (20-60-20 rule); artists 10–15.
 
 ## Section craft and hero discipline
