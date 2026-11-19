@@ -20,13 +20,15 @@ Produces:
 - A section sequence with each section's composition, the feeling curve with its named peak, and the
   chrome — every section backed by material the brief actually supplies.
 
+Numbers here are Restrained-lane defaults; the direction contract's dimensions override them; floors (marked by their basis) do not.
+
 ## Contents
 - Anatomy by visitor job
 - Macrostructures and fingerprints
 - Narrative: the question chain
 - Feeling curve
 - Section compositions
-- Repetition bans
+- Repetition defaults
 - The SaaS deck and pricing
 - Product, case-study and vertical pages
 - Navigation and footer
@@ -68,12 +70,12 @@ Stat-Led/Workbench/Long-Document · conference → Marquee-Hero/Manifesto/Photog
 **Six structural axes** (heading placement · body composition · divider language · button voice · image
 treatment · reveal); with the nav and the close counted too, no two pages share >3. Record each build's
 fingerprint (macro, lane, palette, type pair, hero posture, nav/footer) in system memory and compare the
-plan with **each** of the last three builds, not an average; a page that fails changes its plan, never
-the record. A recoloured or retuned effect is not a signature.
+plan with **each** of the last three builds, not an average — an anti-drift check on unintended
+sameness that breaks ties and never overrides brief fit; a repeat that fits is named in the contract. A recoloured or retuned effect is not a signature.
 
 ## Narrative: the question chain
 
-Landing pages carry **8 beats:** 1 Hook · 2 Problem empathy · 3 USP · 4 Value props · 5 Proof points ·
+A Persuade page answers the question chain; the **8 beats** are a checklist, not a sequence: 1 Hook · 2 Problem empathy · 3 USP · 4 Value props · 5 Proof points ·
 6 How it works · 7 Stakes · 8 CTA. Walk top to bottom and mark where each answer lands: *What is this?
 → Is it for me? → Why better? → Can I trust it? → How does it work? → How much effort? → What next?*
 Answering **early is also a defect** (pricing above the fold to someone still asking "what is this").
@@ -108,12 +110,12 @@ monthly/yearly; first state visible without script) · an **index** for 6–20 i
 · a **schedule** only for times a visitor plans around · an **offer** for the thing being bought.
 **Mass, not air:** a heading and a paragraph are a head block, never a section (layout-composition.md).
 
-## Repetition bans
+## Repetition defaults
 
-- A layout family appears at most once per page; 8 sections need ≥4 families. Max 2 consecutive image+text splits.
-- Eyebrows that pass the eyebrow test (anti-defaults.md): at most 1 per 3 sections, hero included — `count ≤ ceil(sectionCount / 3)`.
+- Persuade default: vary layout families (8 sections, ≥4 families; ≤2 consecutive image+text splits); Read, Letter and Long-Document repeat one on purpose.
+- Label eyebrows that pass the eyebrow test (anti-defaults.md): at most 1 per 3 sections — `count ≤ ceil(sectionCount / 3)`; fact-bearing kickers (section, date, status) are uncapped.
 - Split-header ("big headline left + small explainer right") is not a default; stack vertically.
-- One corner-radius scale and one page theme; no section inverts mid-scroll (exception: one deliberate colour-block story).
+- One corner-radius scale; alternating grounds is a lane device, not a ban.
 - **Each fact once, where it does work:** a price, time or count in four or more sections is filler; a section's last line never restates its heading. A figure row uses only numbers the brief states outright — "365 mornings" from "every day" is invented — and each stat carries its denominator and source ("18.4% trial→paid · 4,120 teams, 2025"). Steps only for a process the visitor really goes through.
 
 ## The SaaS deck and pricing
@@ -146,8 +148,7 @@ craft frames → outcome (real results only, else what shipped) → next project
 
 ## Navigation and footer
 
-Decide the chrome; don't inherit it. The default nav (wordmark left, links, button right, hairline) and
-footer (four columns, social row, copyright) are reflexes: choose instead an edge-aligned bar (wordmark
-and one action), a masthead, a slab or a search-led bar — a three-part bar only for four or more real
-destinations — and a mast, statement, colophon or letter-close footer; index columns only for a real
-sitemap. Sign-in is a quiet text link, never a second button. One action keeps one label everywhere.
+The conventional nav (wordmark left, links, primary action right) is the default for Persuade and
+Operate; an edge-aligned bar, masthead, slab or search-led bar is a lane choice for Experience and
+editorial surfaces. Footer: index columns for a real sitemap, else a mast, statement, colophon or
+letter close. Sign-in is a quiet text link, never a second button. One action keeps one label everywhere.

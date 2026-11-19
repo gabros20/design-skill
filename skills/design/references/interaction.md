@@ -79,7 +79,7 @@ One machine per concern; no impossible states (loading + error); every state has
 
 ## Laws that set defaults
 
-**Fitts:** the target is the interactive area, not the icon; keep destructive actions small and distant. **Hick:** reduce *simultaneous* choices; group before cutting; three pricing tiers. **Working memory is ~4±1 chunks (Cowan 2001)** — the "7±2" figure is a myth; cite chunking. Practical caps (top-level nav: information-architecture.md): ≤4 fields per group, ≤4 dashboard metrics; 3–5 named onboarding phases, not a raw step count.
+**Fitts:** the target is the interactive area, not the icon; keep destructive actions small and distant. **Hick:** reduce *simultaneous* choices; group before cutting; three pricing tiers. **Working memory is ~4±1 chunks (Cowan 2001)** — the "7±2" figure is a myth; cite chunking. It bounds what a person must hold or compare at once: ≤4 fields per group, ≤4 KPIs to compare; scanned displays (dense instruments) may hold more when grouped and labelled. Top-level nav: information-architecture.md; 3–5 named onboarding phases, not a raw step count.
 ## Attention devices
 
 **Isolation:** the single boldest colour goes only to the primary CTA and works only when the surroundings are consistent; it survives grayscale and all states. **One primary action per view;** more than three secondary actions go behind a menu. Show progress ("Step 2 of 3") on multi-step tasks. **Delight** is sized to frequency and stakes — routine actions should just feel certain; never fake work, delay completion or invent progress to stage a moment; no jokes near money, loss or privacy; it survives the 100th use; no sound without consent.

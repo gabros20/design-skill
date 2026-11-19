@@ -54,20 +54,21 @@ per action (Delete or Remove, never both) and one flow vocabulary (Get started �
 Destructive labels name the destruction and its scope ("Delete 5 items"); "Delete" is permanent,
 "Remove" recoverable. Match verbs to input (tap, click, or select when both); never mix "My…" and
 "Your…". Label toggles by what ON does ("Send read receipts" — a "Don't…" toggle is a double
-negative). Clickable text never wraps: buttons, primary nav and CTA labels stay one line from 320 to 1920px — shorten the label first. Link text stands alone; suffix every repeated "Learn more" ("Learn more about exports");
+negative). Buttons, primary nav and CTA labels default to one line from 320 to 1920px — shorten the label first; at zoom or in a long locale they wrap, never clip or truncate (WCAG 1.4.4, 1.4.10). Link text stands alone; suffix every repeated "Learn more" ("Learn more about exports");
 link to a referenced setting instead of narrating its menu path.
 
 ## Capitalization and length
 
 One capitalization system per product. Default sentence case everywhere, titles, buttons and labels
-included; Title Case only where the platform (Apple) or the brand's existing style sets it. ALL-CAPS:
-only overlines of 3 words or fewer, plus acronyms. A dropdown action item is a button
+included; Title Case only where the platform (Apple) or the brand's existing style sets it. ALL-CAPS by
+default only for overlines of 3 words or fewer and acronyms; tracked caps for nav and buttons is a lane
+choice (luxury, editorial), tracked +0.05–0.12em (typography.md). A dropdown action item is a button
 (sentence case); a button pointing to a named page keeps that page's case. Store copy in natural case
 and apply caps with `text-transform`. Numbers use numerals; dates and numbers format by locale (`frontend` `i18n.md` "`Intl` APIs and
 pluralization"), never a bare `8/5/2025`. Relative times ("3 hours ago") switch to an absolute date after about a week.
 
 Length tracks comprehension: 8 words or fewer is fully understood, 14 drops to about 90%, 25 is the
-cliff. Limits: buttons 2–4 words (15–25 chars), titles 3–6 words (~40 chars), errors 12–18 words
+cliff. Limits: buttons 1–3 words, 4 at most (15–25 chars), titles 3–6 words (~40 chars), errors 12–18 words
 including the fix, instructions 14 words ideal and 20 max, a UI copy line 40–60 chars (body measure is
 typography.md's).
 
@@ -137,8 +138,9 @@ three, persuasion on a sales page that stands on facts.
 
 ## Punctuation
 
-The em-dash is banned in UI strings, headlines, buttons, microcopy, and generated marketing or landing
-copy (a recognized AI tell); permitted only in long-form editorial prose the register demands.
+Reflex: the em-dash as connective tissue in generated copy (a recognized AI tell) — choose it, don't
+land on it. Use it where the voice chart allows, never several per paragraph; default none in UI
+strings and buttons.
 Required characters: curly quotes **in the locale's form** (de „…“, fr « … » with a narrow no-break
 space, set by `lang`), the ellipsis `…`, en dash for ranges (`9–5`), minus `−` in figures, `×` in
 dimensions, a no-break space binding number and unit ("12 kg"), and every diacritic in names. Automate

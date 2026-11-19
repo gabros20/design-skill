@@ -16,6 +16,8 @@ Inputs:
 Produces:
 - A grid, a spacing scale, a hierarchy with one focal point, and an alignment/elevation plan.
 
+Numbers here are Restrained-lane defaults; the direction contract's dimensions override them; floors (marked by their basis) do not.
+
 ## Contents
 
 - Grids
@@ -34,7 +36,7 @@ Produces:
 - **12-column base**: `repeat(12, minmax(0, 1fr))` — never bare `1fr` (it won't shrink below content min-size). **Columns by width:** <600px 4 columns, 16px gutter, 16–20px margin · 600–1023px 8 columns, 24px gutter, 32px margin · ≥1024px 12 columns, 24–32px gutter, margin ≥48px until the content cap. Components span whole columns; gutters stay fixed while columns flex.
 - **Bento**: 12-col + `grid-auto-flow: dense` (backfills gaps); limit 6–12 blocks; N items → exactly N cells (no empty cells); the tile mix that makes it one picture is in product-visuals.md.
 - **Equal-rank items get equal cells;** unequal tracks only where rank differs. Three-up is a tell when it is the page's only composition or content was forced to three (anti-defaults.md). Real metrics can sit as an editorial index, each at its own size and column.
-- **Break ~20% of the grid, not 100%** — keep at least one consistent edge/baseline or it reads as chaos.
+- **Default: break ~20% of the grid, not 100%** — keep at least one consistent edge/baseline or it reads as chaos.
 - **Ultra-wide cap**: primary content `max-width` 1280–1600px (1440 typical); full-bleed only for backgrounds/decoration (uncapped 4K → >75ch lines + neck movement).
 - Page-edge clipping: `overflow-x: clip` on both `html` and `body` (not `hidden` — `clip` preserves sticky/fixed).
 
@@ -43,14 +45,14 @@ Produces:
 - **4pt or 8pt base**; all margins/paddings/gaps are multiples exposed as named tokens (`--space-2xs`…`--space-4xl`), **~6–9 rungs**, not every 4px. A common scale: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96.
 - **`gap` over margins** for siblings; `margin` only for optical or break-out cases (`frontend` `web-platform-css.md` "Margin collapse").
 - Two scales: **micro** (line-height, padding, gaps) and **macro** (between sections). Section vertical padding often `clamp(4rem, 10vw, 10rem)`.
-- The Linear/Stripe/Vercel rule: **"take the spacing that feels like enough, then double it."** Tight within a group (8–16px), generous between groups (48–96px); alternate dense and open sections for cadence — a monotone of one gap everywhere is "the sound of no one deciding." A heading binds downward: more space above it than below.
-- **Mass, not air** (the under-fill failure "double it" can cause): a heading and a paragraph are a head block, never a section — each section body carries mass (a visual ≥~360px tall, a set of 3–4 across, a list or table of ≥3 rows, or a statement at section-head size) and its widest row spans ~10 of 12 columns. Space is earned by mass: a 144px gap frames a 700px section and is a hole under a 200px one; an empty-looking page wants a bigger head or visual, never a smaller gap or more copy. Fail at 1440: content fills <½ its section, or a >160px dead band sits between the hero's content and the fold.
+- **Spacing is a density dimension:** airy lanes take the spacing that feels like enough, then double it; workbench density holds 12–16px. Tight within a group (8–16px), generous between groups (48–96px in airy lanes); alternate dense and open sections for cadence — a monotone of one gap everywhere is "the sound of no one deciding." A heading binds downward: more space above it than below.
+- **Mass, not air** — under-fill is a defect only where the lane promises mass (quiet-luxury and Ma lanes spend air on purpose). There a section body carries mass (a visual ≥~360px, a set of 3–4, a list of ≥3 rows, or a statement at section-head size), and space is earned by it: a 144px gap frames a 700px section and is a hole under a 200px one — fix with a bigger head or visual, not a smaller gap or more copy. Signs at 1440: content fills <½ its section, or a >160px dead band above the fold.
 - **Control clearance:** 12px between bordered or filled controls, 24px between the glyphs of borderless text/icon buttons (space is their only boundary), ≥24px between unrelated groups.
 - **No near-tangents:** edges 1–3px apart read as an accident — align exactly or separate by ≥8px. Words keep ≥12px from a window, card or row edge; a title sits 4–6px of ink above its subtitle; dots and badges sit fully inside the content edge.
 
 ## Hierarchy
 
-- **Exactly one focal point per view/section** — name it before building, make it win by size/contrast/position/surrounding space, and demote everything else deliberately. Promotion without demotion isn't hierarchy.
+- **One focal point per view by default** (index and catalogue grids are equal-rank by design) — name it before building, make it win by size/contrast/position/surrounding space, and demote everything else deliberately. Promotion without demotion isn't hierarchy.
 - **Levers**: size, weight, color/opacity, whitespace, scan position — combine 2–3, never size alone. **Weight + color do more than size:** one 14px size holds three tiers (`value 600/primary`, `label 500/secondary`, `meta 400/muted`).
 - **Grayscale first, color last;** contrast the primary hard — the contrast *is* the hierarchy. **Squint test**: if headline, body and label blur together, hierarchy is too weak.
 - **Scanning:** unstructured text gets an F-scan — the right side and lower lines go unread. Defeat it: a heading or bold lead every 3–5 lines, the information-carrying word first in every heading, link and list item, and the action where the content that motivates it ends.
@@ -90,7 +92,7 @@ Every repeated element (card, row, tile, KPI, result) is a **fixed slot model**:
 2. Establish hierarchy in **grayscale**; add color last.
 3. Type scale per typography.md.
 4. Set spacing as relationships (proximity), on one scale.
-5. Snap to a 12-col grid with one shared left edge.
+5. Snap to the lane's grid (12 by default; editorial 3–5; Swiss asymmetric) with one shared left edge.
 6. Spend **one bold move**, keep the rest quiet (see visual-direction).
 7. Run the refinement checklist before shipping.
 

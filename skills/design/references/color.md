@@ -17,6 +17,8 @@ Inputs:
 Produces:
 - An OKLCH token set (paper/ink/neutrals/accent + semantic + surfaces), verified for contrast and gamut.
 
+Numbers here are Restrained-lane defaults; the direction contract's dimensions override them; floors (marked by their basis) do not.
+
 ## Contents
 - Why OKLCH; syntax
 - Palette construction (4 layers + deterministic ramp)
@@ -47,10 +49,10 @@ browsers later than `oklch()` — verify current support); ship a hex fallback u
 
 - **Paper** (background): `oklch(0.96–0.98 0.005–0.015 H)` / `oklch(0.12–0.16 0.008–0.015 H)`.
 - **Ink** (body text): `oklch(0.16–0.22 …)` / `oklch(0.92–0.96 …)`.
-- **Neutrals:** 5–9 steps, each tinted ≥0.005 chroma toward the anchor hue (never flat gray).
-- **Accent:** one saturated color, chroma 0.12–0.22, occupying ≤3–5% of the viewport.
+- **Neutrals:** 5–9 steps, by default tinted ≥0.005 chroma toward the anchor hue; achromatic grey where colour judgement matters (photo, art, colour tools) or the lane is Swiss/Rams.
+- **Accent:** one saturated color, chroma 0.12–0.22; Restrained (default) keeps it ≤5% as fill — Committed, Full and Drenched lift the cap (strategy axis below).
 
-Bans: zero-chroma gray; accent as a fill >5%; gray text on a color; alpha standing in for an
+Defaults: no gray text on a color; no alpha standing in for an
 undefined color ("alpha is a design smell" — define explicit overlay colors). Pure `#000`/`#fff` halate
 on large light-on-dark text fields, so near-black/off-white is the default there; pure black and white
 stay legitimate in a lane that commits to them (Swiss, gallery-dark, high-contrast), and a reflexive
@@ -104,7 +106,7 @@ doesn't force the decision, add detail until it does. Dark/light is never a defa
 **Distribution: 60-30-10 is visual weight, not pixel count** — 60% dominant neutral surface, 30%
 secondary text/surfaces, 10% accent. Vivid works *because* it is rare; multiple accents read as the
 "AI gradient" look. Fit the accent's L to its ground: light paper 0.43–0.67, mid-dark slate 0.74–0.84,
-near-black 0.63–0.85; below C 0.08 it reads grey; yellow works only on dark.
+near-black 0.63–0.85; below C 0.08 it reads grey; yellow as text needs a dark ground; as a fill it takes ink text.
 
 ## State derivation
 

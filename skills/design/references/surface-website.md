@@ -17,6 +17,8 @@ Skip when:
 Inputs: brief (niche, ideal client, the page's one job), brand assets, register decision.
 Produces: dial setting, section-by-section craft, hero spec, phone composition, finish list, anti-boring pass.
 
+Numbers here are Restrained-lane defaults; the direction contract's dimensions override them; floors (marked by their basis) do not.
+
 ## Contents
 - The premium↔information dial
 - Section craft and hero discipline
@@ -33,7 +35,7 @@ credentials, case results, social proof by the CTA).
 **Don't blend — sequence:** restrained emotional hero → progressively denser proof as the visitor
 self-qualifies → low-friction action. **Set the dial by stakes and emotion, not taste:** higher
 money/health/legal risk → proof leads, register conservative; lifestyle/prestige → premium can lead;
-proof always carries equal final weight. Never let aesthetics bury the phone number, the credentials,
+on Persuade pages proof carries equal final weight; on Experience surfaces the work is the proof. Never let aesthetics bury the phone number, the credentials,
 or the next step.
 
 **Per-vertical expectations** (finance navy + crisp white; law navy/charcoal/burgundy/muted gold;
@@ -48,9 +50,10 @@ A boring section is one flat plane (text + image-square on solid fill). A great 
 (≥2 Z-planes), **tension** (asymmetry/scale contrast), and **one deliberate move**. **Cardinal rule:
 one or two devices per section, executed precisely — never all at once.**
 
-**Anti-boring checklist (run every section)** — MUST be yes: depth (≥2 planes or one unifying
-texture/glow/shadow) · one focal point (squint) · a contrast move · one signature · grayscale test
-passes · spacing system · quality floor. MUST be no: centered-everything · three identical cards as the
+**Anti-boring pass (Persuade default)** — skip any line the lane's fail-if list overrides (flat in
+Swiss/Rams; centred symmetry in quiet luxury, ceremonial and hospitality). Yes: depth (≥2 planes or one
+unifying texture/glow/shadow) · one focal point · a contrast move · one signature · grayscale test ·
+spacing system. No: centered-everything · three identical cards as the
 only idea · same rhythm every section · weak heading↔body contrast · `01/02/03` on non-sequences · more
 than two bold moves fighting.
 
@@ -60,18 +63,19 @@ bottom-left/right over image, stacked-center, image-as-canvas, off-grid editoria
 plus three from the job: **Counter** (the action is the visual — the subscribe field beside the latest
 issue, the next booking times, the buy box set large), **Index** (the content list is the visual — the
 lineup, the menu), **Banner** (50–60% tall so the first section shows; docs, references, utilities).
-Use ≥3 different anchors per site; never the same anchor >2 sections in a row, never the same
-background mode >3 in a row.
+Default ≥3 anchors on a Persuade site, the same anchor ≤2 sections in a row; a lane whose concept is
+repetition records it in the contract.
 
-**Hero discipline:** hero fits the initial viewport (`min-height: clamp(60vh, 75dvh, 88dvh)`,
-footprint 70–90%, not `100vh`); headline ≤2 lines desktop; subtext ≤20 words and ≤3–4 lines; CTAs
+**Persuade-hero default:** fits the initial viewport (`min-height: clamp(60vh, 75dvh, 88dvh)`,
+footprint 70–90%); full-viewport heroes use `dvh`/`svh`, never `100vh` (iOS toolbar); headline ≤2 lines desktop; subtext ≤20 words and ≤3–4 lines; CTAs
 visible without scroll; hero top padding max `pt-24`; **max 4 hero text elements** (brand strip or a
-passing label, headline, subtext, primary CTA + max one secondary). Banned in hero: decorative tagline
+passing label, headline, subtext, primary CTA + max one secondary). Default out of the hero: decorative tagline
 below CTAs (one line answering commitment or cost — "14 days, no card" — is part of the CTA), trust
-micro-strip, pricing teaser, feature bullets, avatar row, version labels. A logo wall lives UNDER the
+micro-strip, feature bullets, avatar row, version labels; price, rating and proof belong in it when the
+visitor's job is *buy*. A logo wall lives UNDER the
 hero.
 
-**Screen budget:** about 80 words per 900px window at 1440, labels included; the first screen holds at
+**Screen budget (Persuade default; index and news fronts budget by scan):** about 80 words per 900px window at 1440, labels included; the first screen holds at
 most six things (nav, one proof line, headline, one sentence, one CTA group, one visual) and no more
 than about four compete anywhere. Fill a thin screen with scale or a picture, never more copy. **Fold
 checks:** at 1280×800 the headline, sentence, primary action and the visual's focal point are visible;
@@ -100,7 +104,7 @@ visibly disabled); one aspect-ratio family, one image reveal and one image hover
 WebGL shader/liquid backgrounds, canvas particle systems, custom lerping cursors (the lag is the premium
 feel), View Transitions, generative accents. Discipline: **one signature moment, not twenty.** Propose
 2–3 ambitious directions with their cost (support, performance, complexity) before building any;
-lazy-init; hold 60fps on mid-range; provide a static reduced-motion fallback; gate cursor effects
+lazy-init; hold 60fps on mid-range; scroll-driven scenes advance by keyboard scroll and never trap focus (WCAG 2.1.1, 2.1.2); provide a static reduced-motion fallback; gate cursor effects
 behind `@media (hover: hover)`. Over a 3D or moving hero, the headline and CTA read within ~3s.
 
 **Judged on the public jury weights** — Design 40%, Usability 30%, Creativity 20%, Content 10% (re-check

@@ -41,7 +41,7 @@ Map real-world concepts before the product. Don't resolve contradictions — **r
 
 ## Naming is design
 
-Use the user's vocabulary, not the engineer's; name actions by their effect ("Archive", not "Hide"). **Hard ceiling ~10 invented terms** for the whole product — fewer is better; translate internal shorthand ("recon job", "P2 ticket") at the customer boundary. **Button labels: 1 word ideal, 2 fine, 3 max**; titles and headings carry the fuller story. Placement tells half the story. Plain labels beat clever ones on every usability metric.
+Use the user's vocabulary, not the engineer's; name actions by their effect ("Archive", not "Hide"). **Hard ceiling ~10 invented terms** for the whole product — fewer is better; translate internal shorthand ("recon job", "P2 ticket") at the customer boundary. **Button labels: length per content.md (1–3 words)**; titles and headings carry the fuller story. Placement tells half the story. Plain labels beat clever ones on every usability metric.
 
 ## Sitemap
 

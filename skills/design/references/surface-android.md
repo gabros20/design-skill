@@ -32,7 +32,7 @@ Material 3 governs; brand comes through theming. The slop tell is an iOS app in 
 
 ## Dynamic color and color roles
 
-**Dynamic color is the default on Android 12+** (`dynamicLightColorScheme` / `dynamicDarkColorScheme`, derived from wallpaper). Provide a static fallback below Android 12. Never hardcode hex — reference color roles; test with ≥3 wallpapers; generate custom palettes from a seed via Material Theme Builder, never hand-picked tones. Baseline seed = `#6750A4`.
+**Dynamic color is the default on Android 12+** (`dynamicLightColorScheme` / `dynamicDarkColorScheme`, derived from wallpaper). Provide a static fallback below Android 12. Always reference color roles, never hardcoded hex (M3); test with ≥3 wallpapers. Default dynamic colour with a seeded scheme (Material Theme Builder); a brand may supply its own seeded or hand-tuned scheme if every role pair passes contrast. Baseline seed = `#6750A4`.
 
 **Color roles are semantic**, each with a matching `on-` role: `primary`/`onPrimary`, `primaryContainer` (same for secondary, tertiary); `error` family is **static** (does not change with dynamic color); `surface`, `surfaceVariant`, and `surface-container-{lowest,low,container,high,highest}` + `surface-dim`/`surface-bright`; `outline` (important 3:1 boundaries, text-field borders) vs `outline-variant` (dividers/decorative — never swap them); `inverseSurface` = snackbar background; `secondaryContainer` = navigation active indicator. Never use `primary`/`secondary` as large backgrounds — use `surface`. Fill → text pairs only (`primaryContainer` → `onPrimaryContainer`); pairing outside the intended pair breaks contrast under dynamic/high-contrast.
 

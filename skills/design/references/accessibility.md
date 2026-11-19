@@ -36,7 +36,7 @@ Produces:
 
 Contrast is always foreground vs the background it actually sits on (nearest parent's background;
 for text over an image, the worst region under the text). **Every pair passes WCAG 2 AA — that is
-the gate** (EN 301 549, Section 508 and ADA rules cite WCAG 2.x; WCAG 3 is a draft). APCA is a second,
+the gate**, except logotypes, pure decoration and inactive controls (1.4.3) (EN 301 549, Section 508 and ADA rules cite WCAG 2.x; WCAG 3 is a draft). APCA is a second,
 stricter lens for body text, thin weights and dark mode, where WCAG 2 misjudges; where they disagree,
 satisfy both.
 
@@ -48,7 +48,7 @@ satisfy both.
 
 **APCA lens** (Lc is signed; compare the absolute value): body and column text **75** (aim 90) · other
 text — labels, headings **60** · large text (≥36px, or ≥24px bold) and fine-line icons **45** · solid
-icons, controls, focus rings **30** · dividers **15**. Body copy at Lc 60 is a fail.
+icons, controls, focus rings **30** · dividers **15**. Body text missing Lc 75: raise the L gap.
 
 - **Fix contrast by moving lightness only** (OKLCH; hold C and H). Guide: on a light bg (L > 0.85)
   foreground L < 0.45; on a dark bg (L < 0.25) foreground L > 0.75 — then measure.

@@ -53,7 +53,7 @@ thick legibility-first glass for AI/agent web apps (surface-webapp.md "Solid Gla
 ## Navigation and reserved gestures
 
 - **Tab bar at the bottom for 2–5 top-level sections** (use a "More" tab if >5) — tabs are places, never actions, and switching never slides. Labels 10pt; filled SF Symbol = selected, outline = unselected. Each tab remembers its own nav state; tapping the active tab returns to that tab's root. Never hide the tab bar navigating deeper.
-- **Never use a hamburger/drawer menu** — iOS users expect tab bars.
+- **Default the tab bar for 2–5 sections;** a drawer only past ~5 peers, never for primary actions.
 - Back-button label = the *previous screen's title*, not "Back". Use `NavigationStack` (not deprecated `NavigationView`); large titles collapse to inline on scroll.
 - **Reserved system gestures — never override:** swipe-from-left-edge (back), swipe-down on a modal (dismiss), pull-down on a list (refresh), swipe-left on a row (actions), pinch (zoom), long-press (context menu), plus the top-corner Notification/Control Center and bottom home/app-switcher swipes.
 
@@ -79,7 +79,7 @@ For durations and easing, use the canon in motion.md. Apple **fluid-interface** 
 
 ## Permissions
 
-Request **just-in-time at the action**, never at launch. Show a **custom pre-permission priming screen** *before* the system dialog (the system prompt appears only once); "Maybe Later" avoids triggering a system denial — wait **≥3 days** before re-showing. Usage string = "[App name] [action] to [user benefit]." Offer **Sign in with Apple** first if any third-party sign-in exists. Use **PHPicker** (photos) and **CNContactPicker** (contacts) — no permission required. Request `.whenInUse` before `.always`; request notifications after the user has seen value. After denial, deep-link to Settings.
+Request **just-in-time at the action**, never at launch. Show a **custom pre-permission priming screen** *before* the system dialog (the system prompt appears only once); "Maybe Later" avoids triggering a system denial — wait **≥3 days** before re-showing. Usage string = "[App name] [action] to [user benefit]." When a third-party login sets up the primary account, also offer an equivalent privacy-focused login (App Store 4.8) — Sign in with Apple qualifies. Use **PHPicker** (photos) and **CNContactPicker** (contacts) — no permission required. Request `.whenInUse` before `.always`; request notifications after the user has seen value. After denial, deep-link to Settings.
 
 ## iPad adaptivity
 

@@ -19,6 +19,8 @@ Inputs:
 Produces:
 - Motion tokens (duration/easing/spring, motion character) and a per-moment reduced-motion spec.
 
+Numbers here are Restrained-lane defaults; the direction contract's dimensions override them; floors (marked by their basis) do not.
+
 ## Contents
 - Canonical scale (durations, character, easing)
 - The gate: should it animate?
@@ -45,13 +47,13 @@ Durations, keyed by what the motion does (not by pixel count alone):
 - **80ms is the "instant" threshold**; a press/toggle can be 0ms and often should be. **The focus ring is never animated** — it appears in full the frame focus lands.
 - **Duration by distance** (within a tier): 8–16px → 100–150ms; 50–100px → 150–250ms; full-screen → 250–350ms. Travel scales down with frequency, up with ceremony.
 - **Tab bars and bottom nav switch without sliding** (peers, not depth; paid dozens of times a session); swipeable top tabs track the finger laterally.
-- **Motion character** scales the duration tokens system-wide: still (only functional state changes), severe (×0.7–0.75), brisk (×0.85–0.9), calm (×1.0–1.3). A page spends at most three motion primitives — one reveal, one hover signal, one functional loop.
+- **Motion character** scales the duration tokens system-wide: still (only functional state changes), severe (×0.7–0.75), brisk (×0.85–0.9), calm (×1.0–1.3). Motion intensity is a dimension: a Restrained page spends ≤3 primitives (one reveal, one hover signal, one functional loop); a cinematic lane commits a vocabulary under one motion verb.
 
 Easing — built-in CSS curves are too weak; use strong custom curves:
 
 - **Entrances: ease-out** (expo/quart/quint family). Fast in, settle. `ease-out` at 200ms *feels* faster than `ease-in` at 200ms because it front-loads the moment the user watches.
 - **Exits:** a short UI dismissal (popover, menu, toast) **eases out** too, so it moves the instant it is triggered; **ease-in only for an element travelling off-screen** (accelerating away). **On-screen movement / morph: ease-in-out.** **Loops, progress, and fills that visualise time: linear.**
-- **Never `ease-in` on UI entrances; never `linear` for UI movement.** Both read as blocks in review.
+- **Never `ease-in` on UI entrances; never `linear` for *timed* UI movement** (scroll-scrubbed motion maps linear — the scroll is the easing). Both read as blocks in review.
 
 ```css
 --ease-out-expo:   cubic-bezier(0.16, 1, 0.3, 1);
@@ -63,8 +65,8 @@ Easing — built-in CSS curves are too weak; use strong custom curves:
 
 A floating drawer that touches no edge is a standard-tier ~200ms motion, not `--ease-drawer`. The
 curves are a palette, not a per-element free-for-all: **commit to at most 3 easing curves system-wide**
-(typically one ease-out, one ease-in-out, one exit). **Bounce/overshoot is reserved for gesture-driven
-physical interactions** (drag-release, throw, toggle); a bouncy modal or hover reads dated.
+(typically one ease-out, one ease-in-out, one exit). **Default no overshoot** outside gesture-driven physics (drag-release,
+throw, toggle) in Restrained lanes; Expressive and playful lanes use spatial overshoot, never on colour or opacity.
 
 ## The gate: should it animate?
 
@@ -85,25 +87,24 @@ because it is a close.
 
 Code: `frontend` `ui-motion.md` "Hover and press".
 
-- **Never animate from `scale(0)`** — start `scale(0.95–0.97)` + `opacity: 0`. Exception: a small icon swap (play→pause, copy→copied) cross-fades from scale 0.25 with a 4px blur over ~300ms, no bounce; tab and nav icons swap instantly.
+- **Default: start from `scale(0.95–0.97)` + `opacity: 0`**, not `scale(0)`; small badges and dots may grow from 0. Exception: a small icon swap (play→pause, copy→copied) cross-fades from scale 0.25 with a 4px blur over ~300ms, no bounce; tab and nav icons swap instantly.
 - **Origin-aware popovers:** scale from the trigger. **Modals are exempt — they stay `transform-origin: center`.** This exemption recurs everywhere; preserve it.
 - **Press feedback:** `scale(0.96)` on `:active`, ~150ms ease-out (range 0.95–0.98, **never below 0.95**); never on a disabled control; it survives reduced motion (feedback, not travel). *A design system may instead declare stillness — no press transform (nothing-design / dembrandt "component stability"); name which stance the system takes; do not mix.*
 - **Hold-to-confirm:** a linear fill over ~2s while pressed, snapping back in ~200ms ease-out on early release. A newly selected item may glow ~1s, then settles to a static style.
-- **Hover moves a child, never the target or a neighbour.** A self-translating card slips from under the cursor and flickers; hit areas stay the resting footprint (interaction.md). Delay hover-in previews only; leaving is immediate.
+- **Hover may move the visual, never the hit area** — it stays the resting footprint (interaction.md), or the card slips from under the cursor and flickers; never push a neighbour. Delay hover-in previews only; leaving is immediate.
 - **Blur masks an imperfect crossfade:** `blur(2px)` during a two-state overlap reads as one transformation; keep blur <20px, never on a plain fade or theme change.
 - **Zoom in log space:** a scale over a ratio ≳1.6 runs `from·(to/from)^ease(p)` so equal time buys an equal ratio; a value-space tween visibly decelerates as it grows.
-- **A flash, pulse or shake is an event with an age:** 40–120ms attack with zero slope at onset, then exponential decay; never full in one frame; overlapping events add.
-- **Colour in motion:** distant hues pass through mud — keep it ~200ms, interpolated in OKLab. A new item may take the accent and cool to rest (hold ~0.3s, cool 0.2–0.5s); a label changes first, its colour a beat later.
+- **A flash, pulse or shake has an age:** 40–120ms attack from zero slope, then exponential decay; overlapping events add.
+- **Colour in motion:** distant hues pass through mud — ~200ms, in OKLab; a new item may take the accent and cool to rest (hold ~0.3s, cool 0.2–0.5s).
 
 ## Springs
 
-Springs simulate physics with no fixed duration — for drag with momentum, "alive" elements,
-interruptible gestures. Prefer the two designer-friendly Apple params over mass/stiffness/damping:
+Springs have no fixed duration — for momentum, "alive" elements, interruptible gestures. Use Apple's two params:
 
 - **Damping ratio** (overshoot): 1.0 = critically damped, no bounce; <1.0 overshoots. Most UI = 1.0; Motion's `bounce: 0` is the house default.
-- **Response** (how fast it reaches target, in seconds; not "duration"). Add bounce (~0.8 damping) only when the gesture carried momentum. Apple values: move/reposition 1.0 / 0.4; rotation 0.8 / 0.4; drawer 0.8 / 0.3. Keep bounce subtle (0.1–0.3).
+- **Response** (seconds to reach target). Bounce (~0.8 damping) only after a momentum gesture. Apple values: move/reposition 1.0 / 0.4; rotation 0.8 / 0.4; drawer 0.8 / 0.3. Keep bounce subtle (0.1–0.3).
 - **Copied a physics-form spring? Convert first:** ζ = damping ÷ (2√(stiffness × mass)). `stiffness 300, damping 20` is ζ≈0.58, a visible bounce; content and UI springs stay ζ ≥ ~0.9.
-- **Two clocks** (pointer-driven figures and visuals). A discrete change (which part) gets a timed ease-out (~700ms on `--ease-drawer`); a continuous input (where the pointer is) gets a spring (stiffness 100, damping 18 ≈ ζ 0.9), because its target moves every frame. Pointer follow: `x += (target − x)·(1 − e^(−dt/τ))`, τ 0.1–0.3s, dt clamped to 1/30s.
+- **Two clocks** (pointer-driven visuals): a discrete change gets a timed ease-out (~700ms, `--ease-drawer`); a continuous input gets a spring (stiffness 100, damping 18 ≈ ζ 0.9) since its target moves every frame. Pointer follow: `x += (target − x)·(1 − e^(−dt/τ))`, τ 0.1–0.3s, dt clamped to 1/30s.
 
 Gesture phases, momentum and dismissal: choreography.md.
 
@@ -145,7 +146,7 @@ symmetric enter/exit on press/hold. Named motion tells live here; general anti-d
 anti-defaults.md — do not restate them.
 
 **Auditing a codebase's motion:** give each animated surface a frequency tier (it sets severity);
-rank HIGH (feel-breaking: ease-in on UI, motion on high-frequency UI, dropped frames) / MEDIUM (origin,
-non-interruptible, missing reduced motion) / LOW; close with ≤4 missing moments and ≤5 rejected
+rank HIGH (auto-motion >5s with no pause, WCAG 2.2.2; vestibular-scale motion with no reduced path; ease-in on UI; motion on
+high-frequency UI; dropped frames) / MEDIUM (origin, non-interruptible, a small fade with no reduced path) / LOW; close with ≤4 missing moments and ≤5 rejected
 candidates, each with the gate question that killed it. The code sweep: `frontend` `ui-motion.md`
 "Removing and importing motion".
