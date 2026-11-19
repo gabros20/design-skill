@@ -60,7 +60,7 @@ Purchase/checkout: collect only what each stage requires; keep a persistent orde
 
 **Refuse deceptive patterns — a floor, never waived:** cancelling takes no more steps than signing up,
 in the same channel; decline is as visible as accept, on the same layer (consent banners included);
-nothing consent-like or paid is pre-ticked; the full price with fees shows before the commitment step;
+nothing consent-like (GDPR) or paid is pre-ticked; the full price with fees shows before the commitment step;
 no countdown, stock or "3 people viewing" claim without live data behind it; no guilt-worded decline
 ("No thanks, I like paying more"); a trial states the charge date and amount before card entry and
 reminds before charging. When a brief asks for one, name the pattern, state the risk, and offer the

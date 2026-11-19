@@ -112,8 +112,8 @@ Gesture phases, momentum and dismissal: choreography.md.
 
 `transform` and `opacity` are the default (they skip layout and paint). Bounded `filter`, `mask` or
 `clip-path` on an isolated region is allowed once measured smooth on a mid-range phone;
-`width/height/margin/padding/top/left`, `box-shadow` spread and `backdrop-filter` stay banned; never
-`transition: all`. Pause offscreen loops, cap DPR and particles, hold 60fps on a mid-range phone.
+`width/height/margin/padding/top/left`, `box-shadow` spread and `backdrop-filter` stay banned, and never
+`transition: all` (perf: rendering cost). Pause offscreen loops, cap DPR and particles, hold 60fps on a mid-range phone.
 Drivers, library behaviour and versions: `frontend` `ui-motion.md` "Motion performance traps";
 scroll-linked code: `scroll-animation`.
 

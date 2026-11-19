@@ -109,5 +109,5 @@ built from the mark's own construction.
 A wordmark is commercial trademark use: confirm the font licence permits logo use (SIL OFL generally
 does; many free fonts are personal-use only), check glyph coverage for every brand language plus
 `@ & ’`, numerals and currency, and outline the letters — the brand typefaces still need licences for
-everyday use. Never claim trademark clearance; recommend a trademark-database and reverse-image search.
+everyday use. Never claim trademark clearance (legal); recommend a trademark-database and reverse-image search.
 For a redesign, audit equity first (visual-direction.md) and keep the strongest anchor.

@@ -33,7 +33,7 @@ Every coded design artifact carries exactly one label, stated up front:
 | Design reference | demonstrates behavior or appearance; engineers reimplement it in the codebase's own patterns | guide implementation; not copied verbatim |
 | Production candidate | may be adopted after engineering, accessibility, testing, and architecture review | enter engineering review |
 
-No label is production-ready before implementation and quality validation. Never imply production readiness without that review. This label is the single most important line in a prototype handoff.
+No label is production-ready before implementation and quality validation. Never imply production readiness without that review (honesty). This label is the single most important line in a prototype handoff.
 
 ## Fidelity: match the question, not the deadline
 

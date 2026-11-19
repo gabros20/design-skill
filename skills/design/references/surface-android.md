@@ -28,7 +28,7 @@ Material 3 governs; brand comes through theming. The slop tell is an iOS app in 
 
 ## Fonts and units (Roboto exception)
 
-**Roboto / Roboto Flex IS the correct default in Material 3** — this overrides the general "avoid Roboto" advice (ruling 2). Roboto Flex axes: wght 100–1000, wdth 25–151, opsz 8–144. Two typeface roles: Brand (Display + Headline) and Plain (Title + Body + Label), both default Roboto. Always use **`sp` for text** (never `dp`).
+**Roboto / Roboto Flex IS the correct default in Material 3** — this overrides the general "avoid Roboto" advice (ruling 2). Roboto Flex axes: wght 100–1000, wdth 25–151, opsz 8–144. Two typeface roles: Brand (Display + Headline) and Plain (Title + Body + Label), both default Roboto. Always use **`sp` for text** (never `dp`; M3).
 
 ## Dynamic color and color roles
 
@@ -68,7 +68,7 @@ Use window size classes, not raw pixels — breakpoints **600 / 840 / 1200 / 160
 - **Expanded 840–1199dp** (tablet landscape/desktop) — 24dp / 24dp / 12 col.
 - **Large 1200–1599dp / Extra-large 1600dp+** — cap content, prefer list-detail/panes over spanning.
 
-Max content width ~840dp on expanded (or list-detail); don't span full width. **Edge-to-edge is enforced on Android 15+** (`enableEdgeToEdge()`; `Scaffold` handles insets). Foldables: `ListDetailPaneScaffold` / `SupportingPaneScaffold`; never place critical content across the hinge; test folded, open and tabletop. Base spacing = 4dp grid.
+Max content width ~840dp on expanded (or list-detail); don't span full width. **Edge-to-edge is enforced on Android 15+** (`enableEdgeToEdge()`; `Scaffold` handles insets). Foldables: `ListDetailPaneScaffold` / `SupportingPaneScaffold`; never place critical content across the hinge (M3); test folded, open and tabletop. Base spacing = 4dp grid.
 
 ## Navigation matrix and predictive back
 
@@ -82,7 +82,7 @@ Navigation Bar: bottom, 80dp, elevation L2, **always show labels** (icon-only no
 
 **Translating from iOS** (translate, never transplant): tab bar ↔ navigation bar/rail/drawer · edge-swipe back + chevron ↔ predictive back · switch, segmented control, pickers ↔ Material switch, chips, Material pickers · action sheet ↔ bottom sheet or dialog · SF Symbols, SF Pro, Dynamic Type ↔ Material Symbols, Roboto, `sp` · semantic colours + materials ↔ colour roles + tonal elevation · push/sheet ↔ container transform, shared axis, fade through. Brand carries over through the target's theming; a Material-styled cross-platform app still owes iOS its safe areas, Reduce Motion and edge-swipe back. Tab switches never slide.
 
-**Predictive back (Android 13+):** opt in via `android:enableOnBackInvokedCallback="true"`; drive the exit animation from `BackEventCompat.progress` (0.0→1.0) — the exiting screen scales down (`1f - progress*0.1f`) and shifts toward the initiating edge (±`progress*32.dp`, from `swipeEdge` EDGE_LEFT/EDGE_RIGHT). **Back gesture = navigate back in the stack; Up button = navigate up the hierarchy** (they may differ). Never override deprecated `onBackPressed()`.
+**Predictive back (Android 13+):** opt in via `android:enableOnBackInvokedCallback="true"`; drive the exit animation from `BackEventCompat.progress` (0.0→1.0) — the exiting screen scales down (`1f - progress*0.1f`) and shifts toward the initiating edge (±`progress*32.dp`, from `swipeEdge` EDGE_LEFT/EDGE_RIGHT). **Back gesture = navigate back in the stack; Up button = navigate up the hierarchy** (they may differ). Never override deprecated `onBackPressed()` (Android).
 
 ## Material 3 Expressive
 

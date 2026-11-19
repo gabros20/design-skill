@@ -56,7 +56,7 @@ an inset rim-light + border. Don't animate layered shadows on large elements.
 **Glassmorphism.** `backdrop-filter: blur(8–15px) saturate(160%)` ; bg
 opacity 8–30% (dark UI 6–12%); a 1px low-opacity white border is the edge; an inset top highlight is
 the glass. Max 2–3 glass elements per viewport; **never glass on glass** (legibility collapses; solid glass stacks opaque panes on purpose);
-never animate `backdrop-filter`; ship a `-webkit-` prefix + `@supports not` solid fallback; drop blur to
+never animate `backdrop-filter` (perf: rendering cost); ship a `-webkit-` prefix + `@supports not` solid fallback; drop blur to
 6–8px on mobile; check text against the *brightest* backdrop region. Needs a busy backdrop to read;
 liquid-glass refraction belongs on one hero element only.
 

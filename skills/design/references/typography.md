@@ -100,7 +100,7 @@ pull quotes reuse article text outside the measure, never styled as a block quot
 
 - `font-display: swap` (or `optional` for zero CLS); metric-match the fallback via `size-adjust`/`ascent-override`/`descent-override` (Fontaine automates this).
 - Preload only the critical weight; use a variable font when you need 3+ weights.
-- Never name a paid font in code unlicensed; logo use needs its own permission (brand-mark.md). CSS: `frontend` `typography-css.md` "Faces and synthesis".
+- Never name a paid font in code unlicensed (licence); logo use needs its own permission (brand-mark.md). CSS: `frontend` `typography-css.md` "Faces and synthesis".
 
 ## Validation
 

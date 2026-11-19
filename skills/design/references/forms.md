@@ -30,7 +30,7 @@ Produces:
 
 ## Layout
 
-One column; labels above, left edge on the field edge; never a placeholder as the only label. Side by
+One column; labels above, left edge on the field edge; never a placeholder as the only label (WCAG 3.3.2). Side by
 side only for short fields people treat as one (city + postcode, expiry + CVC). **Field width signals
 the expected answer** (postcode ~8 characters, CVC 4, email full width); equal widths discard the hint.
 Ask less: every field names who uses the answer, and nothing is asked twice in one flow (prefill, or
@@ -55,7 +55,7 @@ action at the end, aligned to the field edge; no Reset.
 | A date the person knows (birth, issue, expiry) | Three text fields in locale order |
 | A date near today, or where weekday or availability matters | Calendar that also accepts typing; ranges show two months and presets |
 
-Preselect only the safe majority choice — never consent, a paid add-on, or a legally meaningful option.
+Preselect only the safe majority choice — never consent (GDPR), a paid add-on, or a legally meaningful option (honesty).
 
 ## Validation timing
 
@@ -88,7 +88,7 @@ box-shadow (border-width shifts layout); reserve a transparent focus-outline slo
 4–6% darker. Inputs and buttons share one height per size step; the floor follows the pointer — touch
 44pt / 48dp (accessibility.md), pointer-first product UI typically 32–40px. Reserve a right-edge slot
 (~24px) for a status icon and a `min-height` for the helper line so validation doesn't reflow.
-Disabled = three channels (opacity ~0.5, `not-allowed`, `aria-disabled`), never colour alone.
+Disabled = three channels (opacity ~0.5, `not-allowed`, `aria-disabled`), never colour alone (WCAG 1.4.1).
 
 ## Save model
 

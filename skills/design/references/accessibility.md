@@ -19,6 +19,8 @@ Inputs:
 Produces:
 - Pass/fail against each floor, the specific fix, and a design-decidable a11y priority order.
 
+Every rule in this file is a floor (WCAG, or the basis named) unless it is marked Default.
+
 ## Contents
 
 - Contrast (APCA + WCAG)

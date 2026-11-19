@@ -34,7 +34,7 @@ built in code only when nothing runs yet, named in the handoff with the screens 
 licensed library photos · generated stills on request · type at scale. Capture several states (main
 screen for the hero, one detail cropped large, a second screen, the phone view). **Scrub every capture**
 — no real names, emails, tokens, file paths, error states or debug overlays — and never retouch what
-the product shows. Never generate a stand-in for a real person, product, place, or work.
+the product shows. Never generate a stand-in for a real person, product, place, or work (honesty).
 
 **Reproduce gaps** (visual-direction.md): a missing asset stays a counted, labeled gap. A generated fill
 is allowed only in a non-brand, non-hero decorative slot, in the source's style, recorded as `generated`
@@ -57,7 +57,7 @@ says not every icon is — check each icon's licence.
 
 **Logos are trademarks:** no file licence grants trademark rights, and a package licence covers the
 compilation, not each mark inside it. Seek permission, follow the brand's guidelines, render marks
-unaltered, never imply endorsement, and never put a letter-in-a-square beside a real company name —
+unaltered, never imply endorsement (trademark), and never put a letter-in-a-square beside a real company name —
 use its real mark or a plain wordmark. **Logo rows:** crop each mark to its drawn box, size by shape
 (landscape to ~70% of the tile width, portrait to ~68% of its height), one treatment per row (all colour
 or all mono), one baseline, rows split evenly (3+3, never 5+1). Record source + licence per asset in

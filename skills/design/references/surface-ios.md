@@ -31,7 +31,7 @@ HIG governs structure; brand lives in the expressive layer (tint, type, motion, 
 
 - **Minimum touch target and list-row height: 44×44pt.** Design the smallest screen first: **375pt wide (iPhone SE)** through **430pt (Pro Max)** — never hardcode widths.
 - **8pt grid** (8/16/24/32/40/48); 4pt for fine adjustments. Content margins **16–20pt** from screen edges.
-- **Safe areas:** never place text or controls under the status bar, Dynamic Island, or home indicator; `.ignoresSafeArea()` only for background fills. Primary actions at the bottom (thumb zone); navigation at top.
+- **Safe areas (HIG):** never place text or controls under the status bar, Dynamic Island, or home indicator; `.ignoresSafeArea()` only for background fills. Primary actions at the bottom (thumb zone); navigation at top.
 
 ## Chrome dimensions
 
@@ -55,7 +55,7 @@ thick legibility-first glass for AI/agent web apps (surface-webapp.md "Solid Gla
 - **Tab bar at the bottom for 2–5 top-level sections** (use a "More" tab if >5) — tabs are places, never actions, and switching never slides. Labels 10pt; filled SF Symbol = selected, outline = unselected. Each tab remembers its own nav state; tapping the active tab returns to that tab's root. Never hide the tab bar navigating deeper.
 - **Default the tab bar for 2–5 sections;** a drawer only past ~5 peers, never for primary actions.
 - Back-button label = the *previous screen's title*, not "Back". Use `NavigationStack` (not deprecated `NavigationView`); large titles collapse to inline on scroll.
-- **Reserved system gestures — never override:** swipe-from-left-edge (back), swipe-down on a modal (dismiss), pull-down on a list (refresh), swipe-left on a row (actions), pinch (zoom), long-press (context menu), plus the top-corner Notification/Control Center and bottom home/app-switcher swipes.
+- **Reserved system gestures — never override (HIG):** swipe-from-left-edge (back), swipe-down on a modal (dismiss), pull-down on a list (refresh), swipe-left on a row (actions), pinch (zoom), long-press (context menu), plus the top-corner Notification/Control Center and bottom home/app-switcher swipes.
 
 ## Typography / Dynamic Type
 
@@ -87,7 +87,7 @@ Request **just-in-time at the action**, never at launch. Show a **custom pre-per
 
 - **Regular width: replace the tab bar with a sidebar** (`TabView(...).tabViewStyle(.sidebarAdaptable)`). Two-column (sidebar + detail) is common; three-column (`NavigationSplitView`) for category > list > detail. Primary column ~320pt default. **Toolbars at the top** (not bottom). The detail view is never empty — show a placeholder with icon + instruction.
 - **Pointer/trackpad:** `.hoverEffect(.highlight/.lift)`; right-click context menus.
-- **Keyboard:** Cmd shortcuts for all major actions; Cmd-hold shows the shortcut overlay; Tab/Shift+Tab between fields. Never claim Cmd+H, Cmd+Tab, Cmd+Space, Globe.
+- **Keyboard:** Cmd shortcuts for all major actions; Cmd-hold shows the shortcut overlay; Tab/Shift+Tab between fields. Never claim Cmd+H, Cmd+Tab, Cmd+Space, Globe (HIG).
 - **Drag & drop expected** (`.draggable`/`.dropDestination`, spring-loaded targets). Apple Pencil: never disable Scribble. iPad popovers anchor to their source as floating panels — don't make everything a full-screen sheet.
 
 ## Mobile-prototype spec

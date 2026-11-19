@@ -30,7 +30,7 @@ Produces: a state-complete interaction spec — every state, feedback timing, er
 
 ## The eight-state model
 
-Every interactive element is designed in eight states — **default, hover, focus, active, disabled, loading, error, success** — and every data region additionally has **empty**. This is the canonical state set for the pack; other references point here. "Keyboard users never see hover": design hover *and* focus separately (`:focus-visible`, never `outline:none` without a replacement). Missing states are the fastest tell of an unfinished interface. Disabled is exempt from contrast requirements and has no hover at all.
+Every interactive element is designed in eight states — **default, hover, focus, active, disabled, loading, error, success** — and every data region additionally has **empty**. This is the canonical state set for the pack; other references point here. "Keyboard users never see hover": design hover *and* focus separately (`:focus-visible`, never `outline:none` without a replacement, WCAG 2.4.7). Missing states are the fastest tell of an unfinished interface. Disabled is exempt from contrast requirements and has no hover at all.
 
 - **Beyond the visual eight**, name the data states (one item, long list, partly loaded, refreshing stale data), account states (plan, role, owner vs member, viewer without dead controls) and feature states (flag off, trial, limit reached, locked); pair them only where the product branches on the pair.
 - **When states co-occur**, the spec states which wins (default loading > selected > focus > hover). An animated accent marks a change, not a state: a newly selected item may glow briefly, then holds a static selected style; one animated accent per view.

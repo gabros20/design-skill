@@ -96,10 +96,10 @@ Read these together — the router encodes the pairing so no lateral hop is requ
 
 - Name the register per surface before craft — design-IS-the-product (Persuade, Experience) vs design-SERVES-the-product (Operate, Read). The audience picks the aesthetic, not taste; the serve register legitimately inverts several distinctiveness defaults.
 - Design the full state set when it applies: default, hover, focus, active, disabled, loading, error, success, plus empty for every data region.
-- Use real content at real lengths — the longest realistic string, the empty case, the overflow case. Never fabricate claims — metrics, logos, testimonials, prices, customers, capabilities, outcomes, or decorative data. Demonstration content may be authored at full fidelity only when labelled synthetic and listed for replacement.
+- Use real content at real lengths — the longest realistic string, the empty case, the overflow case. Never fabricate claims (honesty) — metrics, logos, testimonials, prices, customers, capabilities, outcomes, or decorative data. Demonstration content may be authored at full fidelity only when labelled synthetic and listed for replacement.
 - Label every coded artifact disposable, design-reference, or production-candidate. Never present prototype code as production-ready without engineering, accessibility, and quality review.
 - **Precedence:** floors never bend. Above them the direction contract — register, lane, dimensions — outranks every leaf default and every catalogued tell; leaf numbers are Restrained-lane defaults unless the leaf says otherwise. A tell is an *unchosen* default.
-- Treat accessibility floors as design constraints even when accessibility.md is not opened: every control named and keyboard-operable, text 4.5:1 / UI 3:1, meaning never by colour alone, targets ≥24px (44pt / 48dp touch), visible focus, a reduced-motion path.
+- Treat accessibility floors as design constraints even when accessibility.md is not opened: every control named and keyboard-operable, text 4.5:1 / UI 3:1, meaning never by colour alone (WCAG 1.4.1), targets ≥24px (44pt / 48dp touch), visible focus, a reduced-motion path.
 - Preserve established product, brand, and architecture constraints. When the design and a constraint conflict, report it explicitly rather than silently overriding.
 - A visual verdict requires rendered evidence. When no build was viewed, state "code-level pass, not an art review" rather than signing off on appearance.
 
