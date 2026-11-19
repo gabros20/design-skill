@@ -67,7 +67,7 @@ Loads in addition to the primary job whenever the request names or implies its s
 | When the surface is | Read | Expected contribution |
 |---|---|---|
 | A marketing, brand, landing, or portfolio site (design IS the product) | [Website](references/surface-website.md) | Premium↔information dial, section craft and hero, phone composition, finish, award tier |
-| Product/app UI on the web — dashboards, admin, settings, data tools (design SERVES the product) | [Web app](references/surface-webapp.md) | Density mode, layout paradigm, data-display and web-platform conformance |
+| Product/app UI on the web — dashboards, admin, settings, data tools, AI/agent apps (design SERVES the product) | [Web app](references/surface-webapp.md) | Density mode, layout paradigm, data-display and web-platform conformance; the Solid Glass language |
 | A native iOS / iPadOS app | [iOS](references/surface-ios.md) | HIG chrome/target numbers, Dynamic Type, gestures, iPad adaptivity |
 | A native Android app | [Android](references/surface-android.md) | Material 3 tonal color, type scale, window classes, navigation matrix |
 

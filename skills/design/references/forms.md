@@ -4,8 +4,8 @@ Purpose: Design forms and inputs that people finish without errors — layout, c
 validation timing, forgiving input, sign-in, field states, and the save model.
 
 Read when:
-- Designing a form, field, sign-in, sign-up, checkout step, or settings page, or reviewing why one
-  produces errors or abandonment.
+- Designing a form, field, sign-in, sign-up, checkout step, or settings page (expert configuration
+  included), or reviewing why one produces errors or abandonment.
 
 Skip when:
 - The multi-step flow itself (wizard, checkout sequence) → journeys.md; error and helper copy →
@@ -26,6 +26,7 @@ Produces:
 - Passwords and sign-in
 - Field states
 - Save model
+- Expert settings
 
 ## Layout
 
@@ -95,3 +96,7 @@ One per surface, stated. *Immediate:* each change applies at once, shows "Saved"
 (switches, inline edit). *Explicit:* fields plus Save, a visible unsaved marker, and a leave guard.
 Never mix them — a switch inside a Save form misleads one way or the other. Long documents autosave
 with a visible status ("Saving… / Saved 14:02 / Offline — changes kept on this device").
+
+## Expert settings
+
+For a webapp's domain-expert configuration: domain language over technical (`max_concurrent_jobs` → "Maximum tasks running at once"); if you can't write a domain label, the param belongs in a config file, not the UI. Group by domain concept, not by type/alphabetical. Every param shows a visible default + reset; units are mandatory and adjacent. Progressive disclosure: primary (80% of tasks) / advanced (collapsed) / developer (not in UI). Validate in domain terms, inline, and surface interactions ("when retry is off, max-attempts has no effect").
