@@ -114,7 +114,7 @@ Default target: **WCAG 2.2 AA** unless the brief sets another. Decided in design
 ## Reduced motion
 
 - `prefers-reduced-motion` is a **required, complete state** — the no-motion experience must be the
-  finished, usable design, not a degraded one. Every motion device ships this kill-switch.
+  finished, usable design, not a degraded one. Every motion device ships a reduced-motion path.
 - Reduced means **gentler, not necessarily zero**, decided per moment: essential motion (a state
   transition that carries meaning) may remain in a calmer form; decorative motion (parallax,
   ambient loops, scroll-hijack) collapses to static. Never carry meaning by motion alone.

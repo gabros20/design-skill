@@ -39,6 +39,7 @@ Durations, keyed by what the motion does (not by pixel count alone):
 | large surfaces | 300–500ms | modal, drawer, accordion, page section |
 | marketing entrances | 400–800ms | hero reveal, onboarding, first-run delight |
 
+- Measured long-tail scroll entrances are judged by when they read as arrived, not by total length: `scroll-animation` `craft.md` "3. Durations" (~1.3s editorial moves).
 - **Exit ≈ 60–75% of enter.** Opening invites; closing gets out of the way.
 - **UI stays under 300ms.** Above that needs a reason (a large surface or a marketing moment).
 - **80ms is the "instant" threshold**; a press/toggle can be 0ms and often should be. **The focus ring is never animated** — it appears in full the frame focus lands.
@@ -119,8 +120,9 @@ scroll-linked code: `scroll-animation`.
 
 `prefers-reduced-motion: reduce` means **gentler, not zero, decided per moment** — keep opacity/colour
 transitions that aid comprehension; slides, scales and blurs become an opacity cross-fade, not a hard
-cut; drop parallax, overshoot and large traveling objects. The no-motion state must be the complete,
-usable state (ship a kill-switch for every motion device). Also honor `prefers-reduced-transparency`
+cut (a route change may swap at once or crossfade in place: `scroll-animation` `page-transitions.md`
+"8. Reduced motion and pointer events"); drop parallax, overshoot and large traveling objects. The
+no-motion state must be the complete, usable state (a reduced-motion path per motion device). Also honor `prefers-reduced-transparency`
 (frostier/solid surfaces) and `prefers-contrast: more`. Gate hover motion behind `@media (hover:
 hover) and (pointer: fine)` — touch fires false hovers. Gestures and choreographed groups:
 choreography.md.
@@ -134,7 +136,7 @@ defence. **Reduce means a smaller version of the same motion:** hover lift → c
 frequent slide/scale → opacity 150ms; UI >300ms → 200–250ms; long stagger → 30ms or one group fade;
 an infinite pulse, shimmer or glow on a persistent element → once, then static. Data the user reads
 (charts, tables, counts) animates only to show a real change, never on every mount; a spinner or
-shimmer on an operation that resolves in <300ms reads as a glitch.
+shimmer that flashes reads as a glitch (thresholds: interaction.md "Feedback and latency ladder").
 
 Flag on sight: `transition: all`, `scale(0)`/pure-fade entrances, `ease-in` on an entrance or on-screen move,
 weak easing, animation on 100+/day actions, UI >300ms with no reason, `transform-origin: center` on a

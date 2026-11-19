@@ -90,7 +90,7 @@ foreground. Prefer a soft scroll-edge fade where content meets floating chrome o
 ## 3D tilt and scroll depth
 
 - **Tilt:** `perspective: 1200px` on the parent for a card (≈1,800–2,600px for a near-full-width panel; less distorts like a wide lens); angles **8–16°** (over-rotation reads as a 2010 app-store mockup); render the asset at 2×; disable on touch. A turned panel lands face-on at rest, lit from one key. Pointer tilt ±~15°, spring-smoothed, flat on leave; magnetic pull ≈ 0.6 × distance, zero by ~100px; fine pointers only, never on functional data.
-- **Parallax / scroll depth:** pure CSS (`animation-timeline: scroll()` / `view()`), displacement small (≤ a few hundred px). `background-attachment: fixed` is broken on iOS. Placement and kill-switch rules: choreography.md. Ken Burns: 12–20s pan-zoom via `translate3d`/`scale3d`, zoom ≤1.15 or faces distort. (Motion values: motion.md.)
+- **Parallax / scroll depth:** pure CSS (`animation-timeline: scroll()` / `view()`), displacement small (≤ a few hundred px). `background-attachment: fixed` is broken on iOS. Placement and reduced-motion rules: choreography.md "Scroll and reveal". Ken Burns: 12–20s pan-zoom via `translate3d`/`scale3d`, zoom ≤1.15 or faces distort. (Motion values: motion.md.)
 
 ## Image treatment and text over image
 

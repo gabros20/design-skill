@@ -82,7 +82,7 @@ CC BY 4.0:
 - **Jakubantalik/transitions.dev** — motion token scale and polish doctrine; values re-expressed, cited to the underlying motion standards.
 - **jakubkrehel/oklch-skill** — OKLCH model, palette algorithm, APCA/WCAG thresholds; facts only, cited to oklch.fyi, the APCA specification, and WCAG.
 
-- **tponscr-debug/claude-skill-awwwards** — inspiration only, unlicensed (dimming photos on dark surfaces, re-expressed).
+- **tponscr-debug/claude-skill-awwwards** — inspiration only, unlicensed — prompted the dark-mode image check; the pack's rule (no CSS dimming) is its own.
 
 ## Primary documents (checked 2026-10)
 
