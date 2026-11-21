@@ -98,7 +98,7 @@ where content meets floating chrome, a soft scroll-edge fade beats a hard 1px di
 
 ## Image treatment and text over image
 
-- Foundations: `aspect-ratio` reserves space; `object-fit: cover`; `<picture>` swaps the *crop* per viewport (`srcset`/`sizes` for mere resolution). Default crops: avatar 1:1, headshot 4:5, hero 16:9, story 9:16; eyes about a third from the top.
+- Foundations: `aspect-ratio` reserves space; `object-fit: cover`; `<picture>` swaps the *crop* per viewport (`srcset`/`sizes` for mere resolution). Default crops: avatar 1:1, headshot 4:5, hero 16:9, story 9:16; eyes about a third from the top. Full-bleed and hero images load over the background colour, never a blur placeholder (a whole-box filter blur: `scroll-animation` `performance.md` §11).
 - **Shapes:** `clip-path` is hard-edged (aliases on curves); **use `mask-image` for soft/alpha edges.** Clipping crops — test the focal point per breakpoint with `object-position`.
 - **Photos on a matching ground may take a 1px inset edge** in pure black (light) or white (dark) at 10% (a tinted neutral reads as dirt); full-bleed, gallery and transparent art take none.
 - **Text over image (scrim), least→most damage:** a strip/highlight behind the text → crop to a quiet copy area → a backdrop-blur chip → a full tint (last resort). Shape the scrim to the copy: a corner gradient for corner copy, a bottom band once copy spans the width (phones), a column under a text column, or mask the image away from the text. Over bright sky or haze, a soft pool of the photo's deep tone behind the line beats a per-letter shadow. Test dark type on the *darkest* patch under it and light type on the brightest; over video, the worst frame. Contrast floors: accessibility.md.

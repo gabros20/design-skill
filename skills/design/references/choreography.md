@@ -50,7 +50,7 @@ children. Order by importance, not DOM. Two leads is a hierarchy bug motion cann
 - **Never on anything opened many times a day** (menus, dropdown rows, palettes, tab content).
 - **Default: not uniform:** an identical gap, distance and duration on every item is a metronome tell. Vary gaps ≥15% or ease the delays, let the lead travel furthest, accelerate a run into its payoff, and play a repeated reveal ~40% faster the second time.
 - **A list that arrives as a list** is staggered; every scrolled section is not.
-- **Hero and first-run entrances stagger semantic chunks**, not containers: title, description, actions ~100ms apart, each rising 12px from a 4px blur over 300ms ease-out; a short display headline goes word by word at 80ms unblurred (a filter per word).
+- **Hero and first-run entrances stagger semantic chunks**, not containers: title, description, actions ~100ms apart, each rising 12px from a 4px blur on the marketing-entrance tier (motion.md); a short display headline goes word by word at 80ms unblurred (a filter per word).
 - **Stagger from the hand** when the pointer triggered it: `delay = |i − a| × 30–60ms`, spreading from what was touched; reach falls off to a clamped floor.
 
 ## Exits, swaps and direction
@@ -91,7 +91,7 @@ Code: `frontend` `ui-motion.md` "Springs and interruption".
 Code: `frontend` `ui-motion.md` "Scripted loops and demos".
 
 - **Alive vs busy** (is-the-product): alive is one system that responds everywhere and may keep a slow, small motion at rest (the concept's own object, zero under reduced motion); busy is many unrelated effects. A quiet brief may stay still — record it.
-- **Any loop** rests on its finished frame (never an empty window), changes one thing every 1–2s, holds the finished frame for its last ~15%, pauses on hover and focus and off-screen, and ships a visible pause past 5s (accessibility.md); default one self-mover per screen; each one past 5s ships a pause (2.2.2).
+- **Any loop** rests on its finished frame (never an empty window), changes one thing every 1–2s, holds the finished frame for its last ~15%, pauses on hover and focus and off-screen, and ships a visible pause past 5s (accessibility.md, 2.2.2); default one self-mover per screen.
 - **Idle invitation** (an icon that occasionally nudges): first run after ~2.5s, then about every 6s, stops on interaction, resumes only after its reset completes.
 - **Demo loops:** a walkthrough runs 3–5 steps of 4–8s, each holding its result ≥1s; a hero loop runs 10–16s with 3–5 beats, a payoff held ~2s, nothing still >3s. The **poster** (thumbnail, reduced motion, first paint) is the beat that tells the story alone, nothing caught mid-change; open the loop on it. A reset removes what the loop added as one thing — a visible cause (undo, clear), an exit around an anchor (all within 0.5s), or a snap while hidden; data never rewinds in view. UI feedback stays as fast as the real product; only storytelling slows (arrivals 0.8–1s); solid things arrive by moving and stay opaque; content arrives after its container.
 - **Interactive figures:** the designed rest pose is the thumbnail. Untouched, a tour starts after ~1.4s, visits 3–6 parts in hand order, drives the user's own targets, pauses on any input and resumes ~3.6s after it; on take-over the state stays put.
