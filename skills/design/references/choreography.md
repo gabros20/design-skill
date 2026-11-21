@@ -36,10 +36,10 @@ Numbers here are Restrained-lane defaults; the direction contract's dimensions o
 
 ## Cast and relate
 
-Choreography is mostly cutting moving parts and running the rest in parallel. Cast every mover:
+Choreography is mostly cutting movers and running the rest in parallel. Cast each:
 **lead** (moves first, travels most) · **support** (shorter, smaller) · **decoration** (fade only, or
 nothing) · **static** (containers whose content animates). Relate each pair: **together** by default
-(same object or moment, or order carries no meaning) → **overlap** (stagger) when order means
+(same object or moment, or order means nothing) → **overlap** (stagger) when order means
 something → **sequence** only when overlap looks broken → **carry** a child you can't steer by
 animating its parent. **One entrance per container** — never a panel entrance plus a stagger of its
 children. Order by importance, not DOM. Two leads is a hierarchy bug motion cannot fix.
@@ -50,7 +50,7 @@ children. Order by importance, not DOM. Two leads is a hierarchy bug motion cann
 - **Never on anything opened many times a day** (menus, dropdown rows, palettes, tab content).
 - **Default: not uniform:** an identical gap, distance and duration on every item is a metronome tell. Vary gaps ≥15% or ease the delays, let the lead travel furthest, accelerate a run into its payoff, and play a repeated reveal ~40% faster the second time.
 - **A list that arrives as a list** is staggered; every scrolled section is not.
-- **Hero and first-run entrances stagger semantic chunks**, not containers: title, description, actions ~100ms apart (a short display headline word by word at 80ms), each rising 12px from a 4px blur over 300ms ease-out.
+- **Hero and first-run entrances stagger semantic chunks**, not containers: title, description, actions ~100ms apart, each rising 12px from a 4px blur over 300ms ease-out; a short display headline goes word by word at 80ms unblurred (a filter per word).
 - **Stagger from the hand** when the pointer triggered it: `delay = |i − a| × 30–60ms`, spreading from what was touched; reach falls off to a clamped floor.
 
 ## Exits, swaps and direction

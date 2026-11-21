@@ -54,7 +54,7 @@ When the handoff is a correction to an existing surface, write read-only plans u
 
 ## Motion plan
 
-When motion ships, the plan gives exact values, never approximated: curves, durations, spring configs, and the token each maps to. Include a feel-check the executor runs: trigger the interaction, step it frame by frame (or 10% playback), toggle reduced motion, look again the next day, and judge gestures on a real 120Hz phone (desktop monitors hide opacity roughness; native: a release build on the slowest supported device). Values are in motion.md and choreography.md; cite, never restate.
+When motion ships, the plan gives exact values, never approximated: curves, durations, spring configs, and the token each maps to. Include a feel-check the executor runs: trigger the interaction, step it frame by frame (or 10% playback), toggle reduced motion, look again the next day, and judge gestures on a real 120Hz phone (desktop monitors hide opacity roughness; native: a release build on the slowest supported device). A hero with heavy movers (a live scene, video, a loop strip) also names their order and which start after the entrance settles, and its first paint: a still poster, or a scene that builds up from empty (surface-website.md "Award / experimental tier"). Values are in motion.md and choreography.md; cite, never restate.
 
 ## Tokens: two formats
 

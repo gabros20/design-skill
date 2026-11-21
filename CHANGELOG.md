@@ -8,7 +8,16 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ## [Unreleased]
 
 ### Added
-- Queue unreleased changes here.
+- `surface-website.md` "Award / experimental tier": a busy hero runs one heavy thing at a time. The
+  type leads and lands first; a live scene, video and loop strips start after it settles, one at a
+  time; glass fades in place and sits over a live scene only after the entrance; delayed items fade.
+  Points at `scroll-animation` (the hero budget) and `3d` (`threejs-orchestration.md`).
+- `handoff.md` "Motion plan": a hero with heavy movers names their order, which wait for the
+  entrance to settle, and its first paint (a still poster or a build-up from empty).
+
+### Changed
+- `choreography.md` "Stagger": a word-by-word display headline drops the 4px entrance blur, since
+  each word becomes its own filter layer.
 
 ## [0.3.1] — 2026-11-20
 

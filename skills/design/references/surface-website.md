@@ -107,6 +107,14 @@ feel), View Transitions, generative accents. Discipline: **one signature moment,
 lazy-init; hold 60fps on mid-range; scroll-driven scenes advance by keyboard scroll and never trap focus (WCAG 2.1.1, 2.1.2); provide a static reduced-motion fallback; gate cursor effects
 behind `@media (hover: hover)`. Over a 3D or moving hero, the headline and CTA read within ~3s.
 
+**Default: a busy hero runs one heavy thing at a time** (performance: every mover shares one main
+thread and one GPU). The type is the lead and lands first. Heavy movers (a live scene, video, a loop
+strip) start after it settles, one at a time; until then the scene holds a still or builds up from
+empty, which reads as choreography, not delay. Glass (backdrop blur) fades in place, never slides in,
+and sits over a live scene only once the entrance is done. A delayed item fades; move-only suits items
+that start at once or are masked. Code: `scroll-animation` `performance.md` (the hero budget), `3d`
+`threejs-orchestration.md`.
+
 **Judged on the public jury weights** — Design 40%, Usability 30%, Creativity 20%, Content 10% (re-check
 the evaluation page; weights change). Anchors: 6 clean but any template · 7 a clear type system, an
 intentional palette, one or two memorable compositions · 8 every frame composed, type used as image,
