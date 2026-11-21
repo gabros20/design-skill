@@ -14,10 +14,27 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
   Points at `scroll-animation` (the hero budget) and `3d` (`threejs-orchestration.md`).
 - `handoff.md` "Motion plan": a hero with heavy movers names their order, which wait for the
   entrance to settle, and its first paint (a still poster or a build-up from empty).
+- `product-visuals.md` "An app demo in a hero": size it to the viewport, scale it as one picture but
+  never past real size, show the explanatory (labelled) state, let it break the text column, and make
+  its clicks legible at the scaled size. "The honesty rule": no real customer's site in a preview pane
+  unless that customer agreed; `image-sourcing.md` scrubs it from captures.
+- `critique.md` "Preconditions and evidence": how to get the phone width: CDP device emulation, an iOS
+  Simulator for WebKit sign-off, a phone-width iframe as a last resort; a window resize fails silently
+  (macOS floors Chrome near 500px), so confirm the breakpoint fired.
+- `imagery-depth-decoration.md`: full-bleed and hero images load over the background colour, never a
+  blur placeholder (a whole-box filter blur; the measurement is `scroll-animation`'s).
 
 ### Changed
 - `choreography.md` "Stagger": a word-by-word display headline drops the 4px entrance blur, since
-  each word becomes its own filter layer.
+  each word becomes its own filter layer. The hero chunks' duration is the marketing-entrance tier in
+  `motion.md`, which the line used to contradict (300ms against 400–800ms); a loop's pause is stated
+  once.
+- `surface-website.md` busy hero: a product demo arrives after the copy, into space reserved from the
+  first paint, with an opacity-only fade, and starts its story once in view; the hero image takes no
+  blur placeholder; move-only entrances point to `scroll-animation` `craft.md` §5 instead of restating
+  the rule.
+- `critique.md` "Failure modes and routing" drops two restatements of its own preconditions and
+  Skip-when lines.
 
 ## [0.3.1] — 2026-11-20
 
