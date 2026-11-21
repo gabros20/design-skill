@@ -8,6 +8,11 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ## [Unreleased]
 
 ### Added
+- Queue unreleased changes here.
+
+## [0.3.2] — 2026-11-21
+
+### Added
 - `surface-website.md` "Award / experimental tier": a busy hero runs one heavy thing at a time. The
   type leads and lands first; a live scene, video and loop strips start after it settles, one at a
   time; glass fades in place and sits over a live scene only after the entrance; delayed items fade.
