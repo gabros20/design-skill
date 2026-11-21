@@ -249,5 +249,30 @@
       "references/forms.md",
       "references/research.md"
     ]
+  },
+  {
+    "id": "hero-app-demo",
+    "prompt": "Our marketing hero plays an animated demo of our app's dashboard under the headline. It's too tall for the screen, the collapsed sidebar looks squashed and the click ripples vanish at this size.",
+    "expected_references": [
+      "references/product-visuals.md",
+      "references/surface-website.md"
+    ],
+    "forbidden_references": [
+      "references/forms.md",
+      "references/research.md",
+      "references/surface-android.md"
+    ]
+  },
+  {
+    "id": "critique-phone-evidence",
+    "prompt": "Review the mobile hero of this landing page. I can only drive a desktop Chrome window on my Mac.",
+    "expected_references": [
+      "references/critique.md"
+    ],
+    "forbidden_references": [
+      "references/forms.md",
+      "references/brand-mark.md",
+      "references/surface-android.md"
+    ]
   }
 ]
