@@ -23,6 +23,7 @@ Produces:
 - The honesty rule
 - Product shots
 - Product UI in motion
+- An app demo in a hero
 - Bento as one picture
 - Explanatory figures
 - Drawn illustration
@@ -36,7 +37,8 @@ A product visual is a real screenshot, or the product's own components, tokens, 
 rebuilt and simplified — never UI the product does not have (anti-defaults.md: fake product UI is the
 #1 tell). Every label, menu item and number traces to the app's source or a reference: one invented
 word ("Processing…") makes viewers stop believing the rest. Use one owned example subject across every
-window, never a client's or real person's data.
+window, never a client's or real person's data, nor a real customer's site in a preview pane (even when the design
+frames show one) unless that customer agreed: invent the customer, with your own or licensed photography.
 
 ## Product shots
 
@@ -55,6 +57,25 @@ loop timing: choreography.md "Loops, idle and demo loops"). With no live product
 grey bars standing in for a page read as unfinished. **Pause test:** any paused frame is a screenshot —
 dates match weekdays, counts match the items shown and change on the frame their cause lands, a summary
 arrives after the events it sums, newest first, and zero reads "No clashes", never "0 clashes".
+
+## An app demo in a hero
+
+A running mock of the app playing a short scripted story (from a field build, each rule checked at several
+viewports):
+
+- **Size it to the viewport, not the artboard:** frame height `clamp(min, 100svh − header − margin, max)`, the app's
+  layout flexing to it as the real app does to its window (panels stretch, the chat scrolls), so a jump to `#demo`
+  shows the whole app under a fixed header (it fit exactly at 1440×900, 1440×760 and 1920×1080).
+- **Scale it as one picture, never past real size:** by width, capped at one design px per CSS px, so a wider screen
+  gets a roomier app (a wider preview pane), not inflated UI type.
+- **Show the explanatory state:** the labelled sidebar, not the collapsed icon rail the "in use" frames show; a
+  compact state at marketing scale reads cramped and explains nothing.
+- **It may break the text column:** run it to ~32px from the window edges on desktop while the copy keeps the
+  container; it is the page's evidence.
+- **Make its interactions legible at the scaled size:** a click is two layers, a soft disc (~72px, from ~0.55
+  opacity, fading over 0.7s) and a thin ring (~88px, 2px, from ~0.9, over 0.9s), scale and opacity only. One faint
+  ripple sized for the real UI vanishes once the mock is scaled down.
+- Its arrival in a busy hero: surface-website.md "Award / experimental tier".
 
 ## Bento as one picture
 

@@ -33,8 +33,8 @@ reached** (a URL, a dev server, a project that starts with one command, an insta
 built in code only when nothing runs yet, named in the handoff with the screens to capture later ·
 licensed library photos · generated stills on request · type at scale. Capture several states (main
 screen for the hero, one detail cropped large, a second screen, the phone view). **Scrub every capture**
-— no real names, emails, tokens, file paths, error states or debug overlays — and never retouch what
-the product shows. Never generate a stand-in for a real person, product, place, or work (honesty).
+— no real names, emails, tokens, file paths, error states, debug overlays, or a real customer's site or data
+(product-visuals.md "The honesty rule") — and never retouch what the product shows. Never generate a stand-in for a real person, product, place, or work (honesty).
 
 **Reproduce gaps** (visual-direction.md): a missing asset stays a counted, labeled gap. A generated fill
 is allowed only in a non-brand, non-hero decorative slot, in the source's style, recorded as `generated`
