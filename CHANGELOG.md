@@ -10,6 +10,14 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ### Added
 - Queue unreleased changes here.
 
+## [0.3.4] — 2026-11-22
+
+### Changed (documentation)
+- The site's motion card adds the 0.3.2 and 0.3.3 rules: a busy hero runs one heavy thing at a time, type first, and
+  two readable texts never overlap in a swap.
+- README: the current release and the eval runs point at the changelog instead of v0.1.0.
+- Changelog link references cover every release.
+
 ## [0.3.3] — 2026-11-22
 
 ### Changed
@@ -219,8 +227,14 @@ is unchanged from 0.1.1; nothing about routing, artifacts, or behavior differs f
 - Evaluation fixtures across four dimensions — activation, traversal, output, and
   compression-ablation — replacing the placeholder sets.
 
+[Unreleased]: https://github.com/gabros20/design-skill/compare/v0.3.4...HEAD
+[0.3.4]: https://github.com/gabros20/design-skill/releases/tag/v0.3.4
+[0.3.3]: https://github.com/gabros20/design-skill/releases/tag/v0.3.3
+[0.3.2]: https://github.com/gabros20/design-skill/releases/tag/v0.3.2
 [0.3.1]: https://github.com/gabros20/design-skill/releases/tag/v0.3.1
 [0.3.0]: https://github.com/gabros20/design-skill/releases/tag/v0.3.0
 [0.2.0]: https://github.com/gabros20/design-skill/releases/tag/v0.2.0
+[0.1.3]: https://github.com/gabros20/design-skill/releases/tag/v0.1.3
 [0.1.2]: https://github.com/gabros20/design-skill/releases/tag/v0.1.2
+[0.1.1]: https://github.com/gabros20/design-skill/releases/tag/v0.1.1
 [0.1.0]: https://github.com/gabros20/design-skill/releases/tag/v0.1.0
