@@ -11,6 +11,8 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 - `choreography.md` "Exits, swaps and direction": a view swap still crossfades, but two readable texts
   never overlap; the old leaves in ~0.3s, then the new arrives. A field rebuild measured a 1.1s act
   crossfade in a scroll scene that read as broken, overlapping text.
+- Pointers to `scroll-animation` follow its 2.2.0 lifecycle: the hero budget now lives in
+  `lifecycle.md` "The hero budget"; the blur-placeholder pointer names its heading, not a section number.
 
 ## [0.3.2] — 2026-11-21
 

@@ -116,7 +116,7 @@ its story once in view (its framing: product-visuals.md "An app demo in a hero")
 fades in place, never slides in, and sits over a live scene only once the entrance is done. The hero
 image loads over the background colour, never a blur placeholder (imagery-depth-decoration.md). A
 delayed item fades (move-only entrances: `scroll-animation` `craft.md` §5). Code: `scroll-animation`
-`performance.md` (the hero budget), `3d` `threejs-orchestration.md`.
+`lifecycle.md` "The hero budget", `3d` `threejs-orchestration.md`.
 
 **Judged on the public jury weights** — Design 40%, Usability 30%, Creativity 20%, Content 10% (re-check
 the evaluation page; weights change). Anchors: 6 clean but any template · 7 a clear type system, an
