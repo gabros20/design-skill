@@ -7,6 +7,11 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 
 ## [Unreleased]
 
+### Added
+- Queue unreleased changes here.
+
+## [0.3.3] — 2026-11-22
+
 ### Changed
 - `choreography.md` "Exits, swaps and direction": a view swap still crossfades, but two readable texts
   never overlap; the old leaves in ~0.3s, then the new arrives. A field rebuild measured a 1.1s act
