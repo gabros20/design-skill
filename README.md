@@ -172,7 +172,7 @@ Four fixture layers keep failures diagnosable — each points at a distinct fix:
 | Compression | Did a shorter candidate preserve quality? | `evals/compression-ablation/` (4 cases) |
 
 `scripts/check-sync` validates fixture structure; representative live activation and traversal runs
-are in progress for the v0.1.0 release. See [evals/README.md](evals/README.md).
+are recorded per release in the changelog. See [evals/README.md](evals/README.md).
 
 ## Provenance
 
@@ -216,7 +216,7 @@ release version alignment. Every reference stays under 2,500 tokens.
 
 Each release synchronizes `.codex-plugin/plugin.json`, the newest `CHANGELOG.md` release, git tag
 `v<version>`, and the matching GitHub Release. Runtime `SKILL.md` intentionally carries no version
-or repository metadata. Current release: **v0.1.0**.
+or repository metadata. The current release is the newest heading in the changelog.
 
 ## Contributing
 
