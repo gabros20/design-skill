@@ -57,10 +57,10 @@ children. Order by importance, not DOM. Two leads is a hierarchy bug motion cann
 
 Code: `frontend` `ui-motion.md` "Enter and exit".
 
-- **Closes are faster and quieter than opens.** The enter carries the distance and blur; the exit travels a fixed ~12px in ~150ms (never its full height) unless the destination means something (a drawer, a card returning to its list). **Never bounce and never delay a close.** Symmetric exceptions — tabs, accordion, icon/text swap — read as one reversible motion; keep one duration both ways.
+- **Closes are faster and quieter than opens.** The enter carries the distance and blur; the exit travels a fixed ~12px in ~150ms (never its full height) unless the destination means something (a drawer, a card going home). **Never bounce and never delay a close.** Symmetric exceptions — tabs, accordion, icon/text swap — read as one reversible motion; keep one duration both ways.
 - **An exiting element leaves the layout at once**; siblings close the gap while it fades.
-- **A view swap in one container crossfades** (old exits while new enters); wait only between two dense views in a container resizing in both dimensions.
-- **Exits run together and shorter** — never reverse-staggered out — and leave along the entry path.
+- **A view swap in one container crossfades** (old exits while new enters), but two readable texts never overlap: the old leaves in ~0.3s, then the new arrives. Dense resizing views wait too.
+- **Exits run together and shorter**, never reverse-staggered, along the entry path.
 - **Direction follows the mental model:** forward moves content left (new enters from the right), back moves it right; sibling menus enter from the trigger's side; the exiting element reads the direction when it starts.
 
 ## Timing family, overlap and interruptibility
